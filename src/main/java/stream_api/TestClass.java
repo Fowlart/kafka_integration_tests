@@ -6,6 +6,7 @@ import stream_api.entitys.Position;
 import stream_api.entitys.Seniority;
 
 import java.util.*;
+import java.util.stream.Collectors;
 
 import static java.util.stream.Collectors.*;
 
@@ -46,5 +47,12 @@ public class TestClass {
         Map<Position, String> result_3 = getTestData().stream().collect(groupingBy(Employe::getPosition, mapping
                 (empl -> empl.getName(), joining(", ", " [", "]"))));
         System.out.println(result_3);
+
+        // magically converting all test POJOs into single string with names of male.
+        System.out.println(
+                getTestData().stream().
+                        collect(Collectors.partitioningBy((employe -> employe.getGender() == Gender.MALE))).
+                        get(true).stream().map(Employe::getName).collect(Collectors.joining(", "))
+        );
     }
 }
