@@ -1,6 +1,8 @@
 package collections;
 
 import java.util.Collection;
+import java.util.Collections;
+
 
 public class Utils
 {
@@ -9,7 +11,7 @@ public class Utils
 		System.out.println("______________" + examplNumber + "______________");
 	}
 
-	static void outPutCollection(Collection collection1, Collection collection2, String operationDescribe)
+	public static void outPutCollection(Collection collection1, Collection collection2, String operationDescribe)
 	{
 		System.out.println("______________" + operationDescribe + "______________");
 		System.out.println("collection A: " + collection1);
