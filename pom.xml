@@ -28,14 +28,33 @@
     </properties>
 
     <dependencies>
-    <dependency>
-        <groupId>info.cukes</groupId>
-        <artifactId>cucumber-java8</artifactId>
-        <version>1.2.5</version>
-    </dependency>
+        <dependency>
+            <groupId>info.cukes</groupId>
+            <artifactId>cucumber-java8</artifactId>
+            <version>1.2.5</version>
+        </dependency>
+
+        <dependency>
+            <groupId>lc.kra.system</groupId>
+            <artifactId>system-hook</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>lc.kra.system</groupId>
+            <artifactId>system-hook</artifactId>
+            <version>3.5</version>
+        </dependency>
+
     </dependencies>
 
-
-
+    <repositories>
+        <repository>
+            <id>system-hook-mvn-repo</id>
+            <url>https://raw.github.com/kristian/system-hook/mvn-repo/</url>
+            <snapshots>
+                <enabled>true</enabled>
+                <updatePolicy>always</updatePolicy>
+            </snapshots>
+        </repository>
+    </repositories>
 
 </project>
