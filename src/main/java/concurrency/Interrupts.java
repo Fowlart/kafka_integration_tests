@@ -17,17 +17,16 @@ class MyThread implements Runnable
 	@Override
 	public void run()
 	{
-
 		for (int i = 0; i < importantInfo.length; i++)
 		{
 			//Pause for 4 seconds
 			System.out.println(importantInfo[i]);
+			/***
+			 * Many methods that throw InterruptedException, such as sleep, are designed to cancel their current operation and
+			 * return immediately when an interrupt is received.
+			 ***/
 			try
 			{
-				/***
-				 * Many methods that throw InterruptedException, such as sleep, are designed to cancel their current operation and
-				 * return immediately when an interrupt is received.
-				 ***/
 				Thread.sleep(4000);
 			}
 			catch (InterruptedException e)
@@ -68,12 +67,13 @@ public class Interrupts
 	public static void main(String args[]) throws InterruptedException
 	{
 		//1 
-		Thread forInterruption_1 = new Thread(new MyThread());
-		forInterruption_1.start();
-		Thread.sleep(3000);
-		forInterruption_1.interrupt();
+		/*
+		 * Thread forInterruption_1 = new Thread(new MyThread()); forInterruption_1.start(); Thread.sleep(3000);
+		 * forInterruption_1.interrupt();
+		 */
 
 		/** Give us unpredictable lines */
+
 		Thread forInterruption_2 = new Thread(new MyThreadWithoutInterruption());
 		forInterruption_2.start();
 		for (int i = 0; i <= 10; i++)
@@ -81,5 +81,6 @@ public class Interrupts
 			Thread.sleep(1);
 			forInterruption_2.interrupt();
 		}
+
 	}
 }
