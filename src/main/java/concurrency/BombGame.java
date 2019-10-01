@@ -47,15 +47,13 @@ class Bomb extends Thread {
                 Thread.sleep(500);
                 System.out.println(active.get());
                 Thread.sleep(100);
-                if (active.get())
-                    active.set(false);
-                else
-                    active.set(true);
+                if (myKey.getSignal().get()) break;
+
+                if (active.get()) active.set(false);
+                else active.set(true);
             } catch (InterruptedException e) {
                 break;
             }
-
-            if (myKey.getSignal().get()) break;
         }
 
         if (active.get()) System.out.println("BAAAAAAAAAAAAAAAAAAAAAAAAAAAANGGGG");

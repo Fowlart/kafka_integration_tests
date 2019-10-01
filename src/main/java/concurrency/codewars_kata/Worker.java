@@ -10,36 +10,36 @@ import java.util.Set;
 import java.util.stream.Collectors;
 
 
-/** https://www.codewars.com/kata/concurrent-task-execution/train/java */
-public class Worker
-{
+/**
+ * https://www.codewars.com/kata/concurrent-task-execution/train/java
+ */
+public class Worker {
 
-	public static class ExecutedTasks
-	{
+    public static class ExecutedTasks {
 
-		public final List<Runnable> successful = new ArrayList<>();
-		public final Set<Runnable> failed = new HashSet<>();
-		public final Set<Runnable> timedOut = new HashSet<>();
-	}
+        public final List<Runnable> successful = new ArrayList<>();
+        public final Set<Runnable> failed = new HashSet<>();
+        public final Set<Runnable> timedOut = new HashSet<>();
+    }
 
-	public ExecutedTasks execute(Collection<Runnable> actions, long timeoutMillis) throws InterruptedException
-	{
+    public ExecutedTasks execute(Collection<Runnable> actions, long timeoutMillis) throws InterruptedException {
 
-		ExecutedTasks result = new ExecutedTasks();
+        ExecutedTasks result = new ExecutedTasks();
 
-		Map<Runnable, Thread> runnableThreadMap = new LinkedHashMap<>();
+        Map<Runnable, Thread> runnableThreadMap = new LinkedHashMap<>();
 
-		for (Runnable runnable : actions)
-		{
-			Thread thread = new Thread(runnable);
-			runnableThreadMap.put(runnable, thread);
-			thread.start();
-		}
+        for (Runnable runnable : actions) {
+            Thread thread = new Thread(runnable);
+            runnableThreadMap.put(runnable, thread);
+            thread.start();
+        }
 
-		Thread.sleep(timeoutMillis);
+        Thread.sleep(timeoutMillis);
 
-		// result.failed = runnableThreadMap.keySet().stream().filter( () Thread::isAlive).collect(Collectors.toList());
+        result.successful.addAll(runnableThreadMap.keySet().stream().filter(
+                (runnable) -> !runnableThreadMap.get(runnable).isAlive())
+                .collect(Collectors.toSet())) ;
 
         return result;
-	}
+    }
 }
