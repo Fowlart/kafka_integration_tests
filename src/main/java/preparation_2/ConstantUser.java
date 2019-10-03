@@ -1,24 +1,15 @@
 package preparation_2;
 
-import java.text.ParseException;
-import java.text.SimpleDateFormat;
 import java.util.Date;
 
 public class ConstantUser {
 
-    private final String name;
+    private  String name;
 
     private Date date;
 
-    public ConstantUser(String name, String date) {
-        SimpleDateFormat formatter2=new SimpleDateFormat("dd-MMM-yyyy");
-        this.name = name;
-
-        try {
-            this.date = formatter2.parse(date);
-        } catch (ParseException e) {
-            throw new RuntimeException("Прикрутіть валідацію!!!!!!!!!");
-        }
+    public ConstantUser(String name, Date date) {
+     this.date = (Date)date.clone();
     }
 
     public String getName() {
@@ -28,4 +19,20 @@ public class ConstantUser {
     public Date getDate() {
         return date;
     }
+
+
+
+    public static void main(String[] args) {
+        Date date = new Date();
+        System.out.println(date);
+
+        ConstantUser constantUser = new ConstantUser("art",date);
+        date.setDate(100000);
+        System.out.println(constantUser.getDate());
+
+
+    }
+
+
+
 }
