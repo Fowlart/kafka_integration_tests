@@ -5,7 +5,7 @@ public class StaticVsDynamicBinding {
         MadCow madCow = new MadCow();
         System.out.println(madCow);
         //upcasting
-        Cow cow = (Cow)madCow;
+        Cow cow = madCow;
         System.out.println(cow);
         cow = new Cow();
         System.out.println(cow);
@@ -13,13 +13,13 @@ public class StaticVsDynamicBinding {
 }
 class Cow {
     private void eat() {
-        System.out.println("preparation1.Cow is eating...");
+        System.out.println("Cow is eating...");
     }
 
     @Override
     public String toString() {
         eat();
-        return "preparation1.Cow{}";
+        return "Cow{}";
     }
 }
 
@@ -31,6 +31,6 @@ class MadCow extends Cow {
     @Override
     public String toString() {
         eat();
-        return "preparation1.MadCow{}";
+        return "MadCow{}";
     }
 }

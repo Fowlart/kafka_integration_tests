@@ -2,15 +2,34 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="c0e3b33d-eeec-463a-b539-62d273a79c8c" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/example.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/xml/DomParser.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/xml/SaxParser.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/preparation_2/EnumExtending.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/preparation_2/SuperMethodsCall.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/xml/dom/DomParser.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/preparation_1/FieldsOverriding.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/preparation_1/FieldsOverriding.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/preparation_1/FinalTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/preparation_1/FinalTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/preparation_1/InterfacesVsAbstractClasses.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/preparation_1/InterfacesVsAbstractClasses.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/preparation_1/PassByValue.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/preparation_1/PassByValue.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/preparation_1/Primitives.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/preparation_1/Primitives.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/preparation_1/StaticVsDynamicBinding.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/preparation_1/StaticVsDynamicBinding.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/xml/DomParser.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/preparation_1/Cow.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/preparation_1/Cow.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/preparation_1/Dog.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/preparation_1/Dog.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/preparation_1/FieldsOverriding.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/preparation_1/FieldsOverriding.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/preparation_1/FinalTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/preparation_1/FinalTest.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/preparation_1/InterfacesVsAbstractClasses$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/preparation_1/InterfacesVsAbstractClasses$1.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/preparation_1/InterfacesVsAbstractClasses$2.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/preparation_1/InterfacesVsAbstractClasses$2.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/preparation_1/InterfacesVsAbstractClasses.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/preparation_1/InterfacesVsAbstractClasses.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/preparation_1/MadCow.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/preparation_1/MadCow.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/preparation_1/PassByValue.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/preparation_1/PassByValue.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/preparation_1/Primitives.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/preparation_1/Primitives.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/preparation_1/Sub.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/preparation_1/Sub.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/preparation_1/Super.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/preparation_1/Super.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/stream_api/TestClass.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/stream_api/TestClass.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/stream_api/entitys/Employe.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/stream_api/entitys/Employe.class" afterDir="false" />
     </list>
-    <ignored path="$PROJECT_DIR$/out/" />
-    <ignored path="$PROJECT_DIR$/target/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -18,37 +37,8 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="DefaultGradleProjectSettings">
-    <option name="isMigrated" value="true" />
-  </component>
-  <component name="FileEditorManager">
-    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/example.xml">
-          <provider selected="true" editor-type-id="text-editor" />
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/main/java/xml/DomParser.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="145">
-              <caret line="22" column="59" selection-start-line="22" selection-start-column="59" selection-end-line="22" selection-end-column="59" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/xml/SaxParser.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="34">
-              <caret line="2" column="22" selection-start-line="2" selection-start-column="22" selection-end-line="2" selection-end-column="22" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-    </leaf>
+    <option name="testRunner" value="GRADLE" />
+    <option name="delegatedBuild" value="true" />
   </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
@@ -58,47 +48,8 @@
       </list>
     </option>
   </component>
-  <component name="FindInProjectRecents">
-    <findStrings>
-      <find>updat</find>
-    </findStrings>
-  </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
-  </component>
-  <component name="IdeDocumentHistory">
-    <option name="CHANGED_PATHS">
-      <list>
-        <option value="$PROJECT_DIR$/src/main/java/FieldsOverriding.java" />
-        <option value="$PROJECT_DIR$/src/main/java/StaticVsDynamicBinding.java" />
-        <option value="$PROJECT_DIR$/src/main/java/PassByValue.java" />
-        <option value="$PROJECT_DIR$/src/main/java/StaticMethods.java" />
-        <option value="$PROJECT_DIR$/src/main/java/FinalTest.java" />
-        <option value="$PROJECT_DIR$/src/main/java/InterfacesVsAbstractClasses.java" />
-        <option value="$PROJECT_DIR$/src/main/java/OverloadingVsOverriding.java" />
-        <option value="$PROJECT_DIR$/src/main/java/Primitives.java" />
-        <option value="$PROJECT_DIR$/src/main/java/StreamAPI/Gender.java" />
-        <option value="$PROJECT_DIR$/src/main/java/StreamAPI/Seniority.java" />
-        <option value="$PROJECT_DIR$/src/main/java/StreamAPI/Employe.java" />
-        <option value="$PROJECT_DIR$/src/main/java/StreamAPI/Position.java" />
-        <option value="$PROJECT_DIR$/src/main/java/StreamAPI/TestClass.java" />
-        <option value="$PROJECT_DIR$/src/main/java/stream_api/TestClass.java" />
-        <option value="$PROJECT_DIR$/src/main/java/is_double_initializes/ComplexObject.java" />
-        <option value="$PROJECT_DIR$/src/main/java/concurrency/Interrupts2.java" />
-        <option value="$PROJECT_DIR$/src/main/java/concurrency/BombGame.java" />
-        <option value="$PROJECT_DIR$/src/main/java/concurrency/concurent_modification/Controller.java" />
-        <option value="$PROJECT_DIR$/src/main/java/concurrency/codewars_kata/Worker.java" />
-        <option value="$PROJECT_DIR$/OutFile.txt" />
-        <option value="$PROJECT_DIR$/src/main/java/exceptions/ListOfNumbers.java" />
-        <option value="$PROJECT_DIR$/src/main/java/exceptions/TryWithResources.java" />
-        <option value="$PROJECT_DIR$/pom.xml" />
-        <option value="$PROJECT_DIR$/src/main/java/xml/pom_example.xml" />
-        <option value="$PROJECT_DIR$/src/main/java/xml/SaxParser.java" />
-        <option value="$PROJECT_DIR$/pom_example.xml" />
-        <option value="$PROJECT_DIR$/example.xml" />
-        <option value="$PROJECT_DIR$/src/main/java/xml/DomParser.java" />
-      </list>
-    </option>
   </component>
   <component name="MavenImportPreferences">
     <option name="importingSettings">
@@ -107,94 +58,20 @@
       </MavenImportingSettings>
     </option>
   </component>
-  <component name="MavenProjectNavigator">
-    <treeState>
-      <expand>
-        <path>
-          <item name="" type="16c1761:MavenProjectsStructure$RootNode" />
-          <item name="testlab" type="9519ce18:MavenProjectsStructure$ProjectNode" />
-        </path>
-        <path>
-          <item name="" type="16c1761:MavenProjectsStructure$RootNode" />
-          <item name="testlab" type="9519ce18:MavenProjectsStructure$ProjectNode" />
-          <item name="Lifecycle" type="58874e2:MavenProjectsStructure$LifecycleNode" />
-        </path>
-      </expand>
-      <select />
-    </treeState>
-  </component>
-  <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="10" />
-    <option name="y" value="20" />
-    <option name="width" value="1346" />
-    <option name="height" value="688" />
-  </component>
-  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
-  <component name="ProjectView">
-    <navigator proportions="" version="1">
-      <foldersAlwaysOnTop value="true" />
-    </navigator>
-    <panes>
-      <pane id="PackagesPane" />
-      <pane id="ProjectPane">
-        <subPane>
-          <expand>
-            <path>
-              <item name="testlab" type="b2602c69:ProjectViewProjectNode" />
-              <item name="testlab" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="testlab" type="b2602c69:ProjectViewProjectNode" />
-              <item name="testlab" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="testlab" type="b2602c69:ProjectViewProjectNode" />
-              <item name="testlab" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="testlab" type="b2602c69:ProjectViewProjectNode" />
-              <item name="testlab" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="testlab" type="b2602c69:ProjectViewProjectNode" />
-              <item name="testlab" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="xml" type="462c0819:PsiDirectoryNode" />
-            </path>
-          </expand>
-          <select />
-        </subPane>
-      </pane>
-      <pane id="Scope" />
-    </panes>
-  </component>
+  <component name="ProjectId" id="1RabLv0R9xsfr8wXYj2jequ7rnu" />
   <component name="PropertiesComponent">
-    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
+    <property name="SONARLINT_PRECOMMIT_ANALYSIS" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
     <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1549225008607" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/main/java/xml" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
-    <property name="project.structure.last.edited" value="Modules" />
+    <property name="project.structure.last.edited" value="Project" />
     <property name="project.structure.proportion" value="0.14965986" />
     <property name="project.structure.side.proportion" value="0.2" />
   </component>
   <component name="RecentsManager">
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="D:\GIT\testlab" />
-    </key>
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="D:\GIT\testlab\src\main\java\xml" />
-    </key>
     <key name="CreateClassDialog.RecentsKey">
       <recent name="StreamAPI" />
     </key>
@@ -212,38 +89,12 @@
     </option>
   </component>
   <component name="RunManager" selected="Application.DomParser">
-    <configuration name="BombGame" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="concurrency.BombGame" />
-      <module name="testlab" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="concurrency.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="Controller" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="concurrency.concurent_modification.Controller" />
-      <module name="testlab" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="concurrency.concurent_modification.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
     <configuration name="DomParser" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="xml.DomParser" />
+      <option name="MAIN_CLASS_NAME" value="xml.dom.DomParser" />
       <module name="testlab" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="xml.*" />
+          <option name="PATTERN" value="xml.dom.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -251,12 +102,12 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="ListOfNumbers" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="exceptions.ListOfNumbers" />
+    <configuration name="PassByValue" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="preparation_1.PassByValue" />
       <module name="testlab" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="exceptions.*" />
+          <option name="PATTERN" value="preparation_1.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -264,12 +115,38 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="TryWithResources" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="exceptions.TryWithResources" />
+    <configuration name="Primitives" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="preparation_1.Primitives" />
       <module name="testlab" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="exceptions.*" />
+          <option name="PATTERN" value="preparation_1.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="StaticMethods" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="preparation_1.StaticMethods" />
+      <module name="testlab" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="preparation_1.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="StaticVsDynamicBinding" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="preparation_1.StaticVsDynamicBinding" />
+      <module name="testlab" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="preparation_1.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -280,10 +157,10 @@
     <recent_temporary>
       <list>
         <item itemvalue="Application.DomParser" />
-        <item itemvalue="Application.TryWithResources" />
-        <item itemvalue="Application.ListOfNumbers" />
-        <item itemvalue="Application.Controller" />
-        <item itemvalue="Application.BombGame" />
+        <item itemvalue="Application.StaticVsDynamicBinding" />
+        <item itemvalue="Application.StaticMethods" />
+        <item itemvalue="Application.Primitives" />
+        <item itemvalue="Application.PassByValue" />
       </list>
     </recent_temporary>
   </component>
@@ -300,470 +177,65 @@
       <workItem from="1549061915970" duration="21541000" />
       <workItem from="1549307301941" duration="20000" />
       <workItem from="1551001468672" duration="185000" />
-      <workItem from="1566489129068" duration="1743000" />
-      <workItem from="1569673038909" duration="6268000" />
-      <workItem from="1569735777382" duration="3689000" />
-      <workItem from="1569947674676" duration="3608000" />
-      <workItem from="1570167152922" duration="467000" />
-      <workItem from="1570169052622" duration="335000" />
-      <workItem from="1570255999699" duration="5589000" />
-      <workItem from="1572187235252" duration="3415000" />
     </task>
-    <task id="LOCAL-00001" summary="examples for streamAPI added">
-      <created>1558878388261</created>
+    <task id="LOCAL-00001" summary="study 30.09">
+      <created>1569851138653</created>
       <option name="number" value="00001" />
       <option name="presentableId" value="LOCAL-00001" />
       <option name="project" value="LOCAL" />
-      <updated>1558878388261</updated>
+      <updated>1569851138653</updated>
     </task>
-    <task id="LOCAL-00002" summary="examples for initialization of primitives added">
-      <created>1566490663337</created>
+    <task id="LOCAL-00002" summary="study 1.10 codewars start">
+      <created>1569912652209</created>
       <option name="number" value="00002" />
       <option name="presentableId" value="LOCAL-00002" />
       <option name="project" value="LOCAL" />
-      <updated>1566490663337</updated>
+      <updated>1569912652210</updated>
     </task>
-    <task id="LOCAL-00003" summary="28.09 add bomb deactivate game :)">
-      <created>1569678479770</created>
+    <task id="LOCAL-00003" summary="study 3.10 more learning">
+      <created>1570086236147</created>
       <option name="number" value="00003" />
       <option name="presentableId" value="LOCAL-00003" />
       <option name="project" value="LOCAL" />
-      <updated>1569678479771</updated>
+      <updated>1570086236147</updated>
     </task>
-    <task id="LOCAL-00004" summary="01.10 kata">
-      <created>1569951411831</created>
-      <option name="number" value="00004" />
-      <option name="presentableId" value="LOCAL-00004" />
-      <option name="project" value="LOCAL" />
-      <updated>1569951411831</updated>
-    </task>
-    <task id="LOCAL-00005" summary="05.10 Exception study">
-      <created>1570260445411</created>
-      <option name="number" value="00005" />
-      <option name="presentableId" value="LOCAL-00005" />
-      <option name="project" value="LOCAL" />
-      <updated>1570260445411</updated>
-    </task>
-    <option name="localTasksCounter" value="6" />
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="46860000" />
-  </component>
-  <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
-    <editor active="true" />
-    <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.18229954" />
-      <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
-      <window_info id="Designer" order="2" />
-      <window_info id="Image Layers" order="3" />
-      <window_info id="Capture Tool" order="4" />
-      <window_info id="UI Designer" order="5" />
-      <window_info id="Favorites" order="6" side_tool="true" />
-      <window_info anchor="bottom" id="Message" order="0" />
-      <window_info anchor="bottom" id="Find" order="1" weight="0.32993197" />
-      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.34183672" />
-      <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
-      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
-      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
-      <window_info anchor="bottom" id="TODO" order="6" />
-      <window_info anchor="bottom" id="Terminal" order="7" />
-      <window_info anchor="bottom" id="Docker" order="8" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Event Log" order="9" side_tool="true" />
-      <window_info anchor="bottom" id="Messages" order="10" weight="0.32993197" />
-      <window_info anchor="bottom" id="Database Changes" order="11" />
-      <window_info anchor="bottom" id="Version Control" order="12" weight="0.32993197" />
-      <window_info anchor="bottom" id="Hybris Console" order="13" />
-      <window_info anchor="right" id="Palette" order="0" />
-      <window_info anchor="right" id="Capture Analysis" order="1" />
-      <window_info anchor="right" id="Database" order="2" />
-      <window_info anchor="right" id="Palette&#9;" order="3" />
-      <window_info anchor="right" id="Theme Preview" order="4" />
-      <window_info anchor="right" id="Commander" internal_type="SLIDING" order="5" type="SLIDING" weight="0.4" />
-      <window_info anchor="right" id="Ant Build" order="6" weight="0.25" />
-      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="7" weight="0.25" />
-      <window_info anchor="right" id="Maven" order="8" visible="true" weight="0.12859304" />
-    </layout>
-    <layout-to-restore>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.23827533" />
-      <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
-      <window_info id="Designer" order="2" />
-      <window_info id="Image Layers" order="3" />
-      <window_info id="Capture Tool" order="4" />
-      <window_info id="UI Designer" order="5" />
-      <window_info id="Favorites" order="6" side_tool="true" />
-      <window_info anchor="bottom" id="Message" order="0" />
-      <window_info anchor="bottom" id="Find" order="1" weight="0.32993197" />
-      <window_info anchor="bottom" id="Run" order="2" weight="0.16496599" />
-      <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
-      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
-      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
-      <window_info anchor="bottom" id="TODO" order="6" />
-      <window_info anchor="bottom" id="Terminal" order="7" />
-      <window_info anchor="bottom" id="Docker" order="8" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Event Log" order="9" side_tool="true" />
-      <window_info anchor="bottom" id="Messages" order="10" weight="0.32993197" />
-      <window_info anchor="bottom" id="Database Changes" order="11" />
-      <window_info active="true" anchor="bottom" id="Version Control" order="12" visible="true" weight="0.32993197" />
-      <window_info anchor="bottom" id="Hybris Console" order="13" />
-      <window_info anchor="right" id="Palette" order="0" />
-      <window_info anchor="right" id="Capture Analysis" order="1" />
-      <window_info anchor="right" id="Database" order="2" />
-      <window_info anchor="right" id="Palette&#9;" order="3" />
-      <window_info anchor="right" id="Theme Preview" order="4" />
-      <window_info anchor="right" id="Commander" internal_type="SLIDING" order="5" type="SLIDING" weight="0.4" />
-      <window_info anchor="right" id="Maven" order="6" visible="true" weight="0.12859304" />
-      <window_info anchor="right" id="Ant Build" order="7" weight="0.25" />
-      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="8" weight="0.25" />
-    </layout-to-restore>
+    <option name="totallyTimeSpent" value="21746000" />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="1" />
   </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State>
+              <option name="COLUMN_ORDER" />
+            </State>
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="examples for streamAPI added" />
-    <MESSAGE value="examples for initialization of primitives added" />
-    <MESSAGE value="28.09 add bomb deactivate game :)" />
-    <MESSAGE value="01.10 kata" />
-    <MESSAGE value="05.10 Exception study" />
-    <option name="LAST_COMMIT_MESSAGE" value="05.10 Exception study" />
+    <MESSAGE value="study 30.09" />
+    <MESSAGE value="study 1.10 codewars start" />
+    <MESSAGE value="study 3.10 more learning" />
+    <option name="LAST_COMMIT_MESSAGE" value="study 3.10 more learning" />
   </component>
-  <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/main/java/preparation_1/StaticVsDynamicBinding.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-33">
-          <caret line="5" column="30" selection-start-line="5" selection-start-column="30" selection-end-line="5" selection-end-column="30" />
-          <folding>
-            <element signature="e#77#78#0" expanded="true" />
-            <element signature="e#131#132#0" expanded="true" />
-            <element signature="e#599#600#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/preparation_1/StaticMethods.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="439">
-          <caret line="31" column="56" selection-start-line="31" selection-start-column="56" selection-end-line="31" selection-end-column="56" />
-          <folding>
-            <element signature="e#111#112#0" expanded="true" />
-            <element signature="e#144#145#0" expanded="true" />
-            <element signature="e#193#194#0" expanded="true" />
-            <element signature="e#246#247#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/preparation_1/InterfacesVsAbstractClasses.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-7">
-          <caret line="31" column="15" selection-start-line="31" selection-start-column="15" selection-end-line="31" selection-end-column="15" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/preparation_1/FinalTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="34">
-          <caret line="2" column="13" selection-start-line="2" selection-start-column="13" selection-end-line="2" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/preparation_1/Primitives.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="34">
-          <caret line="2" column="25" lean-forward="true" selection-start-line="2" selection-start-column="25" selection-end-line="2" selection-end-column="25" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/preparation_1/OverloadingVsOverriding.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="34">
-          <caret line="2" column="13" selection-start-line="2" selection-start-column="13" selection-end-line="2" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/preparation_1/FieldsOverriding.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="323">
-          <caret line="19" column="6" selection-start-line="19" selection-start-column="6" selection-end-line="19" selection-end-column="6" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://C:/Program Files/Java/jdk-11.0.1/lib/src.zip!/java.base/java/util/stream/Collectors.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="62">
-          <caret line="1018" column="4" selection-start-line="1018" selection-start-column="4" selection-end-line="1018" selection-end-column="4" />
-          <folding>
-            <element signature="e#27033#27034#0" expanded="true" />
-            <element signature="e#27098#27099#0" expanded="true" />
-            <element signature="e#43699#43700#0" expanded="true" />
-            <element signature="e#43754#43755#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/preparation_1/PassByValue.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="34">
-          <caret line="2" column="13" selection-start-line="2" selection-start-column="13" selection-end-line="2" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/stream_api/entitys/Position.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="34">
-          <caret line="2" column="12" selection-start-line="2" selection-start-column="12" selection-end-line="2" selection-end-column="12" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/stream_api/entitys/Seniority.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="34">
-          <caret line="2" column="13" selection-start-line="2" selection-start-column="13" selection-end-line="2" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/stream_api/entitys/Employe.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="68">
-          <caret line="4" column="13" selection-start-line="4" selection-start-column="13" selection-end-line="4" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/stream_api/entitys/Gender.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="34">
-          <caret line="2" column="13" selection-start-line="2" selection-start-column="13" selection-end-line="2" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/is_double_initializes/ComplexObject.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="17">
-          <caret line="17" column="28" selection-start-line="17" selection-start-column="28" selection-end-line="17" selection-end-column="28" />
-          <folding>
-            <element signature="e#164#165#0" expanded="true" />
-            <element signature="e#200#201#0" expanded="true" />
-            <element signature="e#265#266#0" expanded="true" />
-            <element signature="e#315#316#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/concurrency/join_at_work/Racing.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="34">
-          <caret line="2" column="13" selection-start-line="2" selection-start-column="13" selection-end-line="2" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/concurrency/join_at_work/TestJoinClass.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-179">
-          <caret line="10" column="13" selection-start-line="10" selection-start-column="13" selection-end-line="10" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$MAVEN_REPOSITORY$/lc/kra/system/system-hook/3.5/system-hook-3.5.jar!/lc/kra/system/keyboard/event/GlobalKeyAdapter.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="119">
-          <caret line="7" column="13" selection-start-line="7" selection-start-column="13" selection-end-line="7" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/concurrency/BombGame.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="30">
-          <caret line="51" column="16" selection-start-line="51" selection-start-column="16" selection-end-line="51" selection-end-column="16" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/stream_api/TestClass.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="506">
-          <caret line="50" column="85" selection-start-line="50" selection-start-column="85" selection-end-line="50" selection-end-column="85" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/concurrency/codewars_kata/Worker.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="446">
-          <caret line="42" column="8" selection-start-line="42" selection-start-column="8" selection-end-line="42" selection-end-column="8" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/concurrency/concurent_modification/Controller.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="255">
-          <caret line="15" column="44" selection-start-line="15" selection-start-column="44" selection-end-line="15" selection-end-column="44" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://C:/Program Files/Java/jdk-11.0.1/lib/src.zip!/java.base/java/io/PrintWriter.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="129">
-          <caret line="60" column="13" selection-start-line="60" selection-start-column="13" selection-end-line="60" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://C:/Program Files/Java/jdk-11.0.1/lib/src.zip!/java.base/java/io/Reader.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="493">
-          <caret line="53" column="22" selection-start-line="53" selection-start-column="22" selection-end-line="53" selection-end-column="22" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://C:/Program Files/Java/jdk-11.0.1/lib/src.zip!/java.base/java/io/BufferedReader.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="154">
-          <caret line="69" column="39" lean-forward="true" selection-start-line="69" selection-start-column="39" selection-end-line="69" selection-end-column="39" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/OutFile.txt">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/exceptions/TryWithResources.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="183">
-          <caret line="30" column="95" selection-start-line="30" selection-start-column="95" selection-end-line="30" selection-end-column="95" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/exceptions/ListOfNumbers.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="102">
-          <caret line="23" column="58" selection-start-line="23" selection-start-column="45" selection-end-line="23" selection-end-column="58" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/pom.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="136">
-          <caret line="8" column="35" lean-forward="true" selection-start-line="8" selection-start-column="35" selection-end-line="8" selection-end-column="35" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/xml/SaxParser.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="34">
-          <caret line="2" column="22" selection-start-line="2" selection-start-column="22" selection-end-line="2" selection-end-column="22" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/example.xml">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/xml/DomParser.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="145">
-          <caret line="22" column="59" selection-start-line="22" selection-start-column="59" selection-end-line="22" selection-end-column="59" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-  </component>
-  <component name="masterDetails">
-    <states>
-      <state key="ArtifactsStructureConfigurable.UI">
-        <settings>
-          <artifact-editor />
-          <splitter-proportions>
-            <option name="proportions">
-              <list>
-                <option value="0.2" />
-              </list>
-            </option>
-          </splitter-proportions>
-        </settings>
-      </state>
-      <state key="FacetStructureConfigurable.UI">
-        <settings>
-          <last-edited>No facets are configured</last-edited>
-          <splitter-proportions>
-            <option name="proportions">
-              <list>
-                <option value="0.2" />
-              </list>
-            </option>
-          </splitter-proportions>
-        </settings>
-      </state>
-      <state key="GlobalLibrariesConfigurable.UI">
-        <settings>
-          <splitter-proportions>
-            <option name="proportions">
-              <list>
-                <option value="0.2" />
-              </list>
-            </option>
-          </splitter-proportions>
-        </settings>
-      </state>
-      <state key="JdkListConfigurable.UI">
-        <settings>
-          <last-edited>1.8</last-edited>
-          <splitter-proportions>
-            <option name="proportions">
-              <list>
-                <option value="0.2" />
-              </list>
-            </option>
-          </splitter-proportions>
-        </settings>
-      </state>
-      <state key="ModuleStructureConfigurable.UI">
-        <settings>
-          <last-edited>testlab</last-edited>
-          <splitter-proportions>
-            <option name="proportions">
-              <list>
-                <option value="0.2" />
-                <option value="0.6" />
-              </list>
-            </option>
-          </splitter-proportions>
-        </settings>
-      </state>
-      <state key="ProjectJDKs.UI">
-        <settings>
-          <last-edited>1.8</last-edited>
-          <splitter-proportions>
-            <option name="proportions">
-              <list>
-                <option value="0.2" />
-              </list>
-            </option>
-          </splitter-proportions>
-        </settings>
-      </state>
-      <state key="ProjectLibrariesConfigurable.UI">
-        <settings>
-          <last-edited>Maven: info.cukes:cucumber-core:1.2.5</last-edited>
-          <splitter-proportions>
-            <option name="proportions">
-              <list>
-                <option value="0.2" />
-              </list>
-            </option>
-          </splitter-proportions>
-        </settings>
-      </state>
-    </states>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/concurrency/wait_notify/Program.java</url>
+          <line>14</line>
+          <option name="timeStamp" value="5" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
 </project>

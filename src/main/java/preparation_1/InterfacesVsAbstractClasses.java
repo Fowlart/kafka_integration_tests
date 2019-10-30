@@ -29,12 +29,12 @@ interface Animal {
     }
 }
 
-abstract class Dog {
+abstract class Dog implements Animal {
     int size = 25;
     private int psize=50;
     String name ="Doggi";
 
-    void voice(){
+    public void voice(){
         System.out.println("Gav-gav");
         angry();
     }

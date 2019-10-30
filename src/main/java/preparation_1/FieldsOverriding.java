@@ -9,7 +9,8 @@ public class FieldsOverriding {
         /** Створюємо нову змінну, та розширюємо її  до батьківського інтерфейсу*/
         Super c2 = new Sub();
         System.out.println(c2.s);
-        System.out.println( ((Sub)((Sub) c2)).s );
+		/** Звужуємо, дивимся що відбувається */
+		System.out.println(((Sub) (c2)).s);
     }
 }
 
