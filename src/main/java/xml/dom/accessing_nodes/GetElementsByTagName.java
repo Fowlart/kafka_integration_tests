@@ -19,7 +19,7 @@ public class GetElementsByTagName
 		try
 		{
 			documentBuilder = documentBuilderFactory.newDocumentBuilder();
-			Document document = documentBuilder.parse("example.xml");
+			Document document = documentBuilder.parse("xmls/example.xml");
 			// The getElementsByTagName() method returns a node list. A node list is an array of nodes.
 			String textContent = document.getElementsByTagName("CD").item(4).getTextContent();
 			System.out.println(textContent);

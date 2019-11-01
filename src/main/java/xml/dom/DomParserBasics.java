@@ -24,7 +24,7 @@ public class DomParserBasics {
         DocumentBuilderFactory documentBuilderFactory = DocumentBuilderFactory.newInstance();
         try {
             DocumentBuilder documentBuilder = documentBuilderFactory.newDocumentBuilder();
-            Document document = documentBuilder.parse("example.xml");
+            Document document = documentBuilder.parse("xmls/example.xml");
 
 			// this code will retrieves all text content from first and second CD element
             System.out.println(document.getElementsByTagName("CD").item(0).getTextContent());

@@ -21,7 +21,7 @@ public class LoopingThrough
 		try
 		{
 			documentBuilder = documentBuilderFactory.newDocumentBuilder();
-			Document document = documentBuilder.parse("example.xml");
+			Document document = documentBuilder.parse("xmls/example.xml");
 
 			// The documentElement property of the XML document is the root node.
 			Element root = document.getDocumentElement();
