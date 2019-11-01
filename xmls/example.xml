@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <CATALOG>
     <CD>
-        <TITLE>Empire Burlesque</TITLE>
+        <TITLE id="catch_me">Empire Burlesque</TITLE>
         <ARTIST>Bob Dylan</ARTIST>
         <COUNTRY>USA</COUNTRY>
         <COMPANY>Columbia</COMPANY>
@@ -9,7 +9,7 @@
         <YEAR>1985</YEAR>
     </CD>
     <CD>
-        <TITLE>Hide your heart</TITLE>
+        <TITLE id="super_title" id2="super_title_2">Hide your heart</TITLE>
         <ARTIST>Bonnie Tyler</ARTIST>
         <COUNTRY>UK</COUNTRY>
         <COMPANY>CBS Records</COMPANY>

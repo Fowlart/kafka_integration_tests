@@ -1,20 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="c0e3b33d-eeec-463a-b539-62d273a79c8c" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/preparation_2/EnumExtending.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/preparation_2/SuperMethodsCall.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/xml/dom/DomParser.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+    <list default="true" id="c0e3b33d-eeec-463a-b539-62d273a79c8c" name="Default Changelist" comment="study 30.10 DOMParser">
+      <change afterPath="$PROJECT_DIR$/src/main/java/xml/dom/node_info/NodeInfo.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/xml/dom/node_info/Utils.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/preparation_1/FieldsOverriding.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/preparation_1/FieldsOverriding.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/preparation_1/FinalTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/preparation_1/FinalTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/preparation_1/InterfacesVsAbstractClasses.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/preparation_1/InterfacesVsAbstractClasses.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/preparation_1/PassByValue.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/preparation_1/PassByValue.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/preparation_1/Primitives.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/preparation_1/Primitives.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/preparation_1/StaticVsDynamicBinding.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/preparation_1/StaticVsDynamicBinding.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/xml/DomParser.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/xml/dom/node_info/CdCatalogTextCleaner.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/META-INF/testlab.kotlin_module" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/META-INF/testlab.kotlin_module" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/preparation_1/Cow.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/preparation_1/Cow.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/preparation_1/Dog.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/preparation_1/Dog.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/preparation_1/FieldsOverriding.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/preparation_1/FieldsOverriding.class" afterDir="false" />
@@ -29,6 +21,7 @@
       <change beforePath="$PROJECT_DIR$/target/classes/preparation_1/Super.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/preparation_1/Super.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/stream_api/TestClass.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/stream_api/TestClass.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/stream_api/entitys/Employe.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/stream_api/entitys/Employe.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/xmls/example.xml" beforeDir="false" afterPath="$PROJECT_DIR$/xmls/example.xml" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -72,6 +65,10 @@
     <property name="project.structure.side.proportion" value="0.2" />
   </component>
   <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\My\tests_experiments_preparations_examples\xmls" />
+      <recent name="C:\My\tests_experiments_preparations_examples" />
+    </key>
     <key name="CreateClassDialog.RecentsKey">
       <recent name="StreamAPI" />
     </key>
@@ -88,9 +85,9 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Application.DomParser">
-    <configuration name="DomParser" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="xml.dom.DomParser" />
+  <component name="RunManager" selected="Application.NodeInfo">
+    <configuration name="DomParserBasics" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="xml.dom.DomParserBasics" />
       <module name="testlab" />
       <extension name="coverage">
         <pattern>
@@ -102,12 +99,12 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="PassByValue" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="preparation_1.PassByValue" />
+    <configuration name="GetElementsByTagName" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="xml.dom.accessing_nodes.GetElementsByTagName" />
       <module name="testlab" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="preparation_1.*" />
+          <option name="PATTERN" value="xml.dom.accessing_nodes.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -115,12 +112,12 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="Primitives" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="preparation_1.Primitives" />
+    <configuration name="NavigatingNodeRelationships" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="xml.dom.accessing_nodes.NavigatingNodeRelationships" />
       <module name="testlab" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="preparation_1.*" />
+          <option name="PATTERN" value="xml.dom.accessing_nodes.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -128,12 +125,12 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="StaticMethods" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="preparation_1.StaticMethods" />
+    <configuration name="NodeInfo" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="xml.dom.node_info.NodeInfo" />
       <module name="testlab" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="preparation_1.*" />
+          <option name="PATTERN" value="xml.dom.node_info.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -141,12 +138,12 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="StaticVsDynamicBinding" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="preparation_1.StaticVsDynamicBinding" />
+    <configuration name="Utils" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="xml.dom.node_info.Utils" />
       <module name="testlab" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="preparation_1.*" />
+          <option name="PATTERN" value="xml.dom.node_info.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -156,11 +153,11 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Application.DomParser" />
-        <item itemvalue="Application.StaticVsDynamicBinding" />
-        <item itemvalue="Application.StaticMethods" />
-        <item itemvalue="Application.Primitives" />
-        <item itemvalue="Application.PassByValue" />
+        <item itemvalue="Application.NodeInfo" />
+        <item itemvalue="Application.Utils" />
+        <item itemvalue="Application.NavigatingNodeRelationships" />
+        <item itemvalue="Application.DomParserBasics" />
+        <item itemvalue="Application.GetElementsByTagName" />
       </list>
     </recent_temporary>
   </component>
@@ -199,7 +196,35 @@
       <option name="project" value="LOCAL" />
       <updated>1570086236147</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="study 30.10 more learning">
+      <created>1572421728220</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1572421728220</updated>
+    </task>
+    <task id="LOCAL-00005" summary="study 30.10 DOMParser">
+      <created>1572442076135</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1572442076135</updated>
+    </task>
+    <task id="LOCAL-00006" summary="study 31.10 DOMParser +">
+      <created>1572505941623</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1572505941623</updated>
+    </task>
+    <task id="LOCAL-00007" summary="study 1.11 DOMParser">
+      <created>1572607252406</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1572607252406</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
@@ -225,7 +250,11 @@
     <MESSAGE value="study 30.09" />
     <MESSAGE value="study 1.10 codewars start" />
     <MESSAGE value="study 3.10 more learning" />
-    <option name="LAST_COMMIT_MESSAGE" value="study 3.10 more learning" />
+    <MESSAGE value="study 30.10 more learning" />
+    <MESSAGE value="study 30.10 DOMParser" />
+    <MESSAGE value="study 31.10 DOMParser +" />
+    <MESSAGE value="study 1.11 DOMParser" />
+    <option name="LAST_COMMIT_MESSAGE" value="study 1.11 DOMParser" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -234,6 +263,16 @@
           <url>file://$PROJECT_DIR$/src/main/java/concurrency/wait_notify/Program.java</url>
           <line>14</line>
           <option name="timeStamp" value="5" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/xml/dom/accessing_nodes/LoopingThrough.java</url>
+          <line>29</line>
+          <option name="timeStamp" value="6" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/xml/dom/node_info/Utils.java</url>
+          <line>29</line>
+          <option name="timeStamp" value="7" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
