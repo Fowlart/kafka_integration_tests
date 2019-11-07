@@ -19,6 +19,7 @@ public class NodeInfo
 
 		Node cleanRoot = utils.getRoot();
 
+		//NodeValue for element nodes is undefined
 		System.out.println("Printing properties for ELEMENT NODES:");
 		for (int i = 0; i < cleanRoot.getChildNodes().getLength(); i++)
 		{
@@ -32,6 +33,8 @@ public class NodeInfo
 		//NodeValue for attribute nodes is the attribute value, NodeName of an attribute node is the attribute name
 		utils.getAllAttributeNodes(cleanRoot).stream().forEach(node -> System.out.println(
 				">NodeValue:" + node.getNodeValue() + ">>NodeName:" + node.getNodeName() + ">>>NodeType:" + node.getNodeType()));
+
+
 
 	}
 }

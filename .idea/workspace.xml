@@ -2,10 +2,16 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="c0e3b33d-eeec-463a-b539-62d273a79c8c" name="Default Changelist" comment="study 30.10 DOMParser">
-      <change afterPath="$PROJECT_DIR$/src/main/java/xml/dom/node_info/NodeInfo.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/xml/dom/node_info/Utils.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/groovy/assertions/UsingAssertions1.groovy" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/groovy/assertions/UsingAssertions2.groovy" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/groovy/basics/Book.groovy" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/groovy/basics/BookBean.groovy" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/groovy/basics/DeclaringClasses.groovy" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/groovy/basics/FixedBook.groovy" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/xml/dom/node_info/CdCatalogTextCleaner.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/xml/SaxParser.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/xml/dom/node_info/NodeInfo.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/xml/dom/node_info/NodeInfo.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/META-INF/testlab.kotlin_module" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/META-INF/testlab.kotlin_module" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/preparation_1/Cow.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/preparation_1/Cow.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/preparation_1/Dog.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/preparation_1/Dog.class" afterDir="false" />
@@ -21,7 +27,6 @@
       <change beforePath="$PROJECT_DIR$/target/classes/preparation_1/Super.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/preparation_1/Super.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/stream_api/TestClass.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/stream_api/TestClass.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/stream_api/entitys/Employe.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/stream_api/entitys/Employe.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/xmls/example.xml" beforeDir="false" afterPath="$PROJECT_DIR$/xmls/example.xml" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -65,12 +70,15 @@
     <property name="project.structure.side.proportion" value="0.2" />
   </component>
   <component name="RecentsManager">
+    <key name="CreateClassDialog.RecentsKey">
+      <recent name="StreamAPI" />
+    </key>
+    <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="xml.dom" />
+    </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\My\tests_experiments_preparations_examples\xmls" />
       <recent name="C:\My\tests_experiments_preparations_examples" />
-    </key>
-    <key name="CreateClassDialog.RecentsKey">
-      <recent name="StreamAPI" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -85,13 +93,13 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Application.NodeInfo">
-    <configuration name="DomParserBasics" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="xml.dom.DomParserBasics" />
+  <component name="RunManager" selected="Application.DeclaringClasses">
+    <configuration name="Basic" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="groovy.Basic" />
       <module name="testlab" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="xml.dom.*" />
+          <option name="PATTERN" value="groovy.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -99,25 +107,12 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="GetElementsByTagName" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="xml.dom.accessing_nodes.GetElementsByTagName" />
+    <configuration name="DeclaringClasses" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="groovy.basics.DeclaringClasses" />
       <module name="testlab" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="xml.dom.accessing_nodes.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="NavigatingNodeRelationships" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="xml.dom.accessing_nodes.NavigatingNodeRelationships" />
-      <module name="testlab" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="xml.dom.accessing_nodes.*" />
+          <option name="PATTERN" value="groovy.basics.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -138,12 +133,25 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="Utils" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="xml.dom.node_info.Utils" />
+    <configuration name="UsingAssertions1" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="groovy.assertions.UsingAssertions1" />
       <module name="testlab" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="xml.dom.node_info.*" />
+          <option name="PATTERN" value="groovy.assertions.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="UsingAssertions2" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="groovy.assertions.UsingAssertions2" />
+      <module name="testlab" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="groovy.assertions.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -153,11 +161,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.DeclaringClasses" />
+        <item itemvalue="Application.UsingAssertions2" />
+        <item itemvalue="Application.UsingAssertions1" />
+        <item itemvalue="Application.Basic" />
         <item itemvalue="Application.NodeInfo" />
-        <item itemvalue="Application.Utils" />
-        <item itemvalue="Application.NavigatingNodeRelationships" />
-        <item itemvalue="Application.DomParserBasics" />
-        <item itemvalue="Application.GetElementsByTagName" />
       </list>
     </recent_temporary>
   </component>
@@ -224,7 +232,14 @@
       <option name="project" value="LOCAL" />
       <updated>1572607252406</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="study 1.11 DOMParser(2)">
+      <created>1572620093060</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1572620093060</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
@@ -254,7 +269,8 @@
     <MESSAGE value="study 30.10 DOMParser" />
     <MESSAGE value="study 31.10 DOMParser +" />
     <MESSAGE value="study 1.11 DOMParser" />
-    <option name="LAST_COMMIT_MESSAGE" value="study 1.11 DOMParser" />
+    <MESSAGE value="study 1.11 DOMParser(2)" />
+    <option name="LAST_COMMIT_MESSAGE" value="study 1.11 DOMParser(2)" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
