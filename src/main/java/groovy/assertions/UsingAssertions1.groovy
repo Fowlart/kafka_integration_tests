@@ -18,20 +18,24 @@ class UsingAssertions1 {
         assert x == 1
 
         //This is the typical style when asserting the program status for the current line. It uses two statements on the same line, separated by a semicolon.
-        def y = 1; assert y == 1
+        def y = 1
+        assert y == 1
 
         // assert in loops
         List<Integer> list = new ArrayList<>()
 
         for (int i = 0; i <= 20; i++) {
-            list.add(i);
+            list.add(i)
         }
 
         // What happens if an assertion fails? Pause and think about the language features required to provide such a sophisticated error message.
-        assert (list.size() == 20)
+ //       assert (list.size() == 20)
 
         list.each {
             print it
         }
+
+        assert x == 'hey, this is really the content of x'
+
     }
 }
