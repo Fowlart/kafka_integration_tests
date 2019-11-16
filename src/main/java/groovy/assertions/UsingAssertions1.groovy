@@ -3,8 +3,8 @@ package groovy.assertions
 class UsingAssertions1 {
 
     /** Assertions serve multiple purposes:
-     *■ They can be used to reveal the current program state
-     *■ They often make good replacements for line comments, because they reveal assumptions and verify them at the same time.
+     * ■ They can be used to reveal the current program state
+     * ■ They often make good replacements for line comments, because they reveal assumptions and verify them at the same time.
      **/
 
     static void main(String[] args) {
@@ -27,11 +27,15 @@ class UsingAssertions1 {
             list.add(i);
         }
 
-        // What happens if an assertion fails? Pause and think about the language features required to provide such a sophisticated error message.
-        assert (list.size() == 20)
+        // checking optional value
+        Optional<Double> optional = Optional.empty()
+        assert (!optional.isPresent())
 
+        // What happens if an assertion fails? Pause and think about the language features required to provide such a sophisticated error message.
+        assert (list.size() == 21)
         list.each {
             print it
         }
+
     }
 }
