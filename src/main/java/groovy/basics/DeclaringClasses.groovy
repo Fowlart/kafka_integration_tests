@@ -20,16 +20,8 @@ class DeclaringClasses {
         groovyBook.title = 'Groovy conquers the world'
         assert groovyBook.title == 'Groovy conquers the world'
 
-
-        def gina = new FixedBook('Groovy in Action')
-        def regina = new FixedBook(title: 'Groovy in Action')
-        assert gina.title == 'Groovy in Action'
-        assert gina == regina
-        try {
-            gina.title = "Oops!"
-            assert false, "should not reach here" // this assert will stop the program execution and print out msg
-        } catch (ReadOnlyPropertyException expected) {
-            println "Expected Error: '$expected.message'"
-        }
+        // loop definition
+        def partyPeople = 100
+        1.upto(partyPeople) {print it}
     }
 }
