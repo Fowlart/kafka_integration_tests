@@ -13,11 +13,10 @@ class FixedBook {
         assert gina.title == 'Groovy in Action'
         assert gina == regina
         try {
-            gina.title = "Oops!"
+   //         gina.title = "Oops!"
             assert false, "should not reach here" // this assert will stop the program execution and print out msg
         } catch (ReadOnlyPropertyException expected) {
             println "Expected Error: '$expected.message'"
         }
     }
-
 }
