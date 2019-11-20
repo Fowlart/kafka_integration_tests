@@ -21,6 +21,15 @@ aaassaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa''')
 
 
         def a = "<some text>"
-        println(/x(\d*)y\$a/)
+        println(/x(\d*)y\\n$a/)
+
+        //   a = "<another text>"
+        println($/x(\d*)y\\n$a/$)
+
+        println("You can provide 'quoted' without escaping ordinary quote sign")
+        println('You can provide "quoted" without escaping ordinary quote sign')
+
+        //If you want to coerce a string into a character:
+        println("a".toCharacter().isDigit())
     }
 }
