@@ -5,11 +5,13 @@ class StringOperations {
         String greeting = 'Hello Groovy!'
         assert greeting.startsWith('Hello')
         assert greeting.getAt(0) == 'H'
-        assert greeting[0] == 'H'
+
+        assert greeting[0] == 'H' // ???Syntax???
+
         assert greeting.indexOf('Groovy') >= 0
         assert greeting.contains('Groovy')
         assert greeting[6..11] == 'Groovy'
-        assert 'Hi' + greeting - 'Hello' == 'Hi Groovy!'
+        assert 'Hi' + greeting - 'Hello' == 'Hi Groovy!'//
         assert greeting.count('o') == 3
 
         // text transforming operations
