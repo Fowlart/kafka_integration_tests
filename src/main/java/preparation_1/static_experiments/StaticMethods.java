@@ -1,4 +1,4 @@
-package preparation_1;
+package preparation_1.static_experiments;
 
 public class StaticMethods {
 

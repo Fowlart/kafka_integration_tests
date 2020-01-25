@@ -27,6 +27,10 @@ public class TestClass {
         return result;
     }
 
+    public static List<Employe> getNull() {
+        return null;
+    }
+
     public static void main(String[] args) {
 
         // Just grouping by Position
@@ -54,5 +58,9 @@ public class TestClass {
                         collect(Collectors.partitioningBy((employe -> employe.getGender() == Gender.MALE))).
                         get(true).stream().map(Employe::getName).collect(Collectors.joining(", "))
         );
+
+
+        System.out.println(getNull().stream().filter(Objects::nonNull).findAny().orElseGet(()->new Employe(12, "bob", Gender.FEMALE, Position.DEVELOPER, Seniority.JUNIOR)));
+
     }
 }
