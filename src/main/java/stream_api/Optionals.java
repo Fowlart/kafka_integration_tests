@@ -7,5 +7,8 @@ public class Optionals {
         Integer i = null;
         Optional<Integer> res =  Optional.ofNullable(i);
         System.out.println(res.isPresent());
+
+         res =  Optional.of(i);
+        System.out.println(res.isPresent());
     }
 }
