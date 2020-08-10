@@ -27,6 +27,12 @@ public class TestClass {
         return result;
     }
 
+    public static List<Employe> getTestDataWithNull() {
+        List<Employe> result = new ArrayList<>();
+        result.add(new Employe(31, null, Gender.MALE, Position.DEVELOPER, Seniority.JUNIOR));
+        return result;
+    }
+
     public static List<Employe> getNull() {
         return null;
     }
@@ -59,8 +65,10 @@ public class TestClass {
                         get(true).stream().map(Employe::getName).collect(Collectors.joining(", "))
         );
 
+      Optional<String> nameOptional = getTestDataWithNull().stream().map(Employe::getName).filter(Objects::nonNull).findFirst();
+      System.out.println(">>>>>"+nameOptional.get());
 
-        System.out.println(getNull().stream().filter(Objects::nonNull).findAny().orElseGet(()->new Employe(12, "bob", Gender.FEMALE, Position.DEVELOPER, Seniority.JUNIOR)));
+  //      System.out.println(getNull().stream().filter(Objects::nonNull).findAny().orElseGet(()->new Employe(12, "bob", Gender.FEMALE, Position.DEVELOPER, Seniority.JUNIOR)));
 
     }
 }
