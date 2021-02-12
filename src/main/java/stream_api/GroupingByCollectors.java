@@ -4,6 +4,8 @@ import stream_api.entitys.Employe;
 import stream_api.entitys.Gender;
 import stream_api.entitys.Position;
 
+import java.util.Collection;
+import java.util.Collections;
 import java.util.List;
 import java.util.Map;
 import java.util.Objects;
@@ -71,6 +73,9 @@ public class GroupingByCollectors {
         Map<Gender, Double> result5 = TestClass.getTestData().stream().collect(Collectors.groupingBy(Employe::getGender, Collectors.averagingInt(Employe::getAge)));
         System.out.println("Avg MALE age:" + result5.get(Gender.MALE));
         System.out.println("Avg FEMALE age:" + result5.get(Gender.FEMALE));
+
+       Set<Employe> employes=  result2.values().stream().flatMap(Collection::stream).collect(Collectors.toSet());
+
 
 
 

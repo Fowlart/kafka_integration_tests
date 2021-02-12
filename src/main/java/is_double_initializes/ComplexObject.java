@@ -17,6 +17,7 @@ class MoreComplexObject {
 public class ComplexObject {
     private java.lang.Double aDouble;
     private int anInt;
+    private boolean aBoolean;
 
     public Double getaDouble() {
         return aDouble;
@@ -41,6 +42,7 @@ public class ComplexObject {
         // Primitives are initialized, but nonPrimitives - not
         System.out.println(complexObject.getaDouble());
         System.out.println(complexObject.getAnInt());
+        System.out.println(complexObject.aBoolean);
 
         complexObject.setaDouble(15d);
         Optional<Double> doubleOptional = Optional.ofNullable(complexObject.getaDouble());
