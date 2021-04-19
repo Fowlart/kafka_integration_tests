@@ -15,6 +15,7 @@ public class BasicAuth {
         String encryptPassword= cryptPasswordEncoder.encode(secret);
         System.out.println("for our settings: "+encryptPassword);
         String encodedString = Base64.getEncoder().encodeToString((user + ":" + secret).getBytes(StandardCharsets.UTF_8));
+        System.out.println("Expected header name: Authorization");
         System.out.println("Expected header: "+"Basic " + encodedString);
         System.out.println("Is password match? "+cryptPasswordEncoder.matches(secret,testedPassword));
     }
