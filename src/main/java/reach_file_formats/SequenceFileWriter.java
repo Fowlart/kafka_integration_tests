@@ -17,7 +17,7 @@ public class SequenceFileWriter {
 
     public static void main(String[] args) {
 
-        String outputFile = "generated_files/sequence_file";
+        String outputFile = "generated_files/sequence_file.seq";
 
         Configuration conf = new Configuration();
         try {

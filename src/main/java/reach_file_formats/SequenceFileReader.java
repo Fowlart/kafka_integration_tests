@@ -12,7 +12,7 @@ public class SequenceFileReader {
 
     public static void main(String[] args) {
 
-        String inputFile = "generated_files/sequence_file";
+        String inputFile = "generated_files/sequence_file.seq";
 
         Configuration conf = new Configuration();
         try {
