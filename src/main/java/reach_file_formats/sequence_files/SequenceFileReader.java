@@ -1,4 +1,4 @@
-package reach_file_formats;
+package reach_file_formats.sequence_files;
 
 import org.apache.hadoop.conf.Configuration;
 import org.apache.hadoop.fs.Path;
