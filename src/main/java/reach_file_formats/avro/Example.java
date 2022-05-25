@@ -14,9 +14,29 @@ import java.util.Date;
 
 class AvroHttpRequestSchemaProvider {
 
-    private static final Schema clientIdentifier = SchemaBuilder.record("ClientIdentifier").namespace("com.fowlart.avro").fields().requiredString("hostName").requiredString("ipAddress").endRecord();
+    private static final Schema clientIdentifier = SchemaBuilder
+            .record("ClientIdentifier")
+            .namespace("reach_file_formats.avro")
+            .fields()
+            .requiredString("hostName").requiredString("ipAddress").endRecord();
 
-    private static final Schema avroHttpRequest = SchemaBuilder.record("AvroHttpRequest").namespace("com.fowlart.avro").fields().requiredLong("requestTime").name("clientIdentifier").type(clientIdentifier).noDefault().name("employeeNames").type().array().items().stringType().arrayDefault(null).name("active").type().enumeration("Active").symbols("YES", "NO").noDefault().endRecord();
+    private static final Schema avroHttpRequest = SchemaBuilder.record("AvroHttpRequest")
+            .namespace("com.reach_file_formats.avro")
+            .fields()
+            .requiredLong("requestTime")
+            .name("clientIdentifier")
+            .type(clientIdentifier).noDefault()
+            .name("employeeNames")
+            .type()
+            .array()
+            .items()
+            .stringType()
+            .arrayDefault(null)
+            .name("active")
+            .type()
+            .enumeration("Active")
+            .symbols("YES", "NO").noDefault()
+            .endRecord();
 
     public static Schema getClassSchema() {
         return avroHttpRequest;
@@ -27,10 +47,7 @@ public class Example {
 
     private static final Logger logger = LoggerFactory.getLogger(Example.class);
 
-    public static void main(String[] args) {
-
-        logger.info(()->"JSON avro representation:" + AvroHttpRequestSchemaProvider.getClassSchema().toString(true));
-
+    private static void bookExampleRun() {
         Active active = Active.YES;
         ClientIdentifier clientIdentifier = ClientIdentifier
                 .newBuilder()
@@ -54,11 +71,22 @@ public class Example {
         String binaryFilePath = "generated_files/object_1.obj";
         writeByte(serealizeAvroHttpRequestBinary(avroHttpRequest),binaryFilePath);
         try {
-           AvroHttpRequest result =  deSerealizeAvroHttpRequestBinary(readBytesFromFile(binaryFilePath));
+            AvroHttpRequest result =  deSerealizeAvroHttpRequestBinary(readBytesFromFile(binaryFilePath));
             logger.info(()->"deserialized results: "+result.toString());
         } catch (IOException e) {
             e.printStackTrace();
         }
+    }
+
+    public static void main(String[] args) {
+        // logger.info(()->"JSON avro representation:" + AvroHttpRequestSchemaProvider.getClassSchema().toString(true));
+        //  bookExampleRun();
+
+        final Rule rule = Rule
+                .newBuilder()
+                .setRuleCreatedDate(new Date().getTime())
+                .build();
+
     }
 
     public static byte[] readBytesFromFile(String path) throws IOException
