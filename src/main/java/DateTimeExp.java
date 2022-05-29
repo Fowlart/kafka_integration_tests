@@ -1,5 +1,6 @@
 import java.text.DateFormat;
 import java.text.SimpleDateFormat;
+import java.time.LocalDateTime;
 import java.util.Calendar;
 import java.util.Date;
 
@@ -16,6 +17,9 @@ public class DateTimeExp {
 
         Date d = new Date(System.currentTimeMillis() - (86400000*7));
         System.out.println(d);
+
+        new Date().getTime();
+        LocalDateTime.now();
 
     }
 

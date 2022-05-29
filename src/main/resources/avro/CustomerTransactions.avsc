@@ -1584,6 +1584,72 @@
       "default": []
     },
     {
+      "name": "rules",
+      "type": [
+        "null",
+        {
+          "type": "array",
+          "items": {
+            "type": "record",
+            "name": "Rule",
+            "fields": [
+              {
+                "name": "rule_id",
+                "type": {
+                  "type": "string",
+                  "avro.java.string": "String"
+                },
+                "default": ""
+              },
+              {
+                "name": "priority",
+                "type": "int",
+                "default": 0
+              },
+              {
+                "name": "rule_value",
+                "type": "double",
+                "default": 0
+              },
+              {
+                "name": "rule_desc",
+                "type": {
+                  "type": "string",
+                  "avro.java.string": "String"
+                },
+                "default": ""
+              },
+              {
+                "name": "rule_action",
+                "type": {
+                  "type": "string",
+                  "avro.java.string": "String"
+                },
+                "default": ""
+              },
+              {
+                "name": "rule_active_flag",
+                "type": "boolean",
+                "default": false
+              },
+              {
+                "name": "rule_created_date",
+                "type": "long",
+                "default": 0
+              },
+              {
+                "name": "rule_modified_date",
+                "type": "long",
+                "default": 0
+              }
+            ]
+          },
+          "default": []
+        }
+      ],
+      "default": null
+    },
+    {
       "name": "record_update_flag",
       "type": {
         "type": "string",
