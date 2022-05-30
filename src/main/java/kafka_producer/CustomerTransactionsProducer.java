@@ -21,11 +21,11 @@ public class CustomerTransactionsProducer {
 
     private static final Logger logger = LoggerFactory.getLogger(CustomerTransactionsProducer.class);
 
-    public static void main(String[] args) {
+    private static Properties getProperties(String filePath) {
 
         final Properties propsFromFile = new Properties();
 
-        try (InputStream input = new FileInputStream("/Users/artur/IdeaProjects/tests_experiments_preparations_examples/src/main/resources/local.properties")) {
+        try (InputStream input = new FileInputStream(filePath)) {
             propsFromFile.load(input);
 
         } catch (IOException ex) {
@@ -47,25 +47,46 @@ public class CustomerTransactionsProducer {
         props.put(AbstractKafkaSchemaSerDeConfig.BASIC_AUTH_CREDENTIALS_SOURCE, "USER_INFO");
         props.put(AbstractKafkaSchemaSerDeConfig.USER_INFO_CONFIG, propsFromFile.getProperty("basic.auth.user.info"));
 
-        KafkaProducer<String, CustomerTransactions> producer = new KafkaProducer<>(props);
+        return props;
+    }
 
-        for (int i = 0; i <= 10; i++) {
-            CustomerTransactions customerTransactions = CustomerTransactions.newBuilder().setCardNumber("223").setActiveFlag("A").setCreatedDate(new Date().getTime()).setStartDate(new Date().getTime()).setCustReturnCounter(24).setCustSaleCounter(25).setEndDate(new Date().getTime()).setOnlineAtgId("1234").setPctSaleToReturn(90).setReasonText("Test record").setReturnAuthFlag("D").setSephoraId(123456l).setRecordUpdateFlag("A").setReturnCaseId("2323242424").setReturnSurrogateKey("2323242424")
-                    .build();
-            ProducerRecord<String, CustomerTransactions> producerRecord = new ProducerRecord<>("Sephora.DataPlatform.TRE.CustomerTransactionsLogger", "second", customerTransactions);
+    public static <K, V> void produceRecord(K key, V record, String topic, int times) {
 
+        KafkaProducer<K, V> producer = new KafkaProducer<>(getProperties("/Users/artur/IdeaProjects/tests_experiments_preparations_examples/src/main/resources/local.properties"));
+
+        for (int i = 0; i < times; i++) {
+            ProducerRecord<K, V> producerRecord = new ProducerRecord<>(topic, key, record);
             producer.send(producerRecord, (recordMetadata, e) -> {
                 if (Objects.isNull(e)) {
-                    logger.info(() ->
-                            " offset: " + recordMetadata.offset() +
-                                    " topic: " + recordMetadata.topic() +
-                                    " partition: " + recordMetadata.partition() +
-                                    " timestamp: " + recordMetadata.timestamp());
+                    logger.info(() -> "Message sent! Offset: " + recordMetadata.offset() + ", topic: " + recordMetadata.topic() + ", partition: " + recordMetadata.partition() + ", timestamp: " + recordMetadata.timestamp());
                 } else {
                     logger.error(e::getMessage);
                 }
             });
         }
         producer.flush();
+    }
+
+    public static void main(String[] args) {
+
+        CustomerTransactions customerTransactions = CustomerTransactions
+                .newBuilder()
+                .setCardNumber("223")
+                .setActiveFlag("A")
+                .setCreatedDate(new Date().getTime())
+                .setStartDate(new Date().getTime())
+                .setCustReturnCounter(24)
+                .setCustSaleCounter(25)
+                .setEndDate(new Date().getTime()).setOnlineAtgId("1234")
+                .setPctSaleToReturn(90).setReasonText("Test record")
+                .setReturnAuthFlag("D")
+                .setSephoraId(123456l)
+                .setRecordUpdateFlag("A")
+                .setReturnCaseId("2323242424")
+                .setReturnSurrogateKey("2323242424")
+                .build();
+
+        produceRecord("the fourth",customerTransactions,"Sephora.DataPlatform.TRE.CustomerTransactionsLogger",1);
+
     }
 }
