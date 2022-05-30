@@ -38,12 +38,12 @@ public class CustomerTransactionsProducer {
         props.put("sasl.mechanism", "PLAIN");
         props.put(ProducerConfig.ACKS_CONFIG, "all");
         props.put(ProducerConfig.RETRIES_CONFIG, 1);
-        props.put("group.id", "Sephora.DataPlatform.TRE.CustomerTransactionsLogger.GRP.DEV");
+        props.put("group.id", propsFromFile.getProperty("group.id"));
         props.put(ProducerConfig.KEY_SERIALIZER_CLASS_CONFIG, StringSerializer.class);
         props.put(ProducerConfig.VALUE_SERIALIZER_CLASS_CONFIG, KafkaAvroSerializer.class);
         props.put(AbstractKafkaSchemaSerDeConfig.SCHEMA_REGISTRY_URL_CONFIG, propsFromFile.getProperty("schema-registry.server"));
         props.put(AbstractKafkaSchemaSerDeConfig.AUTO_REGISTER_SCHEMAS, false);
-        props.put(AbstractKafkaSchemaSerDeConfig.USE_SCHEMA_ID, "100262");
+        props.put(AbstractKafkaSchemaSerDeConfig.USE_SCHEMA_ID, propsFromFile.getProperty("use.schema.id"));
         props.put(AbstractKafkaSchemaSerDeConfig.BASIC_AUTH_CREDENTIALS_SOURCE, "USER_INFO");
         props.put(AbstractKafkaSchemaSerDeConfig.USER_INFO_CONFIG, propsFromFile.getProperty("basic.auth.user.info"));
 
@@ -87,6 +87,5 @@ public class CustomerTransactionsProducer {
                 .build();
 
         produceRecord("the fourth",customerTransactions,"Sephora.DataPlatform.TRE.CustomerTransactionsLogger",1);
-
     }
 }
