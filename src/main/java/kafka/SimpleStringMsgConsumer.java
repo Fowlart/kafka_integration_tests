@@ -1,4 +1,4 @@
-package kafka_producer;
+package kafka;
 
 import org.apache.kafka.clients.consumer.ConsumerConfig;
 import org.apache.kafka.clients.consumer.ConsumerRecord;

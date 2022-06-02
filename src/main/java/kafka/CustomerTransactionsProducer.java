@@ -1,4 +1,4 @@
-package kafka_producer;
+package kafka;
 
 import io.confluent.kafka.serializers.AbstractKafkaSchemaSerDeConfig;
 import io.confluent.kafka.serializers.KafkaAvroSerializer;
