@@ -86,6 +86,6 @@ public class CustomerTransactionsProducer {
                 .setReturnSurrogateKey("2323242424")
                 .build();
 
-        produceRecord("the fourth",customerTransactions,"Sephora.DataPlatform.TRE.CustomerTransactionsLogger",1);
+        produceRecord("the fourth",customerTransactions,"Sephora.DataPlatform.ReturnAuth.CustomerTransactionsLogger",1);
     }
 }
