@@ -1,6 +1,7 @@
-package kafka;
+package test_cases;
 
 import avro_pojos.CustomerTransactionsSummary;
+import kafka_utils.PropertiesUtil;
 import org.apache.kafka.clients.consumer.ConsumerRecord;
 import org.apache.kafka.clients.consumer.ConsumerRecords;
 import org.apache.kafka.clients.consumer.KafkaConsumer;
@@ -19,7 +20,7 @@ public class ConsumeFromCustomerTransactionLogger {
 
 
         KafkaConsumer<String, CustomerTransactionsSummary> consumer =
-                new KafkaConsumer<>(PropertiesUtil.getPropertiesForLocalConsumer());
+                new KafkaConsumer<>(PropertiesUtil.getPropertiesForLocalConsumer("test_group_10"));
 
         consumer.subscribe(Collections.singleton("Sephora.DataPlatform.ReturnAuth.CustomerTransactionsLogger"));
 

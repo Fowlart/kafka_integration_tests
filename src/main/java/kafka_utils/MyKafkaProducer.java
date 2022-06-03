@@ -1,6 +1,6 @@
-package kafka;
+package kafka_utils;
 
-import org.apache.kafka.clients.producer.KafkaProducer;
+import test_cases.ProduceInCustTransLogger;
 import org.apache.kafka.clients.producer.ProducerRecord;
 import org.junit.platform.commons.logging.Logger;
 import org.junit.platform.commons.logging.LoggerFactory;

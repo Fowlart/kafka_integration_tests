@@ -1,7 +1,9 @@
-package kafka;
+package test_cases;
 
 import avro_pojos.OrderHeaderConsolidated;
 import avro_pojos.OrderTenderDetailsEvents;
+import kafka_utils.MyKafkaProducer;
+import kafka_utils.PropertiesUtil;
 import org.apache.commons.compress.utils.Lists;
 
 import java.util.Date;
@@ -34,8 +36,8 @@ public class ProduceDataAtInputTopics {
         return OrderHeaderConsolidated
                 .newBuilder()
                 .setOrderNumber(orderNumber)
-                .setUsaId(666L)
-                .setSephoraId(12345L)
+                .setUsaId(669L)
+                .setSephoraId(12348L)
                 .setTransactionType(transType)
                 .setOrderSubmitDate(date)
                 .setChannelType("SEPHORA")
@@ -51,10 +53,10 @@ public class ProduceDataAtInputTopics {
         List<OrderHeaderConsolidated> returns = Lists.newArrayList();
         List<OrderTenderDetailsEvents> tenders = Lists.newArrayList();
 
-        IntStream.range(0,25).forEach(i -> {
+        IntStream.range(0,24).forEach(i -> {
             String orderNum = Long.toString(new Date().getTime() + i);
             sales.add(getOrder(orderNum, time, "S"));
-            //    if (i<=24) returns.add(getOrder(orderNum,time,"R"));
+            if (i<=23) returns.add(getOrder(orderNum,time,"R"));
             tenders.add(getTender(orderNum, time, "S"));
         });
 
@@ -72,6 +74,5 @@ public class ProduceDataAtInputTopics {
         tenders.forEach(ten -> orderTenderDetailsEventsMyKafkaProducer.produceRecord(ten.getOrderNumber(),
                 ten,
                 "Sephora.DataPlatform.ReturnAuth.OrderTenderDetailsEvents", 1));
-
     }
 }

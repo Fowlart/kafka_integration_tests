@@ -1,4 +1,4 @@
-package kafka;
+package kafka_utils;
 
 import io.confluent.kafka.serializers.AbstractKafkaSchemaSerDeConfig;
 import io.confluent.kafka.serializers.KafkaAvroDeserializer;
@@ -38,7 +38,7 @@ public class PropertiesUtil {
         return props;
     }
 
-    public static Properties getPropertiesForLocalConsumer() {
+    public static Properties getPropertiesForLocalConsumer(String groupId) {
         final Properties propsFromFile = getPropertiesFromFile(LOCAL_KAFKA_PROPS_PATH);
         final Properties props = new Properties();
         props.put(ConsumerConfig.BOOTSTRAP_SERVERS_CONFIG, propsFromFile.getProperty("kafka.server"));
@@ -46,7 +46,7 @@ public class PropertiesUtil {
         props.put(ConsumerConfig.VALUE_DESERIALIZER_CLASS_CONFIG, KafkaAvroDeserializer.class);
         props.put(AbstractKafkaSchemaSerDeConfig.SCHEMA_REGISTRY_URL_CONFIG, propsFromFile.getProperty("schema-registry.server"));
         props.put(ConsumerConfig.AUTO_OFFSET_RESET_CONFIG, "earliest");
-        props.put("group.id", "test_group_0");
+        props.put("group.id", groupId);
         return props;
     }
 

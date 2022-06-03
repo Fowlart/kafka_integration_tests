@@ -1,6 +1,8 @@
-package kafka;
+package test_cases;
 
 import avro_pojos.CustomerTransactions;
+import kafka_utils.MyKafkaProducer;
+import kafka_utils.PropertiesUtil;
 
 import java.util.Date;
 
