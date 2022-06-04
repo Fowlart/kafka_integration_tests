@@ -1700,6 +1700,10 @@ public class CustomerTransactionsSummary extends org.apache.avro.specific.Specif
       }
     }
   }
+
+  public static void main(String[] args) {
+    System.out.println(SCHEMA$);
+  }
 }
 
 

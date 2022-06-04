@@ -1,4 +1,4 @@
-package test_cases;
+package danger_experements;
 
 import kafka_utils.PropertiesUtil;
 import org.apache.kafka.clients.consumer.ConsumerRecord;
@@ -16,7 +16,7 @@ public class SimpleStringMsgConsumer {
 
     public static void main(String[] args) {
 
-        KafkaConsumer<String, String> consumer = new KafkaConsumer<>(PropertiesUtil.getPropertiesForQaConsumer());
+        KafkaConsumer<String, String> consumer = new KafkaConsumer<>(PropertiesUtil.getPropertiesForQaConsumer("Sephora.DataPlatform.ReturnAuth.CustomerTransactionsLogger.GRP.STG",null));
         consumer.subscribe(Collections.singleton("Stores.StoreDigital.RetailSaleTransactions"));
         while (true) {
             ConsumerRecords<String, String> consumerRecords = consumer.poll(Duration.ofMillis(100));

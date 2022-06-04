@@ -1,27 +1,13 @@
-package test_cases;
+package test_utils;
 
 import avro_pojos.Rule;
-import kafka_utils.MyKafkaProducer;
-import kafka_utils.PropertiesUtil;
 import org.apache.commons.compress.utils.Lists;
 
 import java.util.List;
 
-public class ProduceRules {
+public class RuleGenerator {
 
-    /** ('1',2,90,'Percentage cut off','PercentageCutOff',true, unix_timestamp(), unix_timestamp()),
-
-     ('2',1,23,'Pre-Warning # of transactions','TransactionPreWarning',true, unix_timestamp(), unix_timestamp()),
-
-     ('4',4,25,'Denial # of transactions','TransactionDenial',true, unix_timestamp(), unix_timestamp()),
-
-     ('3',3,24,'Warning # of transactions','TransactionWarning',true, unix_timestamp(), unix_timestamp());
-     */
-
-    private static final MyKafkaProducer<String, Rule> ruleProducer =
-            new MyKafkaProducer<>(PropertiesUtil.getPropertiesForLocalProducer());
-
-   static private List<Rule> getRules() {
+   public static List<Rule> getRules() {
 
         Rule warningRule = Rule
                 .newBuilder()
@@ -61,11 +47,5 @@ public class ProduceRules {
         rules.add(denialRule);
         rules.add(warningRule);
         return rules;
-    }
-
-    public static void main(String[] args) {
-       getRules().forEach(rule ->
-               ruleProducer.produceRecord(rule.getRuleId(),rule,
-                       "Sephora.DataPlatform.ReturnAuth.RulesManage",1));
     }
 }
