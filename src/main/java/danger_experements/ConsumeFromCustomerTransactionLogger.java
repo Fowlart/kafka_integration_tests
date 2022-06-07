@@ -19,18 +19,17 @@ public class ConsumeFromCustomerTransactionLogger {
     public static void main(String[] args) {
 
 
-        KafkaConsumer<String, CustomerTransactions> consumer =
+        KafkaConsumer<String, org.apache.avro.generic.GenericData.Record> consumer =
                 new KafkaConsumer<>(PropertiesUtil.getPropertiesForQaConsumer("Sephora.DataPlatform.ReturnAuth.CustomerTransactionsLogger.GRP.STG",null));
 
         consumer.subscribe(Collections.singleton("Sephora.DataPlatform.ReturnAuth.CustomerTransactionsLogger"));
 
         //poll for data
         while (true) {
-            ConsumerRecords<String, CustomerTransactions> consumerRecords = consumer.poll(Duration.ofMillis(100));
-            for (ConsumerRecord<String, CustomerTransactions> cr : consumerRecords) {
+            ConsumerRecords<String, org.apache.avro.generic.GenericData.Record> consumerRecords = consumer.poll(Duration.ofMillis(100));
+            for (ConsumerRecord<String, org.apache.avro.generic.GenericData.Record> cr : consumerRecords) {
                 logger.info(() -> "key: " + cr.key() + "| \n \n \n value: " + cr.value());
             }
-            consumer.commitSync();
         }
     }
 }

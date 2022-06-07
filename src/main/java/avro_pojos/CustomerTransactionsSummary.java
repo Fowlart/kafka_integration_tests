@@ -5,11 +5,14 @@
  */
 package avro_pojos;
 
-import org.apache.avro.message.BinaryMessageDecoder;
-import org.apache.avro.message.BinaryMessageEncoder;
-import org.apache.avro.message.SchemaStore;
+import org.apache.avro.generic.GenericArray;
 import org.apache.avro.specific.SpecificData;
+import org.apache.avro.util.Utf8;
+import org.apache.avro.message.BinaryMessageEncoder;
+import org.apache.avro.message.BinaryMessageDecoder;
+import org.apache.avro.message.SchemaStore;
 
+@org.apache.avro.specific.AvroGenerated
 public class CustomerTransactionsSummary extends org.apache.avro.specific.SpecificRecordBase implements org.apache.avro.specific.SpecificRecord {
   private static final long serialVersionUID = 8360026988201882156L;
   public static final org.apache.avro.Schema SCHEMA$ = new org.apache.avro.Schema.Parser().parse("{\"type\":\"record\",\"name\":\"CustomerTransactionsSummary\",\"namespace\":\"com.sephora.dataplatform.avro\",\"fields\":[{\"name\":\"return_surrogate_key\",\"type\":{\"type\":\"string\",\"avro.java.string\":\"String\"}},{\"name\":\"return_reference_number\",\"type\":[\"null\",{\"type\":\"string\",\"avro.java.string\":\"String\"}],\"default\":null},{\"name\":\"usa_id\",\"type\":[\"null\",\"long\"],\"doc\":\"bi_id\",\"default\":null},{\"name\":\"sephora_id\",\"type\":[\"null\",\"long\"],\"doc\":\"sephora_id field\",\"default\":null},{\"name\":\"online_atg_id\",\"type\":[\"null\",{\"type\":\"string\",\"avro.java.string\":\"String\"}],\"doc\":\"online_atg_id field\",\"default\":null},{\"name\":\"card_number\",\"type\":[\"null\",{\"type\":\"string\",\"avro.java.string\":\"String\"}],\"doc\":\"card_number token from order_tender_details_events table\",\"default\":null},{\"name\":\"return_auth_flag\",\"type\":[\"null\",{\"type\":\"string\",\"avro.java.string\":\"String\"}],\"doc\":\"return_auth_flag field\",\"default\":null},{\"name\":\"reason_text\",\"type\":[\"null\",{\"type\":\"string\",\"avro.java.string\":\"String\"}],\"doc\":\"the reason why the current return has such return_auth_flag\",\"default\":null},{\"name\":\"cust_sale_counter\",\"type\":\"int\",\"doc\":\"cust_sale_counter field\"},{\"name\":\"cust_return_counter\",\"type\":\"int\",\"doc\":\"cust_return_counter field\"},{\"name\":\"pct_sale_to_return\",\"type\":\"double\",\"doc\":\"pct_sale_to_return field\"},{\"name\":\"created_date\",\"type\":\"long\",\"doc\":\"created_date field\"},{\"name\":\"start_date\",\"type\":\"long\",\"doc\":\"start_date field\"},{\"name\":\"end_date\",\"type\":\"long\",\"doc\":\"end_date field\"},{\"name\":\"active_flag\",\"type\":{\"type\":\"string\",\"avro.java.string\":\"String\"},\"doc\":\"active_flag field A or I\",\"default\":\"A\"},{\"name\":\"record_update_flag\",\"type\":{\"type\":\"string\",\"avro.java.string\":\"String\"},\"doc\":\"record_update_flag field U or D\",\"default\":\"U\"}]}");
@@ -1700,6 +1703,15 @@ public class CustomerTransactionsSummary extends org.apache.avro.specific.Specif
     }
   }
 }
+
+
+
+
+
+
+
+
+
 
 
 

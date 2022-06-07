@@ -1,6 +1,5 @@
 package kafka_utils;
 
-import danger_experements.ProduceInCustTransLogger;
 import org.apache.kafka.clients.producer.ProducerRecord;
 import org.junit.platform.commons.logging.Logger;
 import org.junit.platform.commons.logging.LoggerFactory;
@@ -16,7 +15,7 @@ public class MyKafkaProducer<K,V> {
         this.producer = new org.apache.kafka.clients.producer.KafkaProducer<>(properties);
     }
 
-    private static final Logger logger = LoggerFactory.getLogger(ProduceInCustTransLogger.class);
+    private static final Logger logger = LoggerFactory.getLogger(MyKafkaProducer.class);
 
     public void produceRecord(K key, V record, String topic, int times) {
         for (int i = 0; i < times; i++) {

@@ -17,7 +17,7 @@ public class ConsumeFromCustomerSummary {
 
     public static void main(String[] args) {
 
-        KafkaConsumer<String, CustomerTransactionsSummary> consumer =
+        KafkaConsumer<String, org.apache.avro.generic.GenericData.Record> consumer =
                 new KafkaConsumer<>(PropertiesUtil.getPropertiesForQaConsumer("DataPlatformCreditCardDPPreScreen",
                         "100264"));
 
@@ -25,8 +25,8 @@ public class ConsumeFromCustomerSummary {
 
         //poll for data
         while (true) {
-            ConsumerRecords<String, CustomerTransactionsSummary> consumerRecords = consumer.poll(Duration.ofMillis(100));
-            for (ConsumerRecord<String, CustomerTransactionsSummary> cr : consumerRecords) {
+            ConsumerRecords<String, org.apache.avro.generic.GenericData.Record> consumerRecords = consumer.poll(Duration.ofMillis(100));
+            for (ConsumerRecord<String, org.apache.avro.generic.GenericData.Record> cr : consumerRecords) {
                 logger.info(cr+"\n \n \n");
             }
     }
