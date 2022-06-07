@@ -1,2 +1,4 @@
 /target/classes/
 /.idea/
+/src/main/resources/dev-kafka.properties
+/src/main/resources/qa-kafka.properties

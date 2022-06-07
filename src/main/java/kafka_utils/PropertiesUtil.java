@@ -15,9 +15,9 @@ import java.util.Objects;
 import java.util.Properties;
 
 public class PropertiesUtil {
-    private static final String LOCAL_KAFKA_PROPS_PATH = "/Users/artur/IdeaProjects/tests_experiments_preparations_examples/src/main/resources/local-kafka.properties";
-    private static final String DEV_KAFKA_PROPS_PATH = "/Users/artur/IdeaProjects/tests_experiments_preparations_examples/src/main/resources/dev-kafka.properties";
-    private static final String QA_KAFKA_PROPS_PATH = "/Users/artur/IdeaProjects/tests_experiments_preparations_examples/src/main/resources/qa-kafka.properties";
+    private static final String LOCAL_KAFKA_PROPS_PATH = "src/main/resources/local-kafka.properties";
+    private static final String DEV_KAFKA_PROPS_PATH = "src/main/resources/dev-kafka.properties";
+    private static final String QA_KAFKA_PROPS_PATH = "src/main/resources/qa-kafka.properties";
 
     private static Properties getPropertiesFromFile(String filePath) {
         final Properties propsFromFile = new Properties();
