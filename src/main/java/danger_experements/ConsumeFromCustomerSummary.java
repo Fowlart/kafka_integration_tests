@@ -19,7 +19,7 @@ public class ConsumeFromCustomerSummary {
 
         KafkaConsumer<String, CustomerTransactionsSummary> consumer =
                 new KafkaConsumer<>(PropertiesUtil.getPropertiesForQaConsumer("DataPlatformCreditCardDPPreScreen",
-                        "100266"));
+                        "100264"));
 
         consumer.subscribe(Collections.singleton("Sephora.DataPlatform.ReturnAuth.CustomerSummary"));
 

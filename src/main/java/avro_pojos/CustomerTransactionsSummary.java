@@ -10,7 +10,6 @@ import org.apache.avro.message.BinaryMessageEncoder;
 import org.apache.avro.message.SchemaStore;
 import org.apache.avro.specific.SpecificData;
 
-@org.apache.avro.specific.AvroGenerated
 public class CustomerTransactionsSummary extends org.apache.avro.specific.SpecificRecordBase implements org.apache.avro.specific.SpecificRecord {
   private static final long serialVersionUID = 8360026988201882156L;
   public static final org.apache.avro.Schema SCHEMA$ = new org.apache.avro.Schema.Parser().parse("{\"type\":\"record\",\"name\":\"CustomerTransactionsSummary\",\"namespace\":\"com.sephora.dataplatform.avro\",\"fields\":[{\"name\":\"return_surrogate_key\",\"type\":{\"type\":\"string\",\"avro.java.string\":\"String\"}},{\"name\":\"return_reference_number\",\"type\":[\"null\",{\"type\":\"string\",\"avro.java.string\":\"String\"}],\"default\":null},{\"name\":\"usa_id\",\"type\":[\"null\",\"long\"],\"doc\":\"bi_id\",\"default\":null},{\"name\":\"sephora_id\",\"type\":[\"null\",\"long\"],\"doc\":\"sephora_id field\",\"default\":null},{\"name\":\"online_atg_id\",\"type\":[\"null\",{\"type\":\"string\",\"avro.java.string\":\"String\"}],\"doc\":\"online_atg_id field\",\"default\":null},{\"name\":\"card_number\",\"type\":[\"null\",{\"type\":\"string\",\"avro.java.string\":\"String\"}],\"doc\":\"card_number token from order_tender_details_events table\",\"default\":null},{\"name\":\"return_auth_flag\",\"type\":[\"null\",{\"type\":\"string\",\"avro.java.string\":\"String\"}],\"doc\":\"return_auth_flag field\",\"default\":null},{\"name\":\"reason_text\",\"type\":[\"null\",{\"type\":\"string\",\"avro.java.string\":\"String\"}],\"doc\":\"the reason why the current return has such return_auth_flag\",\"default\":null},{\"name\":\"cust_sale_counter\",\"type\":\"int\",\"doc\":\"cust_sale_counter field\"},{\"name\":\"cust_return_counter\",\"type\":\"int\",\"doc\":\"cust_return_counter field\"},{\"name\":\"pct_sale_to_return\",\"type\":\"double\",\"doc\":\"pct_sale_to_return field\"},{\"name\":\"created_date\",\"type\":\"long\",\"doc\":\"created_date field\"},{\"name\":\"start_date\",\"type\":\"long\",\"doc\":\"start_date field\"},{\"name\":\"end_date\",\"type\":\"long\",\"doc\":\"end_date field\"},{\"name\":\"active_flag\",\"type\":{\"type\":\"string\",\"avro.java.string\":\"String\"},\"doc\":\"active_flag field A or I\",\"default\":\"A\"},{\"name\":\"record_update_flag\",\"type\":{\"type\":\"string\",\"avro.java.string\":\"String\"},\"doc\":\"record_update_flag field U or D\",\"default\":\"U\"}]}");
@@ -19,10 +18,10 @@ public class CustomerTransactionsSummary extends org.apache.avro.specific.Specif
   private static SpecificData MODEL$ = new SpecificData();
 
   private static final BinaryMessageEncoder<CustomerTransactionsSummary> ENCODER =
-      new BinaryMessageEncoder<CustomerTransactionsSummary>(MODEL$, SCHEMA$);
+          new BinaryMessageEncoder<CustomerTransactionsSummary>(MODEL$, SCHEMA$);
 
   private static final BinaryMessageDecoder<CustomerTransactionsSummary> DECODER =
-      new BinaryMessageDecoder<CustomerTransactionsSummary>(MODEL$, SCHEMA$);
+          new BinaryMessageDecoder<CustomerTransactionsSummary>(MODEL$, SCHEMA$);
 
   /**
    * Return the BinaryMessageEncoder instance used by this class.
@@ -65,24 +64,24 @@ public class CustomerTransactionsSummary extends org.apache.avro.specific.Specif
    * @throws java.io.IOException if the given bytes could not be deserialized into an instance of this class
    */
   public static CustomerTransactionsSummary fromByteBuffer(
-      java.nio.ByteBuffer b) throws java.io.IOException {
+          java.nio.ByteBuffer b) throws java.io.IOException {
     return DECODER.decode(b);
   }
 
-  @Deprecated public String return_surrogate_key;
-  @Deprecated public String return_reference_number;
+  @Deprecated public java.lang.String return_surrogate_key;
+  @Deprecated public java.lang.String return_reference_number;
   /** bi_id */
-  @Deprecated public Long usa_id;
+  @Deprecated public java.lang.Long usa_id;
   /** sephora_id field */
-  @Deprecated public Long sephora_id;
+  @Deprecated public java.lang.Long sephora_id;
   /** online_atg_id field */
-  @Deprecated public String online_atg_id;
+  @Deprecated public java.lang.String online_atg_id;
   /** card_number token from order_tender_details_events table */
-  @Deprecated public String card_number;
+  @Deprecated public java.lang.String card_number;
   /** return_auth_flag field */
-  @Deprecated public String return_auth_flag;
+  @Deprecated public java.lang.String return_auth_flag;
   /** the reason why the current return has such return_auth_flag */
-  @Deprecated public String reason_text;
+  @Deprecated public java.lang.String reason_text;
   /** cust_sale_counter field */
   @Deprecated public int cust_sale_counter;
   /** cust_return_counter field */
@@ -96,9 +95,9 @@ public class CustomerTransactionsSummary extends org.apache.avro.specific.Specif
   /** end_date field */
   @Deprecated public long end_date;
   /** active_flag field A or I */
-  @Deprecated public String active_flag;
+  @Deprecated public java.lang.String active_flag;
   /** record_update_flag field U or D */
-  @Deprecated public String record_update_flag;
+  @Deprecated public java.lang.String record_update_flag;
 
   /**
    * Default constructor.  Note that this does not initialize fields
@@ -126,7 +125,7 @@ public class CustomerTransactionsSummary extends org.apache.avro.specific.Specif
    * @param active_flag active_flag field A or I
    * @param record_update_flag record_update_flag field U or D
    */
-  public CustomerTransactionsSummary(String return_surrogate_key, String return_reference_number, Long usa_id, Long sephora_id, String online_atg_id, String card_number, String return_auth_flag, String reason_text, Integer cust_sale_counter, Integer cust_return_counter, Double pct_sale_to_return, Long created_date, Long start_date, Long end_date, String active_flag, String record_update_flag) {
+  public CustomerTransactionsSummary(java.lang.String return_surrogate_key, java.lang.String return_reference_number, java.lang.Long usa_id, java.lang.Long sephora_id, java.lang.String online_atg_id, java.lang.String card_number, java.lang.String return_auth_flag, java.lang.String reason_text, java.lang.Integer cust_sale_counter, java.lang.Integer cust_return_counter, java.lang.Double pct_sale_to_return, java.lang.Long created_date, java.lang.Long start_date, java.lang.Long end_date, java.lang.String active_flag, java.lang.String record_update_flag) {
     this.return_surrogate_key = return_surrogate_key;
     this.return_reference_number = return_reference_number;
     this.usa_id = usa_id;
@@ -145,52 +144,52 @@ public class CustomerTransactionsSummary extends org.apache.avro.specific.Specif
     this.record_update_flag = record_update_flag;
   }
 
-  public SpecificData getSpecificData() { return MODEL$; }
+  public org.apache.avro.specific.SpecificData getSpecificData() { return MODEL$; }
   public org.apache.avro.Schema getSchema() { return SCHEMA$; }
   // Used by DatumWriter.  Applications should not call.
-  public Object get(int field$) {
+  public java.lang.Object get(int field$) {
     switch (field$) {
-    case 0: return return_surrogate_key;
-    case 1: return return_reference_number;
-    case 2: return usa_id;
-    case 3: return sephora_id;
-    case 4: return online_atg_id;
-    case 5: return card_number;
-    case 6: return return_auth_flag;
-    case 7: return reason_text;
-    case 8: return cust_sale_counter;
-    case 9: return cust_return_counter;
-    case 10: return pct_sale_to_return;
-    case 11: return created_date;
-    case 12: return start_date;
-    case 13: return end_date;
-    case 14: return active_flag;
-    case 15: return record_update_flag;
-    default: throw new IndexOutOfBoundsException("Invalid index: " + field$);
+      case 0: return return_surrogate_key;
+      case 1: return return_reference_number;
+      case 2: return usa_id;
+      case 3: return sephora_id;
+      case 4: return online_atg_id;
+      case 5: return card_number;
+      case 6: return return_auth_flag;
+      case 7: return reason_text;
+      case 8: return cust_sale_counter;
+      case 9: return cust_return_counter;
+      case 10: return pct_sale_to_return;
+      case 11: return created_date;
+      case 12: return start_date;
+      case 13: return end_date;
+      case 14: return active_flag;
+      case 15: return record_update_flag;
+      default: throw new IndexOutOfBoundsException("Invalid index: " + field$);
     }
   }
 
   // Used by DatumReader.  Applications should not call.
   @SuppressWarnings(value="unchecked")
-  public void put(int field$, Object value$) {
+  public void put(int field$, java.lang.Object value$) {
     switch (field$) {
-    case 0: return_surrogate_key = value$ != null ? value$.toString() : null; break;
-    case 1: return_reference_number = value$ != null ? value$.toString() : null; break;
-    case 2: usa_id = (Long)value$; break;
-    case 3: sephora_id = (Long)value$; break;
-    case 4: online_atg_id = value$ != null ? value$.toString() : null; break;
-    case 5: card_number = value$ != null ? value$.toString() : null; break;
-    case 6: return_auth_flag = value$ != null ? value$.toString() : null; break;
-    case 7: reason_text = value$ != null ? value$.toString() : null; break;
-    case 8: cust_sale_counter = (Integer)value$; break;
-    case 9: cust_return_counter = (Integer)value$; break;
-    case 10: pct_sale_to_return = (Double)value$; break;
-    case 11: created_date = (Long)value$; break;
-    case 12: start_date = (Long)value$; break;
-    case 13: end_date = (Long)value$; break;
-    case 14: active_flag = value$ != null ? value$.toString() : null; break;
-    case 15: record_update_flag = value$ != null ? value$.toString() : null; break;
-    default: throw new IndexOutOfBoundsException("Invalid index: " + field$);
+      case 0: return_surrogate_key = value$ != null ? value$.toString() : null; break;
+      case 1: return_reference_number = value$ != null ? value$.toString() : null; break;
+      case 2: usa_id = (java.lang.Long)value$; break;
+      case 3: sephora_id = (java.lang.Long)value$; break;
+      case 4: online_atg_id = value$ != null ? value$.toString() : null; break;
+      case 5: card_number = value$ != null ? value$.toString() : null; break;
+      case 6: return_auth_flag = value$ != null ? value$.toString() : null; break;
+      case 7: reason_text = value$ != null ? value$.toString() : null; break;
+      case 8: cust_sale_counter = (java.lang.Integer)value$; break;
+      case 9: cust_return_counter = (java.lang.Integer)value$; break;
+      case 10: pct_sale_to_return = (java.lang.Double)value$; break;
+      case 11: created_date = (java.lang.Long)value$; break;
+      case 12: start_date = (java.lang.Long)value$; break;
+      case 13: end_date = (java.lang.Long)value$; break;
+      case 14: active_flag = value$ != null ? value$.toString() : null; break;
+      case 15: record_update_flag = value$ != null ? value$.toString() : null; break;
+      default: throw new IndexOutOfBoundsException("Invalid index: " + field$);
     }
   }
 
@@ -198,7 +197,7 @@ public class CustomerTransactionsSummary extends org.apache.avro.specific.Specif
    * Gets the value of the 'return_surrogate_key' field.
    * @return The value of the 'return_surrogate_key' field.
    */
-  public String getReturnSurrogateKey() {
+  public java.lang.String getReturnSurrogateKey() {
     return return_surrogate_key;
   }
 
@@ -207,7 +206,7 @@ public class CustomerTransactionsSummary extends org.apache.avro.specific.Specif
    * Sets the value of the 'return_surrogate_key' field.
    * @param value the value to set.
    */
-  public void setReturnSurrogateKey(String value) {
+  public void setReturnSurrogateKey(java.lang.String value) {
     this.return_surrogate_key = value;
   }
 
@@ -215,7 +214,7 @@ public class CustomerTransactionsSummary extends org.apache.avro.specific.Specif
    * Gets the value of the 'return_reference_number' field.
    * @return The value of the 'return_reference_number' field.
    */
-  public String getReturnReferenceNumber() {
+  public java.lang.String getReturnReferenceNumber() {
     return return_reference_number;
   }
 
@@ -224,7 +223,7 @@ public class CustomerTransactionsSummary extends org.apache.avro.specific.Specif
    * Sets the value of the 'return_reference_number' field.
    * @param value the value to set.
    */
-  public void setReturnReferenceNumber(String value) {
+  public void setReturnReferenceNumber(java.lang.String value) {
     this.return_reference_number = value;
   }
 
@@ -232,7 +231,7 @@ public class CustomerTransactionsSummary extends org.apache.avro.specific.Specif
    * Gets the value of the 'usa_id' field.
    * @return bi_id
    */
-  public Long getUsaId() {
+  public java.lang.Long getUsaId() {
     return usa_id;
   }
 
@@ -242,7 +241,7 @@ public class CustomerTransactionsSummary extends org.apache.avro.specific.Specif
    * bi_id
    * @param value the value to set.
    */
-  public void setUsaId(Long value) {
+  public void setUsaId(java.lang.Long value) {
     this.usa_id = value;
   }
 
@@ -250,7 +249,7 @@ public class CustomerTransactionsSummary extends org.apache.avro.specific.Specif
    * Gets the value of the 'sephora_id' field.
    * @return sephora_id field
    */
-  public Long getSephoraId() {
+  public java.lang.Long getSephoraId() {
     return sephora_id;
   }
 
@@ -260,7 +259,7 @@ public class CustomerTransactionsSummary extends org.apache.avro.specific.Specif
    * sephora_id field
    * @param value the value to set.
    */
-  public void setSephoraId(Long value) {
+  public void setSephoraId(java.lang.Long value) {
     this.sephora_id = value;
   }
 
@@ -268,7 +267,7 @@ public class CustomerTransactionsSummary extends org.apache.avro.specific.Specif
    * Gets the value of the 'online_atg_id' field.
    * @return online_atg_id field
    */
-  public String getOnlineAtgId() {
+  public java.lang.String getOnlineAtgId() {
     return online_atg_id;
   }
 
@@ -278,7 +277,7 @@ public class CustomerTransactionsSummary extends org.apache.avro.specific.Specif
    * online_atg_id field
    * @param value the value to set.
    */
-  public void setOnlineAtgId(String value) {
+  public void setOnlineAtgId(java.lang.String value) {
     this.online_atg_id = value;
   }
 
@@ -286,7 +285,7 @@ public class CustomerTransactionsSummary extends org.apache.avro.specific.Specif
    * Gets the value of the 'card_number' field.
    * @return card_number token from order_tender_details_events table
    */
-  public String getCardNumber() {
+  public java.lang.String getCardNumber() {
     return card_number;
   }
 
@@ -296,7 +295,7 @@ public class CustomerTransactionsSummary extends org.apache.avro.specific.Specif
    * card_number token from order_tender_details_events table
    * @param value the value to set.
    */
-  public void setCardNumber(String value) {
+  public void setCardNumber(java.lang.String value) {
     this.card_number = value;
   }
 
@@ -304,7 +303,7 @@ public class CustomerTransactionsSummary extends org.apache.avro.specific.Specif
    * Gets the value of the 'return_auth_flag' field.
    * @return return_auth_flag field
    */
-  public String getReturnAuthFlag() {
+  public java.lang.String getReturnAuthFlag() {
     return return_auth_flag;
   }
 
@@ -314,7 +313,7 @@ public class CustomerTransactionsSummary extends org.apache.avro.specific.Specif
    * return_auth_flag field
    * @param value the value to set.
    */
-  public void setReturnAuthFlag(String value) {
+  public void setReturnAuthFlag(java.lang.String value) {
     this.return_auth_flag = value;
   }
 
@@ -322,7 +321,7 @@ public class CustomerTransactionsSummary extends org.apache.avro.specific.Specif
    * Gets the value of the 'reason_text' field.
    * @return the reason why the current return has such return_auth_flag
    */
-  public String getReasonText() {
+  public java.lang.String getReasonText() {
     return reason_text;
   }
 
@@ -332,7 +331,7 @@ public class CustomerTransactionsSummary extends org.apache.avro.specific.Specif
    * the reason why the current return has such return_auth_flag
    * @param value the value to set.
    */
-  public void setReasonText(String value) {
+  public void setReasonText(java.lang.String value) {
     this.reason_text = value;
   }
 
@@ -448,7 +447,7 @@ public class CustomerTransactionsSummary extends org.apache.avro.specific.Specif
    * Gets the value of the 'active_flag' field.
    * @return active_flag field A or I
    */
-  public String getActiveFlag() {
+  public java.lang.String getActiveFlag() {
     return active_flag;
   }
 
@@ -458,7 +457,7 @@ public class CustomerTransactionsSummary extends org.apache.avro.specific.Specif
    * active_flag field A or I
    * @param value the value to set.
    */
-  public void setActiveFlag(String value) {
+  public void setActiveFlag(java.lang.String value) {
     this.active_flag = value;
   }
 
@@ -466,7 +465,7 @@ public class CustomerTransactionsSummary extends org.apache.avro.specific.Specif
    * Gets the value of the 'record_update_flag' field.
    * @return record_update_flag field U or D
    */
-  public String getRecordUpdateFlag() {
+  public java.lang.String getRecordUpdateFlag() {
     return record_update_flag;
   }
 
@@ -476,7 +475,7 @@ public class CustomerTransactionsSummary extends org.apache.avro.specific.Specif
    * record_update_flag field U or D
    * @param value the value to set.
    */
-  public void setRecordUpdateFlag(String value) {
+  public void setRecordUpdateFlag(java.lang.String value) {
     this.record_update_flag = value;
   }
 
@@ -519,22 +518,22 @@ public class CustomerTransactionsSummary extends org.apache.avro.specific.Specif
    */
   @org.apache.avro.specific.AvroGenerated
   public static class Builder extends org.apache.avro.specific.SpecificRecordBuilderBase<CustomerTransactionsSummary>
-    implements org.apache.avro.data.RecordBuilder<CustomerTransactionsSummary> {
+          implements org.apache.avro.data.RecordBuilder<CustomerTransactionsSummary> {
 
-    private String return_surrogate_key;
-    private String return_reference_number;
+    private java.lang.String return_surrogate_key;
+    private java.lang.String return_reference_number;
     /** bi_id */
-    private Long usa_id;
+    private java.lang.Long usa_id;
     /** sephora_id field */
-    private Long sephora_id;
+    private java.lang.Long sephora_id;
     /** online_atg_id field */
-    private String online_atg_id;
+    private java.lang.String online_atg_id;
     /** card_number token from order_tender_details_events table */
-    private String card_number;
+    private java.lang.String card_number;
     /** return_auth_flag field */
-    private String return_auth_flag;
+    private java.lang.String return_auth_flag;
     /** the reason why the current return has such return_auth_flag */
-    private String reason_text;
+    private java.lang.String reason_text;
     /** cust_sale_counter field */
     private int cust_sale_counter;
     /** cust_return_counter field */
@@ -548,9 +547,9 @@ public class CustomerTransactionsSummary extends org.apache.avro.specific.Specif
     /** end_date field */
     private long end_date;
     /** active_flag field A or I */
-    private String active_flag;
+    private java.lang.String active_flag;
     /** record_update_flag field U or D */
-    private String record_update_flag;
+    private java.lang.String record_update_flag;
 
     /** Creates a new Builder */
     private Builder() {
@@ -702,20 +701,20 @@ public class CustomerTransactionsSummary extends org.apache.avro.specific.Specif
     }
 
     /**
-      * Gets the value of the 'return_surrogate_key' field.
-      * @return The value.
-      */
-    public String getReturnSurrogateKey() {
+     * Gets the value of the 'return_surrogate_key' field.
+     * @return The value.
+     */
+    public java.lang.String getReturnSurrogateKey() {
       return return_surrogate_key;
     }
 
 
     /**
-      * Sets the value of the 'return_surrogate_key' field.
-      * @param value The value of 'return_surrogate_key'.
-      * @return This builder.
-      */
-    public CustomerTransactionsSummary.Builder setReturnSurrogateKey(String value) {
+     * Sets the value of the 'return_surrogate_key' field.
+     * @param value The value of 'return_surrogate_key'.
+     * @return This builder.
+     */
+    public CustomerTransactionsSummary.Builder setReturnSurrogateKey(java.lang.String value) {
       validate(fields()[0], value);
       this.return_surrogate_key = value;
       fieldSetFlags()[0] = true;
@@ -723,18 +722,18 @@ public class CustomerTransactionsSummary extends org.apache.avro.specific.Specif
     }
 
     /**
-      * Checks whether the 'return_surrogate_key' field has been set.
-      * @return True if the 'return_surrogate_key' field has been set, false otherwise.
-      */
+     * Checks whether the 'return_surrogate_key' field has been set.
+     * @return True if the 'return_surrogate_key' field has been set, false otherwise.
+     */
     public boolean hasReturnSurrogateKey() {
       return fieldSetFlags()[0];
     }
 
 
     /**
-      * Clears the value of the 'return_surrogate_key' field.
-      * @return This builder.
-      */
+     * Clears the value of the 'return_surrogate_key' field.
+     * @return This builder.
+     */
     public CustomerTransactionsSummary.Builder clearReturnSurrogateKey() {
       return_surrogate_key = null;
       fieldSetFlags()[0] = false;
@@ -742,20 +741,20 @@ public class CustomerTransactionsSummary extends org.apache.avro.specific.Specif
     }
 
     /**
-      * Gets the value of the 'return_reference_number' field.
-      * @return The value.
-      */
-    public String getReturnReferenceNumber() {
+     * Gets the value of the 'return_reference_number' field.
+     * @return The value.
+     */
+    public java.lang.String getReturnReferenceNumber() {
       return return_reference_number;
     }
 
 
     /**
-      * Sets the value of the 'return_reference_number' field.
-      * @param value The value of 'return_reference_number'.
-      * @return This builder.
-      */
-    public CustomerTransactionsSummary.Builder setReturnReferenceNumber(String value) {
+     * Sets the value of the 'return_reference_number' field.
+     * @param value The value of 'return_reference_number'.
+     * @return This builder.
+     */
+    public CustomerTransactionsSummary.Builder setReturnReferenceNumber(java.lang.String value) {
       validate(fields()[1], value);
       this.return_reference_number = value;
       fieldSetFlags()[1] = true;
@@ -763,18 +762,18 @@ public class CustomerTransactionsSummary extends org.apache.avro.specific.Specif
     }
 
     /**
-      * Checks whether the 'return_reference_number' field has been set.
-      * @return True if the 'return_reference_number' field has been set, false otherwise.
-      */
+     * Checks whether the 'return_reference_number' field has been set.
+     * @return True if the 'return_reference_number' field has been set, false otherwise.
+     */
     public boolean hasReturnReferenceNumber() {
       return fieldSetFlags()[1];
     }
 
 
     /**
-      * Clears the value of the 'return_reference_number' field.
-      * @return This builder.
-      */
+     * Clears the value of the 'return_reference_number' field.
+     * @return This builder.
+     */
     public CustomerTransactionsSummary.Builder clearReturnReferenceNumber() {
       return_reference_number = null;
       fieldSetFlags()[1] = false;
@@ -782,22 +781,22 @@ public class CustomerTransactionsSummary extends org.apache.avro.specific.Specif
     }
 
     /**
-      * Gets the value of the 'usa_id' field.
-      * bi_id
-      * @return The value.
-      */
-    public Long getUsaId() {
+     * Gets the value of the 'usa_id' field.
+     * bi_id
+     * @return The value.
+     */
+    public java.lang.Long getUsaId() {
       return usa_id;
     }
 
 
     /**
-      * Sets the value of the 'usa_id' field.
-      * bi_id
-      * @param value The value of 'usa_id'.
-      * @return This builder.
-      */
-    public CustomerTransactionsSummary.Builder setUsaId(Long value) {
+     * Sets the value of the 'usa_id' field.
+     * bi_id
+     * @param value The value of 'usa_id'.
+     * @return This builder.
+     */
+    public CustomerTransactionsSummary.Builder setUsaId(java.lang.Long value) {
       validate(fields()[2], value);
       this.usa_id = value;
       fieldSetFlags()[2] = true;
@@ -805,20 +804,20 @@ public class CustomerTransactionsSummary extends org.apache.avro.specific.Specif
     }
 
     /**
-      * Checks whether the 'usa_id' field has been set.
-      * bi_id
-      * @return True if the 'usa_id' field has been set, false otherwise.
-      */
+     * Checks whether the 'usa_id' field has been set.
+     * bi_id
+     * @return True if the 'usa_id' field has been set, false otherwise.
+     */
     public boolean hasUsaId() {
       return fieldSetFlags()[2];
     }
 
 
     /**
-      * Clears the value of the 'usa_id' field.
-      * bi_id
-      * @return This builder.
-      */
+     * Clears the value of the 'usa_id' field.
+     * bi_id
+     * @return This builder.
+     */
     public CustomerTransactionsSummary.Builder clearUsaId() {
       usa_id = null;
       fieldSetFlags()[2] = false;
@@ -826,22 +825,22 @@ public class CustomerTransactionsSummary extends org.apache.avro.specific.Specif
     }
 
     /**
-      * Gets the value of the 'sephora_id' field.
-      * sephora_id field
-      * @return The value.
-      */
-    public Long getSephoraId() {
+     * Gets the value of the 'sephora_id' field.
+     * sephora_id field
+     * @return The value.
+     */
+    public java.lang.Long getSephoraId() {
       return sephora_id;
     }
 
 
     /**
-      * Sets the value of the 'sephora_id' field.
-      * sephora_id field
-      * @param value The value of 'sephora_id'.
-      * @return This builder.
-      */
-    public CustomerTransactionsSummary.Builder setSephoraId(Long value) {
+     * Sets the value of the 'sephora_id' field.
+     * sephora_id field
+     * @param value The value of 'sephora_id'.
+     * @return This builder.
+     */
+    public CustomerTransactionsSummary.Builder setSephoraId(java.lang.Long value) {
       validate(fields()[3], value);
       this.sephora_id = value;
       fieldSetFlags()[3] = true;
@@ -849,20 +848,20 @@ public class CustomerTransactionsSummary extends org.apache.avro.specific.Specif
     }
 
     /**
-      * Checks whether the 'sephora_id' field has been set.
-      * sephora_id field
-      * @return True if the 'sephora_id' field has been set, false otherwise.
-      */
+     * Checks whether the 'sephora_id' field has been set.
+     * sephora_id field
+     * @return True if the 'sephora_id' field has been set, false otherwise.
+     */
     public boolean hasSephoraId() {
       return fieldSetFlags()[3];
     }
 
 
     /**
-      * Clears the value of the 'sephora_id' field.
-      * sephora_id field
-      * @return This builder.
-      */
+     * Clears the value of the 'sephora_id' field.
+     * sephora_id field
+     * @return This builder.
+     */
     public CustomerTransactionsSummary.Builder clearSephoraId() {
       sephora_id = null;
       fieldSetFlags()[3] = false;
@@ -870,22 +869,22 @@ public class CustomerTransactionsSummary extends org.apache.avro.specific.Specif
     }
 
     /**
-      * Gets the value of the 'online_atg_id' field.
-      * online_atg_id field
-      * @return The value.
-      */
-    public String getOnlineAtgId() {
+     * Gets the value of the 'online_atg_id' field.
+     * online_atg_id field
+     * @return The value.
+     */
+    public java.lang.String getOnlineAtgId() {
       return online_atg_id;
     }
 
 
     /**
-      * Sets the value of the 'online_atg_id' field.
-      * online_atg_id field
-      * @param value The value of 'online_atg_id'.
-      * @return This builder.
-      */
-    public CustomerTransactionsSummary.Builder setOnlineAtgId(String value) {
+     * Sets the value of the 'online_atg_id' field.
+     * online_atg_id field
+     * @param value The value of 'online_atg_id'.
+     * @return This builder.
+     */
+    public CustomerTransactionsSummary.Builder setOnlineAtgId(java.lang.String value) {
       validate(fields()[4], value);
       this.online_atg_id = value;
       fieldSetFlags()[4] = true;
@@ -893,20 +892,20 @@ public class CustomerTransactionsSummary extends org.apache.avro.specific.Specif
     }
 
     /**
-      * Checks whether the 'online_atg_id' field has been set.
-      * online_atg_id field
-      * @return True if the 'online_atg_id' field has been set, false otherwise.
-      */
+     * Checks whether the 'online_atg_id' field has been set.
+     * online_atg_id field
+     * @return True if the 'online_atg_id' field has been set, false otherwise.
+     */
     public boolean hasOnlineAtgId() {
       return fieldSetFlags()[4];
     }
 
 
     /**
-      * Clears the value of the 'online_atg_id' field.
-      * online_atg_id field
-      * @return This builder.
-      */
+     * Clears the value of the 'online_atg_id' field.
+     * online_atg_id field
+     * @return This builder.
+     */
     public CustomerTransactionsSummary.Builder clearOnlineAtgId() {
       online_atg_id = null;
       fieldSetFlags()[4] = false;
@@ -914,22 +913,22 @@ public class CustomerTransactionsSummary extends org.apache.avro.specific.Specif
     }
 
     /**
-      * Gets the value of the 'card_number' field.
-      * card_number token from order_tender_details_events table
-      * @return The value.
-      */
-    public String getCardNumber() {
+     * Gets the value of the 'card_number' field.
+     * card_number token from order_tender_details_events table
+     * @return The value.
+     */
+    public java.lang.String getCardNumber() {
       return card_number;
     }
 
 
     /**
-      * Sets the value of the 'card_number' field.
-      * card_number token from order_tender_details_events table
-      * @param value The value of 'card_number'.
-      * @return This builder.
-      */
-    public CustomerTransactionsSummary.Builder setCardNumber(String value) {
+     * Sets the value of the 'card_number' field.
+     * card_number token from order_tender_details_events table
+     * @param value The value of 'card_number'.
+     * @return This builder.
+     */
+    public CustomerTransactionsSummary.Builder setCardNumber(java.lang.String value) {
       validate(fields()[5], value);
       this.card_number = value;
       fieldSetFlags()[5] = true;
@@ -937,20 +936,20 @@ public class CustomerTransactionsSummary extends org.apache.avro.specific.Specif
     }
 
     /**
-      * Checks whether the 'card_number' field has been set.
-      * card_number token from order_tender_details_events table
-      * @return True if the 'card_number' field has been set, false otherwise.
-      */
+     * Checks whether the 'card_number' field has been set.
+     * card_number token from order_tender_details_events table
+     * @return True if the 'card_number' field has been set, false otherwise.
+     */
     public boolean hasCardNumber() {
       return fieldSetFlags()[5];
     }
 
 
     /**
-      * Clears the value of the 'card_number' field.
-      * card_number token from order_tender_details_events table
-      * @return This builder.
-      */
+     * Clears the value of the 'card_number' field.
+     * card_number token from order_tender_details_events table
+     * @return This builder.
+     */
     public CustomerTransactionsSummary.Builder clearCardNumber() {
       card_number = null;
       fieldSetFlags()[5] = false;
@@ -958,22 +957,22 @@ public class CustomerTransactionsSummary extends org.apache.avro.specific.Specif
     }
 
     /**
-      * Gets the value of the 'return_auth_flag' field.
-      * return_auth_flag field
-      * @return The value.
-      */
-    public String getReturnAuthFlag() {
+     * Gets the value of the 'return_auth_flag' field.
+     * return_auth_flag field
+     * @return The value.
+     */
+    public java.lang.String getReturnAuthFlag() {
       return return_auth_flag;
     }
 
 
     /**
-      * Sets the value of the 'return_auth_flag' field.
-      * return_auth_flag field
-      * @param value The value of 'return_auth_flag'.
-      * @return This builder.
-      */
-    public CustomerTransactionsSummary.Builder setReturnAuthFlag(String value) {
+     * Sets the value of the 'return_auth_flag' field.
+     * return_auth_flag field
+     * @param value The value of 'return_auth_flag'.
+     * @return This builder.
+     */
+    public CustomerTransactionsSummary.Builder setReturnAuthFlag(java.lang.String value) {
       validate(fields()[6], value);
       this.return_auth_flag = value;
       fieldSetFlags()[6] = true;
@@ -981,20 +980,20 @@ public class CustomerTransactionsSummary extends org.apache.avro.specific.Specif
     }
 
     /**
-      * Checks whether the 'return_auth_flag' field has been set.
-      * return_auth_flag field
-      * @return True if the 'return_auth_flag' field has been set, false otherwise.
-      */
+     * Checks whether the 'return_auth_flag' field has been set.
+     * return_auth_flag field
+     * @return True if the 'return_auth_flag' field has been set, false otherwise.
+     */
     public boolean hasReturnAuthFlag() {
       return fieldSetFlags()[6];
     }
 
 
     /**
-      * Clears the value of the 'return_auth_flag' field.
-      * return_auth_flag field
-      * @return This builder.
-      */
+     * Clears the value of the 'return_auth_flag' field.
+     * return_auth_flag field
+     * @return This builder.
+     */
     public CustomerTransactionsSummary.Builder clearReturnAuthFlag() {
       return_auth_flag = null;
       fieldSetFlags()[6] = false;
@@ -1002,22 +1001,22 @@ public class CustomerTransactionsSummary extends org.apache.avro.specific.Specif
     }
 
     /**
-      * Gets the value of the 'reason_text' field.
-      * the reason why the current return has such return_auth_flag
-      * @return The value.
-      */
-    public String getReasonText() {
+     * Gets the value of the 'reason_text' field.
+     * the reason why the current return has such return_auth_flag
+     * @return The value.
+     */
+    public java.lang.String getReasonText() {
       return reason_text;
     }
 
 
     /**
-      * Sets the value of the 'reason_text' field.
-      * the reason why the current return has such return_auth_flag
-      * @param value The value of 'reason_text'.
-      * @return This builder.
-      */
-    public CustomerTransactionsSummary.Builder setReasonText(String value) {
+     * Sets the value of the 'reason_text' field.
+     * the reason why the current return has such return_auth_flag
+     * @param value The value of 'reason_text'.
+     * @return This builder.
+     */
+    public CustomerTransactionsSummary.Builder setReasonText(java.lang.String value) {
       validate(fields()[7], value);
       this.reason_text = value;
       fieldSetFlags()[7] = true;
@@ -1025,20 +1024,20 @@ public class CustomerTransactionsSummary extends org.apache.avro.specific.Specif
     }
 
     /**
-      * Checks whether the 'reason_text' field has been set.
-      * the reason why the current return has such return_auth_flag
-      * @return True if the 'reason_text' field has been set, false otherwise.
-      */
+     * Checks whether the 'reason_text' field has been set.
+     * the reason why the current return has such return_auth_flag
+     * @return True if the 'reason_text' field has been set, false otherwise.
+     */
     public boolean hasReasonText() {
       return fieldSetFlags()[7];
     }
 
 
     /**
-      * Clears the value of the 'reason_text' field.
-      * the reason why the current return has such return_auth_flag
-      * @return This builder.
-      */
+     * Clears the value of the 'reason_text' field.
+     * the reason why the current return has such return_auth_flag
+     * @return This builder.
+     */
     public CustomerTransactionsSummary.Builder clearReasonText() {
       reason_text = null;
       fieldSetFlags()[7] = false;
@@ -1046,21 +1045,21 @@ public class CustomerTransactionsSummary extends org.apache.avro.specific.Specif
     }
 
     /**
-      * Gets the value of the 'cust_sale_counter' field.
-      * cust_sale_counter field
-      * @return The value.
-      */
+     * Gets the value of the 'cust_sale_counter' field.
+     * cust_sale_counter field
+     * @return The value.
+     */
     public int getCustSaleCounter() {
       return cust_sale_counter;
     }
 
 
     /**
-      * Sets the value of the 'cust_sale_counter' field.
-      * cust_sale_counter field
-      * @param value The value of 'cust_sale_counter'.
-      * @return This builder.
-      */
+     * Sets the value of the 'cust_sale_counter' field.
+     * cust_sale_counter field
+     * @param value The value of 'cust_sale_counter'.
+     * @return This builder.
+     */
     public CustomerTransactionsSummary.Builder setCustSaleCounter(int value) {
       validate(fields()[8], value);
       this.cust_sale_counter = value;
@@ -1069,41 +1068,41 @@ public class CustomerTransactionsSummary extends org.apache.avro.specific.Specif
     }
 
     /**
-      * Checks whether the 'cust_sale_counter' field has been set.
-      * cust_sale_counter field
-      * @return True if the 'cust_sale_counter' field has been set, false otherwise.
-      */
+     * Checks whether the 'cust_sale_counter' field has been set.
+     * cust_sale_counter field
+     * @return True if the 'cust_sale_counter' field has been set, false otherwise.
+     */
     public boolean hasCustSaleCounter() {
       return fieldSetFlags()[8];
     }
 
 
     /**
-      * Clears the value of the 'cust_sale_counter' field.
-      * cust_sale_counter field
-      * @return This builder.
-      */
+     * Clears the value of the 'cust_sale_counter' field.
+     * cust_sale_counter field
+     * @return This builder.
+     */
     public CustomerTransactionsSummary.Builder clearCustSaleCounter() {
       fieldSetFlags()[8] = false;
       return this;
     }
 
     /**
-      * Gets the value of the 'cust_return_counter' field.
-      * cust_return_counter field
-      * @return The value.
-      */
+     * Gets the value of the 'cust_return_counter' field.
+     * cust_return_counter field
+     * @return The value.
+     */
     public int getCustReturnCounter() {
       return cust_return_counter;
     }
 
 
     /**
-      * Sets the value of the 'cust_return_counter' field.
-      * cust_return_counter field
-      * @param value The value of 'cust_return_counter'.
-      * @return This builder.
-      */
+     * Sets the value of the 'cust_return_counter' field.
+     * cust_return_counter field
+     * @param value The value of 'cust_return_counter'.
+     * @return This builder.
+     */
     public CustomerTransactionsSummary.Builder setCustReturnCounter(int value) {
       validate(fields()[9], value);
       this.cust_return_counter = value;
@@ -1112,41 +1111,41 @@ public class CustomerTransactionsSummary extends org.apache.avro.specific.Specif
     }
 
     /**
-      * Checks whether the 'cust_return_counter' field has been set.
-      * cust_return_counter field
-      * @return True if the 'cust_return_counter' field has been set, false otherwise.
-      */
+     * Checks whether the 'cust_return_counter' field has been set.
+     * cust_return_counter field
+     * @return True if the 'cust_return_counter' field has been set, false otherwise.
+     */
     public boolean hasCustReturnCounter() {
       return fieldSetFlags()[9];
     }
 
 
     /**
-      * Clears the value of the 'cust_return_counter' field.
-      * cust_return_counter field
-      * @return This builder.
-      */
+     * Clears the value of the 'cust_return_counter' field.
+     * cust_return_counter field
+     * @return This builder.
+     */
     public CustomerTransactionsSummary.Builder clearCustReturnCounter() {
       fieldSetFlags()[9] = false;
       return this;
     }
 
     /**
-      * Gets the value of the 'pct_sale_to_return' field.
-      * pct_sale_to_return field
-      * @return The value.
-      */
+     * Gets the value of the 'pct_sale_to_return' field.
+     * pct_sale_to_return field
+     * @return The value.
+     */
     public double getPctSaleToReturn() {
       return pct_sale_to_return;
     }
 
 
     /**
-      * Sets the value of the 'pct_sale_to_return' field.
-      * pct_sale_to_return field
-      * @param value The value of 'pct_sale_to_return'.
-      * @return This builder.
-      */
+     * Sets the value of the 'pct_sale_to_return' field.
+     * pct_sale_to_return field
+     * @param value The value of 'pct_sale_to_return'.
+     * @return This builder.
+     */
     public CustomerTransactionsSummary.Builder setPctSaleToReturn(double value) {
       validate(fields()[10], value);
       this.pct_sale_to_return = value;
@@ -1155,41 +1154,41 @@ public class CustomerTransactionsSummary extends org.apache.avro.specific.Specif
     }
 
     /**
-      * Checks whether the 'pct_sale_to_return' field has been set.
-      * pct_sale_to_return field
-      * @return True if the 'pct_sale_to_return' field has been set, false otherwise.
-      */
+     * Checks whether the 'pct_sale_to_return' field has been set.
+     * pct_sale_to_return field
+     * @return True if the 'pct_sale_to_return' field has been set, false otherwise.
+     */
     public boolean hasPctSaleToReturn() {
       return fieldSetFlags()[10];
     }
 
 
     /**
-      * Clears the value of the 'pct_sale_to_return' field.
-      * pct_sale_to_return field
-      * @return This builder.
-      */
+     * Clears the value of the 'pct_sale_to_return' field.
+     * pct_sale_to_return field
+     * @return This builder.
+     */
     public CustomerTransactionsSummary.Builder clearPctSaleToReturn() {
       fieldSetFlags()[10] = false;
       return this;
     }
 
     /**
-      * Gets the value of the 'created_date' field.
-      * created_date field
-      * @return The value.
-      */
+     * Gets the value of the 'created_date' field.
+     * created_date field
+     * @return The value.
+     */
     public long getCreatedDate() {
       return created_date;
     }
 
 
     /**
-      * Sets the value of the 'created_date' field.
-      * created_date field
-      * @param value The value of 'created_date'.
-      * @return This builder.
-      */
+     * Sets the value of the 'created_date' field.
+     * created_date field
+     * @param value The value of 'created_date'.
+     * @return This builder.
+     */
     public CustomerTransactionsSummary.Builder setCreatedDate(long value) {
       validate(fields()[11], value);
       this.created_date = value;
@@ -1198,41 +1197,41 @@ public class CustomerTransactionsSummary extends org.apache.avro.specific.Specif
     }
 
     /**
-      * Checks whether the 'created_date' field has been set.
-      * created_date field
-      * @return True if the 'created_date' field has been set, false otherwise.
-      */
+     * Checks whether the 'created_date' field has been set.
+     * created_date field
+     * @return True if the 'created_date' field has been set, false otherwise.
+     */
     public boolean hasCreatedDate() {
       return fieldSetFlags()[11];
     }
 
 
     /**
-      * Clears the value of the 'created_date' field.
-      * created_date field
-      * @return This builder.
-      */
+     * Clears the value of the 'created_date' field.
+     * created_date field
+     * @return This builder.
+     */
     public CustomerTransactionsSummary.Builder clearCreatedDate() {
       fieldSetFlags()[11] = false;
       return this;
     }
 
     /**
-      * Gets the value of the 'start_date' field.
-      * start_date field
-      * @return The value.
-      */
+     * Gets the value of the 'start_date' field.
+     * start_date field
+     * @return The value.
+     */
     public long getStartDate() {
       return start_date;
     }
 
 
     /**
-      * Sets the value of the 'start_date' field.
-      * start_date field
-      * @param value The value of 'start_date'.
-      * @return This builder.
-      */
+     * Sets the value of the 'start_date' field.
+     * start_date field
+     * @param value The value of 'start_date'.
+     * @return This builder.
+     */
     public CustomerTransactionsSummary.Builder setStartDate(long value) {
       validate(fields()[12], value);
       this.start_date = value;
@@ -1241,41 +1240,41 @@ public class CustomerTransactionsSummary extends org.apache.avro.specific.Specif
     }
 
     /**
-      * Checks whether the 'start_date' field has been set.
-      * start_date field
-      * @return True if the 'start_date' field has been set, false otherwise.
-      */
+     * Checks whether the 'start_date' field has been set.
+     * start_date field
+     * @return True if the 'start_date' field has been set, false otherwise.
+     */
     public boolean hasStartDate() {
       return fieldSetFlags()[12];
     }
 
 
     /**
-      * Clears the value of the 'start_date' field.
-      * start_date field
-      * @return This builder.
-      */
+     * Clears the value of the 'start_date' field.
+     * start_date field
+     * @return This builder.
+     */
     public CustomerTransactionsSummary.Builder clearStartDate() {
       fieldSetFlags()[12] = false;
       return this;
     }
 
     /**
-      * Gets the value of the 'end_date' field.
-      * end_date field
-      * @return The value.
-      */
+     * Gets the value of the 'end_date' field.
+     * end_date field
+     * @return The value.
+     */
     public long getEndDate() {
       return end_date;
     }
 
 
     /**
-      * Sets the value of the 'end_date' field.
-      * end_date field
-      * @param value The value of 'end_date'.
-      * @return This builder.
-      */
+     * Sets the value of the 'end_date' field.
+     * end_date field
+     * @param value The value of 'end_date'.
+     * @return This builder.
+     */
     public CustomerTransactionsSummary.Builder setEndDate(long value) {
       validate(fields()[13], value);
       this.end_date = value;
@@ -1284,42 +1283,42 @@ public class CustomerTransactionsSummary extends org.apache.avro.specific.Specif
     }
 
     /**
-      * Checks whether the 'end_date' field has been set.
-      * end_date field
-      * @return True if the 'end_date' field has been set, false otherwise.
-      */
+     * Checks whether the 'end_date' field has been set.
+     * end_date field
+     * @return True if the 'end_date' field has been set, false otherwise.
+     */
     public boolean hasEndDate() {
       return fieldSetFlags()[13];
     }
 
 
     /**
-      * Clears the value of the 'end_date' field.
-      * end_date field
-      * @return This builder.
-      */
+     * Clears the value of the 'end_date' field.
+     * end_date field
+     * @return This builder.
+     */
     public CustomerTransactionsSummary.Builder clearEndDate() {
       fieldSetFlags()[13] = false;
       return this;
     }
 
     /**
-      * Gets the value of the 'active_flag' field.
-      * active_flag field A or I
-      * @return The value.
-      */
-    public String getActiveFlag() {
+     * Gets the value of the 'active_flag' field.
+     * active_flag field A or I
+     * @return The value.
+     */
+    public java.lang.String getActiveFlag() {
       return active_flag;
     }
 
 
     /**
-      * Sets the value of the 'active_flag' field.
-      * active_flag field A or I
-      * @param value The value of 'active_flag'.
-      * @return This builder.
-      */
-    public CustomerTransactionsSummary.Builder setActiveFlag(String value) {
+     * Sets the value of the 'active_flag' field.
+     * active_flag field A or I
+     * @param value The value of 'active_flag'.
+     * @return This builder.
+     */
+    public CustomerTransactionsSummary.Builder setActiveFlag(java.lang.String value) {
       validate(fields()[14], value);
       this.active_flag = value;
       fieldSetFlags()[14] = true;
@@ -1327,20 +1326,20 @@ public class CustomerTransactionsSummary extends org.apache.avro.specific.Specif
     }
 
     /**
-      * Checks whether the 'active_flag' field has been set.
-      * active_flag field A or I
-      * @return True if the 'active_flag' field has been set, false otherwise.
-      */
+     * Checks whether the 'active_flag' field has been set.
+     * active_flag field A or I
+     * @return True if the 'active_flag' field has been set, false otherwise.
+     */
     public boolean hasActiveFlag() {
       return fieldSetFlags()[14];
     }
 
 
     /**
-      * Clears the value of the 'active_flag' field.
-      * active_flag field A or I
-      * @return This builder.
-      */
+     * Clears the value of the 'active_flag' field.
+     * active_flag field A or I
+     * @return This builder.
+     */
     public CustomerTransactionsSummary.Builder clearActiveFlag() {
       active_flag = null;
       fieldSetFlags()[14] = false;
@@ -1348,22 +1347,22 @@ public class CustomerTransactionsSummary extends org.apache.avro.specific.Specif
     }
 
     /**
-      * Gets the value of the 'record_update_flag' field.
-      * record_update_flag field U or D
-      * @return The value.
-      */
-    public String getRecordUpdateFlag() {
+     * Gets the value of the 'record_update_flag' field.
+     * record_update_flag field U or D
+     * @return The value.
+     */
+    public java.lang.String getRecordUpdateFlag() {
       return record_update_flag;
     }
 
 
     /**
-      * Sets the value of the 'record_update_flag' field.
-      * record_update_flag field U or D
-      * @param value The value of 'record_update_flag'.
-      * @return This builder.
-      */
-    public CustomerTransactionsSummary.Builder setRecordUpdateFlag(String value) {
+     * Sets the value of the 'record_update_flag' field.
+     * record_update_flag field U or D
+     * @param value The value of 'record_update_flag'.
+     * @return This builder.
+     */
+    public CustomerTransactionsSummary.Builder setRecordUpdateFlag(java.lang.String value) {
       validate(fields()[15], value);
       this.record_update_flag = value;
       fieldSetFlags()[15] = true;
@@ -1371,20 +1370,20 @@ public class CustomerTransactionsSummary extends org.apache.avro.specific.Specif
     }
 
     /**
-      * Checks whether the 'record_update_flag' field has been set.
-      * record_update_flag field U or D
-      * @return True if the 'record_update_flag' field has been set, false otherwise.
-      */
+     * Checks whether the 'record_update_flag' field has been set.
+     * record_update_flag field U or D
+     * @return True if the 'record_update_flag' field has been set, false otherwise.
+     */
     public boolean hasRecordUpdateFlag() {
       return fieldSetFlags()[15];
     }
 
 
     /**
-      * Clears the value of the 'record_update_flag' field.
-      * record_update_flag field U or D
-      * @return This builder.
-      */
+     * Clears the value of the 'record_update_flag' field.
+     * record_update_flag field U or D
+     * @return This builder.
+     */
     public CustomerTransactionsSummary.Builder clearRecordUpdateFlag() {
       record_update_flag = null;
       fieldSetFlags()[15] = false;
@@ -1396,26 +1395,26 @@ public class CustomerTransactionsSummary extends org.apache.avro.specific.Specif
     public CustomerTransactionsSummary build() {
       try {
         CustomerTransactionsSummary record = new CustomerTransactionsSummary();
-        record.return_surrogate_key = fieldSetFlags()[0] ? this.return_surrogate_key : (String) defaultValue(fields()[0]);
-        record.return_reference_number = fieldSetFlags()[1] ? this.return_reference_number : (String) defaultValue(fields()[1]);
-        record.usa_id = fieldSetFlags()[2] ? this.usa_id : (Long) defaultValue(fields()[2]);
-        record.sephora_id = fieldSetFlags()[3] ? this.sephora_id : (Long) defaultValue(fields()[3]);
-        record.online_atg_id = fieldSetFlags()[4] ? this.online_atg_id : (String) defaultValue(fields()[4]);
-        record.card_number = fieldSetFlags()[5] ? this.card_number : (String) defaultValue(fields()[5]);
-        record.return_auth_flag = fieldSetFlags()[6] ? this.return_auth_flag : (String) defaultValue(fields()[6]);
-        record.reason_text = fieldSetFlags()[7] ? this.reason_text : (String) defaultValue(fields()[7]);
-        record.cust_sale_counter = fieldSetFlags()[8] ? this.cust_sale_counter : (Integer) defaultValue(fields()[8]);
-        record.cust_return_counter = fieldSetFlags()[9] ? this.cust_return_counter : (Integer) defaultValue(fields()[9]);
-        record.pct_sale_to_return = fieldSetFlags()[10] ? this.pct_sale_to_return : (Double) defaultValue(fields()[10]);
-        record.created_date = fieldSetFlags()[11] ? this.created_date : (Long) defaultValue(fields()[11]);
-        record.start_date = fieldSetFlags()[12] ? this.start_date : (Long) defaultValue(fields()[12]);
-        record.end_date = fieldSetFlags()[13] ? this.end_date : (Long) defaultValue(fields()[13]);
-        record.active_flag = fieldSetFlags()[14] ? this.active_flag : (String) defaultValue(fields()[14]);
-        record.record_update_flag = fieldSetFlags()[15] ? this.record_update_flag : (String) defaultValue(fields()[15]);
+        record.return_surrogate_key = fieldSetFlags()[0] ? this.return_surrogate_key : (java.lang.String) defaultValue(fields()[0]);
+        record.return_reference_number = fieldSetFlags()[1] ? this.return_reference_number : (java.lang.String) defaultValue(fields()[1]);
+        record.usa_id = fieldSetFlags()[2] ? this.usa_id : (java.lang.Long) defaultValue(fields()[2]);
+        record.sephora_id = fieldSetFlags()[3] ? this.sephora_id : (java.lang.Long) defaultValue(fields()[3]);
+        record.online_atg_id = fieldSetFlags()[4] ? this.online_atg_id : (java.lang.String) defaultValue(fields()[4]);
+        record.card_number = fieldSetFlags()[5] ? this.card_number : (java.lang.String) defaultValue(fields()[5]);
+        record.return_auth_flag = fieldSetFlags()[6] ? this.return_auth_flag : (java.lang.String) defaultValue(fields()[6]);
+        record.reason_text = fieldSetFlags()[7] ? this.reason_text : (java.lang.String) defaultValue(fields()[7]);
+        record.cust_sale_counter = fieldSetFlags()[8] ? this.cust_sale_counter : (java.lang.Integer) defaultValue(fields()[8]);
+        record.cust_return_counter = fieldSetFlags()[9] ? this.cust_return_counter : (java.lang.Integer) defaultValue(fields()[9]);
+        record.pct_sale_to_return = fieldSetFlags()[10] ? this.pct_sale_to_return : (java.lang.Double) defaultValue(fields()[10]);
+        record.created_date = fieldSetFlags()[11] ? this.created_date : (java.lang.Long) defaultValue(fields()[11]);
+        record.start_date = fieldSetFlags()[12] ? this.start_date : (java.lang.Long) defaultValue(fields()[12]);
+        record.end_date = fieldSetFlags()[13] ? this.end_date : (java.lang.Long) defaultValue(fields()[13]);
+        record.active_flag = fieldSetFlags()[14] ? this.active_flag : (java.lang.String) defaultValue(fields()[14]);
+        record.record_update_flag = fieldSetFlags()[15] ? this.record_update_flag : (java.lang.String) defaultValue(fields()[15]);
         return record;
       } catch (org.apache.avro.AvroMissingFieldException e) {
         throw e;
-      } catch (Exception e) {
+      } catch (java.lang.Exception e) {
         throw new org.apache.avro.AvroRuntimeException(e);
       }
     }
@@ -1423,26 +1422,26 @@ public class CustomerTransactionsSummary extends org.apache.avro.specific.Specif
 
   @SuppressWarnings("unchecked")
   private static final org.apache.avro.io.DatumWriter<CustomerTransactionsSummary>
-    WRITER$ = (org.apache.avro.io.DatumWriter<CustomerTransactionsSummary>)MODEL$.createDatumWriter(SCHEMA$);
+          WRITER$ = (org.apache.avro.io.DatumWriter<CustomerTransactionsSummary>)MODEL$.createDatumWriter(SCHEMA$);
 
   @Override public void writeExternal(java.io.ObjectOutput out)
-    throws java.io.IOException {
+          throws java.io.IOException {
     WRITER$.write(this, SpecificData.getEncoder(out));
   }
 
   @SuppressWarnings("unchecked")
   private static final org.apache.avro.io.DatumReader<CustomerTransactionsSummary>
-    READER$ = (org.apache.avro.io.DatumReader<CustomerTransactionsSummary>)MODEL$.createDatumReader(SCHEMA$);
+          READER$ = (org.apache.avro.io.DatumReader<CustomerTransactionsSummary>)MODEL$.createDatumReader(SCHEMA$);
 
   @Override public void readExternal(java.io.ObjectInput in)
-    throws java.io.IOException {
+          throws java.io.IOException {
     READER$.read(this, SpecificData.getDecoder(in));
   }
 
   @Override protected boolean hasCustomCoders() { return true; }
 
   @Override public void customEncode(org.apache.avro.io.Encoder out)
-    throws java.io.IOException
+          throws java.io.IOException
   {
     out.writeString(this.return_surrogate_key);
 
@@ -1521,7 +1520,7 @@ public class CustomerTransactionsSummary extends org.apache.avro.specific.Specif
   }
 
   @Override public void customDecode(org.apache.avro.io.ResolvingDecoder in)
-    throws java.io.IOException
+          throws java.io.IOException
   {
     org.apache.avro.Schema.Field[] fieldOrder = in.readFieldOrderIfDiff();
     if (fieldOrder == null) {
@@ -1595,114 +1594,110 @@ public class CustomerTransactionsSummary extends org.apache.avro.specific.Specif
     } else {
       for (int i = 0; i < 16; i++) {
         switch (fieldOrder[i].pos()) {
-        case 0:
-          this.return_surrogate_key = in.readString();
-          break;
+          case 0:
+            this.return_surrogate_key = in.readString();
+            break;
 
-        case 1:
-          if (in.readIndex() != 1) {
-            in.readNull();
-            this.return_reference_number = null;
-          } else {
-            this.return_reference_number = in.readString();
-          }
-          break;
+          case 1:
+            if (in.readIndex() != 1) {
+              in.readNull();
+              this.return_reference_number = null;
+            } else {
+              this.return_reference_number = in.readString();
+            }
+            break;
 
-        case 2:
-          if (in.readIndex() != 1) {
-            in.readNull();
-            this.usa_id = null;
-          } else {
-            this.usa_id = in.readLong();
-          }
-          break;
+          case 2:
+            if (in.readIndex() != 1) {
+              in.readNull();
+              this.usa_id = null;
+            } else {
+              this.usa_id = in.readLong();
+            }
+            break;
 
-        case 3:
-          if (in.readIndex() != 1) {
-            in.readNull();
-            this.sephora_id = null;
-          } else {
-            this.sephora_id = in.readLong();
-          }
-          break;
+          case 3:
+            if (in.readIndex() != 1) {
+              in.readNull();
+              this.sephora_id = null;
+            } else {
+              this.sephora_id = in.readLong();
+            }
+            break;
 
-        case 4:
-          if (in.readIndex() != 1) {
-            in.readNull();
-            this.online_atg_id = null;
-          } else {
-            this.online_atg_id = in.readString();
-          }
-          break;
+          case 4:
+            if (in.readIndex() != 1) {
+              in.readNull();
+              this.online_atg_id = null;
+            } else {
+              this.online_atg_id = in.readString();
+            }
+            break;
 
-        case 5:
-          if (in.readIndex() != 1) {
-            in.readNull();
-            this.card_number = null;
-          } else {
-            this.card_number = in.readString();
-          }
-          break;
+          case 5:
+            if (in.readIndex() != 1) {
+              in.readNull();
+              this.card_number = null;
+            } else {
+              this.card_number = in.readString();
+            }
+            break;
 
-        case 6:
-          if (in.readIndex() != 1) {
-            in.readNull();
-            this.return_auth_flag = null;
-          } else {
-            this.return_auth_flag = in.readString();
-          }
-          break;
+          case 6:
+            if (in.readIndex() != 1) {
+              in.readNull();
+              this.return_auth_flag = null;
+            } else {
+              this.return_auth_flag = in.readString();
+            }
+            break;
 
-        case 7:
-          if (in.readIndex() != 1) {
-            in.readNull();
-            this.reason_text = null;
-          } else {
-            this.reason_text = in.readString();
-          }
-          break;
+          case 7:
+            if (in.readIndex() != 1) {
+              in.readNull();
+              this.reason_text = null;
+            } else {
+              this.reason_text = in.readString();
+            }
+            break;
 
-        case 8:
-          this.cust_sale_counter = in.readInt();
-          break;
+          case 8:
+            this.cust_sale_counter = in.readInt();
+            break;
 
-        case 9:
-          this.cust_return_counter = in.readInt();
-          break;
+          case 9:
+            this.cust_return_counter = in.readInt();
+            break;
 
-        case 10:
-          this.pct_sale_to_return = in.readDouble();
-          break;
+          case 10:
+            this.pct_sale_to_return = in.readDouble();
+            break;
 
-        case 11:
-          this.created_date = in.readLong();
-          break;
+          case 11:
+            this.created_date = in.readLong();
+            break;
 
-        case 12:
-          this.start_date = in.readLong();
-          break;
+          case 12:
+            this.start_date = in.readLong();
+            break;
 
-        case 13:
-          this.end_date = in.readLong();
-          break;
+          case 13:
+            this.end_date = in.readLong();
+            break;
 
-        case 14:
-          this.active_flag = in.readString();
-          break;
+          case 14:
+            this.active_flag = in.readString();
+            break;
 
-        case 15:
-          this.record_update_flag = in.readString();
-          break;
+          case 15:
+            this.record_update_flag = in.readString();
+            break;
 
-        default:
-          throw new java.io.IOException("Corrupt ResolvingDecoder.");
+          default:
+            throw new java.io.IOException("Corrupt ResolvingDecoder.");
         }
       }
     }
-  }
-
-  public static void main(String[] args) {
-    System.out.println(SCHEMA$);
   }
 }
 
