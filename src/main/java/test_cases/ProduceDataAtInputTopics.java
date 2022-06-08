@@ -97,13 +97,13 @@ public class ProduceDataAtInputTopics {
             OrderHeaderConsolidated order = getOrder(orderNum, date, dateTime, "S");
             OrderTenderDetailsEvents tender = getTender(orderNum, date, "S");
 
-            orderHeaderConsolidatedMyKafkaProducer.produceRecord(order.getOrderNumber(),
-                    order,
-                    "Sephora.DataPlatform.ReturnAuth.OrderHeaderConsolidated", 1);
-
             orderTenderDetailsEventsMyKafkaProducer.produceRecord(tender.getOrderNumber(),
                     tender,
                     "Sephora.DataPlatform.ReturnAuth.OrderTenderDetailsEvents", 1);
+
+            orderHeaderConsolidatedMyKafkaProducer.produceRecord(order.getOrderNumber(),
+                    order,
+                    "Sephora.DataPlatform.ReturnAuth.OrderHeaderConsolidated", 1);
 
             if (i <= 23) returns.add(getOrder(orderNum, date, dateTime, "R"));
         });
@@ -114,7 +114,7 @@ public class ProduceDataAtInputTopics {
 
         List<org.apache.avro.generic.GenericData.Record> results = Lists.newArrayList();
 
-        ConsumerRecords<String, org.apache.avro.generic.GenericData.Record> consumerRecords = consumer.poll(Duration.ofSeconds(10));
+        ConsumerRecords<String, org.apache.avro.generic.GenericData.Record> consumerRecords = consumer.poll(Duration.ofSeconds(15));
         for (ConsumerRecord<String, org.apache.avro.generic.GenericData.Record> cr : consumerRecords) {
             org.apache.avro.generic.GenericData.Record received = cr.value();
             results.add(received);

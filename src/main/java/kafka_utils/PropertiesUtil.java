@@ -46,7 +46,7 @@ public class PropertiesUtil {
         props.put(ConsumerConfig.KEY_DESERIALIZER_CLASS_CONFIG, StringDeserializer.class);
         props.put(ConsumerConfig.VALUE_DESERIALIZER_CLASS_CONFIG, KafkaAvroDeserializer.class);
         props.put(AbstractKafkaSchemaSerDeConfig.SCHEMA_REGISTRY_URL_CONFIG, propsFromFile.getProperty("schema-registry.server"));
-        props.put(ConsumerConfig.AUTO_OFFSET_RESET_CONFIG, "earliest");
+        props.put(ConsumerConfig.AUTO_OFFSET_RESET_CONFIG, "latest");
         props.put("group.id", groupId);
         return props;
     }
@@ -60,7 +60,6 @@ public class PropertiesUtil {
         props.put("sasl.mechanism", "PLAIN");
         props.put(ProducerConfig.ACKS_CONFIG, "all");
         props.put(ProducerConfig.RETRIES_CONFIG, 1);
-        props.put("group.id", propsFromFile.getProperty("group.id"));
         props.put(ProducerConfig.KEY_SERIALIZER_CLASS_CONFIG, StringSerializer.class);
         props.put(ProducerConfig.VALUE_SERIALIZER_CLASS_CONFIG, KafkaAvroSerializer.class);
         props.put(AbstractKafkaSchemaSerDeConfig.SCHEMA_REGISTRY_URL_CONFIG, propsFromFile.getProperty("schema-registry.server"));
@@ -81,7 +80,6 @@ public class PropertiesUtil {
         props.put("sasl.mechanism", "PLAIN");
         props.put(ProducerConfig.ACKS_CONFIG, "all");
         props.put(ProducerConfig.RETRIES_CONFIG, 1);
-        props.put("group.id", propsFromFile.getProperty("group.id"));
         props.put(ProducerConfig.KEY_SERIALIZER_CLASS_CONFIG, StringSerializer.class);
         props.put(ProducerConfig.VALUE_SERIALIZER_CLASS_CONFIG, KafkaAvroSerializer.class);
         props.put(AbstractKafkaSchemaSerDeConfig.SCHEMA_REGISTRY_URL_CONFIG, propsFromFile.getProperty("schema-registry.server"));
@@ -103,6 +101,23 @@ public class PropertiesUtil {
         props.put(ConsumerConfig.KEY_DESERIALIZER_CLASS_CONFIG, StringDeserializer.class);
         props.put(ConsumerConfig.VALUE_DESERIALIZER_CLASS_CONFIG, StringDeserializer.class);
         props.put(ConsumerConfig.AUTO_OFFSET_RESET_CONFIG, "earliest");
+
+        if (Objects.nonNull(schemaId))  props.put("use.schema.id", schemaId);
+        return props;
+    }
+
+    public static Properties getPropertiesForDevConsumer(String groupId, String schemaId) {
+        final Properties propsFromFile = getPropertiesFromFile(DEV_KAFKA_PROPS_PATH);
+        final Properties props = new Properties();
+        props.put(ConsumerConfig.BOOTSTRAP_SERVERS_CONFIG, propsFromFile.getProperty("kafka.server"));
+        props.put("security.protocol", "SASL_SSL");
+        props.put("sasl.jaas.config", propsFromFile.getProperty("sasl.jaas.config"));
+        props.put("sasl.mechanism", "PLAIN");
+        props.put("group.id", groupId);
+        props.put(ConsumerConfig.KEY_DESERIALIZER_CLASS_CONFIG, StringDeserializer.class);
+        props.put(ConsumerConfig.VALUE_DESERIALIZER_CLASS_CONFIG, StringDeserializer.class);
+        props.put(ConsumerConfig.AUTO_OFFSET_RESET_CONFIG, "earliest");
+
         if (Objects.nonNull(schemaId))  props.put("use.schema.id", schemaId);
         return props;
     }
