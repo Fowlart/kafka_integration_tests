@@ -52,27 +52,16 @@ public class PropertiesUtil {
     }
 
     public static Properties getPropertiesForProducerOnQaEnv() {
-        final Properties propsFromFile = getPropertiesFromFile(QA_KAFKA_PROPS_PATH);
-        final Properties props = new Properties();
-        props.put(ProducerConfig.BOOTSTRAP_SERVERS_CONFIG, propsFromFile.getProperty("kafka.server"));
-        props.put("security.protocol", "SASL_SSL");
-        props.put("sasl.jaas.config", propsFromFile.getProperty("sasl.jaas.config"));
-        props.put("sasl.mechanism", "PLAIN");
-        props.put(ProducerConfig.ACKS_CONFIG, "all");
-        props.put(ProducerConfig.RETRIES_CONFIG, 1);
-        props.put(ProducerConfig.KEY_SERIALIZER_CLASS_CONFIG, StringSerializer.class);
-        props.put(ProducerConfig.VALUE_SERIALIZER_CLASS_CONFIG, KafkaAvroSerializer.class);
-        props.put(AbstractKafkaSchemaSerDeConfig.SCHEMA_REGISTRY_URL_CONFIG, propsFromFile.getProperty("schema-registry.server"));
-        props.put(AbstractKafkaSchemaSerDeConfig.AUTO_REGISTER_SCHEMAS, false);
-        props.put(AbstractKafkaSchemaSerDeConfig.USE_SCHEMA_ID, "100264");
-        props.put(AbstractKafkaSchemaSerDeConfig.BASIC_AUTH_CREDENTIALS_SOURCE, "USER_INFO");
-        props.put(AbstractKafkaSchemaSerDeConfig.USER_INFO_CONFIG, propsFromFile.getProperty("basic.auth.user.info"));
-        return props;
+        return getCommonPropertiesForProducers(QA_KAFKA_PROPS_PATH);
     }
 
 
     public static Properties getPropertiesForProducerOnDevEnv() {
-        final Properties propsFromFile = getPropertiesFromFile(DEV_KAFKA_PROPS_PATH);
+        return getCommonPropertiesForProducers(DEV_KAFKA_PROPS_PATH);
+    }
+
+    private static Properties getCommonPropertiesForProducers(String devKafkaPropsPath) {
+        final Properties propsFromFile = getPropertiesFromFile(devKafkaPropsPath);
         final Properties props = new Properties();
         props.put(ProducerConfig.BOOTSTRAP_SERVERS_CONFIG, propsFromFile.getProperty("kafka.server"));
         props.put("security.protocol", "SASL_SSL");
@@ -91,23 +80,15 @@ public class PropertiesUtil {
     }
 
     public static Properties getPropertiesForQaConsumer(String groupId, String schemaId) {
-        final Properties propsFromFile = getPropertiesFromFile(QA_KAFKA_PROPS_PATH);
-        final Properties props = new Properties();
-        props.put(ConsumerConfig.BOOTSTRAP_SERVERS_CONFIG, propsFromFile.getProperty("kafka.server"));
-        props.put("security.protocol", "SASL_SSL");
-        props.put("sasl.jaas.config", propsFromFile.getProperty("sasl.jaas.config"));
-        props.put("sasl.mechanism", "PLAIN");
-        props.put("group.id", groupId);
-        props.put(ConsumerConfig.KEY_DESERIALIZER_CLASS_CONFIG, StringDeserializer.class);
-        props.put(ConsumerConfig.VALUE_DESERIALIZER_CLASS_CONFIG, StringDeserializer.class);
-        props.put(ConsumerConfig.AUTO_OFFSET_RESET_CONFIG, "earliest");
-
-        if (Objects.nonNull(schemaId))  props.put("use.schema.id", schemaId);
-        return props;
+        return getCommonPropertiesForConsumers(groupId, schemaId, QA_KAFKA_PROPS_PATH);
     }
 
     public static Properties getPropertiesForDevConsumer(String groupId, String schemaId) {
-        final Properties propsFromFile = getPropertiesFromFile(DEV_KAFKA_PROPS_PATH);
+        return getCommonPropertiesForConsumers(groupId, schemaId, DEV_KAFKA_PROPS_PATH);
+    }
+
+    private static Properties getCommonPropertiesForConsumers(String groupId, String schemaId, String devKafkaPropsPath) {
+        final Properties propsFromFile = getPropertiesFromFile(devKafkaPropsPath);
         final Properties props = new Properties();
         props.put(ConsumerConfig.BOOTSTRAP_SERVERS_CONFIG, propsFromFile.getProperty("kafka.server"));
         props.put("security.protocol", "SASL_SSL");
@@ -118,7 +99,7 @@ public class PropertiesUtil {
         props.put(ConsumerConfig.VALUE_DESERIALIZER_CLASS_CONFIG, StringDeserializer.class);
         props.put(ConsumerConfig.AUTO_OFFSET_RESET_CONFIG, "earliest");
 
-        if (Objects.nonNull(schemaId))  props.put("use.schema.id", schemaId);
+        if (Objects.nonNull(schemaId)) props.put("use.schema.id", schemaId);
         return props;
     }
 }
