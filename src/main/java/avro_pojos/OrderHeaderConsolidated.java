@@ -5,27 +5,29 @@
  */
 package avro_pojos;
 
-import org.apache.avro.message.BinaryMessageDecoder;
-import org.apache.avro.message.BinaryMessageEncoder;
-import org.apache.avro.message.SchemaStore;
+import org.apache.avro.generic.GenericArray;
 import org.apache.avro.specific.SpecificData;
+import org.apache.avro.util.Utf8;
+import org.apache.avro.message.BinaryMessageEncoder;
+import org.apache.avro.message.BinaryMessageDecoder;
+import org.apache.avro.message.SchemaStore;
 
 @org.apache.avro.specific.AvroGenerated
 public class OrderHeaderConsolidated extends org.apache.avro.specific.SpecificRecordBase implements org.apache.avro.specific.SpecificRecord {
-  private static final long serialVersionUID = 828968700187417631L;
-  public static final org.apache.avro.Schema SCHEMA$ = new org.apache.avro.Schema.Parser().parse("{\"type\":\"record\",\"name\":\"OrderHeaderConsolidated\",\"namespace\":\"com.sephora.dataplatform.avro\",\"fields\":[{\"name\":\"org_id\",\"type\":[\"null\",{\"type\":\"string\",\"avro.java.string\":\"String\"}],\"default\":null},{\"name\":\"atg_id\",\"type\":[\"null\",{\"type\":\"string\",\"avro.java.string\":\"String\"}],\"default\":null},{\"name\":\"usa_id\",\"type\":[\"null\",\"long\"]},{\"name\":\"sephora_id\",\"type\":[\"null\",\"long\"]},{\"name\":\"order_number\",\"type\":[\"null\",{\"type\":\"string\",\"avro.java.string\":\"String\"}]},{\"name\":\"atg_order_number\",\"type\":[\"null\",{\"type\":\"string\",\"avro.java.string\":\"String\"}],\"default\":null},{\"name\":\"transaction_date\",\"type\":[\"null\",{\"type\":\"string\",\"avro.java.string\":\"String\"}],\"default\":null},{\"name\":\"transaction_datetime\",\"type\":[\"null\",{\"type\":\"string\",\"avro.java.string\":\"String\"}],\"default\":null},{\"name\":\"transaction_datetime_utc\",\"type\":[\"null\",{\"type\":\"string\",\"avro.java.string\":\"String\"}],\"default\":null},{\"name\":\"fulfill_milestone_datetime\",\"type\":[\"null\",{\"type\":\"string\",\"avro.java.string\":\"String\"}],\"default\":null},{\"name\":\"channel_type\",\"type\":[\"null\",{\"type\":\"string\",\"avro.java.string\":\"String\"}],\"default\":null},{\"name\":\"transaction_type\",\"type\":[\"null\",{\"type\":\"string\",\"avro.java.string\":\"String\"}],\"default\":null},{\"name\":\"sub_transaction_type\",\"type\":[\"null\",{\"type\":\"string\",\"avro.java.string\":\"String\"}],\"default\":null},{\"name\":\"store_number\",\"type\":[\"null\",{\"type\":\"string\",\"avro.java.string\":\"String\"}],\"default\":null},{\"name\":\"mplus_store_number\",\"type\":[\"null\",{\"type\":\"string\",\"avro.java.string\":\"String\"}],\"default\":null},{\"name\":\"bi_tier_atorder\",\"type\":[\"null\",{\"type\":\"string\",\"avro.java.string\":\"String\"}],\"default\":null},{\"name\":\"units\",\"type\":[\"null\",\"double\"],\"default\":null},{\"name\":\"gross_sales_usd_amount\",\"type\":[\"null\",\"double\"],\"default\":null},{\"name\":\"gross_sales_local_amount\",\"type\":[\"null\",\"double\"],\"default\":null},{\"name\":\"sales_afterdiscount_usd_amount\",\"type\":[\"null\",\"double\"],\"default\":null},{\"name\":\"sales_afterdiscount_local_amount\",\"type\":[\"null\",\"double\"],\"default\":null},{\"name\":\"net_sales_usd_amount\",\"type\":[\"null\",\"double\"],\"default\":null},{\"name\":\"net_sales_local_amount\",\"type\":[\"null\",{\"type\":\"string\",\"avro.java.string\":\"String\"}],\"default\":null},{\"name\":\"discount_usd_amount\",\"type\":[\"null\",\"double\"],\"default\":null},{\"name\":\"discount_local_amount\",\"type\":[\"null\",\"double\"],\"default\":null},{\"name\":\"exchange_rate\",\"type\":[\"null\",{\"type\":\"fixed\",\"name\":\"fixed\",\"namespace\":\"exchange_rate\",\"size\":5,\"logicalType\":\"decimal\",\"precision\":10,\"scale\":6}],\"default\":null},{\"name\":\"giftwrap_gross_amount\",\"type\":[\"null\",\"double\"],\"default\":null},{\"name\":\"giftwrap_net_amount\",\"type\":[\"null\",\"double\"],\"default\":null},{\"name\":\"ship_gross_amount\",\"type\":[\"null\",\"double\"],\"default\":null},{\"name\":\"ship_net_amount\",\"type\":[\"null\",\"double\"],\"default\":null},{\"name\":\"tax_amount\",\"type\":[\"null\",{\"type\":\"string\",\"avro.java.string\":\"String\"}],\"default\":null},{\"name\":\"origin_of_order\",\"type\":[\"null\",{\"type\":\"string\",\"avro.java.string\":\"String\"}],\"default\":null},{\"name\":\"country_of_origin\",\"type\":[\"null\",{\"type\":\"string\",\"avro.java.string\":\"String\"}],\"default\":null},{\"name\":\"currency_code\",\"type\":[\"null\",{\"type\":\"string\",\"avro.java.string\":\"String\"}],\"default\":null},{\"name\":\"cancel_flag\",\"type\":[\"null\",{\"type\":\"string\",\"avro.java.string\":\"String\"}],\"default\":null},{\"name\":\"dotcom_guest_flag\",\"type\":[\"null\",{\"type\":\"string\",\"avro.java.string\":\"String\"}],\"default\":null},{\"name\":\"flash_order_type\",\"type\":[\"null\",{\"type\":\"string\",\"avro.java.string\":\"String\"}],\"default\":null},{\"name\":\"csr_id\",\"type\":[\"null\",{\"type\":\"string\",\"avro.java.string\":\"String\"}],\"default\":null},{\"name\":\"transaction_number\",\"type\":[\"null\",{\"type\":\"string\",\"avro.java.string\":\"String\"}],\"default\":null},{\"name\":\"language\",\"type\":[\"null\",{\"type\":\"string\",\"avro.java.string\":\"String\"}],\"default\":null},{\"name\":\"original_order_number\",\"type\":[\"null\",{\"type\":\"string\",\"avro.java.string\":\"String\"}],\"default\":null},{\"name\":\"terminal_id\",\"type\":[\"null\",{\"type\":\"string\",\"avro.java.string\":\"String\"}],\"default\":null},{\"name\":\"demand_gross_sales\",\"type\":[\"null\",\"double\"],\"default\":null},{\"name\":\"demand_discounted_sales\",\"type\":[\"null\",\"double\"],\"default\":null},{\"name\":\"ship_amount\",\"type\":[\"null\",{\"type\":\"string\",\"avro.java.string\":\"String\"}],\"default\":null},{\"name\":\"gift_wrap_amount\",\"type\":[\"null\",{\"type\":\"string\",\"avro.java.string\":\"String\"}],\"default\":null},{\"name\":\"gift_wrap_flag\",\"type\":[\"null\",{\"type\":\"string\",\"avro.java.string\":\"String\"}],\"default\":null},{\"name\":\"gwp_flag\",\"type\":[\"null\",{\"type\":\"string\",\"avro.java.string\":\"String\"}],\"default\":null},{\"name\":\"order_cancel_flag\",\"type\":[\"null\",{\"type\":\"string\",\"avro.java.string\":\"String\"}],\"default\":null},{\"name\":\"order_cancel_datetime\",\"type\":[\"null\",{\"type\":\"string\",\"avro.java.string\":\"String\"}],\"default\":null},{\"name\":\"sample_flag\",\"type\":[\"null\",{\"type\":\"string\",\"avro.java.string\":\"String\"}],\"default\":null},{\"name\":\"order_submit_datetime\",\"type\":[\"null\",{\"type\":\"string\",\"avro.java.string\":\"String\"}],\"default\":null},{\"name\":\"order_submit_datetime_utc\",\"type\":[\"null\",{\"type\":\"string\",\"avro.java.string\":\"String\"}],\"default\":null},{\"name\":\"order_submit_datetime_local\",\"type\":[\"null\",{\"type\":\"string\",\"avro.java.string\":\"String\"}],\"default\":null},{\"name\":\"order_submit_year_month\",\"type\":[\"null\",\"int\"],\"default\":null},{\"name\":\"order_submit_date\",\"type\":[\"null\",{\"type\":\"string\",\"avro.java.string\":\"String\"}]},{\"name\":\"order_submit_hour\",\"type\":[\"null\",\"int\"],\"default\":null},{\"name\":\"dp_create_timestamp\",\"type\":[\"null\",{\"type\":\"string\",\"avro.java.string\":\"String\"}],\"default\":null},{\"name\":\"dp_update_timestamp\",\"type\":[\"null\",{\"type\":\"string\",\"avro.java.string\":\"String\"}],\"default\":null},{\"name\":\"sephora_id_update_timestamp\",\"type\":[\"null\",{\"type\":\"string\",\"avro.java.string\":\"String\"}],\"default\":null},{\"name\":\"topic\",\"type\":[\"null\",{\"type\":\"string\",\"avro.java.string\":\"String\"}],\"default\":null},{\"name\":\"partition\",\"type\":[\"null\",\"int\"],\"default\":null},{\"name\":\"offset\",\"type\":[\"null\",\"long\"],\"default\":null},{\"name\":\"timestamp\",\"type\":[\"null\",\"long\"],\"default\":null},{\"name\":\"channel\",\"type\":[\"null\",{\"type\":\"string\",\"avro.java.string\":\"String\"}],\"default\":null},{\"name\":\"transaction_datetime_local\",\"type\":[\"null\",{\"type\":\"string\",\"avro.java.string\":\"String\"}],\"default\":null},{\"name\":\"hold_release_datetime\",\"type\":[\"null\",{\"type\":\"string\",\"avro.java.string\":\"String\"}],\"default\":null},{\"name\":\"cancel_type\",\"type\":[\"null\",{\"type\":\"string\",\"avro.java.string\":\"String\"}],\"default\":null},{\"name\":\"cancel_reason_text\",\"type\":[\"null\",{\"type\":\"string\",\"avro.java.string\":\"String\"}],\"default\":null},{\"name\":\"cancel_reason_code\",\"type\":[\"null\",{\"type\":\"string\",\"avro.java.string\":\"String\"}],\"default\":null},{\"name\":\"pickup_cancelled_datetime\",\"type\":[\"null\",{\"type\":\"string\",\"avro.java.string\":\"String\"}],\"default\":null},{\"name\":\"seller_org_code\",\"type\":[\"null\",{\"type\":\"string\",\"avro.java.string\":\"String\"}],\"default\":null},{\"name\":\"bi_pointsbalance_atorder\",\"type\":[\"null\",\"int\"],\"default\":null},{\"name\":\"shipped_datetime\",\"type\":[\"null\",{\"type\":\"string\",\"avro.java.string\":\"String\"}],\"default\":null},{\"name\":\"pickup_store_number\",\"type\":[\"null\",{\"type\":\"string\",\"avro.java.string\":\"String\"}],\"default\":null},{\"name\":\"picked_up_datetime\",\"type\":[\"null\",{\"type\":\"string\",\"avro.java.string\":\"String\"}],\"default\":null},{\"name\":\"external_order_type\",\"type\":[\"null\",{\"type\":\"string\",\"avro.java.string\":\"String\"}],\"default\":null},{\"name\":\"external_order_number\",\"type\":[\"null\",{\"type\":\"string\",\"avro.java.string\":\"String\"}],\"default\":null},{\"name\":\"hal_selected\",\"type\":[\"null\",{\"type\":\"string\",\"avro.java.string\":\"String\"}],\"default\":null}]}");
+  private static final long serialVersionUID = 8827429627402114776L;
+  public static final org.apache.avro.Schema SCHEMA$ = new org.apache.avro.Schema.Parser().parse("{\"type\":\"record\",\"name\":\"OrderHeaderConsolidated\",\"namespace\":\"com.sephora.dataplatform.avro\",\"fields\":[{\"name\":\"org_id\",\"type\":[\"null\",{\"type\":\"string\",\"avro.java.string\":\"String\"}],\"default\":null},{\"name\":\"atg_id\",\"type\":[\"null\",{\"type\":\"string\",\"avro.java.string\":\"String\"}],\"default\":null},{\"name\":\"usa_id\",\"type\":[\"null\",\"long\"]},{\"name\":\"sephora_id\",\"type\":[\"null\",\"long\"]},{\"name\":\"order_number\",\"type\":[\"null\",{\"type\":\"string\",\"avro.java.string\":\"String\"}]},{\"name\":\"atg_order_number\",\"type\":[\"null\",{\"type\":\"string\",\"avro.java.string\":\"String\"}],\"default\":null},{\"name\":\"transaction_date\",\"type\":[\"null\",{\"type\":\"string\",\"avro.java.string\":\"String\"}],\"default\":null},{\"name\":\"transaction_datetime\",\"type\":[\"null\",{\"type\":\"string\",\"avro.java.string\":\"String\"}],\"default\":null},{\"name\":\"transaction_datetime_utc\",\"type\":[\"null\",{\"type\":\"string\",\"avro.java.string\":\"String\"}],\"default\":null},{\"name\":\"fulfill_milestone_datetime\",\"type\":[\"null\",{\"type\":\"string\",\"avro.java.string\":\"String\"}],\"default\":null},{\"name\":\"channel_type\",\"type\":[\"null\",{\"type\":\"string\",\"avro.java.string\":\"String\"}],\"default\":null},{\"name\":\"transaction_type\",\"type\":[\"null\",{\"type\":\"string\",\"avro.java.string\":\"String\"}],\"default\":null},{\"name\":\"sub_transaction_type\",\"type\":[\"null\",{\"type\":\"string\",\"avro.java.string\":\"String\"}],\"default\":null},{\"name\":\"store_number\",\"type\":[\"null\",{\"type\":\"string\",\"avro.java.string\":\"String\"}],\"default\":null},{\"name\":\"mplus_store_number\",\"type\":[\"null\",{\"type\":\"string\",\"avro.java.string\":\"String\"}],\"default\":null},{\"name\":\"bi_tier_atorder\",\"type\":[\"null\",{\"type\":\"string\",\"avro.java.string\":\"String\"}],\"default\":null},{\"name\":\"units\",\"type\":[\"null\",\"double\"],\"default\":null},{\"name\":\"gross_sales_usd_amount\",\"type\":[\"null\",\"double\"],\"default\":null},{\"name\":\"gross_sales_local_amount\",\"type\":[\"null\",\"double\"],\"default\":null},{\"name\":\"sales_afterdiscount_usd_amount\",\"type\":[\"null\",\"double\"],\"default\":null},{\"name\":\"sales_afterdiscount_local_amount\",\"type\":[\"null\",\"double\"],\"default\":null},{\"name\":\"net_sales_usd_amount\",\"type\":[\"null\",\"double\"],\"default\":null},{\"name\":\"net_sales_local_amount\",\"type\":[\"null\",{\"type\":\"string\",\"avro.java.string\":\"String\"}],\"default\":null},{\"name\":\"discount_usd_amount\",\"type\":[\"null\",\"double\"],\"default\":null},{\"name\":\"discount_local_amount\",\"type\":[\"null\",\"double\"],\"default\":null},{\"name\":\"exchange_rate\",\"type\":[\"null\",{\"type\":\"fixed\",\"name\":\"fixed\",\"namespace\":\"exchange_rate\",\"size\":5,\"logicalType\":\"decimal\",\"precision\":10,\"scale\":6}],\"default\":null},{\"name\":\"giftwrap_gross_amount\",\"type\":[\"null\",\"double\"],\"default\":null},{\"name\":\"giftwrap_net_amount\",\"type\":[\"null\",\"double\"],\"default\":null},{\"name\":\"ship_gross_amount\",\"type\":[\"null\",\"double\"],\"default\":null},{\"name\":\"ship_net_amount\",\"type\":[\"null\",\"double\"],\"default\":null},{\"name\":\"tax_amount\",\"type\":[\"null\",{\"type\":\"string\",\"avro.java.string\":\"String\"}],\"default\":null},{\"name\":\"origin_of_order\",\"type\":[\"null\",{\"type\":\"string\",\"avro.java.string\":\"String\"}],\"default\":null},{\"name\":\"country_of_origin\",\"type\":[\"null\",{\"type\":\"string\",\"avro.java.string\":\"String\"}],\"default\":null},{\"name\":\"currency_code\",\"type\":[\"null\",{\"type\":\"string\",\"avro.java.string\":\"String\"}],\"default\":null},{\"name\":\"cancel_flag\",\"type\":[\"null\",{\"type\":\"string\",\"avro.java.string\":\"String\"}],\"default\":null},{\"name\":\"dotcom_guest_flag\",\"type\":[\"null\",{\"type\":\"string\",\"avro.java.string\":\"String\"}],\"default\":null},{\"name\":\"flash_order_type\",\"type\":[\"null\",{\"type\":\"string\",\"avro.java.string\":\"String\"}],\"default\":null},{\"name\":\"csr_id\",\"type\":[\"null\",{\"type\":\"string\",\"avro.java.string\":\"String\"}],\"default\":null},{\"name\":\"transaction_number\",\"type\":[\"null\",{\"type\":\"string\",\"avro.java.string\":\"String\"}],\"default\":null},{\"name\":\"language\",\"type\":[\"null\",{\"type\":\"string\",\"avro.java.string\":\"String\"}],\"default\":null},{\"name\":\"original_order_number\",\"type\":[\"null\",{\"type\":\"string\",\"avro.java.string\":\"String\"}],\"default\":null},{\"name\":\"terminal_id\",\"type\":[\"null\",{\"type\":\"string\",\"avro.java.string\":\"String\"}],\"default\":null},{\"name\":\"demand_gross_sales\",\"type\":[\"null\",\"double\"],\"default\":null},{\"name\":\"demand_discounted_sales\",\"type\":[\"null\",\"double\"],\"default\":null},{\"name\":\"ship_amount\",\"type\":[\"null\",{\"type\":\"string\",\"avro.java.string\":\"String\"}],\"default\":null},{\"name\":\"gift_wrap_amount\",\"type\":[\"null\",{\"type\":\"string\",\"avro.java.string\":\"String\"}],\"default\":null},{\"name\":\"gift_wrap_flag\",\"type\":[\"null\",{\"type\":\"string\",\"avro.java.string\":\"String\"}],\"default\":null},{\"name\":\"gwp_flag\",\"type\":[\"null\",{\"type\":\"string\",\"avro.java.string\":\"String\"}],\"default\":null},{\"name\":\"order_cancel_flag\",\"type\":[\"null\",{\"type\":\"string\",\"avro.java.string\":\"String\"}],\"default\":null},{\"name\":\"order_cancel_datetime\",\"type\":[\"null\",{\"type\":\"string\",\"avro.java.string\":\"String\"}],\"default\":null},{\"name\":\"sample_flag\",\"type\":[\"null\",{\"type\":\"string\",\"avro.java.string\":\"String\"}],\"default\":null},{\"name\":\"order_submit_datetime\",\"type\":[\"null\",{\"type\":\"string\",\"avro.java.string\":\"String\"}],\"default\":null},{\"name\":\"order_submit_datetime_utc\",\"type\":[\"null\",{\"type\":\"string\",\"avro.java.string\":\"String\"}],\"default\":null},{\"name\":\"order_submit_datetime_local\",\"type\":[\"null\",{\"type\":\"string\",\"avro.java.string\":\"String\"}],\"default\":null},{\"name\":\"order_submit_year_month\",\"type\":[\"null\",\"int\"],\"default\":null},{\"name\":\"order_submit_date\",\"type\":[\"null\",{\"type\":\"string\",\"avro.java.string\":\"String\"}]},{\"name\":\"order_submit_hour\",\"type\":[\"null\",\"int\"],\"default\":null},{\"name\":\"dp_create_timestamp\",\"type\":[\"null\",{\"type\":\"string\",\"avro.java.string\":\"String\"}],\"default\":null},{\"name\":\"dp_update_timestamp\",\"type\":[\"null\",{\"type\":\"string\",\"avro.java.string\":\"String\"}],\"default\":null},{\"name\":\"sephora_id_update_timestamp\",\"type\":[\"null\",{\"type\":\"string\",\"avro.java.string\":\"String\"}],\"default\":null},{\"name\":\"topic\",\"type\":[\"null\",{\"type\":\"string\",\"avro.java.string\":\"String\"}],\"default\":null},{\"name\":\"partition\",\"type\":[\"null\",\"int\"],\"default\":null},{\"name\":\"offset\",\"type\":[\"null\",\"long\"],\"default\":null},{\"name\":\"timestamp\",\"type\":[\"null\",\"long\"],\"default\":null},{\"name\":\"channel\",\"type\":[\"null\",{\"type\":\"string\",\"avro.java.string\":\"String\"}],\"default\":null},{\"name\":\"transaction_datetime_local\",\"type\":[\"null\",{\"type\":\"string\",\"avro.java.string\":\"String\"}],\"default\":null},{\"name\":\"hold_release_datetime\",\"type\":[\"null\",{\"type\":\"string\",\"avro.java.string\":\"String\"}],\"default\":null},{\"name\":\"cancel_type\",\"type\":[\"null\",{\"type\":\"string\",\"avro.java.string\":\"String\"}],\"default\":null},{\"name\":\"cancel_reason_text\",\"type\":[\"null\",{\"type\":\"string\",\"avro.java.string\":\"String\"}],\"default\":null},{\"name\":\"cancel_reason_code\",\"type\":[\"null\",{\"type\":\"string\",\"avro.java.string\":\"String\"}],\"default\":null},{\"name\":\"pickup_cancelled_datetime\",\"type\":[\"null\",{\"type\":\"string\",\"avro.java.string\":\"String\"}],\"default\":null},{\"name\":\"seller_org_code\",\"type\":[\"null\",{\"type\":\"string\",\"avro.java.string\":\"String\"}],\"default\":null},{\"name\":\"bi_pointsbalance_atorder\",\"type\":[\"null\",\"int\"],\"default\":null},{\"name\":\"shipped_datetime\",\"type\":[\"null\",{\"type\":\"string\",\"avro.java.string\":\"String\"}],\"default\":null},{\"name\":\"pickup_store_number\",\"type\":[\"null\",{\"type\":\"string\",\"avro.java.string\":\"String\"}],\"default\":null},{\"name\":\"picked_up_datetime\",\"type\":[\"null\",{\"type\":\"string\",\"avro.java.string\":\"String\"}],\"default\":null},{\"name\":\"external_order_type\",\"type\":[\"null\",{\"type\":\"string\",\"avro.java.string\":\"String\"}],\"default\":null},{\"name\":\"external_order_number\",\"type\":[\"null\",{\"type\":\"string\",\"avro.java.string\":\"String\"}],\"default\":null},{\"name\":\"hal_selected\",\"type\":[\"null\",{\"type\":\"string\",\"avro.java.string\":\"String\"}],\"default\":null},{\"name\":\"is_declined\",\"type\":\"boolean\",\"default\":false}]}");
   public static org.apache.avro.Schema getClassSchema() { return SCHEMA$; }
 
   private static SpecificData MODEL$ = new SpecificData();
-static {
+  static {
     MODEL$.addLogicalTypeConversion(new org.apache.avro.Conversions.DecimalConversion());
   }
 
   private static final BinaryMessageEncoder<OrderHeaderConsolidated> ENCODER =
-      new BinaryMessageEncoder<OrderHeaderConsolidated>(MODEL$, SCHEMA$);
+          new BinaryMessageEncoder<OrderHeaderConsolidated>(MODEL$, SCHEMA$);
 
   private static final BinaryMessageDecoder<OrderHeaderConsolidated> DECODER =
-      new BinaryMessageDecoder<OrderHeaderConsolidated>(MODEL$, SCHEMA$);
+          new BinaryMessageDecoder<OrderHeaderConsolidated>(MODEL$, SCHEMA$);
 
   /**
    * Return the BinaryMessageEncoder instance used by this class.
@@ -68,89 +70,90 @@ static {
    * @throws java.io.IOException if the given bytes could not be deserialized into an instance of this class
    */
   public static OrderHeaderConsolidated fromByteBuffer(
-      java.nio.ByteBuffer b) throws java.io.IOException {
+          java.nio.ByteBuffer b) throws java.io.IOException {
     return DECODER.decode(b);
   }
 
-  @Deprecated public String org_id;
-  @Deprecated public String atg_id;
-  @Deprecated public Long usa_id;
-  @Deprecated public Long sephora_id;
-  @Deprecated public String order_number;
-  @Deprecated public String atg_order_number;
-  @Deprecated public String transaction_date;
-  @Deprecated public String transaction_datetime;
-  @Deprecated public String transaction_datetime_utc;
-  @Deprecated public String fulfill_milestone_datetime;
-  @Deprecated public String channel_type;
-  @Deprecated public String transaction_type;
-  @Deprecated public String sub_transaction_type;
-  @Deprecated public String store_number;
-  @Deprecated public String mplus_store_number;
-  @Deprecated public String bi_tier_atorder;
-  @Deprecated public Double units;
-  @Deprecated public Double gross_sales_usd_amount;
-  @Deprecated public Double gross_sales_local_amount;
-  @Deprecated public Double sales_afterdiscount_usd_amount;
-  @Deprecated public Double sales_afterdiscount_local_amount;
-  @Deprecated public Double net_sales_usd_amount;
-  @Deprecated public String net_sales_local_amount;
-  @Deprecated public Double discount_usd_amount;
-  @Deprecated public Double discount_local_amount;
+  @Deprecated public java.lang.String org_id;
+  @Deprecated public java.lang.String atg_id;
+  @Deprecated public java.lang.Long usa_id;
+  @Deprecated public java.lang.Long sephora_id;
+  @Deprecated public java.lang.String order_number;
+  @Deprecated public java.lang.String atg_order_number;
+  @Deprecated public java.lang.String transaction_date;
+  @Deprecated public java.lang.String transaction_datetime;
+  @Deprecated public java.lang.String transaction_datetime_utc;
+  @Deprecated public java.lang.String fulfill_milestone_datetime;
+  @Deprecated public java.lang.String channel_type;
+  @Deprecated public java.lang.String transaction_type;
+  @Deprecated public java.lang.String sub_transaction_type;
+  @Deprecated public java.lang.String store_number;
+  @Deprecated public java.lang.String mplus_store_number;
+  @Deprecated public java.lang.String bi_tier_atorder;
+  @Deprecated public java.lang.Double units;
+  @Deprecated public java.lang.Double gross_sales_usd_amount;
+  @Deprecated public java.lang.Double gross_sales_local_amount;
+  @Deprecated public java.lang.Double sales_afterdiscount_usd_amount;
+  @Deprecated public java.lang.Double sales_afterdiscount_local_amount;
+  @Deprecated public java.lang.Double net_sales_usd_amount;
+  @Deprecated public java.lang.String net_sales_local_amount;
+  @Deprecated public java.lang.Double discount_usd_amount;
+  @Deprecated public java.lang.Double discount_local_amount;
   @Deprecated public java.math.BigDecimal exchange_rate;
-  @Deprecated public Double giftwrap_gross_amount;
-  @Deprecated public Double giftwrap_net_amount;
-  @Deprecated public Double ship_gross_amount;
-  @Deprecated public Double ship_net_amount;
-  @Deprecated public String tax_amount;
-  @Deprecated public String origin_of_order;
-  @Deprecated public String country_of_origin;
-  @Deprecated public String currency_code;
-  @Deprecated public String cancel_flag;
-  @Deprecated public String dotcom_guest_flag;
-  @Deprecated public String flash_order_type;
-  @Deprecated public String csr_id;
-  @Deprecated public String transaction_number;
-  @Deprecated public String language;
-  @Deprecated public String original_order_number;
-  @Deprecated public String terminal_id;
-  @Deprecated public Double demand_gross_sales;
-  @Deprecated public Double demand_discounted_sales;
-  @Deprecated public String ship_amount;
-  @Deprecated public String gift_wrap_amount;
-  @Deprecated public String gift_wrap_flag;
-  @Deprecated public String gwp_flag;
-  @Deprecated public String order_cancel_flag;
-  @Deprecated public String order_cancel_datetime;
-  @Deprecated public String sample_flag;
-  @Deprecated public String order_submit_datetime;
-  @Deprecated public String order_submit_datetime_utc;
-  @Deprecated public String order_submit_datetime_local;
-  @Deprecated public Integer order_submit_year_month;
-  @Deprecated public String order_submit_date;
-  @Deprecated public Integer order_submit_hour;
-  @Deprecated public String dp_create_timestamp;
-  @Deprecated public String dp_update_timestamp;
-  @Deprecated public String sephora_id_update_timestamp;
-  @Deprecated public String topic;
-  @Deprecated public Integer partition;
-  @Deprecated public Long offset;
-  @Deprecated public Long timestamp;
-  @Deprecated public String channel;
-  @Deprecated public String transaction_datetime_local;
-  @Deprecated public String hold_release_datetime;
-  @Deprecated public String cancel_type;
-  @Deprecated public String cancel_reason_text;
-  @Deprecated public String cancel_reason_code;
-  @Deprecated public String pickup_cancelled_datetime;
-  @Deprecated public String seller_org_code;
-  @Deprecated public Integer bi_pointsbalance_atorder;
-  @Deprecated public String shipped_datetime;
-  @Deprecated public String pickup_store_number;
-  @Deprecated public String picked_up_datetime;
-  @Deprecated public String external_order_type;
-  @Deprecated public String external_order_number;
-  @Deprecated public String hal_selected;
+  @Deprecated public java.lang.Double giftwrap_gross_amount;
+  @Deprecated public java.lang.Double giftwrap_net_amount;
+  @Deprecated public java.lang.Double ship_gross_amount;
+  @Deprecated public java.lang.Double ship_net_amount;
+  @Deprecated public java.lang.String tax_amount;
+  @Deprecated public java.lang.String origin_of_order;
+  @Deprecated public java.lang.String country_of_origin;
+  @Deprecated public java.lang.String currency_code;
+  @Deprecated public java.lang.String cancel_flag;
+  @Deprecated public java.lang.String dotcom_guest_flag;
+  @Deprecated public java.lang.String flash_order_type;
+  @Deprecated public java.lang.String csr_id;
+  @Deprecated public java.lang.String transaction_number;
+  @Deprecated public java.lang.String language;
+  @Deprecated public java.lang.String original_order_number;
+  @Deprecated public java.lang.String terminal_id;
+  @Deprecated public java.lang.Double demand_gross_sales;
+  @Deprecated public java.lang.Double demand_discounted_sales;
+  @Deprecated public java.lang.String ship_amount;
+  @Deprecated public java.lang.String gift_wrap_amount;
+  @Deprecated public java.lang.String gift_wrap_flag;
+  @Deprecated public java.lang.String gwp_flag;
+  @Deprecated public java.lang.String order_cancel_flag;
+  @Deprecated public java.lang.String order_cancel_datetime;
+  @Deprecated public java.lang.String sample_flag;
+  @Deprecated public java.lang.String order_submit_datetime;
+  @Deprecated public java.lang.String order_submit_datetime_utc;
+  @Deprecated public java.lang.String order_submit_datetime_local;
+  @Deprecated public java.lang.Integer order_submit_year_month;
+  @Deprecated public java.lang.String order_submit_date;
+  @Deprecated public java.lang.Integer order_submit_hour;
+  @Deprecated public java.lang.String dp_create_timestamp;
+  @Deprecated public java.lang.String dp_update_timestamp;
+  @Deprecated public java.lang.String sephora_id_update_timestamp;
+  @Deprecated public java.lang.String topic;
+  @Deprecated public java.lang.Integer partition;
+  @Deprecated public java.lang.Long offset;
+  @Deprecated public java.lang.Long timestamp;
+  @Deprecated public java.lang.String channel;
+  @Deprecated public java.lang.String transaction_datetime_local;
+  @Deprecated public java.lang.String hold_release_datetime;
+  @Deprecated public java.lang.String cancel_type;
+  @Deprecated public java.lang.String cancel_reason_text;
+  @Deprecated public java.lang.String cancel_reason_code;
+  @Deprecated public java.lang.String pickup_cancelled_datetime;
+  @Deprecated public java.lang.String seller_org_code;
+  @Deprecated public java.lang.Integer bi_pointsbalance_atorder;
+  @Deprecated public java.lang.String shipped_datetime;
+  @Deprecated public java.lang.String pickup_store_number;
+  @Deprecated public java.lang.String picked_up_datetime;
+  @Deprecated public java.lang.String external_order_type;
+  @Deprecated public java.lang.String external_order_number;
+  @Deprecated public java.lang.String hal_selected;
+  @Deprecated public boolean is_declined;
 
   /**
    * Default constructor.  Note that this does not initialize fields
@@ -240,8 +243,9 @@ static {
    * @param external_order_type The new value for external_order_type
    * @param external_order_number The new value for external_order_number
    * @param hal_selected The new value for hal_selected
+   * @param is_declined The new value for is_declined
    */
-  public OrderHeaderConsolidated(String org_id, String atg_id, Long usa_id, Long sephora_id, String order_number, String atg_order_number, String transaction_date, String transaction_datetime, String transaction_datetime_utc, String fulfill_milestone_datetime, String channel_type, String transaction_type, String sub_transaction_type, String store_number, String mplus_store_number, String bi_tier_atorder, Double units, Double gross_sales_usd_amount, Double gross_sales_local_amount, Double sales_afterdiscount_usd_amount, Double sales_afterdiscount_local_amount, Double net_sales_usd_amount, String net_sales_local_amount, Double discount_usd_amount, Double discount_local_amount, java.math.BigDecimal exchange_rate, Double giftwrap_gross_amount, Double giftwrap_net_amount, Double ship_gross_amount, Double ship_net_amount, String tax_amount, String origin_of_order, String country_of_origin, String currency_code, String cancel_flag, String dotcom_guest_flag, String flash_order_type, String csr_id, String transaction_number, String language, String original_order_number, String terminal_id, Double demand_gross_sales, Double demand_discounted_sales, String ship_amount, String gift_wrap_amount, String gift_wrap_flag, String gwp_flag, String order_cancel_flag, String order_cancel_datetime, String sample_flag, String order_submit_datetime, String order_submit_datetime_utc, String order_submit_datetime_local, Integer order_submit_year_month, String order_submit_date, Integer order_submit_hour, String dp_create_timestamp, String dp_update_timestamp, String sephora_id_update_timestamp, String topic, Integer partition, Long offset, Long timestamp, String channel, String transaction_datetime_local, String hold_release_datetime, String cancel_type, String cancel_reason_text, String cancel_reason_code, String pickup_cancelled_datetime, String seller_org_code, Integer bi_pointsbalance_atorder, String shipped_datetime, String pickup_store_number, String picked_up_datetime, String external_order_type, String external_order_number, String hal_selected) {
+  public OrderHeaderConsolidated(java.lang.String org_id, java.lang.String atg_id, java.lang.Long usa_id, java.lang.Long sephora_id, java.lang.String order_number, java.lang.String atg_order_number, java.lang.String transaction_date, java.lang.String transaction_datetime, java.lang.String transaction_datetime_utc, java.lang.String fulfill_milestone_datetime, java.lang.String channel_type, java.lang.String transaction_type, java.lang.String sub_transaction_type, java.lang.String store_number, java.lang.String mplus_store_number, java.lang.String bi_tier_atorder, java.lang.Double units, java.lang.Double gross_sales_usd_amount, java.lang.Double gross_sales_local_amount, java.lang.Double sales_afterdiscount_usd_amount, java.lang.Double sales_afterdiscount_local_amount, java.lang.Double net_sales_usd_amount, java.lang.String net_sales_local_amount, java.lang.Double discount_usd_amount, java.lang.Double discount_local_amount, java.math.BigDecimal exchange_rate, java.lang.Double giftwrap_gross_amount, java.lang.Double giftwrap_net_amount, java.lang.Double ship_gross_amount, java.lang.Double ship_net_amount, java.lang.String tax_amount, java.lang.String origin_of_order, java.lang.String country_of_origin, java.lang.String currency_code, java.lang.String cancel_flag, java.lang.String dotcom_guest_flag, java.lang.String flash_order_type, java.lang.String csr_id, java.lang.String transaction_number, java.lang.String language, java.lang.String original_order_number, java.lang.String terminal_id, java.lang.Double demand_gross_sales, java.lang.Double demand_discounted_sales, java.lang.String ship_amount, java.lang.String gift_wrap_amount, java.lang.String gift_wrap_flag, java.lang.String gwp_flag, java.lang.String order_cancel_flag, java.lang.String order_cancel_datetime, java.lang.String sample_flag, java.lang.String order_submit_datetime, java.lang.String order_submit_datetime_utc, java.lang.String order_submit_datetime_local, java.lang.Integer order_submit_year_month, java.lang.String order_submit_date, java.lang.Integer order_submit_hour, java.lang.String dp_create_timestamp, java.lang.String dp_update_timestamp, java.lang.String sephora_id_update_timestamp, java.lang.String topic, java.lang.Integer partition, java.lang.Long offset, java.lang.Long timestamp, java.lang.String channel, java.lang.String transaction_datetime_local, java.lang.String hold_release_datetime, java.lang.String cancel_type, java.lang.String cancel_reason_text, java.lang.String cancel_reason_code, java.lang.String pickup_cancelled_datetime, java.lang.String seller_org_code, java.lang.Integer bi_pointsbalance_atorder, java.lang.String shipped_datetime, java.lang.String pickup_store_number, java.lang.String picked_up_datetime, java.lang.String external_order_type, java.lang.String external_order_number, java.lang.String hal_selected, java.lang.Boolean is_declined) {
     this.org_id = org_id;
     this.atg_id = atg_id;
     this.usa_id = usa_id;
@@ -321,180 +325,183 @@ static {
     this.external_order_type = external_order_type;
     this.external_order_number = external_order_number;
     this.hal_selected = hal_selected;
+    this.is_declined = is_declined;
   }
 
-  public SpecificData getSpecificData() { return MODEL$; }
+  public org.apache.avro.specific.SpecificData getSpecificData() { return MODEL$; }
   public org.apache.avro.Schema getSchema() { return SCHEMA$; }
   // Used by DatumWriter.  Applications should not call.
-  public Object get(int field$) {
+  public java.lang.Object get(int field$) {
     switch (field$) {
-    case 0: return org_id;
-    case 1: return atg_id;
-    case 2: return usa_id;
-    case 3: return sephora_id;
-    case 4: return order_number;
-    case 5: return atg_order_number;
-    case 6: return transaction_date;
-    case 7: return transaction_datetime;
-    case 8: return transaction_datetime_utc;
-    case 9: return fulfill_milestone_datetime;
-    case 10: return channel_type;
-    case 11: return transaction_type;
-    case 12: return sub_transaction_type;
-    case 13: return store_number;
-    case 14: return mplus_store_number;
-    case 15: return bi_tier_atorder;
-    case 16: return units;
-    case 17: return gross_sales_usd_amount;
-    case 18: return gross_sales_local_amount;
-    case 19: return sales_afterdiscount_usd_amount;
-    case 20: return sales_afterdiscount_local_amount;
-    case 21: return net_sales_usd_amount;
-    case 22: return net_sales_local_amount;
-    case 23: return discount_usd_amount;
-    case 24: return discount_local_amount;
-    case 25: return exchange_rate;
-    case 26: return giftwrap_gross_amount;
-    case 27: return giftwrap_net_amount;
-    case 28: return ship_gross_amount;
-    case 29: return ship_net_amount;
-    case 30: return tax_amount;
-    case 31: return origin_of_order;
-    case 32: return country_of_origin;
-    case 33: return currency_code;
-    case 34: return cancel_flag;
-    case 35: return dotcom_guest_flag;
-    case 36: return flash_order_type;
-    case 37: return csr_id;
-    case 38: return transaction_number;
-    case 39: return language;
-    case 40: return original_order_number;
-    case 41: return terminal_id;
-    case 42: return demand_gross_sales;
-    case 43: return demand_discounted_sales;
-    case 44: return ship_amount;
-    case 45: return gift_wrap_amount;
-    case 46: return gift_wrap_flag;
-    case 47: return gwp_flag;
-    case 48: return order_cancel_flag;
-    case 49: return order_cancel_datetime;
-    case 50: return sample_flag;
-    case 51: return order_submit_datetime;
-    case 52: return order_submit_datetime_utc;
-    case 53: return order_submit_datetime_local;
-    case 54: return order_submit_year_month;
-    case 55: return order_submit_date;
-    case 56: return order_submit_hour;
-    case 57: return dp_create_timestamp;
-    case 58: return dp_update_timestamp;
-    case 59: return sephora_id_update_timestamp;
-    case 60: return topic;
-    case 61: return partition;
-    case 62: return offset;
-    case 63: return timestamp;
-    case 64: return channel;
-    case 65: return transaction_datetime_local;
-    case 66: return hold_release_datetime;
-    case 67: return cancel_type;
-    case 68: return cancel_reason_text;
-    case 69: return cancel_reason_code;
-    case 70: return pickup_cancelled_datetime;
-    case 71: return seller_org_code;
-    case 72: return bi_pointsbalance_atorder;
-    case 73: return shipped_datetime;
-    case 74: return pickup_store_number;
-    case 75: return picked_up_datetime;
-    case 76: return external_order_type;
-    case 77: return external_order_number;
-    case 78: return hal_selected;
-    default: throw new IndexOutOfBoundsException("Invalid index: " + field$);
+      case 0: return org_id;
+      case 1: return atg_id;
+      case 2: return usa_id;
+      case 3: return sephora_id;
+      case 4: return order_number;
+      case 5: return atg_order_number;
+      case 6: return transaction_date;
+      case 7: return transaction_datetime;
+      case 8: return transaction_datetime_utc;
+      case 9: return fulfill_milestone_datetime;
+      case 10: return channel_type;
+      case 11: return transaction_type;
+      case 12: return sub_transaction_type;
+      case 13: return store_number;
+      case 14: return mplus_store_number;
+      case 15: return bi_tier_atorder;
+      case 16: return units;
+      case 17: return gross_sales_usd_amount;
+      case 18: return gross_sales_local_amount;
+      case 19: return sales_afterdiscount_usd_amount;
+      case 20: return sales_afterdiscount_local_amount;
+      case 21: return net_sales_usd_amount;
+      case 22: return net_sales_local_amount;
+      case 23: return discount_usd_amount;
+      case 24: return discount_local_amount;
+      case 25: return exchange_rate;
+      case 26: return giftwrap_gross_amount;
+      case 27: return giftwrap_net_amount;
+      case 28: return ship_gross_amount;
+      case 29: return ship_net_amount;
+      case 30: return tax_amount;
+      case 31: return origin_of_order;
+      case 32: return country_of_origin;
+      case 33: return currency_code;
+      case 34: return cancel_flag;
+      case 35: return dotcom_guest_flag;
+      case 36: return flash_order_type;
+      case 37: return csr_id;
+      case 38: return transaction_number;
+      case 39: return language;
+      case 40: return original_order_number;
+      case 41: return terminal_id;
+      case 42: return demand_gross_sales;
+      case 43: return demand_discounted_sales;
+      case 44: return ship_amount;
+      case 45: return gift_wrap_amount;
+      case 46: return gift_wrap_flag;
+      case 47: return gwp_flag;
+      case 48: return order_cancel_flag;
+      case 49: return order_cancel_datetime;
+      case 50: return sample_flag;
+      case 51: return order_submit_datetime;
+      case 52: return order_submit_datetime_utc;
+      case 53: return order_submit_datetime_local;
+      case 54: return order_submit_year_month;
+      case 55: return order_submit_date;
+      case 56: return order_submit_hour;
+      case 57: return dp_create_timestamp;
+      case 58: return dp_update_timestamp;
+      case 59: return sephora_id_update_timestamp;
+      case 60: return topic;
+      case 61: return partition;
+      case 62: return offset;
+      case 63: return timestamp;
+      case 64: return channel;
+      case 65: return transaction_datetime_local;
+      case 66: return hold_release_datetime;
+      case 67: return cancel_type;
+      case 68: return cancel_reason_text;
+      case 69: return cancel_reason_code;
+      case 70: return pickup_cancelled_datetime;
+      case 71: return seller_org_code;
+      case 72: return bi_pointsbalance_atorder;
+      case 73: return shipped_datetime;
+      case 74: return pickup_store_number;
+      case 75: return picked_up_datetime;
+      case 76: return external_order_type;
+      case 77: return external_order_number;
+      case 78: return hal_selected;
+      case 79: return is_declined;
+      default: throw new IndexOutOfBoundsException("Invalid index: " + field$);
     }
   }
 
   // Used by DatumReader.  Applications should not call.
   @SuppressWarnings(value="unchecked")
-  public void put(int field$, Object value$) {
+  public void put(int field$, java.lang.Object value$) {
     switch (field$) {
-    case 0: org_id = value$ != null ? value$.toString() : null; break;
-    case 1: atg_id = value$ != null ? value$.toString() : null; break;
-    case 2: usa_id = (Long)value$; break;
-    case 3: sephora_id = (Long)value$; break;
-    case 4: order_number = value$ != null ? value$.toString() : null; break;
-    case 5: atg_order_number = value$ != null ? value$.toString() : null; break;
-    case 6: transaction_date = value$ != null ? value$.toString() : null; break;
-    case 7: transaction_datetime = value$ != null ? value$.toString() : null; break;
-    case 8: transaction_datetime_utc = value$ != null ? value$.toString() : null; break;
-    case 9: fulfill_milestone_datetime = value$ != null ? value$.toString() : null; break;
-    case 10: channel_type = value$ != null ? value$.toString() : null; break;
-    case 11: transaction_type = value$ != null ? value$.toString() : null; break;
-    case 12: sub_transaction_type = value$ != null ? value$.toString() : null; break;
-    case 13: store_number = value$ != null ? value$.toString() : null; break;
-    case 14: mplus_store_number = value$ != null ? value$.toString() : null; break;
-    case 15: bi_tier_atorder = value$ != null ? value$.toString() : null; break;
-    case 16: units = (Double)value$; break;
-    case 17: gross_sales_usd_amount = (Double)value$; break;
-    case 18: gross_sales_local_amount = (Double)value$; break;
-    case 19: sales_afterdiscount_usd_amount = (Double)value$; break;
-    case 20: sales_afterdiscount_local_amount = (Double)value$; break;
-    case 21: net_sales_usd_amount = (Double)value$; break;
-    case 22: net_sales_local_amount = value$ != null ? value$.toString() : null; break;
-    case 23: discount_usd_amount = (Double)value$; break;
-    case 24: discount_local_amount = (Double)value$; break;
-    case 25: exchange_rate = (java.math.BigDecimal)value$; break;
-    case 26: giftwrap_gross_amount = (Double)value$; break;
-    case 27: giftwrap_net_amount = (Double)value$; break;
-    case 28: ship_gross_amount = (Double)value$; break;
-    case 29: ship_net_amount = (Double)value$; break;
-    case 30: tax_amount = value$ != null ? value$.toString() : null; break;
-    case 31: origin_of_order = value$ != null ? value$.toString() : null; break;
-    case 32: country_of_origin = value$ != null ? value$.toString() : null; break;
-    case 33: currency_code = value$ != null ? value$.toString() : null; break;
-    case 34: cancel_flag = value$ != null ? value$.toString() : null; break;
-    case 35: dotcom_guest_flag = value$ != null ? value$.toString() : null; break;
-    case 36: flash_order_type = value$ != null ? value$.toString() : null; break;
-    case 37: csr_id = value$ != null ? value$.toString() : null; break;
-    case 38: transaction_number = value$ != null ? value$.toString() : null; break;
-    case 39: language = value$ != null ? value$.toString() : null; break;
-    case 40: original_order_number = value$ != null ? value$.toString() : null; break;
-    case 41: terminal_id = value$ != null ? value$.toString() : null; break;
-    case 42: demand_gross_sales = (Double)value$; break;
-    case 43: demand_discounted_sales = (Double)value$; break;
-    case 44: ship_amount = value$ != null ? value$.toString() : null; break;
-    case 45: gift_wrap_amount = value$ != null ? value$.toString() : null; break;
-    case 46: gift_wrap_flag = value$ != null ? value$.toString() : null; break;
-    case 47: gwp_flag = value$ != null ? value$.toString() : null; break;
-    case 48: order_cancel_flag = value$ != null ? value$.toString() : null; break;
-    case 49: order_cancel_datetime = value$ != null ? value$.toString() : null; break;
-    case 50: sample_flag = value$ != null ? value$.toString() : null; break;
-    case 51: order_submit_datetime = value$ != null ? value$.toString() : null; break;
-    case 52: order_submit_datetime_utc = value$ != null ? value$.toString() : null; break;
-    case 53: order_submit_datetime_local = value$ != null ? value$.toString() : null; break;
-    case 54: order_submit_year_month = (Integer)value$; break;
-    case 55: order_submit_date = value$ != null ? value$.toString() : null; break;
-    case 56: order_submit_hour = (Integer)value$; break;
-    case 57: dp_create_timestamp = value$ != null ? value$.toString() : null; break;
-    case 58: dp_update_timestamp = value$ != null ? value$.toString() : null; break;
-    case 59: sephora_id_update_timestamp = value$ != null ? value$.toString() : null; break;
-    case 60: topic = value$ != null ? value$.toString() : null; break;
-    case 61: partition = (Integer)value$; break;
-    case 62: offset = (Long)value$; break;
-    case 63: timestamp = (Long)value$; break;
-    case 64: channel = value$ != null ? value$.toString() : null; break;
-    case 65: transaction_datetime_local = value$ != null ? value$.toString() : null; break;
-    case 66: hold_release_datetime = value$ != null ? value$.toString() : null; break;
-    case 67: cancel_type = value$ != null ? value$.toString() : null; break;
-    case 68: cancel_reason_text = value$ != null ? value$.toString() : null; break;
-    case 69: cancel_reason_code = value$ != null ? value$.toString() : null; break;
-    case 70: pickup_cancelled_datetime = value$ != null ? value$.toString() : null; break;
-    case 71: seller_org_code = value$ != null ? value$.toString() : null; break;
-    case 72: bi_pointsbalance_atorder = (Integer)value$; break;
-    case 73: shipped_datetime = value$ != null ? value$.toString() : null; break;
-    case 74: pickup_store_number = value$ != null ? value$.toString() : null; break;
-    case 75: picked_up_datetime = value$ != null ? value$.toString() : null; break;
-    case 76: external_order_type = value$ != null ? value$.toString() : null; break;
-    case 77: external_order_number = value$ != null ? value$.toString() : null; break;
-    case 78: hal_selected = value$ != null ? value$.toString() : null; break;
-    default: throw new IndexOutOfBoundsException("Invalid index: " + field$);
+      case 0: org_id = value$ != null ? value$.toString() : null; break;
+      case 1: atg_id = value$ != null ? value$.toString() : null; break;
+      case 2: usa_id = (java.lang.Long)value$; break;
+      case 3: sephora_id = (java.lang.Long)value$; break;
+      case 4: order_number = value$ != null ? value$.toString() : null; break;
+      case 5: atg_order_number = value$ != null ? value$.toString() : null; break;
+      case 6: transaction_date = value$ != null ? value$.toString() : null; break;
+      case 7: transaction_datetime = value$ != null ? value$.toString() : null; break;
+      case 8: transaction_datetime_utc = value$ != null ? value$.toString() : null; break;
+      case 9: fulfill_milestone_datetime = value$ != null ? value$.toString() : null; break;
+      case 10: channel_type = value$ != null ? value$.toString() : null; break;
+      case 11: transaction_type = value$ != null ? value$.toString() : null; break;
+      case 12: sub_transaction_type = value$ != null ? value$.toString() : null; break;
+      case 13: store_number = value$ != null ? value$.toString() : null; break;
+      case 14: mplus_store_number = value$ != null ? value$.toString() : null; break;
+      case 15: bi_tier_atorder = value$ != null ? value$.toString() : null; break;
+      case 16: units = (java.lang.Double)value$; break;
+      case 17: gross_sales_usd_amount = (java.lang.Double)value$; break;
+      case 18: gross_sales_local_amount = (java.lang.Double)value$; break;
+      case 19: sales_afterdiscount_usd_amount = (java.lang.Double)value$; break;
+      case 20: sales_afterdiscount_local_amount = (java.lang.Double)value$; break;
+      case 21: net_sales_usd_amount = (java.lang.Double)value$; break;
+      case 22: net_sales_local_amount = value$ != null ? value$.toString() : null; break;
+      case 23: discount_usd_amount = (java.lang.Double)value$; break;
+      case 24: discount_local_amount = (java.lang.Double)value$; break;
+      case 25: exchange_rate = (java.math.BigDecimal)value$; break;
+      case 26: giftwrap_gross_amount = (java.lang.Double)value$; break;
+      case 27: giftwrap_net_amount = (java.lang.Double)value$; break;
+      case 28: ship_gross_amount = (java.lang.Double)value$; break;
+      case 29: ship_net_amount = (java.lang.Double)value$; break;
+      case 30: tax_amount = value$ != null ? value$.toString() : null; break;
+      case 31: origin_of_order = value$ != null ? value$.toString() : null; break;
+      case 32: country_of_origin = value$ != null ? value$.toString() : null; break;
+      case 33: currency_code = value$ != null ? value$.toString() : null; break;
+      case 34: cancel_flag = value$ != null ? value$.toString() : null; break;
+      case 35: dotcom_guest_flag = value$ != null ? value$.toString() : null; break;
+      case 36: flash_order_type = value$ != null ? value$.toString() : null; break;
+      case 37: csr_id = value$ != null ? value$.toString() : null; break;
+      case 38: transaction_number = value$ != null ? value$.toString() : null; break;
+      case 39: language = value$ != null ? value$.toString() : null; break;
+      case 40: original_order_number = value$ != null ? value$.toString() : null; break;
+      case 41: terminal_id = value$ != null ? value$.toString() : null; break;
+      case 42: demand_gross_sales = (java.lang.Double)value$; break;
+      case 43: demand_discounted_sales = (java.lang.Double)value$; break;
+      case 44: ship_amount = value$ != null ? value$.toString() : null; break;
+      case 45: gift_wrap_amount = value$ != null ? value$.toString() : null; break;
+      case 46: gift_wrap_flag = value$ != null ? value$.toString() : null; break;
+      case 47: gwp_flag = value$ != null ? value$.toString() : null; break;
+      case 48: order_cancel_flag = value$ != null ? value$.toString() : null; break;
+      case 49: order_cancel_datetime = value$ != null ? value$.toString() : null; break;
+      case 50: sample_flag = value$ != null ? value$.toString() : null; break;
+      case 51: order_submit_datetime = value$ != null ? value$.toString() : null; break;
+      case 52: order_submit_datetime_utc = value$ != null ? value$.toString() : null; break;
+      case 53: order_submit_datetime_local = value$ != null ? value$.toString() : null; break;
+      case 54: order_submit_year_month = (java.lang.Integer)value$; break;
+      case 55: order_submit_date = value$ != null ? value$.toString() : null; break;
+      case 56: order_submit_hour = (java.lang.Integer)value$; break;
+      case 57: dp_create_timestamp = value$ != null ? value$.toString() : null; break;
+      case 58: dp_update_timestamp = value$ != null ? value$.toString() : null; break;
+      case 59: sephora_id_update_timestamp = value$ != null ? value$.toString() : null; break;
+      case 60: topic = value$ != null ? value$.toString() : null; break;
+      case 61: partition = (java.lang.Integer)value$; break;
+      case 62: offset = (java.lang.Long)value$; break;
+      case 63: timestamp = (java.lang.Long)value$; break;
+      case 64: channel = value$ != null ? value$.toString() : null; break;
+      case 65: transaction_datetime_local = value$ != null ? value$.toString() : null; break;
+      case 66: hold_release_datetime = value$ != null ? value$.toString() : null; break;
+      case 67: cancel_type = value$ != null ? value$.toString() : null; break;
+      case 68: cancel_reason_text = value$ != null ? value$.toString() : null; break;
+      case 69: cancel_reason_code = value$ != null ? value$.toString() : null; break;
+      case 70: pickup_cancelled_datetime = value$ != null ? value$.toString() : null; break;
+      case 71: seller_org_code = value$ != null ? value$.toString() : null; break;
+      case 72: bi_pointsbalance_atorder = (java.lang.Integer)value$; break;
+      case 73: shipped_datetime = value$ != null ? value$.toString() : null; break;
+      case 74: pickup_store_number = value$ != null ? value$.toString() : null; break;
+      case 75: picked_up_datetime = value$ != null ? value$.toString() : null; break;
+      case 76: external_order_type = value$ != null ? value$.toString() : null; break;
+      case 77: external_order_number = value$ != null ? value$.toString() : null; break;
+      case 78: hal_selected = value$ != null ? value$.toString() : null; break;
+      case 79: is_declined = (java.lang.Boolean)value$; break;
+      default: throw new IndexOutOfBoundsException("Invalid index: " + field$);
     }
   }
 
@@ -502,7 +509,7 @@ static {
    * Gets the value of the 'org_id' field.
    * @return The value of the 'org_id' field.
    */
-  public String getOrgId() {
+  public java.lang.String getOrgId() {
     return org_id;
   }
 
@@ -511,7 +518,7 @@ static {
    * Sets the value of the 'org_id' field.
    * @param value the value to set.
    */
-  public void setOrgId(String value) {
+  public void setOrgId(java.lang.String value) {
     this.org_id = value;
   }
 
@@ -519,7 +526,7 @@ static {
    * Gets the value of the 'atg_id' field.
    * @return The value of the 'atg_id' field.
    */
-  public String getAtgId() {
+  public java.lang.String getAtgId() {
     return atg_id;
   }
 
@@ -528,7 +535,7 @@ static {
    * Sets the value of the 'atg_id' field.
    * @param value the value to set.
    */
-  public void setAtgId(String value) {
+  public void setAtgId(java.lang.String value) {
     this.atg_id = value;
   }
 
@@ -536,7 +543,7 @@ static {
    * Gets the value of the 'usa_id' field.
    * @return The value of the 'usa_id' field.
    */
-  public Long getUsaId() {
+  public java.lang.Long getUsaId() {
     return usa_id;
   }
 
@@ -545,7 +552,7 @@ static {
    * Sets the value of the 'usa_id' field.
    * @param value the value to set.
    */
-  public void setUsaId(Long value) {
+  public void setUsaId(java.lang.Long value) {
     this.usa_id = value;
   }
 
@@ -553,7 +560,7 @@ static {
    * Gets the value of the 'sephora_id' field.
    * @return The value of the 'sephora_id' field.
    */
-  public Long getSephoraId() {
+  public java.lang.Long getSephoraId() {
     return sephora_id;
   }
 
@@ -562,7 +569,7 @@ static {
    * Sets the value of the 'sephora_id' field.
    * @param value the value to set.
    */
-  public void setSephoraId(Long value) {
+  public void setSephoraId(java.lang.Long value) {
     this.sephora_id = value;
   }
 
@@ -570,7 +577,7 @@ static {
    * Gets the value of the 'order_number' field.
    * @return The value of the 'order_number' field.
    */
-  public String getOrderNumber() {
+  public java.lang.String getOrderNumber() {
     return order_number;
   }
 
@@ -579,7 +586,7 @@ static {
    * Sets the value of the 'order_number' field.
    * @param value the value to set.
    */
-  public void setOrderNumber(String value) {
+  public void setOrderNumber(java.lang.String value) {
     this.order_number = value;
   }
 
@@ -587,7 +594,7 @@ static {
    * Gets the value of the 'atg_order_number' field.
    * @return The value of the 'atg_order_number' field.
    */
-  public String getAtgOrderNumber() {
+  public java.lang.String getAtgOrderNumber() {
     return atg_order_number;
   }
 
@@ -596,7 +603,7 @@ static {
    * Sets the value of the 'atg_order_number' field.
    * @param value the value to set.
    */
-  public void setAtgOrderNumber(String value) {
+  public void setAtgOrderNumber(java.lang.String value) {
     this.atg_order_number = value;
   }
 
@@ -604,7 +611,7 @@ static {
    * Gets the value of the 'transaction_date' field.
    * @return The value of the 'transaction_date' field.
    */
-  public String getTransactionDate() {
+  public java.lang.String getTransactionDate() {
     return transaction_date;
   }
 
@@ -613,7 +620,7 @@ static {
    * Sets the value of the 'transaction_date' field.
    * @param value the value to set.
    */
-  public void setTransactionDate(String value) {
+  public void setTransactionDate(java.lang.String value) {
     this.transaction_date = value;
   }
 
@@ -621,7 +628,7 @@ static {
    * Gets the value of the 'transaction_datetime' field.
    * @return The value of the 'transaction_datetime' field.
    */
-  public String getTransactionDatetime() {
+  public java.lang.String getTransactionDatetime() {
     return transaction_datetime;
   }
 
@@ -630,7 +637,7 @@ static {
    * Sets the value of the 'transaction_datetime' field.
    * @param value the value to set.
    */
-  public void setTransactionDatetime(String value) {
+  public void setTransactionDatetime(java.lang.String value) {
     this.transaction_datetime = value;
   }
 
@@ -638,7 +645,7 @@ static {
    * Gets the value of the 'transaction_datetime_utc' field.
    * @return The value of the 'transaction_datetime_utc' field.
    */
-  public String getTransactionDatetimeUtc() {
+  public java.lang.String getTransactionDatetimeUtc() {
     return transaction_datetime_utc;
   }
 
@@ -647,7 +654,7 @@ static {
    * Sets the value of the 'transaction_datetime_utc' field.
    * @param value the value to set.
    */
-  public void setTransactionDatetimeUtc(String value) {
+  public void setTransactionDatetimeUtc(java.lang.String value) {
     this.transaction_datetime_utc = value;
   }
 
@@ -655,7 +662,7 @@ static {
    * Gets the value of the 'fulfill_milestone_datetime' field.
    * @return The value of the 'fulfill_milestone_datetime' field.
    */
-  public String getFulfillMilestoneDatetime() {
+  public java.lang.String getFulfillMilestoneDatetime() {
     return fulfill_milestone_datetime;
   }
 
@@ -664,7 +671,7 @@ static {
    * Sets the value of the 'fulfill_milestone_datetime' field.
    * @param value the value to set.
    */
-  public void setFulfillMilestoneDatetime(String value) {
+  public void setFulfillMilestoneDatetime(java.lang.String value) {
     this.fulfill_milestone_datetime = value;
   }
 
@@ -672,7 +679,7 @@ static {
    * Gets the value of the 'channel_type' field.
    * @return The value of the 'channel_type' field.
    */
-  public String getChannelType() {
+  public java.lang.String getChannelType() {
     return channel_type;
   }
 
@@ -681,7 +688,7 @@ static {
    * Sets the value of the 'channel_type' field.
    * @param value the value to set.
    */
-  public void setChannelType(String value) {
+  public void setChannelType(java.lang.String value) {
     this.channel_type = value;
   }
 
@@ -689,7 +696,7 @@ static {
    * Gets the value of the 'transaction_type' field.
    * @return The value of the 'transaction_type' field.
    */
-  public String getTransactionType() {
+  public java.lang.String getTransactionType() {
     return transaction_type;
   }
 
@@ -698,7 +705,7 @@ static {
    * Sets the value of the 'transaction_type' field.
    * @param value the value to set.
    */
-  public void setTransactionType(String value) {
+  public void setTransactionType(java.lang.String value) {
     this.transaction_type = value;
   }
 
@@ -706,7 +713,7 @@ static {
    * Gets the value of the 'sub_transaction_type' field.
    * @return The value of the 'sub_transaction_type' field.
    */
-  public String getSubTransactionType() {
+  public java.lang.String getSubTransactionType() {
     return sub_transaction_type;
   }
 
@@ -715,7 +722,7 @@ static {
    * Sets the value of the 'sub_transaction_type' field.
    * @param value the value to set.
    */
-  public void setSubTransactionType(String value) {
+  public void setSubTransactionType(java.lang.String value) {
     this.sub_transaction_type = value;
   }
 
@@ -723,7 +730,7 @@ static {
    * Gets the value of the 'store_number' field.
    * @return The value of the 'store_number' field.
    */
-  public String getStoreNumber() {
+  public java.lang.String getStoreNumber() {
     return store_number;
   }
 
@@ -732,7 +739,7 @@ static {
    * Sets the value of the 'store_number' field.
    * @param value the value to set.
    */
-  public void setStoreNumber(String value) {
+  public void setStoreNumber(java.lang.String value) {
     this.store_number = value;
   }
 
@@ -740,7 +747,7 @@ static {
    * Gets the value of the 'mplus_store_number' field.
    * @return The value of the 'mplus_store_number' field.
    */
-  public String getMplusStoreNumber() {
+  public java.lang.String getMplusStoreNumber() {
     return mplus_store_number;
   }
 
@@ -749,7 +756,7 @@ static {
    * Sets the value of the 'mplus_store_number' field.
    * @param value the value to set.
    */
-  public void setMplusStoreNumber(String value) {
+  public void setMplusStoreNumber(java.lang.String value) {
     this.mplus_store_number = value;
   }
 
@@ -757,7 +764,7 @@ static {
    * Gets the value of the 'bi_tier_atorder' field.
    * @return The value of the 'bi_tier_atorder' field.
    */
-  public String getBiTierAtorder() {
+  public java.lang.String getBiTierAtorder() {
     return bi_tier_atorder;
   }
 
@@ -766,7 +773,7 @@ static {
    * Sets the value of the 'bi_tier_atorder' field.
    * @param value the value to set.
    */
-  public void setBiTierAtorder(String value) {
+  public void setBiTierAtorder(java.lang.String value) {
     this.bi_tier_atorder = value;
   }
 
@@ -774,7 +781,7 @@ static {
    * Gets the value of the 'units' field.
    * @return The value of the 'units' field.
    */
-  public Double getUnits() {
+  public java.lang.Double getUnits() {
     return units;
   }
 
@@ -783,7 +790,7 @@ static {
    * Sets the value of the 'units' field.
    * @param value the value to set.
    */
-  public void setUnits(Double value) {
+  public void setUnits(java.lang.Double value) {
     this.units = value;
   }
 
@@ -791,7 +798,7 @@ static {
    * Gets the value of the 'gross_sales_usd_amount' field.
    * @return The value of the 'gross_sales_usd_amount' field.
    */
-  public Double getGrossSalesUsdAmount() {
+  public java.lang.Double getGrossSalesUsdAmount() {
     return gross_sales_usd_amount;
   }
 
@@ -800,7 +807,7 @@ static {
    * Sets the value of the 'gross_sales_usd_amount' field.
    * @param value the value to set.
    */
-  public void setGrossSalesUsdAmount(Double value) {
+  public void setGrossSalesUsdAmount(java.lang.Double value) {
     this.gross_sales_usd_amount = value;
   }
 
@@ -808,7 +815,7 @@ static {
    * Gets the value of the 'gross_sales_local_amount' field.
    * @return The value of the 'gross_sales_local_amount' field.
    */
-  public Double getGrossSalesLocalAmount() {
+  public java.lang.Double getGrossSalesLocalAmount() {
     return gross_sales_local_amount;
   }
 
@@ -817,7 +824,7 @@ static {
    * Sets the value of the 'gross_sales_local_amount' field.
    * @param value the value to set.
    */
-  public void setGrossSalesLocalAmount(Double value) {
+  public void setGrossSalesLocalAmount(java.lang.Double value) {
     this.gross_sales_local_amount = value;
   }
 
@@ -825,7 +832,7 @@ static {
    * Gets the value of the 'sales_afterdiscount_usd_amount' field.
    * @return The value of the 'sales_afterdiscount_usd_amount' field.
    */
-  public Double getSalesAfterdiscountUsdAmount() {
+  public java.lang.Double getSalesAfterdiscountUsdAmount() {
     return sales_afterdiscount_usd_amount;
   }
 
@@ -834,7 +841,7 @@ static {
    * Sets the value of the 'sales_afterdiscount_usd_amount' field.
    * @param value the value to set.
    */
-  public void setSalesAfterdiscountUsdAmount(Double value) {
+  public void setSalesAfterdiscountUsdAmount(java.lang.Double value) {
     this.sales_afterdiscount_usd_amount = value;
   }
 
@@ -842,7 +849,7 @@ static {
    * Gets the value of the 'sales_afterdiscount_local_amount' field.
    * @return The value of the 'sales_afterdiscount_local_amount' field.
    */
-  public Double getSalesAfterdiscountLocalAmount() {
+  public java.lang.Double getSalesAfterdiscountLocalAmount() {
     return sales_afterdiscount_local_amount;
   }
 
@@ -851,7 +858,7 @@ static {
    * Sets the value of the 'sales_afterdiscount_local_amount' field.
    * @param value the value to set.
    */
-  public void setSalesAfterdiscountLocalAmount(Double value) {
+  public void setSalesAfterdiscountLocalAmount(java.lang.Double value) {
     this.sales_afterdiscount_local_amount = value;
   }
 
@@ -859,7 +866,7 @@ static {
    * Gets the value of the 'net_sales_usd_amount' field.
    * @return The value of the 'net_sales_usd_amount' field.
    */
-  public Double getNetSalesUsdAmount() {
+  public java.lang.Double getNetSalesUsdAmount() {
     return net_sales_usd_amount;
   }
 
@@ -868,7 +875,7 @@ static {
    * Sets the value of the 'net_sales_usd_amount' field.
    * @param value the value to set.
    */
-  public void setNetSalesUsdAmount(Double value) {
+  public void setNetSalesUsdAmount(java.lang.Double value) {
     this.net_sales_usd_amount = value;
   }
 
@@ -876,7 +883,7 @@ static {
    * Gets the value of the 'net_sales_local_amount' field.
    * @return The value of the 'net_sales_local_amount' field.
    */
-  public String getNetSalesLocalAmount() {
+  public java.lang.String getNetSalesLocalAmount() {
     return net_sales_local_amount;
   }
 
@@ -885,7 +892,7 @@ static {
    * Sets the value of the 'net_sales_local_amount' field.
    * @param value the value to set.
    */
-  public void setNetSalesLocalAmount(String value) {
+  public void setNetSalesLocalAmount(java.lang.String value) {
     this.net_sales_local_amount = value;
   }
 
@@ -893,7 +900,7 @@ static {
    * Gets the value of the 'discount_usd_amount' field.
    * @return The value of the 'discount_usd_amount' field.
    */
-  public Double getDiscountUsdAmount() {
+  public java.lang.Double getDiscountUsdAmount() {
     return discount_usd_amount;
   }
 
@@ -902,7 +909,7 @@ static {
    * Sets the value of the 'discount_usd_amount' field.
    * @param value the value to set.
    */
-  public void setDiscountUsdAmount(Double value) {
+  public void setDiscountUsdAmount(java.lang.Double value) {
     this.discount_usd_amount = value;
   }
 
@@ -910,7 +917,7 @@ static {
    * Gets the value of the 'discount_local_amount' field.
    * @return The value of the 'discount_local_amount' field.
    */
-  public Double getDiscountLocalAmount() {
+  public java.lang.Double getDiscountLocalAmount() {
     return discount_local_amount;
   }
 
@@ -919,7 +926,7 @@ static {
    * Sets the value of the 'discount_local_amount' field.
    * @param value the value to set.
    */
-  public void setDiscountLocalAmount(Double value) {
+  public void setDiscountLocalAmount(java.lang.Double value) {
     this.discount_local_amount = value;
   }
 
@@ -944,7 +951,7 @@ static {
    * Gets the value of the 'giftwrap_gross_amount' field.
    * @return The value of the 'giftwrap_gross_amount' field.
    */
-  public Double getGiftwrapGrossAmount() {
+  public java.lang.Double getGiftwrapGrossAmount() {
     return giftwrap_gross_amount;
   }
 
@@ -953,7 +960,7 @@ static {
    * Sets the value of the 'giftwrap_gross_amount' field.
    * @param value the value to set.
    */
-  public void setGiftwrapGrossAmount(Double value) {
+  public void setGiftwrapGrossAmount(java.lang.Double value) {
     this.giftwrap_gross_amount = value;
   }
 
@@ -961,7 +968,7 @@ static {
    * Gets the value of the 'giftwrap_net_amount' field.
    * @return The value of the 'giftwrap_net_amount' field.
    */
-  public Double getGiftwrapNetAmount() {
+  public java.lang.Double getGiftwrapNetAmount() {
     return giftwrap_net_amount;
   }
 
@@ -970,7 +977,7 @@ static {
    * Sets the value of the 'giftwrap_net_amount' field.
    * @param value the value to set.
    */
-  public void setGiftwrapNetAmount(Double value) {
+  public void setGiftwrapNetAmount(java.lang.Double value) {
     this.giftwrap_net_amount = value;
   }
 
@@ -978,7 +985,7 @@ static {
    * Gets the value of the 'ship_gross_amount' field.
    * @return The value of the 'ship_gross_amount' field.
    */
-  public Double getShipGrossAmount() {
+  public java.lang.Double getShipGrossAmount() {
     return ship_gross_amount;
   }
 
@@ -987,7 +994,7 @@ static {
    * Sets the value of the 'ship_gross_amount' field.
    * @param value the value to set.
    */
-  public void setShipGrossAmount(Double value) {
+  public void setShipGrossAmount(java.lang.Double value) {
     this.ship_gross_amount = value;
   }
 
@@ -995,7 +1002,7 @@ static {
    * Gets the value of the 'ship_net_amount' field.
    * @return The value of the 'ship_net_amount' field.
    */
-  public Double getShipNetAmount() {
+  public java.lang.Double getShipNetAmount() {
     return ship_net_amount;
   }
 
@@ -1004,7 +1011,7 @@ static {
    * Sets the value of the 'ship_net_amount' field.
    * @param value the value to set.
    */
-  public void setShipNetAmount(Double value) {
+  public void setShipNetAmount(java.lang.Double value) {
     this.ship_net_amount = value;
   }
 
@@ -1012,7 +1019,7 @@ static {
    * Gets the value of the 'tax_amount' field.
    * @return The value of the 'tax_amount' field.
    */
-  public String getTaxAmount() {
+  public java.lang.String getTaxAmount() {
     return tax_amount;
   }
 
@@ -1021,7 +1028,7 @@ static {
    * Sets the value of the 'tax_amount' field.
    * @param value the value to set.
    */
-  public void setTaxAmount(String value) {
+  public void setTaxAmount(java.lang.String value) {
     this.tax_amount = value;
   }
 
@@ -1029,7 +1036,7 @@ static {
    * Gets the value of the 'origin_of_order' field.
    * @return The value of the 'origin_of_order' field.
    */
-  public String getOriginOfOrder() {
+  public java.lang.String getOriginOfOrder() {
     return origin_of_order;
   }
 
@@ -1038,7 +1045,7 @@ static {
    * Sets the value of the 'origin_of_order' field.
    * @param value the value to set.
    */
-  public void setOriginOfOrder(String value) {
+  public void setOriginOfOrder(java.lang.String value) {
     this.origin_of_order = value;
   }
 
@@ -1046,7 +1053,7 @@ static {
    * Gets the value of the 'country_of_origin' field.
    * @return The value of the 'country_of_origin' field.
    */
-  public String getCountryOfOrigin() {
+  public java.lang.String getCountryOfOrigin() {
     return country_of_origin;
   }
 
@@ -1055,7 +1062,7 @@ static {
    * Sets the value of the 'country_of_origin' field.
    * @param value the value to set.
    */
-  public void setCountryOfOrigin(String value) {
+  public void setCountryOfOrigin(java.lang.String value) {
     this.country_of_origin = value;
   }
 
@@ -1063,7 +1070,7 @@ static {
    * Gets the value of the 'currency_code' field.
    * @return The value of the 'currency_code' field.
    */
-  public String getCurrencyCode() {
+  public java.lang.String getCurrencyCode() {
     return currency_code;
   }
 
@@ -1072,7 +1079,7 @@ static {
    * Sets the value of the 'currency_code' field.
    * @param value the value to set.
    */
-  public void setCurrencyCode(String value) {
+  public void setCurrencyCode(java.lang.String value) {
     this.currency_code = value;
   }
 
@@ -1080,7 +1087,7 @@ static {
    * Gets the value of the 'cancel_flag' field.
    * @return The value of the 'cancel_flag' field.
    */
-  public String getCancelFlag() {
+  public java.lang.String getCancelFlag() {
     return cancel_flag;
   }
 
@@ -1089,7 +1096,7 @@ static {
    * Sets the value of the 'cancel_flag' field.
    * @param value the value to set.
    */
-  public void setCancelFlag(String value) {
+  public void setCancelFlag(java.lang.String value) {
     this.cancel_flag = value;
   }
 
@@ -1097,7 +1104,7 @@ static {
    * Gets the value of the 'dotcom_guest_flag' field.
    * @return The value of the 'dotcom_guest_flag' field.
    */
-  public String getDotcomGuestFlag() {
+  public java.lang.String getDotcomGuestFlag() {
     return dotcom_guest_flag;
   }
 
@@ -1106,7 +1113,7 @@ static {
    * Sets the value of the 'dotcom_guest_flag' field.
    * @param value the value to set.
    */
-  public void setDotcomGuestFlag(String value) {
+  public void setDotcomGuestFlag(java.lang.String value) {
     this.dotcom_guest_flag = value;
   }
 
@@ -1114,7 +1121,7 @@ static {
    * Gets the value of the 'flash_order_type' field.
    * @return The value of the 'flash_order_type' field.
    */
-  public String getFlashOrderType() {
+  public java.lang.String getFlashOrderType() {
     return flash_order_type;
   }
 
@@ -1123,7 +1130,7 @@ static {
    * Sets the value of the 'flash_order_type' field.
    * @param value the value to set.
    */
-  public void setFlashOrderType(String value) {
+  public void setFlashOrderType(java.lang.String value) {
     this.flash_order_type = value;
   }
 
@@ -1131,7 +1138,7 @@ static {
    * Gets the value of the 'csr_id' field.
    * @return The value of the 'csr_id' field.
    */
-  public String getCsrId() {
+  public java.lang.String getCsrId() {
     return csr_id;
   }
 
@@ -1140,7 +1147,7 @@ static {
    * Sets the value of the 'csr_id' field.
    * @param value the value to set.
    */
-  public void setCsrId(String value) {
+  public void setCsrId(java.lang.String value) {
     this.csr_id = value;
   }
 
@@ -1148,7 +1155,7 @@ static {
    * Gets the value of the 'transaction_number' field.
    * @return The value of the 'transaction_number' field.
    */
-  public String getTransactionNumber() {
+  public java.lang.String getTransactionNumber() {
     return transaction_number;
   }
 
@@ -1157,7 +1164,7 @@ static {
    * Sets the value of the 'transaction_number' field.
    * @param value the value to set.
    */
-  public void setTransactionNumber(String value) {
+  public void setTransactionNumber(java.lang.String value) {
     this.transaction_number = value;
   }
 
@@ -1165,7 +1172,7 @@ static {
    * Gets the value of the 'language' field.
    * @return The value of the 'language' field.
    */
-  public String getLanguage() {
+  public java.lang.String getLanguage() {
     return language;
   }
 
@@ -1174,7 +1181,7 @@ static {
    * Sets the value of the 'language' field.
    * @param value the value to set.
    */
-  public void setLanguage(String value) {
+  public void setLanguage(java.lang.String value) {
     this.language = value;
   }
 
@@ -1182,7 +1189,7 @@ static {
    * Gets the value of the 'original_order_number' field.
    * @return The value of the 'original_order_number' field.
    */
-  public String getOriginalOrderNumber() {
+  public java.lang.String getOriginalOrderNumber() {
     return original_order_number;
   }
 
@@ -1191,7 +1198,7 @@ static {
    * Sets the value of the 'original_order_number' field.
    * @param value the value to set.
    */
-  public void setOriginalOrderNumber(String value) {
+  public void setOriginalOrderNumber(java.lang.String value) {
     this.original_order_number = value;
   }
 
@@ -1199,7 +1206,7 @@ static {
    * Gets the value of the 'terminal_id' field.
    * @return The value of the 'terminal_id' field.
    */
-  public String getTerminalId() {
+  public java.lang.String getTerminalId() {
     return terminal_id;
   }
 
@@ -1208,7 +1215,7 @@ static {
    * Sets the value of the 'terminal_id' field.
    * @param value the value to set.
    */
-  public void setTerminalId(String value) {
+  public void setTerminalId(java.lang.String value) {
     this.terminal_id = value;
   }
 
@@ -1216,7 +1223,7 @@ static {
    * Gets the value of the 'demand_gross_sales' field.
    * @return The value of the 'demand_gross_sales' field.
    */
-  public Double getDemandGrossSales() {
+  public java.lang.Double getDemandGrossSales() {
     return demand_gross_sales;
   }
 
@@ -1225,7 +1232,7 @@ static {
    * Sets the value of the 'demand_gross_sales' field.
    * @param value the value to set.
    */
-  public void setDemandGrossSales(Double value) {
+  public void setDemandGrossSales(java.lang.Double value) {
     this.demand_gross_sales = value;
   }
 
@@ -1233,7 +1240,7 @@ static {
    * Gets the value of the 'demand_discounted_sales' field.
    * @return The value of the 'demand_discounted_sales' field.
    */
-  public Double getDemandDiscountedSales() {
+  public java.lang.Double getDemandDiscountedSales() {
     return demand_discounted_sales;
   }
 
@@ -1242,7 +1249,7 @@ static {
    * Sets the value of the 'demand_discounted_sales' field.
    * @param value the value to set.
    */
-  public void setDemandDiscountedSales(Double value) {
+  public void setDemandDiscountedSales(java.lang.Double value) {
     this.demand_discounted_sales = value;
   }
 
@@ -1250,7 +1257,7 @@ static {
    * Gets the value of the 'ship_amount' field.
    * @return The value of the 'ship_amount' field.
    */
-  public String getShipAmount() {
+  public java.lang.String getShipAmount() {
     return ship_amount;
   }
 
@@ -1259,7 +1266,7 @@ static {
    * Sets the value of the 'ship_amount' field.
    * @param value the value to set.
    */
-  public void setShipAmount(String value) {
+  public void setShipAmount(java.lang.String value) {
     this.ship_amount = value;
   }
 
@@ -1267,7 +1274,7 @@ static {
    * Gets the value of the 'gift_wrap_amount' field.
    * @return The value of the 'gift_wrap_amount' field.
    */
-  public String getGiftWrapAmount() {
+  public java.lang.String getGiftWrapAmount() {
     return gift_wrap_amount;
   }
 
@@ -1276,7 +1283,7 @@ static {
    * Sets the value of the 'gift_wrap_amount' field.
    * @param value the value to set.
    */
-  public void setGiftWrapAmount(String value) {
+  public void setGiftWrapAmount(java.lang.String value) {
     this.gift_wrap_amount = value;
   }
 
@@ -1284,7 +1291,7 @@ static {
    * Gets the value of the 'gift_wrap_flag' field.
    * @return The value of the 'gift_wrap_flag' field.
    */
-  public String getGiftWrapFlag() {
+  public java.lang.String getGiftWrapFlag() {
     return gift_wrap_flag;
   }
 
@@ -1293,7 +1300,7 @@ static {
    * Sets the value of the 'gift_wrap_flag' field.
    * @param value the value to set.
    */
-  public void setGiftWrapFlag(String value) {
+  public void setGiftWrapFlag(java.lang.String value) {
     this.gift_wrap_flag = value;
   }
 
@@ -1301,7 +1308,7 @@ static {
    * Gets the value of the 'gwp_flag' field.
    * @return The value of the 'gwp_flag' field.
    */
-  public String getGwpFlag() {
+  public java.lang.String getGwpFlag() {
     return gwp_flag;
   }
 
@@ -1310,7 +1317,7 @@ static {
    * Sets the value of the 'gwp_flag' field.
    * @param value the value to set.
    */
-  public void setGwpFlag(String value) {
+  public void setGwpFlag(java.lang.String value) {
     this.gwp_flag = value;
   }
 
@@ -1318,7 +1325,7 @@ static {
    * Gets the value of the 'order_cancel_flag' field.
    * @return The value of the 'order_cancel_flag' field.
    */
-  public String getOrderCancelFlag() {
+  public java.lang.String getOrderCancelFlag() {
     return order_cancel_flag;
   }
 
@@ -1327,7 +1334,7 @@ static {
    * Sets the value of the 'order_cancel_flag' field.
    * @param value the value to set.
    */
-  public void setOrderCancelFlag(String value) {
+  public void setOrderCancelFlag(java.lang.String value) {
     this.order_cancel_flag = value;
   }
 
@@ -1335,7 +1342,7 @@ static {
    * Gets the value of the 'order_cancel_datetime' field.
    * @return The value of the 'order_cancel_datetime' field.
    */
-  public String getOrderCancelDatetime() {
+  public java.lang.String getOrderCancelDatetime() {
     return order_cancel_datetime;
   }
 
@@ -1344,7 +1351,7 @@ static {
    * Sets the value of the 'order_cancel_datetime' field.
    * @param value the value to set.
    */
-  public void setOrderCancelDatetime(String value) {
+  public void setOrderCancelDatetime(java.lang.String value) {
     this.order_cancel_datetime = value;
   }
 
@@ -1352,7 +1359,7 @@ static {
    * Gets the value of the 'sample_flag' field.
    * @return The value of the 'sample_flag' field.
    */
-  public String getSampleFlag() {
+  public java.lang.String getSampleFlag() {
     return sample_flag;
   }
 
@@ -1361,7 +1368,7 @@ static {
    * Sets the value of the 'sample_flag' field.
    * @param value the value to set.
    */
-  public void setSampleFlag(String value) {
+  public void setSampleFlag(java.lang.String value) {
     this.sample_flag = value;
   }
 
@@ -1369,7 +1376,7 @@ static {
    * Gets the value of the 'order_submit_datetime' field.
    * @return The value of the 'order_submit_datetime' field.
    */
-  public String getOrderSubmitDatetime() {
+  public java.lang.String getOrderSubmitDatetime() {
     return order_submit_datetime;
   }
 
@@ -1378,7 +1385,7 @@ static {
    * Sets the value of the 'order_submit_datetime' field.
    * @param value the value to set.
    */
-  public void setOrderSubmitDatetime(String value) {
+  public void setOrderSubmitDatetime(java.lang.String value) {
     this.order_submit_datetime = value;
   }
 
@@ -1386,7 +1393,7 @@ static {
    * Gets the value of the 'order_submit_datetime_utc' field.
    * @return The value of the 'order_submit_datetime_utc' field.
    */
-  public String getOrderSubmitDatetimeUtc() {
+  public java.lang.String getOrderSubmitDatetimeUtc() {
     return order_submit_datetime_utc;
   }
 
@@ -1395,7 +1402,7 @@ static {
    * Sets the value of the 'order_submit_datetime_utc' field.
    * @param value the value to set.
    */
-  public void setOrderSubmitDatetimeUtc(String value) {
+  public void setOrderSubmitDatetimeUtc(java.lang.String value) {
     this.order_submit_datetime_utc = value;
   }
 
@@ -1403,7 +1410,7 @@ static {
    * Gets the value of the 'order_submit_datetime_local' field.
    * @return The value of the 'order_submit_datetime_local' field.
    */
-  public String getOrderSubmitDatetimeLocal() {
+  public java.lang.String getOrderSubmitDatetimeLocal() {
     return order_submit_datetime_local;
   }
 
@@ -1412,7 +1419,7 @@ static {
    * Sets the value of the 'order_submit_datetime_local' field.
    * @param value the value to set.
    */
-  public void setOrderSubmitDatetimeLocal(String value) {
+  public void setOrderSubmitDatetimeLocal(java.lang.String value) {
     this.order_submit_datetime_local = value;
   }
 
@@ -1420,7 +1427,7 @@ static {
    * Gets the value of the 'order_submit_year_month' field.
    * @return The value of the 'order_submit_year_month' field.
    */
-  public Integer getOrderSubmitYearMonth() {
+  public java.lang.Integer getOrderSubmitYearMonth() {
     return order_submit_year_month;
   }
 
@@ -1429,7 +1436,7 @@ static {
    * Sets the value of the 'order_submit_year_month' field.
    * @param value the value to set.
    */
-  public void setOrderSubmitYearMonth(Integer value) {
+  public void setOrderSubmitYearMonth(java.lang.Integer value) {
     this.order_submit_year_month = value;
   }
 
@@ -1437,7 +1444,7 @@ static {
    * Gets the value of the 'order_submit_date' field.
    * @return The value of the 'order_submit_date' field.
    */
-  public String getOrderSubmitDate() {
+  public java.lang.String getOrderSubmitDate() {
     return order_submit_date;
   }
 
@@ -1446,7 +1453,7 @@ static {
    * Sets the value of the 'order_submit_date' field.
    * @param value the value to set.
    */
-  public void setOrderSubmitDate(String value) {
+  public void setOrderSubmitDate(java.lang.String value) {
     this.order_submit_date = value;
   }
 
@@ -1454,7 +1461,7 @@ static {
    * Gets the value of the 'order_submit_hour' field.
    * @return The value of the 'order_submit_hour' field.
    */
-  public Integer getOrderSubmitHour() {
+  public java.lang.Integer getOrderSubmitHour() {
     return order_submit_hour;
   }
 
@@ -1463,7 +1470,7 @@ static {
    * Sets the value of the 'order_submit_hour' field.
    * @param value the value to set.
    */
-  public void setOrderSubmitHour(Integer value) {
+  public void setOrderSubmitHour(java.lang.Integer value) {
     this.order_submit_hour = value;
   }
 
@@ -1471,7 +1478,7 @@ static {
    * Gets the value of the 'dp_create_timestamp' field.
    * @return The value of the 'dp_create_timestamp' field.
    */
-  public String getDpCreateTimestamp() {
+  public java.lang.String getDpCreateTimestamp() {
     return dp_create_timestamp;
   }
 
@@ -1480,7 +1487,7 @@ static {
    * Sets the value of the 'dp_create_timestamp' field.
    * @param value the value to set.
    */
-  public void setDpCreateTimestamp(String value) {
+  public void setDpCreateTimestamp(java.lang.String value) {
     this.dp_create_timestamp = value;
   }
 
@@ -1488,7 +1495,7 @@ static {
    * Gets the value of the 'dp_update_timestamp' field.
    * @return The value of the 'dp_update_timestamp' field.
    */
-  public String getDpUpdateTimestamp() {
+  public java.lang.String getDpUpdateTimestamp() {
     return dp_update_timestamp;
   }
 
@@ -1497,7 +1504,7 @@ static {
    * Sets the value of the 'dp_update_timestamp' field.
    * @param value the value to set.
    */
-  public void setDpUpdateTimestamp(String value) {
+  public void setDpUpdateTimestamp(java.lang.String value) {
     this.dp_update_timestamp = value;
   }
 
@@ -1505,7 +1512,7 @@ static {
    * Gets the value of the 'sephora_id_update_timestamp' field.
    * @return The value of the 'sephora_id_update_timestamp' field.
    */
-  public String getSephoraIdUpdateTimestamp() {
+  public java.lang.String getSephoraIdUpdateTimestamp() {
     return sephora_id_update_timestamp;
   }
 
@@ -1514,7 +1521,7 @@ static {
    * Sets the value of the 'sephora_id_update_timestamp' field.
    * @param value the value to set.
    */
-  public void setSephoraIdUpdateTimestamp(String value) {
+  public void setSephoraIdUpdateTimestamp(java.lang.String value) {
     this.sephora_id_update_timestamp = value;
   }
 
@@ -1522,7 +1529,7 @@ static {
    * Gets the value of the 'topic' field.
    * @return The value of the 'topic' field.
    */
-  public String getTopic() {
+  public java.lang.String getTopic() {
     return topic;
   }
 
@@ -1531,7 +1538,7 @@ static {
    * Sets the value of the 'topic' field.
    * @param value the value to set.
    */
-  public void setTopic(String value) {
+  public void setTopic(java.lang.String value) {
     this.topic = value;
   }
 
@@ -1539,7 +1546,7 @@ static {
    * Gets the value of the 'partition' field.
    * @return The value of the 'partition' field.
    */
-  public Integer getPartition() {
+  public java.lang.Integer getPartition() {
     return partition;
   }
 
@@ -1548,7 +1555,7 @@ static {
    * Sets the value of the 'partition' field.
    * @param value the value to set.
    */
-  public void setPartition(Integer value) {
+  public void setPartition(java.lang.Integer value) {
     this.partition = value;
   }
 
@@ -1556,7 +1563,7 @@ static {
    * Gets the value of the 'offset' field.
    * @return The value of the 'offset' field.
    */
-  public Long getOffset() {
+  public java.lang.Long getOffset() {
     return offset;
   }
 
@@ -1565,7 +1572,7 @@ static {
    * Sets the value of the 'offset' field.
    * @param value the value to set.
    */
-  public void setOffset(Long value) {
+  public void setOffset(java.lang.Long value) {
     this.offset = value;
   }
 
@@ -1573,7 +1580,7 @@ static {
    * Gets the value of the 'timestamp' field.
    * @return The value of the 'timestamp' field.
    */
-  public Long getTimestamp() {
+  public java.lang.Long getTimestamp() {
     return timestamp;
   }
 
@@ -1582,7 +1589,7 @@ static {
    * Sets the value of the 'timestamp' field.
    * @param value the value to set.
    */
-  public void setTimestamp(Long value) {
+  public void setTimestamp(java.lang.Long value) {
     this.timestamp = value;
   }
 
@@ -1590,7 +1597,7 @@ static {
    * Gets the value of the 'channel' field.
    * @return The value of the 'channel' field.
    */
-  public String getChannel() {
+  public java.lang.String getChannel() {
     return channel;
   }
 
@@ -1599,7 +1606,7 @@ static {
    * Sets the value of the 'channel' field.
    * @param value the value to set.
    */
-  public void setChannel(String value) {
+  public void setChannel(java.lang.String value) {
     this.channel = value;
   }
 
@@ -1607,7 +1614,7 @@ static {
    * Gets the value of the 'transaction_datetime_local' field.
    * @return The value of the 'transaction_datetime_local' field.
    */
-  public String getTransactionDatetimeLocal() {
+  public java.lang.String getTransactionDatetimeLocal() {
     return transaction_datetime_local;
   }
 
@@ -1616,7 +1623,7 @@ static {
    * Sets the value of the 'transaction_datetime_local' field.
    * @param value the value to set.
    */
-  public void setTransactionDatetimeLocal(String value) {
+  public void setTransactionDatetimeLocal(java.lang.String value) {
     this.transaction_datetime_local = value;
   }
 
@@ -1624,7 +1631,7 @@ static {
    * Gets the value of the 'hold_release_datetime' field.
    * @return The value of the 'hold_release_datetime' field.
    */
-  public String getHoldReleaseDatetime() {
+  public java.lang.String getHoldReleaseDatetime() {
     return hold_release_datetime;
   }
 
@@ -1633,7 +1640,7 @@ static {
    * Sets the value of the 'hold_release_datetime' field.
    * @param value the value to set.
    */
-  public void setHoldReleaseDatetime(String value) {
+  public void setHoldReleaseDatetime(java.lang.String value) {
     this.hold_release_datetime = value;
   }
 
@@ -1641,7 +1648,7 @@ static {
    * Gets the value of the 'cancel_type' field.
    * @return The value of the 'cancel_type' field.
    */
-  public String getCancelType() {
+  public java.lang.String getCancelType() {
     return cancel_type;
   }
 
@@ -1650,7 +1657,7 @@ static {
    * Sets the value of the 'cancel_type' field.
    * @param value the value to set.
    */
-  public void setCancelType(String value) {
+  public void setCancelType(java.lang.String value) {
     this.cancel_type = value;
   }
 
@@ -1658,7 +1665,7 @@ static {
    * Gets the value of the 'cancel_reason_text' field.
    * @return The value of the 'cancel_reason_text' field.
    */
-  public String getCancelReasonText() {
+  public java.lang.String getCancelReasonText() {
     return cancel_reason_text;
   }
 
@@ -1667,7 +1674,7 @@ static {
    * Sets the value of the 'cancel_reason_text' field.
    * @param value the value to set.
    */
-  public void setCancelReasonText(String value) {
+  public void setCancelReasonText(java.lang.String value) {
     this.cancel_reason_text = value;
   }
 
@@ -1675,7 +1682,7 @@ static {
    * Gets the value of the 'cancel_reason_code' field.
    * @return The value of the 'cancel_reason_code' field.
    */
-  public String getCancelReasonCode() {
+  public java.lang.String getCancelReasonCode() {
     return cancel_reason_code;
   }
 
@@ -1684,7 +1691,7 @@ static {
    * Sets the value of the 'cancel_reason_code' field.
    * @param value the value to set.
    */
-  public void setCancelReasonCode(String value) {
+  public void setCancelReasonCode(java.lang.String value) {
     this.cancel_reason_code = value;
   }
 
@@ -1692,7 +1699,7 @@ static {
    * Gets the value of the 'pickup_cancelled_datetime' field.
    * @return The value of the 'pickup_cancelled_datetime' field.
    */
-  public String getPickupCancelledDatetime() {
+  public java.lang.String getPickupCancelledDatetime() {
     return pickup_cancelled_datetime;
   }
 
@@ -1701,7 +1708,7 @@ static {
    * Sets the value of the 'pickup_cancelled_datetime' field.
    * @param value the value to set.
    */
-  public void setPickupCancelledDatetime(String value) {
+  public void setPickupCancelledDatetime(java.lang.String value) {
     this.pickup_cancelled_datetime = value;
   }
 
@@ -1709,7 +1716,7 @@ static {
    * Gets the value of the 'seller_org_code' field.
    * @return The value of the 'seller_org_code' field.
    */
-  public String getSellerOrgCode() {
+  public java.lang.String getSellerOrgCode() {
     return seller_org_code;
   }
 
@@ -1718,7 +1725,7 @@ static {
    * Sets the value of the 'seller_org_code' field.
    * @param value the value to set.
    */
-  public void setSellerOrgCode(String value) {
+  public void setSellerOrgCode(java.lang.String value) {
     this.seller_org_code = value;
   }
 
@@ -1726,7 +1733,7 @@ static {
    * Gets the value of the 'bi_pointsbalance_atorder' field.
    * @return The value of the 'bi_pointsbalance_atorder' field.
    */
-  public Integer getBiPointsbalanceAtorder() {
+  public java.lang.Integer getBiPointsbalanceAtorder() {
     return bi_pointsbalance_atorder;
   }
 
@@ -1735,7 +1742,7 @@ static {
    * Sets the value of the 'bi_pointsbalance_atorder' field.
    * @param value the value to set.
    */
-  public void setBiPointsbalanceAtorder(Integer value) {
+  public void setBiPointsbalanceAtorder(java.lang.Integer value) {
     this.bi_pointsbalance_atorder = value;
   }
 
@@ -1743,7 +1750,7 @@ static {
    * Gets the value of the 'shipped_datetime' field.
    * @return The value of the 'shipped_datetime' field.
    */
-  public String getShippedDatetime() {
+  public java.lang.String getShippedDatetime() {
     return shipped_datetime;
   }
 
@@ -1752,7 +1759,7 @@ static {
    * Sets the value of the 'shipped_datetime' field.
    * @param value the value to set.
    */
-  public void setShippedDatetime(String value) {
+  public void setShippedDatetime(java.lang.String value) {
     this.shipped_datetime = value;
   }
 
@@ -1760,7 +1767,7 @@ static {
    * Gets the value of the 'pickup_store_number' field.
    * @return The value of the 'pickup_store_number' field.
    */
-  public String getPickupStoreNumber() {
+  public java.lang.String getPickupStoreNumber() {
     return pickup_store_number;
   }
 
@@ -1769,7 +1776,7 @@ static {
    * Sets the value of the 'pickup_store_number' field.
    * @param value the value to set.
    */
-  public void setPickupStoreNumber(String value) {
+  public void setPickupStoreNumber(java.lang.String value) {
     this.pickup_store_number = value;
   }
 
@@ -1777,7 +1784,7 @@ static {
    * Gets the value of the 'picked_up_datetime' field.
    * @return The value of the 'picked_up_datetime' field.
    */
-  public String getPickedUpDatetime() {
+  public java.lang.String getPickedUpDatetime() {
     return picked_up_datetime;
   }
 
@@ -1786,7 +1793,7 @@ static {
    * Sets the value of the 'picked_up_datetime' field.
    * @param value the value to set.
    */
-  public void setPickedUpDatetime(String value) {
+  public void setPickedUpDatetime(java.lang.String value) {
     this.picked_up_datetime = value;
   }
 
@@ -1794,7 +1801,7 @@ static {
    * Gets the value of the 'external_order_type' field.
    * @return The value of the 'external_order_type' field.
    */
-  public String getExternalOrderType() {
+  public java.lang.String getExternalOrderType() {
     return external_order_type;
   }
 
@@ -1803,7 +1810,7 @@ static {
    * Sets the value of the 'external_order_type' field.
    * @param value the value to set.
    */
-  public void setExternalOrderType(String value) {
+  public void setExternalOrderType(java.lang.String value) {
     this.external_order_type = value;
   }
 
@@ -1811,7 +1818,7 @@ static {
    * Gets the value of the 'external_order_number' field.
    * @return The value of the 'external_order_number' field.
    */
-  public String getExternalOrderNumber() {
+  public java.lang.String getExternalOrderNumber() {
     return external_order_number;
   }
 
@@ -1820,7 +1827,7 @@ static {
    * Sets the value of the 'external_order_number' field.
    * @param value the value to set.
    */
-  public void setExternalOrderNumber(String value) {
+  public void setExternalOrderNumber(java.lang.String value) {
     this.external_order_number = value;
   }
 
@@ -1828,7 +1835,7 @@ static {
    * Gets the value of the 'hal_selected' field.
    * @return The value of the 'hal_selected' field.
    */
-  public String getHalSelected() {
+  public java.lang.String getHalSelected() {
     return hal_selected;
   }
 
@@ -1837,8 +1844,25 @@ static {
    * Sets the value of the 'hal_selected' field.
    * @param value the value to set.
    */
-  public void setHalSelected(String value) {
+  public void setHalSelected(java.lang.String value) {
     this.hal_selected = value;
+  }
+
+  /**
+   * Gets the value of the 'is_declined' field.
+   * @return The value of the 'is_declined' field.
+   */
+  public boolean getIsDeclined() {
+    return is_declined;
+  }
+
+
+  /**
+   * Sets the value of the 'is_declined' field.
+   * @param value the value to set.
+   */
+  public void setIsDeclined(boolean value) {
+    this.is_declined = value;
   }
 
   /**
@@ -1880,87 +1904,88 @@ static {
    */
   @org.apache.avro.specific.AvroGenerated
   public static class Builder extends org.apache.avro.specific.SpecificRecordBuilderBase<OrderHeaderConsolidated>
-    implements org.apache.avro.data.RecordBuilder<OrderHeaderConsolidated> {
+          implements org.apache.avro.data.RecordBuilder<OrderHeaderConsolidated> {
 
-    private String org_id;
-    private String atg_id;
-    private Long usa_id;
-    private Long sephora_id;
-    private String order_number;
-    private String atg_order_number;
-    private String transaction_date;
-    private String transaction_datetime;
-    private String transaction_datetime_utc;
-    private String fulfill_milestone_datetime;
-    private String channel_type;
-    private String transaction_type;
-    private String sub_transaction_type;
-    private String store_number;
-    private String mplus_store_number;
-    private String bi_tier_atorder;
-    private Double units;
-    private Double gross_sales_usd_amount;
-    private Double gross_sales_local_amount;
-    private Double sales_afterdiscount_usd_amount;
-    private Double sales_afterdiscount_local_amount;
-    private Double net_sales_usd_amount;
-    private String net_sales_local_amount;
-    private Double discount_usd_amount;
-    private Double discount_local_amount;
+    private java.lang.String org_id;
+    private java.lang.String atg_id;
+    private java.lang.Long usa_id;
+    private java.lang.Long sephora_id;
+    private java.lang.String order_number;
+    private java.lang.String atg_order_number;
+    private java.lang.String transaction_date;
+    private java.lang.String transaction_datetime;
+    private java.lang.String transaction_datetime_utc;
+    private java.lang.String fulfill_milestone_datetime;
+    private java.lang.String channel_type;
+    private java.lang.String transaction_type;
+    private java.lang.String sub_transaction_type;
+    private java.lang.String store_number;
+    private java.lang.String mplus_store_number;
+    private java.lang.String bi_tier_atorder;
+    private java.lang.Double units;
+    private java.lang.Double gross_sales_usd_amount;
+    private java.lang.Double gross_sales_local_amount;
+    private java.lang.Double sales_afterdiscount_usd_amount;
+    private java.lang.Double sales_afterdiscount_local_amount;
+    private java.lang.Double net_sales_usd_amount;
+    private java.lang.String net_sales_local_amount;
+    private java.lang.Double discount_usd_amount;
+    private java.lang.Double discount_local_amount;
     private java.math.BigDecimal exchange_rate;
-    private Double giftwrap_gross_amount;
-    private Double giftwrap_net_amount;
-    private Double ship_gross_amount;
-    private Double ship_net_amount;
-    private String tax_amount;
-    private String origin_of_order;
-    private String country_of_origin;
-    private String currency_code;
-    private String cancel_flag;
-    private String dotcom_guest_flag;
-    private String flash_order_type;
-    private String csr_id;
-    private String transaction_number;
-    private String language;
-    private String original_order_number;
-    private String terminal_id;
-    private Double demand_gross_sales;
-    private Double demand_discounted_sales;
-    private String ship_amount;
-    private String gift_wrap_amount;
-    private String gift_wrap_flag;
-    private String gwp_flag;
-    private String order_cancel_flag;
-    private String order_cancel_datetime;
-    private String sample_flag;
-    private String order_submit_datetime;
-    private String order_submit_datetime_utc;
-    private String order_submit_datetime_local;
-    private Integer order_submit_year_month;
-    private String order_submit_date;
-    private Integer order_submit_hour;
-    private String dp_create_timestamp;
-    private String dp_update_timestamp;
-    private String sephora_id_update_timestamp;
-    private String topic;
-    private Integer partition;
-    private Long offset;
-    private Long timestamp;
-    private String channel;
-    private String transaction_datetime_local;
-    private String hold_release_datetime;
-    private String cancel_type;
-    private String cancel_reason_text;
-    private String cancel_reason_code;
-    private String pickup_cancelled_datetime;
-    private String seller_org_code;
-    private Integer bi_pointsbalance_atorder;
-    private String shipped_datetime;
-    private String pickup_store_number;
-    private String picked_up_datetime;
-    private String external_order_type;
-    private String external_order_number;
-    private String hal_selected;
+    private java.lang.Double giftwrap_gross_amount;
+    private java.lang.Double giftwrap_net_amount;
+    private java.lang.Double ship_gross_amount;
+    private java.lang.Double ship_net_amount;
+    private java.lang.String tax_amount;
+    private java.lang.String origin_of_order;
+    private java.lang.String country_of_origin;
+    private java.lang.String currency_code;
+    private java.lang.String cancel_flag;
+    private java.lang.String dotcom_guest_flag;
+    private java.lang.String flash_order_type;
+    private java.lang.String csr_id;
+    private java.lang.String transaction_number;
+    private java.lang.String language;
+    private java.lang.String original_order_number;
+    private java.lang.String terminal_id;
+    private java.lang.Double demand_gross_sales;
+    private java.lang.Double demand_discounted_sales;
+    private java.lang.String ship_amount;
+    private java.lang.String gift_wrap_amount;
+    private java.lang.String gift_wrap_flag;
+    private java.lang.String gwp_flag;
+    private java.lang.String order_cancel_flag;
+    private java.lang.String order_cancel_datetime;
+    private java.lang.String sample_flag;
+    private java.lang.String order_submit_datetime;
+    private java.lang.String order_submit_datetime_utc;
+    private java.lang.String order_submit_datetime_local;
+    private java.lang.Integer order_submit_year_month;
+    private java.lang.String order_submit_date;
+    private java.lang.Integer order_submit_hour;
+    private java.lang.String dp_create_timestamp;
+    private java.lang.String dp_update_timestamp;
+    private java.lang.String sephora_id_update_timestamp;
+    private java.lang.String topic;
+    private java.lang.Integer partition;
+    private java.lang.Long offset;
+    private java.lang.Long timestamp;
+    private java.lang.String channel;
+    private java.lang.String transaction_datetime_local;
+    private java.lang.String hold_release_datetime;
+    private java.lang.String cancel_type;
+    private java.lang.String cancel_reason_text;
+    private java.lang.String cancel_reason_code;
+    private java.lang.String pickup_cancelled_datetime;
+    private java.lang.String seller_org_code;
+    private java.lang.Integer bi_pointsbalance_atorder;
+    private java.lang.String shipped_datetime;
+    private java.lang.String pickup_store_number;
+    private java.lang.String picked_up_datetime;
+    private java.lang.String external_order_type;
+    private java.lang.String external_order_number;
+    private java.lang.String hal_selected;
+    private boolean is_declined;
 
     /** Creates a new Builder */
     private Builder() {
@@ -2289,6 +2314,10 @@ static {
         this.hal_selected = data().deepCopy(fields()[78].schema(), other.hal_selected);
         fieldSetFlags()[78] = other.fieldSetFlags()[78];
       }
+      if (isValidValue(fields()[79], other.is_declined)) {
+        this.is_declined = data().deepCopy(fields()[79].schema(), other.is_declined);
+        fieldSetFlags()[79] = other.fieldSetFlags()[79];
+      }
     }
 
     /**
@@ -2613,23 +2642,27 @@ static {
         this.hal_selected = data().deepCopy(fields()[78].schema(), other.hal_selected);
         fieldSetFlags()[78] = true;
       }
+      if (isValidValue(fields()[79], other.is_declined)) {
+        this.is_declined = data().deepCopy(fields()[79].schema(), other.is_declined);
+        fieldSetFlags()[79] = true;
+      }
     }
 
     /**
-      * Gets the value of the 'org_id' field.
-      * @return The value.
-      */
-    public String getOrgId() {
+     * Gets the value of the 'org_id' field.
+     * @return The value.
+     */
+    public java.lang.String getOrgId() {
       return org_id;
     }
 
 
     /**
-      * Sets the value of the 'org_id' field.
-      * @param value The value of 'org_id'.
-      * @return This builder.
-      */
-    public OrderHeaderConsolidated.Builder setOrgId(String value) {
+     * Sets the value of the 'org_id' field.
+     * @param value The value of 'org_id'.
+     * @return This builder.
+     */
+    public OrderHeaderConsolidated.Builder setOrgId(java.lang.String value) {
       validate(fields()[0], value);
       this.org_id = value;
       fieldSetFlags()[0] = true;
@@ -2637,18 +2670,18 @@ static {
     }
 
     /**
-      * Checks whether the 'org_id' field has been set.
-      * @return True if the 'org_id' field has been set, false otherwise.
-      */
+     * Checks whether the 'org_id' field has been set.
+     * @return True if the 'org_id' field has been set, false otherwise.
+     */
     public boolean hasOrgId() {
       return fieldSetFlags()[0];
     }
 
 
     /**
-      * Clears the value of the 'org_id' field.
-      * @return This builder.
-      */
+     * Clears the value of the 'org_id' field.
+     * @return This builder.
+     */
     public OrderHeaderConsolidated.Builder clearOrgId() {
       org_id = null;
       fieldSetFlags()[0] = false;
@@ -2656,20 +2689,20 @@ static {
     }
 
     /**
-      * Gets the value of the 'atg_id' field.
-      * @return The value.
-      */
-    public String getAtgId() {
+     * Gets the value of the 'atg_id' field.
+     * @return The value.
+     */
+    public java.lang.String getAtgId() {
       return atg_id;
     }
 
 
     /**
-      * Sets the value of the 'atg_id' field.
-      * @param value The value of 'atg_id'.
-      * @return This builder.
-      */
-    public OrderHeaderConsolidated.Builder setAtgId(String value) {
+     * Sets the value of the 'atg_id' field.
+     * @param value The value of 'atg_id'.
+     * @return This builder.
+     */
+    public OrderHeaderConsolidated.Builder setAtgId(java.lang.String value) {
       validate(fields()[1], value);
       this.atg_id = value;
       fieldSetFlags()[1] = true;
@@ -2677,18 +2710,18 @@ static {
     }
 
     /**
-      * Checks whether the 'atg_id' field has been set.
-      * @return True if the 'atg_id' field has been set, false otherwise.
-      */
+     * Checks whether the 'atg_id' field has been set.
+     * @return True if the 'atg_id' field has been set, false otherwise.
+     */
     public boolean hasAtgId() {
       return fieldSetFlags()[1];
     }
 
 
     /**
-      * Clears the value of the 'atg_id' field.
-      * @return This builder.
-      */
+     * Clears the value of the 'atg_id' field.
+     * @return This builder.
+     */
     public OrderHeaderConsolidated.Builder clearAtgId() {
       atg_id = null;
       fieldSetFlags()[1] = false;
@@ -2696,20 +2729,20 @@ static {
     }
 
     /**
-      * Gets the value of the 'usa_id' field.
-      * @return The value.
-      */
-    public Long getUsaId() {
+     * Gets the value of the 'usa_id' field.
+     * @return The value.
+     */
+    public java.lang.Long getUsaId() {
       return usa_id;
     }
 
 
     /**
-      * Sets the value of the 'usa_id' field.
-      * @param value The value of 'usa_id'.
-      * @return This builder.
-      */
-    public OrderHeaderConsolidated.Builder setUsaId(Long value) {
+     * Sets the value of the 'usa_id' field.
+     * @param value The value of 'usa_id'.
+     * @return This builder.
+     */
+    public OrderHeaderConsolidated.Builder setUsaId(java.lang.Long value) {
       validate(fields()[2], value);
       this.usa_id = value;
       fieldSetFlags()[2] = true;
@@ -2717,18 +2750,18 @@ static {
     }
 
     /**
-      * Checks whether the 'usa_id' field has been set.
-      * @return True if the 'usa_id' field has been set, false otherwise.
-      */
+     * Checks whether the 'usa_id' field has been set.
+     * @return True if the 'usa_id' field has been set, false otherwise.
+     */
     public boolean hasUsaId() {
       return fieldSetFlags()[2];
     }
 
 
     /**
-      * Clears the value of the 'usa_id' field.
-      * @return This builder.
-      */
+     * Clears the value of the 'usa_id' field.
+     * @return This builder.
+     */
     public OrderHeaderConsolidated.Builder clearUsaId() {
       usa_id = null;
       fieldSetFlags()[2] = false;
@@ -2736,20 +2769,20 @@ static {
     }
 
     /**
-      * Gets the value of the 'sephora_id' field.
-      * @return The value.
-      */
-    public Long getSephoraId() {
+     * Gets the value of the 'sephora_id' field.
+     * @return The value.
+     */
+    public java.lang.Long getSephoraId() {
       return sephora_id;
     }
 
 
     /**
-      * Sets the value of the 'sephora_id' field.
-      * @param value The value of 'sephora_id'.
-      * @return This builder.
-      */
-    public OrderHeaderConsolidated.Builder setSephoraId(Long value) {
+     * Sets the value of the 'sephora_id' field.
+     * @param value The value of 'sephora_id'.
+     * @return This builder.
+     */
+    public OrderHeaderConsolidated.Builder setSephoraId(java.lang.Long value) {
       validate(fields()[3], value);
       this.sephora_id = value;
       fieldSetFlags()[3] = true;
@@ -2757,18 +2790,18 @@ static {
     }
 
     /**
-      * Checks whether the 'sephora_id' field has been set.
-      * @return True if the 'sephora_id' field has been set, false otherwise.
-      */
+     * Checks whether the 'sephora_id' field has been set.
+     * @return True if the 'sephora_id' field has been set, false otherwise.
+     */
     public boolean hasSephoraId() {
       return fieldSetFlags()[3];
     }
 
 
     /**
-      * Clears the value of the 'sephora_id' field.
-      * @return This builder.
-      */
+     * Clears the value of the 'sephora_id' field.
+     * @return This builder.
+     */
     public OrderHeaderConsolidated.Builder clearSephoraId() {
       sephora_id = null;
       fieldSetFlags()[3] = false;
@@ -2776,20 +2809,20 @@ static {
     }
 
     /**
-      * Gets the value of the 'order_number' field.
-      * @return The value.
-      */
-    public String getOrderNumber() {
+     * Gets the value of the 'order_number' field.
+     * @return The value.
+     */
+    public java.lang.String getOrderNumber() {
       return order_number;
     }
 
 
     /**
-      * Sets the value of the 'order_number' field.
-      * @param value The value of 'order_number'.
-      * @return This builder.
-      */
-    public OrderHeaderConsolidated.Builder setOrderNumber(String value) {
+     * Sets the value of the 'order_number' field.
+     * @param value The value of 'order_number'.
+     * @return This builder.
+     */
+    public OrderHeaderConsolidated.Builder setOrderNumber(java.lang.String value) {
       validate(fields()[4], value);
       this.order_number = value;
       fieldSetFlags()[4] = true;
@@ -2797,18 +2830,18 @@ static {
     }
 
     /**
-      * Checks whether the 'order_number' field has been set.
-      * @return True if the 'order_number' field has been set, false otherwise.
-      */
+     * Checks whether the 'order_number' field has been set.
+     * @return True if the 'order_number' field has been set, false otherwise.
+     */
     public boolean hasOrderNumber() {
       return fieldSetFlags()[4];
     }
 
 
     /**
-      * Clears the value of the 'order_number' field.
-      * @return This builder.
-      */
+     * Clears the value of the 'order_number' field.
+     * @return This builder.
+     */
     public OrderHeaderConsolidated.Builder clearOrderNumber() {
       order_number = null;
       fieldSetFlags()[4] = false;
@@ -2816,20 +2849,20 @@ static {
     }
 
     /**
-      * Gets the value of the 'atg_order_number' field.
-      * @return The value.
-      */
-    public String getAtgOrderNumber() {
+     * Gets the value of the 'atg_order_number' field.
+     * @return The value.
+     */
+    public java.lang.String getAtgOrderNumber() {
       return atg_order_number;
     }
 
 
     /**
-      * Sets the value of the 'atg_order_number' field.
-      * @param value The value of 'atg_order_number'.
-      * @return This builder.
-      */
-    public OrderHeaderConsolidated.Builder setAtgOrderNumber(String value) {
+     * Sets the value of the 'atg_order_number' field.
+     * @param value The value of 'atg_order_number'.
+     * @return This builder.
+     */
+    public OrderHeaderConsolidated.Builder setAtgOrderNumber(java.lang.String value) {
       validate(fields()[5], value);
       this.atg_order_number = value;
       fieldSetFlags()[5] = true;
@@ -2837,18 +2870,18 @@ static {
     }
 
     /**
-      * Checks whether the 'atg_order_number' field has been set.
-      * @return True if the 'atg_order_number' field has been set, false otherwise.
-      */
+     * Checks whether the 'atg_order_number' field has been set.
+     * @return True if the 'atg_order_number' field has been set, false otherwise.
+     */
     public boolean hasAtgOrderNumber() {
       return fieldSetFlags()[5];
     }
 
 
     /**
-      * Clears the value of the 'atg_order_number' field.
-      * @return This builder.
-      */
+     * Clears the value of the 'atg_order_number' field.
+     * @return This builder.
+     */
     public OrderHeaderConsolidated.Builder clearAtgOrderNumber() {
       atg_order_number = null;
       fieldSetFlags()[5] = false;
@@ -2856,20 +2889,20 @@ static {
     }
 
     /**
-      * Gets the value of the 'transaction_date' field.
-      * @return The value.
-      */
-    public String getTransactionDate() {
+     * Gets the value of the 'transaction_date' field.
+     * @return The value.
+     */
+    public java.lang.String getTransactionDate() {
       return transaction_date;
     }
 
 
     /**
-      * Sets the value of the 'transaction_date' field.
-      * @param value The value of 'transaction_date'.
-      * @return This builder.
-      */
-    public OrderHeaderConsolidated.Builder setTransactionDate(String value) {
+     * Sets the value of the 'transaction_date' field.
+     * @param value The value of 'transaction_date'.
+     * @return This builder.
+     */
+    public OrderHeaderConsolidated.Builder setTransactionDate(java.lang.String value) {
       validate(fields()[6], value);
       this.transaction_date = value;
       fieldSetFlags()[6] = true;
@@ -2877,18 +2910,18 @@ static {
     }
 
     /**
-      * Checks whether the 'transaction_date' field has been set.
-      * @return True if the 'transaction_date' field has been set, false otherwise.
-      */
+     * Checks whether the 'transaction_date' field has been set.
+     * @return True if the 'transaction_date' field has been set, false otherwise.
+     */
     public boolean hasTransactionDate() {
       return fieldSetFlags()[6];
     }
 
 
     /**
-      * Clears the value of the 'transaction_date' field.
-      * @return This builder.
-      */
+     * Clears the value of the 'transaction_date' field.
+     * @return This builder.
+     */
     public OrderHeaderConsolidated.Builder clearTransactionDate() {
       transaction_date = null;
       fieldSetFlags()[6] = false;
@@ -2896,20 +2929,20 @@ static {
     }
 
     /**
-      * Gets the value of the 'transaction_datetime' field.
-      * @return The value.
-      */
-    public String getTransactionDatetime() {
+     * Gets the value of the 'transaction_datetime' field.
+     * @return The value.
+     */
+    public java.lang.String getTransactionDatetime() {
       return transaction_datetime;
     }
 
 
     /**
-      * Sets the value of the 'transaction_datetime' field.
-      * @param value The value of 'transaction_datetime'.
-      * @return This builder.
-      */
-    public OrderHeaderConsolidated.Builder setTransactionDatetime(String value) {
+     * Sets the value of the 'transaction_datetime' field.
+     * @param value The value of 'transaction_datetime'.
+     * @return This builder.
+     */
+    public OrderHeaderConsolidated.Builder setTransactionDatetime(java.lang.String value) {
       validate(fields()[7], value);
       this.transaction_datetime = value;
       fieldSetFlags()[7] = true;
@@ -2917,18 +2950,18 @@ static {
     }
 
     /**
-      * Checks whether the 'transaction_datetime' field has been set.
-      * @return True if the 'transaction_datetime' field has been set, false otherwise.
-      */
+     * Checks whether the 'transaction_datetime' field has been set.
+     * @return True if the 'transaction_datetime' field has been set, false otherwise.
+     */
     public boolean hasTransactionDatetime() {
       return fieldSetFlags()[7];
     }
 
 
     /**
-      * Clears the value of the 'transaction_datetime' field.
-      * @return This builder.
-      */
+     * Clears the value of the 'transaction_datetime' field.
+     * @return This builder.
+     */
     public OrderHeaderConsolidated.Builder clearTransactionDatetime() {
       transaction_datetime = null;
       fieldSetFlags()[7] = false;
@@ -2936,20 +2969,20 @@ static {
     }
 
     /**
-      * Gets the value of the 'transaction_datetime_utc' field.
-      * @return The value.
-      */
-    public String getTransactionDatetimeUtc() {
+     * Gets the value of the 'transaction_datetime_utc' field.
+     * @return The value.
+     */
+    public java.lang.String getTransactionDatetimeUtc() {
       return transaction_datetime_utc;
     }
 
 
     /**
-      * Sets the value of the 'transaction_datetime_utc' field.
-      * @param value The value of 'transaction_datetime_utc'.
-      * @return This builder.
-      */
-    public OrderHeaderConsolidated.Builder setTransactionDatetimeUtc(String value) {
+     * Sets the value of the 'transaction_datetime_utc' field.
+     * @param value The value of 'transaction_datetime_utc'.
+     * @return This builder.
+     */
+    public OrderHeaderConsolidated.Builder setTransactionDatetimeUtc(java.lang.String value) {
       validate(fields()[8], value);
       this.transaction_datetime_utc = value;
       fieldSetFlags()[8] = true;
@@ -2957,18 +2990,18 @@ static {
     }
 
     /**
-      * Checks whether the 'transaction_datetime_utc' field has been set.
-      * @return True if the 'transaction_datetime_utc' field has been set, false otherwise.
-      */
+     * Checks whether the 'transaction_datetime_utc' field has been set.
+     * @return True if the 'transaction_datetime_utc' field has been set, false otherwise.
+     */
     public boolean hasTransactionDatetimeUtc() {
       return fieldSetFlags()[8];
     }
 
 
     /**
-      * Clears the value of the 'transaction_datetime_utc' field.
-      * @return This builder.
-      */
+     * Clears the value of the 'transaction_datetime_utc' field.
+     * @return This builder.
+     */
     public OrderHeaderConsolidated.Builder clearTransactionDatetimeUtc() {
       transaction_datetime_utc = null;
       fieldSetFlags()[8] = false;
@@ -2976,20 +3009,20 @@ static {
     }
 
     /**
-      * Gets the value of the 'fulfill_milestone_datetime' field.
-      * @return The value.
-      */
-    public String getFulfillMilestoneDatetime() {
+     * Gets the value of the 'fulfill_milestone_datetime' field.
+     * @return The value.
+     */
+    public java.lang.String getFulfillMilestoneDatetime() {
       return fulfill_milestone_datetime;
     }
 
 
     /**
-      * Sets the value of the 'fulfill_milestone_datetime' field.
-      * @param value The value of 'fulfill_milestone_datetime'.
-      * @return This builder.
-      */
-    public OrderHeaderConsolidated.Builder setFulfillMilestoneDatetime(String value) {
+     * Sets the value of the 'fulfill_milestone_datetime' field.
+     * @param value The value of 'fulfill_milestone_datetime'.
+     * @return This builder.
+     */
+    public OrderHeaderConsolidated.Builder setFulfillMilestoneDatetime(java.lang.String value) {
       validate(fields()[9], value);
       this.fulfill_milestone_datetime = value;
       fieldSetFlags()[9] = true;
@@ -2997,18 +3030,18 @@ static {
     }
 
     /**
-      * Checks whether the 'fulfill_milestone_datetime' field has been set.
-      * @return True if the 'fulfill_milestone_datetime' field has been set, false otherwise.
-      */
+     * Checks whether the 'fulfill_milestone_datetime' field has been set.
+     * @return True if the 'fulfill_milestone_datetime' field has been set, false otherwise.
+     */
     public boolean hasFulfillMilestoneDatetime() {
       return fieldSetFlags()[9];
     }
 
 
     /**
-      * Clears the value of the 'fulfill_milestone_datetime' field.
-      * @return This builder.
-      */
+     * Clears the value of the 'fulfill_milestone_datetime' field.
+     * @return This builder.
+     */
     public OrderHeaderConsolidated.Builder clearFulfillMilestoneDatetime() {
       fulfill_milestone_datetime = null;
       fieldSetFlags()[9] = false;
@@ -3016,20 +3049,20 @@ static {
     }
 
     /**
-      * Gets the value of the 'channel_type' field.
-      * @return The value.
-      */
-    public String getChannelType() {
+     * Gets the value of the 'channel_type' field.
+     * @return The value.
+     */
+    public java.lang.String getChannelType() {
       return channel_type;
     }
 
 
     /**
-      * Sets the value of the 'channel_type' field.
-      * @param value The value of 'channel_type'.
-      * @return This builder.
-      */
-    public OrderHeaderConsolidated.Builder setChannelType(String value) {
+     * Sets the value of the 'channel_type' field.
+     * @param value The value of 'channel_type'.
+     * @return This builder.
+     */
+    public OrderHeaderConsolidated.Builder setChannelType(java.lang.String value) {
       validate(fields()[10], value);
       this.channel_type = value;
       fieldSetFlags()[10] = true;
@@ -3037,18 +3070,18 @@ static {
     }
 
     /**
-      * Checks whether the 'channel_type' field has been set.
-      * @return True if the 'channel_type' field has been set, false otherwise.
-      */
+     * Checks whether the 'channel_type' field has been set.
+     * @return True if the 'channel_type' field has been set, false otherwise.
+     */
     public boolean hasChannelType() {
       return fieldSetFlags()[10];
     }
 
 
     /**
-      * Clears the value of the 'channel_type' field.
-      * @return This builder.
-      */
+     * Clears the value of the 'channel_type' field.
+     * @return This builder.
+     */
     public OrderHeaderConsolidated.Builder clearChannelType() {
       channel_type = null;
       fieldSetFlags()[10] = false;
@@ -3056,20 +3089,20 @@ static {
     }
 
     /**
-      * Gets the value of the 'transaction_type' field.
-      * @return The value.
-      */
-    public String getTransactionType() {
+     * Gets the value of the 'transaction_type' field.
+     * @return The value.
+     */
+    public java.lang.String getTransactionType() {
       return transaction_type;
     }
 
 
     /**
-      * Sets the value of the 'transaction_type' field.
-      * @param value The value of 'transaction_type'.
-      * @return This builder.
-      */
-    public OrderHeaderConsolidated.Builder setTransactionType(String value) {
+     * Sets the value of the 'transaction_type' field.
+     * @param value The value of 'transaction_type'.
+     * @return This builder.
+     */
+    public OrderHeaderConsolidated.Builder setTransactionType(java.lang.String value) {
       validate(fields()[11], value);
       this.transaction_type = value;
       fieldSetFlags()[11] = true;
@@ -3077,18 +3110,18 @@ static {
     }
 
     /**
-      * Checks whether the 'transaction_type' field has been set.
-      * @return True if the 'transaction_type' field has been set, false otherwise.
-      */
+     * Checks whether the 'transaction_type' field has been set.
+     * @return True if the 'transaction_type' field has been set, false otherwise.
+     */
     public boolean hasTransactionType() {
       return fieldSetFlags()[11];
     }
 
 
     /**
-      * Clears the value of the 'transaction_type' field.
-      * @return This builder.
-      */
+     * Clears the value of the 'transaction_type' field.
+     * @return This builder.
+     */
     public OrderHeaderConsolidated.Builder clearTransactionType() {
       transaction_type = null;
       fieldSetFlags()[11] = false;
@@ -3096,20 +3129,20 @@ static {
     }
 
     /**
-      * Gets the value of the 'sub_transaction_type' field.
-      * @return The value.
-      */
-    public String getSubTransactionType() {
+     * Gets the value of the 'sub_transaction_type' field.
+     * @return The value.
+     */
+    public java.lang.String getSubTransactionType() {
       return sub_transaction_type;
     }
 
 
     /**
-      * Sets the value of the 'sub_transaction_type' field.
-      * @param value The value of 'sub_transaction_type'.
-      * @return This builder.
-      */
-    public OrderHeaderConsolidated.Builder setSubTransactionType(String value) {
+     * Sets the value of the 'sub_transaction_type' field.
+     * @param value The value of 'sub_transaction_type'.
+     * @return This builder.
+     */
+    public OrderHeaderConsolidated.Builder setSubTransactionType(java.lang.String value) {
       validate(fields()[12], value);
       this.sub_transaction_type = value;
       fieldSetFlags()[12] = true;
@@ -3117,18 +3150,18 @@ static {
     }
 
     /**
-      * Checks whether the 'sub_transaction_type' field has been set.
-      * @return True if the 'sub_transaction_type' field has been set, false otherwise.
-      */
+     * Checks whether the 'sub_transaction_type' field has been set.
+     * @return True if the 'sub_transaction_type' field has been set, false otherwise.
+     */
     public boolean hasSubTransactionType() {
       return fieldSetFlags()[12];
     }
 
 
     /**
-      * Clears the value of the 'sub_transaction_type' field.
-      * @return This builder.
-      */
+     * Clears the value of the 'sub_transaction_type' field.
+     * @return This builder.
+     */
     public OrderHeaderConsolidated.Builder clearSubTransactionType() {
       sub_transaction_type = null;
       fieldSetFlags()[12] = false;
@@ -3136,20 +3169,20 @@ static {
     }
 
     /**
-      * Gets the value of the 'store_number' field.
-      * @return The value.
-      */
-    public String getStoreNumber() {
+     * Gets the value of the 'store_number' field.
+     * @return The value.
+     */
+    public java.lang.String getStoreNumber() {
       return store_number;
     }
 
 
     /**
-      * Sets the value of the 'store_number' field.
-      * @param value The value of 'store_number'.
-      * @return This builder.
-      */
-    public OrderHeaderConsolidated.Builder setStoreNumber(String value) {
+     * Sets the value of the 'store_number' field.
+     * @param value The value of 'store_number'.
+     * @return This builder.
+     */
+    public OrderHeaderConsolidated.Builder setStoreNumber(java.lang.String value) {
       validate(fields()[13], value);
       this.store_number = value;
       fieldSetFlags()[13] = true;
@@ -3157,18 +3190,18 @@ static {
     }
 
     /**
-      * Checks whether the 'store_number' field has been set.
-      * @return True if the 'store_number' field has been set, false otherwise.
-      */
+     * Checks whether the 'store_number' field has been set.
+     * @return True if the 'store_number' field has been set, false otherwise.
+     */
     public boolean hasStoreNumber() {
       return fieldSetFlags()[13];
     }
 
 
     /**
-      * Clears the value of the 'store_number' field.
-      * @return This builder.
-      */
+     * Clears the value of the 'store_number' field.
+     * @return This builder.
+     */
     public OrderHeaderConsolidated.Builder clearStoreNumber() {
       store_number = null;
       fieldSetFlags()[13] = false;
@@ -3176,20 +3209,20 @@ static {
     }
 
     /**
-      * Gets the value of the 'mplus_store_number' field.
-      * @return The value.
-      */
-    public String getMplusStoreNumber() {
+     * Gets the value of the 'mplus_store_number' field.
+     * @return The value.
+     */
+    public java.lang.String getMplusStoreNumber() {
       return mplus_store_number;
     }
 
 
     /**
-      * Sets the value of the 'mplus_store_number' field.
-      * @param value The value of 'mplus_store_number'.
-      * @return This builder.
-      */
-    public OrderHeaderConsolidated.Builder setMplusStoreNumber(String value) {
+     * Sets the value of the 'mplus_store_number' field.
+     * @param value The value of 'mplus_store_number'.
+     * @return This builder.
+     */
+    public OrderHeaderConsolidated.Builder setMplusStoreNumber(java.lang.String value) {
       validate(fields()[14], value);
       this.mplus_store_number = value;
       fieldSetFlags()[14] = true;
@@ -3197,18 +3230,18 @@ static {
     }
 
     /**
-      * Checks whether the 'mplus_store_number' field has been set.
-      * @return True if the 'mplus_store_number' field has been set, false otherwise.
-      */
+     * Checks whether the 'mplus_store_number' field has been set.
+     * @return True if the 'mplus_store_number' field has been set, false otherwise.
+     */
     public boolean hasMplusStoreNumber() {
       return fieldSetFlags()[14];
     }
 
 
     /**
-      * Clears the value of the 'mplus_store_number' field.
-      * @return This builder.
-      */
+     * Clears the value of the 'mplus_store_number' field.
+     * @return This builder.
+     */
     public OrderHeaderConsolidated.Builder clearMplusStoreNumber() {
       mplus_store_number = null;
       fieldSetFlags()[14] = false;
@@ -3216,20 +3249,20 @@ static {
     }
 
     /**
-      * Gets the value of the 'bi_tier_atorder' field.
-      * @return The value.
-      */
-    public String getBiTierAtorder() {
+     * Gets the value of the 'bi_tier_atorder' field.
+     * @return The value.
+     */
+    public java.lang.String getBiTierAtorder() {
       return bi_tier_atorder;
     }
 
 
     /**
-      * Sets the value of the 'bi_tier_atorder' field.
-      * @param value The value of 'bi_tier_atorder'.
-      * @return This builder.
-      */
-    public OrderHeaderConsolidated.Builder setBiTierAtorder(String value) {
+     * Sets the value of the 'bi_tier_atorder' field.
+     * @param value The value of 'bi_tier_atorder'.
+     * @return This builder.
+     */
+    public OrderHeaderConsolidated.Builder setBiTierAtorder(java.lang.String value) {
       validate(fields()[15], value);
       this.bi_tier_atorder = value;
       fieldSetFlags()[15] = true;
@@ -3237,18 +3270,18 @@ static {
     }
 
     /**
-      * Checks whether the 'bi_tier_atorder' field has been set.
-      * @return True if the 'bi_tier_atorder' field has been set, false otherwise.
-      */
+     * Checks whether the 'bi_tier_atorder' field has been set.
+     * @return True if the 'bi_tier_atorder' field has been set, false otherwise.
+     */
     public boolean hasBiTierAtorder() {
       return fieldSetFlags()[15];
     }
 
 
     /**
-      * Clears the value of the 'bi_tier_atorder' field.
-      * @return This builder.
-      */
+     * Clears the value of the 'bi_tier_atorder' field.
+     * @return This builder.
+     */
     public OrderHeaderConsolidated.Builder clearBiTierAtorder() {
       bi_tier_atorder = null;
       fieldSetFlags()[15] = false;
@@ -3256,20 +3289,20 @@ static {
     }
 
     /**
-      * Gets the value of the 'units' field.
-      * @return The value.
-      */
-    public Double getUnits() {
+     * Gets the value of the 'units' field.
+     * @return The value.
+     */
+    public java.lang.Double getUnits() {
       return units;
     }
 
 
     /**
-      * Sets the value of the 'units' field.
-      * @param value The value of 'units'.
-      * @return This builder.
-      */
-    public OrderHeaderConsolidated.Builder setUnits(Double value) {
+     * Sets the value of the 'units' field.
+     * @param value The value of 'units'.
+     * @return This builder.
+     */
+    public OrderHeaderConsolidated.Builder setUnits(java.lang.Double value) {
       validate(fields()[16], value);
       this.units = value;
       fieldSetFlags()[16] = true;
@@ -3277,18 +3310,18 @@ static {
     }
 
     /**
-      * Checks whether the 'units' field has been set.
-      * @return True if the 'units' field has been set, false otherwise.
-      */
+     * Checks whether the 'units' field has been set.
+     * @return True if the 'units' field has been set, false otherwise.
+     */
     public boolean hasUnits() {
       return fieldSetFlags()[16];
     }
 
 
     /**
-      * Clears the value of the 'units' field.
-      * @return This builder.
-      */
+     * Clears the value of the 'units' field.
+     * @return This builder.
+     */
     public OrderHeaderConsolidated.Builder clearUnits() {
       units = null;
       fieldSetFlags()[16] = false;
@@ -3296,20 +3329,20 @@ static {
     }
 
     /**
-      * Gets the value of the 'gross_sales_usd_amount' field.
-      * @return The value.
-      */
-    public Double getGrossSalesUsdAmount() {
+     * Gets the value of the 'gross_sales_usd_amount' field.
+     * @return The value.
+     */
+    public java.lang.Double getGrossSalesUsdAmount() {
       return gross_sales_usd_amount;
     }
 
 
     /**
-      * Sets the value of the 'gross_sales_usd_amount' field.
-      * @param value The value of 'gross_sales_usd_amount'.
-      * @return This builder.
-      */
-    public OrderHeaderConsolidated.Builder setGrossSalesUsdAmount(Double value) {
+     * Sets the value of the 'gross_sales_usd_amount' field.
+     * @param value The value of 'gross_sales_usd_amount'.
+     * @return This builder.
+     */
+    public OrderHeaderConsolidated.Builder setGrossSalesUsdAmount(java.lang.Double value) {
       validate(fields()[17], value);
       this.gross_sales_usd_amount = value;
       fieldSetFlags()[17] = true;
@@ -3317,18 +3350,18 @@ static {
     }
 
     /**
-      * Checks whether the 'gross_sales_usd_amount' field has been set.
-      * @return True if the 'gross_sales_usd_amount' field has been set, false otherwise.
-      */
+     * Checks whether the 'gross_sales_usd_amount' field has been set.
+     * @return True if the 'gross_sales_usd_amount' field has been set, false otherwise.
+     */
     public boolean hasGrossSalesUsdAmount() {
       return fieldSetFlags()[17];
     }
 
 
     /**
-      * Clears the value of the 'gross_sales_usd_amount' field.
-      * @return This builder.
-      */
+     * Clears the value of the 'gross_sales_usd_amount' field.
+     * @return This builder.
+     */
     public OrderHeaderConsolidated.Builder clearGrossSalesUsdAmount() {
       gross_sales_usd_amount = null;
       fieldSetFlags()[17] = false;
@@ -3336,20 +3369,20 @@ static {
     }
 
     /**
-      * Gets the value of the 'gross_sales_local_amount' field.
-      * @return The value.
-      */
-    public Double getGrossSalesLocalAmount() {
+     * Gets the value of the 'gross_sales_local_amount' field.
+     * @return The value.
+     */
+    public java.lang.Double getGrossSalesLocalAmount() {
       return gross_sales_local_amount;
     }
 
 
     /**
-      * Sets the value of the 'gross_sales_local_amount' field.
-      * @param value The value of 'gross_sales_local_amount'.
-      * @return This builder.
-      */
-    public OrderHeaderConsolidated.Builder setGrossSalesLocalAmount(Double value) {
+     * Sets the value of the 'gross_sales_local_amount' field.
+     * @param value The value of 'gross_sales_local_amount'.
+     * @return This builder.
+     */
+    public OrderHeaderConsolidated.Builder setGrossSalesLocalAmount(java.lang.Double value) {
       validate(fields()[18], value);
       this.gross_sales_local_amount = value;
       fieldSetFlags()[18] = true;
@@ -3357,18 +3390,18 @@ static {
     }
 
     /**
-      * Checks whether the 'gross_sales_local_amount' field has been set.
-      * @return True if the 'gross_sales_local_amount' field has been set, false otherwise.
-      */
+     * Checks whether the 'gross_sales_local_amount' field has been set.
+     * @return True if the 'gross_sales_local_amount' field has been set, false otherwise.
+     */
     public boolean hasGrossSalesLocalAmount() {
       return fieldSetFlags()[18];
     }
 
 
     /**
-      * Clears the value of the 'gross_sales_local_amount' field.
-      * @return This builder.
-      */
+     * Clears the value of the 'gross_sales_local_amount' field.
+     * @return This builder.
+     */
     public OrderHeaderConsolidated.Builder clearGrossSalesLocalAmount() {
       gross_sales_local_amount = null;
       fieldSetFlags()[18] = false;
@@ -3376,20 +3409,20 @@ static {
     }
 
     /**
-      * Gets the value of the 'sales_afterdiscount_usd_amount' field.
-      * @return The value.
-      */
-    public Double getSalesAfterdiscountUsdAmount() {
+     * Gets the value of the 'sales_afterdiscount_usd_amount' field.
+     * @return The value.
+     */
+    public java.lang.Double getSalesAfterdiscountUsdAmount() {
       return sales_afterdiscount_usd_amount;
     }
 
 
     /**
-      * Sets the value of the 'sales_afterdiscount_usd_amount' field.
-      * @param value The value of 'sales_afterdiscount_usd_amount'.
-      * @return This builder.
-      */
-    public OrderHeaderConsolidated.Builder setSalesAfterdiscountUsdAmount(Double value) {
+     * Sets the value of the 'sales_afterdiscount_usd_amount' field.
+     * @param value The value of 'sales_afterdiscount_usd_amount'.
+     * @return This builder.
+     */
+    public OrderHeaderConsolidated.Builder setSalesAfterdiscountUsdAmount(java.lang.Double value) {
       validate(fields()[19], value);
       this.sales_afterdiscount_usd_amount = value;
       fieldSetFlags()[19] = true;
@@ -3397,18 +3430,18 @@ static {
     }
 
     /**
-      * Checks whether the 'sales_afterdiscount_usd_amount' field has been set.
-      * @return True if the 'sales_afterdiscount_usd_amount' field has been set, false otherwise.
-      */
+     * Checks whether the 'sales_afterdiscount_usd_amount' field has been set.
+     * @return True if the 'sales_afterdiscount_usd_amount' field has been set, false otherwise.
+     */
     public boolean hasSalesAfterdiscountUsdAmount() {
       return fieldSetFlags()[19];
     }
 
 
     /**
-      * Clears the value of the 'sales_afterdiscount_usd_amount' field.
-      * @return This builder.
-      */
+     * Clears the value of the 'sales_afterdiscount_usd_amount' field.
+     * @return This builder.
+     */
     public OrderHeaderConsolidated.Builder clearSalesAfterdiscountUsdAmount() {
       sales_afterdiscount_usd_amount = null;
       fieldSetFlags()[19] = false;
@@ -3416,20 +3449,20 @@ static {
     }
 
     /**
-      * Gets the value of the 'sales_afterdiscount_local_amount' field.
-      * @return The value.
-      */
-    public Double getSalesAfterdiscountLocalAmount() {
+     * Gets the value of the 'sales_afterdiscount_local_amount' field.
+     * @return The value.
+     */
+    public java.lang.Double getSalesAfterdiscountLocalAmount() {
       return sales_afterdiscount_local_amount;
     }
 
 
     /**
-      * Sets the value of the 'sales_afterdiscount_local_amount' field.
-      * @param value The value of 'sales_afterdiscount_local_amount'.
-      * @return This builder.
-      */
-    public OrderHeaderConsolidated.Builder setSalesAfterdiscountLocalAmount(Double value) {
+     * Sets the value of the 'sales_afterdiscount_local_amount' field.
+     * @param value The value of 'sales_afterdiscount_local_amount'.
+     * @return This builder.
+     */
+    public OrderHeaderConsolidated.Builder setSalesAfterdiscountLocalAmount(java.lang.Double value) {
       validate(fields()[20], value);
       this.sales_afterdiscount_local_amount = value;
       fieldSetFlags()[20] = true;
@@ -3437,18 +3470,18 @@ static {
     }
 
     /**
-      * Checks whether the 'sales_afterdiscount_local_amount' field has been set.
-      * @return True if the 'sales_afterdiscount_local_amount' field has been set, false otherwise.
-      */
+     * Checks whether the 'sales_afterdiscount_local_amount' field has been set.
+     * @return True if the 'sales_afterdiscount_local_amount' field has been set, false otherwise.
+     */
     public boolean hasSalesAfterdiscountLocalAmount() {
       return fieldSetFlags()[20];
     }
 
 
     /**
-      * Clears the value of the 'sales_afterdiscount_local_amount' field.
-      * @return This builder.
-      */
+     * Clears the value of the 'sales_afterdiscount_local_amount' field.
+     * @return This builder.
+     */
     public OrderHeaderConsolidated.Builder clearSalesAfterdiscountLocalAmount() {
       sales_afterdiscount_local_amount = null;
       fieldSetFlags()[20] = false;
@@ -3456,20 +3489,20 @@ static {
     }
 
     /**
-      * Gets the value of the 'net_sales_usd_amount' field.
-      * @return The value.
-      */
-    public Double getNetSalesUsdAmount() {
+     * Gets the value of the 'net_sales_usd_amount' field.
+     * @return The value.
+     */
+    public java.lang.Double getNetSalesUsdAmount() {
       return net_sales_usd_amount;
     }
 
 
     /**
-      * Sets the value of the 'net_sales_usd_amount' field.
-      * @param value The value of 'net_sales_usd_amount'.
-      * @return This builder.
-      */
-    public OrderHeaderConsolidated.Builder setNetSalesUsdAmount(Double value) {
+     * Sets the value of the 'net_sales_usd_amount' field.
+     * @param value The value of 'net_sales_usd_amount'.
+     * @return This builder.
+     */
+    public OrderHeaderConsolidated.Builder setNetSalesUsdAmount(java.lang.Double value) {
       validate(fields()[21], value);
       this.net_sales_usd_amount = value;
       fieldSetFlags()[21] = true;
@@ -3477,18 +3510,18 @@ static {
     }
 
     /**
-      * Checks whether the 'net_sales_usd_amount' field has been set.
-      * @return True if the 'net_sales_usd_amount' field has been set, false otherwise.
-      */
+     * Checks whether the 'net_sales_usd_amount' field has been set.
+     * @return True if the 'net_sales_usd_amount' field has been set, false otherwise.
+     */
     public boolean hasNetSalesUsdAmount() {
       return fieldSetFlags()[21];
     }
 
 
     /**
-      * Clears the value of the 'net_sales_usd_amount' field.
-      * @return This builder.
-      */
+     * Clears the value of the 'net_sales_usd_amount' field.
+     * @return This builder.
+     */
     public OrderHeaderConsolidated.Builder clearNetSalesUsdAmount() {
       net_sales_usd_amount = null;
       fieldSetFlags()[21] = false;
@@ -3496,20 +3529,20 @@ static {
     }
 
     /**
-      * Gets the value of the 'net_sales_local_amount' field.
-      * @return The value.
-      */
-    public String getNetSalesLocalAmount() {
+     * Gets the value of the 'net_sales_local_amount' field.
+     * @return The value.
+     */
+    public java.lang.String getNetSalesLocalAmount() {
       return net_sales_local_amount;
     }
 
 
     /**
-      * Sets the value of the 'net_sales_local_amount' field.
-      * @param value The value of 'net_sales_local_amount'.
-      * @return This builder.
-      */
-    public OrderHeaderConsolidated.Builder setNetSalesLocalAmount(String value) {
+     * Sets the value of the 'net_sales_local_amount' field.
+     * @param value The value of 'net_sales_local_amount'.
+     * @return This builder.
+     */
+    public OrderHeaderConsolidated.Builder setNetSalesLocalAmount(java.lang.String value) {
       validate(fields()[22], value);
       this.net_sales_local_amount = value;
       fieldSetFlags()[22] = true;
@@ -3517,18 +3550,18 @@ static {
     }
 
     /**
-      * Checks whether the 'net_sales_local_amount' field has been set.
-      * @return True if the 'net_sales_local_amount' field has been set, false otherwise.
-      */
+     * Checks whether the 'net_sales_local_amount' field has been set.
+     * @return True if the 'net_sales_local_amount' field has been set, false otherwise.
+     */
     public boolean hasNetSalesLocalAmount() {
       return fieldSetFlags()[22];
     }
 
 
     /**
-      * Clears the value of the 'net_sales_local_amount' field.
-      * @return This builder.
-      */
+     * Clears the value of the 'net_sales_local_amount' field.
+     * @return This builder.
+     */
     public OrderHeaderConsolidated.Builder clearNetSalesLocalAmount() {
       net_sales_local_amount = null;
       fieldSetFlags()[22] = false;
@@ -3536,20 +3569,20 @@ static {
     }
 
     /**
-      * Gets the value of the 'discount_usd_amount' field.
-      * @return The value.
-      */
-    public Double getDiscountUsdAmount() {
+     * Gets the value of the 'discount_usd_amount' field.
+     * @return The value.
+     */
+    public java.lang.Double getDiscountUsdAmount() {
       return discount_usd_amount;
     }
 
 
     /**
-      * Sets the value of the 'discount_usd_amount' field.
-      * @param value The value of 'discount_usd_amount'.
-      * @return This builder.
-      */
-    public OrderHeaderConsolidated.Builder setDiscountUsdAmount(Double value) {
+     * Sets the value of the 'discount_usd_amount' field.
+     * @param value The value of 'discount_usd_amount'.
+     * @return This builder.
+     */
+    public OrderHeaderConsolidated.Builder setDiscountUsdAmount(java.lang.Double value) {
       validate(fields()[23], value);
       this.discount_usd_amount = value;
       fieldSetFlags()[23] = true;
@@ -3557,18 +3590,18 @@ static {
     }
 
     /**
-      * Checks whether the 'discount_usd_amount' field has been set.
-      * @return True if the 'discount_usd_amount' field has been set, false otherwise.
-      */
+     * Checks whether the 'discount_usd_amount' field has been set.
+     * @return True if the 'discount_usd_amount' field has been set, false otherwise.
+     */
     public boolean hasDiscountUsdAmount() {
       return fieldSetFlags()[23];
     }
 
 
     /**
-      * Clears the value of the 'discount_usd_amount' field.
-      * @return This builder.
-      */
+     * Clears the value of the 'discount_usd_amount' field.
+     * @return This builder.
+     */
     public OrderHeaderConsolidated.Builder clearDiscountUsdAmount() {
       discount_usd_amount = null;
       fieldSetFlags()[23] = false;
@@ -3576,20 +3609,20 @@ static {
     }
 
     /**
-      * Gets the value of the 'discount_local_amount' field.
-      * @return The value.
-      */
-    public Double getDiscountLocalAmount() {
+     * Gets the value of the 'discount_local_amount' field.
+     * @return The value.
+     */
+    public java.lang.Double getDiscountLocalAmount() {
       return discount_local_amount;
     }
 
 
     /**
-      * Sets the value of the 'discount_local_amount' field.
-      * @param value The value of 'discount_local_amount'.
-      * @return This builder.
-      */
-    public OrderHeaderConsolidated.Builder setDiscountLocalAmount(Double value) {
+     * Sets the value of the 'discount_local_amount' field.
+     * @param value The value of 'discount_local_amount'.
+     * @return This builder.
+     */
+    public OrderHeaderConsolidated.Builder setDiscountLocalAmount(java.lang.Double value) {
       validate(fields()[24], value);
       this.discount_local_amount = value;
       fieldSetFlags()[24] = true;
@@ -3597,18 +3630,18 @@ static {
     }
 
     /**
-      * Checks whether the 'discount_local_amount' field has been set.
-      * @return True if the 'discount_local_amount' field has been set, false otherwise.
-      */
+     * Checks whether the 'discount_local_amount' field has been set.
+     * @return True if the 'discount_local_amount' field has been set, false otherwise.
+     */
     public boolean hasDiscountLocalAmount() {
       return fieldSetFlags()[24];
     }
 
 
     /**
-      * Clears the value of the 'discount_local_amount' field.
-      * @return This builder.
-      */
+     * Clears the value of the 'discount_local_amount' field.
+     * @return This builder.
+     */
     public OrderHeaderConsolidated.Builder clearDiscountLocalAmount() {
       discount_local_amount = null;
       fieldSetFlags()[24] = false;
@@ -3616,19 +3649,19 @@ static {
     }
 
     /**
-      * Gets the value of the 'exchange_rate' field.
-      * @return The value.
-      */
+     * Gets the value of the 'exchange_rate' field.
+     * @return The value.
+     */
     public java.math.BigDecimal getExchangeRate() {
       return exchange_rate;
     }
 
 
     /**
-      * Sets the value of the 'exchange_rate' field.
-      * @param value The value of 'exchange_rate'.
-      * @return This builder.
-      */
+     * Sets the value of the 'exchange_rate' field.
+     * @param value The value of 'exchange_rate'.
+     * @return This builder.
+     */
     public OrderHeaderConsolidated.Builder setExchangeRate(java.math.BigDecimal value) {
       validate(fields()[25], value);
       this.exchange_rate = value;
@@ -3637,18 +3670,18 @@ static {
     }
 
     /**
-      * Checks whether the 'exchange_rate' field has been set.
-      * @return True if the 'exchange_rate' field has been set, false otherwise.
-      */
+     * Checks whether the 'exchange_rate' field has been set.
+     * @return True if the 'exchange_rate' field has been set, false otherwise.
+     */
     public boolean hasExchangeRate() {
       return fieldSetFlags()[25];
     }
 
 
     /**
-      * Clears the value of the 'exchange_rate' field.
-      * @return This builder.
-      */
+     * Clears the value of the 'exchange_rate' field.
+     * @return This builder.
+     */
     public OrderHeaderConsolidated.Builder clearExchangeRate() {
       exchange_rate = null;
       fieldSetFlags()[25] = false;
@@ -3656,20 +3689,20 @@ static {
     }
 
     /**
-      * Gets the value of the 'giftwrap_gross_amount' field.
-      * @return The value.
-      */
-    public Double getGiftwrapGrossAmount() {
+     * Gets the value of the 'giftwrap_gross_amount' field.
+     * @return The value.
+     */
+    public java.lang.Double getGiftwrapGrossAmount() {
       return giftwrap_gross_amount;
     }
 
 
     /**
-      * Sets the value of the 'giftwrap_gross_amount' field.
-      * @param value The value of 'giftwrap_gross_amount'.
-      * @return This builder.
-      */
-    public OrderHeaderConsolidated.Builder setGiftwrapGrossAmount(Double value) {
+     * Sets the value of the 'giftwrap_gross_amount' field.
+     * @param value The value of 'giftwrap_gross_amount'.
+     * @return This builder.
+     */
+    public OrderHeaderConsolidated.Builder setGiftwrapGrossAmount(java.lang.Double value) {
       validate(fields()[26], value);
       this.giftwrap_gross_amount = value;
       fieldSetFlags()[26] = true;
@@ -3677,18 +3710,18 @@ static {
     }
 
     /**
-      * Checks whether the 'giftwrap_gross_amount' field has been set.
-      * @return True if the 'giftwrap_gross_amount' field has been set, false otherwise.
-      */
+     * Checks whether the 'giftwrap_gross_amount' field has been set.
+     * @return True if the 'giftwrap_gross_amount' field has been set, false otherwise.
+     */
     public boolean hasGiftwrapGrossAmount() {
       return fieldSetFlags()[26];
     }
 
 
     /**
-      * Clears the value of the 'giftwrap_gross_amount' field.
-      * @return This builder.
-      */
+     * Clears the value of the 'giftwrap_gross_amount' field.
+     * @return This builder.
+     */
     public OrderHeaderConsolidated.Builder clearGiftwrapGrossAmount() {
       giftwrap_gross_amount = null;
       fieldSetFlags()[26] = false;
@@ -3696,20 +3729,20 @@ static {
     }
 
     /**
-      * Gets the value of the 'giftwrap_net_amount' field.
-      * @return The value.
-      */
-    public Double getGiftwrapNetAmount() {
+     * Gets the value of the 'giftwrap_net_amount' field.
+     * @return The value.
+     */
+    public java.lang.Double getGiftwrapNetAmount() {
       return giftwrap_net_amount;
     }
 
 
     /**
-      * Sets the value of the 'giftwrap_net_amount' field.
-      * @param value The value of 'giftwrap_net_amount'.
-      * @return This builder.
-      */
-    public OrderHeaderConsolidated.Builder setGiftwrapNetAmount(Double value) {
+     * Sets the value of the 'giftwrap_net_amount' field.
+     * @param value The value of 'giftwrap_net_amount'.
+     * @return This builder.
+     */
+    public OrderHeaderConsolidated.Builder setGiftwrapNetAmount(java.lang.Double value) {
       validate(fields()[27], value);
       this.giftwrap_net_amount = value;
       fieldSetFlags()[27] = true;
@@ -3717,18 +3750,18 @@ static {
     }
 
     /**
-      * Checks whether the 'giftwrap_net_amount' field has been set.
-      * @return True if the 'giftwrap_net_amount' field has been set, false otherwise.
-      */
+     * Checks whether the 'giftwrap_net_amount' field has been set.
+     * @return True if the 'giftwrap_net_amount' field has been set, false otherwise.
+     */
     public boolean hasGiftwrapNetAmount() {
       return fieldSetFlags()[27];
     }
 
 
     /**
-      * Clears the value of the 'giftwrap_net_amount' field.
-      * @return This builder.
-      */
+     * Clears the value of the 'giftwrap_net_amount' field.
+     * @return This builder.
+     */
     public OrderHeaderConsolidated.Builder clearGiftwrapNetAmount() {
       giftwrap_net_amount = null;
       fieldSetFlags()[27] = false;
@@ -3736,20 +3769,20 @@ static {
     }
 
     /**
-      * Gets the value of the 'ship_gross_amount' field.
-      * @return The value.
-      */
-    public Double getShipGrossAmount() {
+     * Gets the value of the 'ship_gross_amount' field.
+     * @return The value.
+     */
+    public java.lang.Double getShipGrossAmount() {
       return ship_gross_amount;
     }
 
 
     /**
-      * Sets the value of the 'ship_gross_amount' field.
-      * @param value The value of 'ship_gross_amount'.
-      * @return This builder.
-      */
-    public OrderHeaderConsolidated.Builder setShipGrossAmount(Double value) {
+     * Sets the value of the 'ship_gross_amount' field.
+     * @param value The value of 'ship_gross_amount'.
+     * @return This builder.
+     */
+    public OrderHeaderConsolidated.Builder setShipGrossAmount(java.lang.Double value) {
       validate(fields()[28], value);
       this.ship_gross_amount = value;
       fieldSetFlags()[28] = true;
@@ -3757,18 +3790,18 @@ static {
     }
 
     /**
-      * Checks whether the 'ship_gross_amount' field has been set.
-      * @return True if the 'ship_gross_amount' field has been set, false otherwise.
-      */
+     * Checks whether the 'ship_gross_amount' field has been set.
+     * @return True if the 'ship_gross_amount' field has been set, false otherwise.
+     */
     public boolean hasShipGrossAmount() {
       return fieldSetFlags()[28];
     }
 
 
     /**
-      * Clears the value of the 'ship_gross_amount' field.
-      * @return This builder.
-      */
+     * Clears the value of the 'ship_gross_amount' field.
+     * @return This builder.
+     */
     public OrderHeaderConsolidated.Builder clearShipGrossAmount() {
       ship_gross_amount = null;
       fieldSetFlags()[28] = false;
@@ -3776,20 +3809,20 @@ static {
     }
 
     /**
-      * Gets the value of the 'ship_net_amount' field.
-      * @return The value.
-      */
-    public Double getShipNetAmount() {
+     * Gets the value of the 'ship_net_amount' field.
+     * @return The value.
+     */
+    public java.lang.Double getShipNetAmount() {
       return ship_net_amount;
     }
 
 
     /**
-      * Sets the value of the 'ship_net_amount' field.
-      * @param value The value of 'ship_net_amount'.
-      * @return This builder.
-      */
-    public OrderHeaderConsolidated.Builder setShipNetAmount(Double value) {
+     * Sets the value of the 'ship_net_amount' field.
+     * @param value The value of 'ship_net_amount'.
+     * @return This builder.
+     */
+    public OrderHeaderConsolidated.Builder setShipNetAmount(java.lang.Double value) {
       validate(fields()[29], value);
       this.ship_net_amount = value;
       fieldSetFlags()[29] = true;
@@ -3797,18 +3830,18 @@ static {
     }
 
     /**
-      * Checks whether the 'ship_net_amount' field has been set.
-      * @return True if the 'ship_net_amount' field has been set, false otherwise.
-      */
+     * Checks whether the 'ship_net_amount' field has been set.
+     * @return True if the 'ship_net_amount' field has been set, false otherwise.
+     */
     public boolean hasShipNetAmount() {
       return fieldSetFlags()[29];
     }
 
 
     /**
-      * Clears the value of the 'ship_net_amount' field.
-      * @return This builder.
-      */
+     * Clears the value of the 'ship_net_amount' field.
+     * @return This builder.
+     */
     public OrderHeaderConsolidated.Builder clearShipNetAmount() {
       ship_net_amount = null;
       fieldSetFlags()[29] = false;
@@ -3816,20 +3849,20 @@ static {
     }
 
     /**
-      * Gets the value of the 'tax_amount' field.
-      * @return The value.
-      */
-    public String getTaxAmount() {
+     * Gets the value of the 'tax_amount' field.
+     * @return The value.
+     */
+    public java.lang.String getTaxAmount() {
       return tax_amount;
     }
 
 
     /**
-      * Sets the value of the 'tax_amount' field.
-      * @param value The value of 'tax_amount'.
-      * @return This builder.
-      */
-    public OrderHeaderConsolidated.Builder setTaxAmount(String value) {
+     * Sets the value of the 'tax_amount' field.
+     * @param value The value of 'tax_amount'.
+     * @return This builder.
+     */
+    public OrderHeaderConsolidated.Builder setTaxAmount(java.lang.String value) {
       validate(fields()[30], value);
       this.tax_amount = value;
       fieldSetFlags()[30] = true;
@@ -3837,18 +3870,18 @@ static {
     }
 
     /**
-      * Checks whether the 'tax_amount' field has been set.
-      * @return True if the 'tax_amount' field has been set, false otherwise.
-      */
+     * Checks whether the 'tax_amount' field has been set.
+     * @return True if the 'tax_amount' field has been set, false otherwise.
+     */
     public boolean hasTaxAmount() {
       return fieldSetFlags()[30];
     }
 
 
     /**
-      * Clears the value of the 'tax_amount' field.
-      * @return This builder.
-      */
+     * Clears the value of the 'tax_amount' field.
+     * @return This builder.
+     */
     public OrderHeaderConsolidated.Builder clearTaxAmount() {
       tax_amount = null;
       fieldSetFlags()[30] = false;
@@ -3856,20 +3889,20 @@ static {
     }
 
     /**
-      * Gets the value of the 'origin_of_order' field.
-      * @return The value.
-      */
-    public String getOriginOfOrder() {
+     * Gets the value of the 'origin_of_order' field.
+     * @return The value.
+     */
+    public java.lang.String getOriginOfOrder() {
       return origin_of_order;
     }
 
 
     /**
-      * Sets the value of the 'origin_of_order' field.
-      * @param value The value of 'origin_of_order'.
-      * @return This builder.
-      */
-    public OrderHeaderConsolidated.Builder setOriginOfOrder(String value) {
+     * Sets the value of the 'origin_of_order' field.
+     * @param value The value of 'origin_of_order'.
+     * @return This builder.
+     */
+    public OrderHeaderConsolidated.Builder setOriginOfOrder(java.lang.String value) {
       validate(fields()[31], value);
       this.origin_of_order = value;
       fieldSetFlags()[31] = true;
@@ -3877,18 +3910,18 @@ static {
     }
 
     /**
-      * Checks whether the 'origin_of_order' field has been set.
-      * @return True if the 'origin_of_order' field has been set, false otherwise.
-      */
+     * Checks whether the 'origin_of_order' field has been set.
+     * @return True if the 'origin_of_order' field has been set, false otherwise.
+     */
     public boolean hasOriginOfOrder() {
       return fieldSetFlags()[31];
     }
 
 
     /**
-      * Clears the value of the 'origin_of_order' field.
-      * @return This builder.
-      */
+     * Clears the value of the 'origin_of_order' field.
+     * @return This builder.
+     */
     public OrderHeaderConsolidated.Builder clearOriginOfOrder() {
       origin_of_order = null;
       fieldSetFlags()[31] = false;
@@ -3896,20 +3929,20 @@ static {
     }
 
     /**
-      * Gets the value of the 'country_of_origin' field.
-      * @return The value.
-      */
-    public String getCountryOfOrigin() {
+     * Gets the value of the 'country_of_origin' field.
+     * @return The value.
+     */
+    public java.lang.String getCountryOfOrigin() {
       return country_of_origin;
     }
 
 
     /**
-      * Sets the value of the 'country_of_origin' field.
-      * @param value The value of 'country_of_origin'.
-      * @return This builder.
-      */
-    public OrderHeaderConsolidated.Builder setCountryOfOrigin(String value) {
+     * Sets the value of the 'country_of_origin' field.
+     * @param value The value of 'country_of_origin'.
+     * @return This builder.
+     */
+    public OrderHeaderConsolidated.Builder setCountryOfOrigin(java.lang.String value) {
       validate(fields()[32], value);
       this.country_of_origin = value;
       fieldSetFlags()[32] = true;
@@ -3917,18 +3950,18 @@ static {
     }
 
     /**
-      * Checks whether the 'country_of_origin' field has been set.
-      * @return True if the 'country_of_origin' field has been set, false otherwise.
-      */
+     * Checks whether the 'country_of_origin' field has been set.
+     * @return True if the 'country_of_origin' field has been set, false otherwise.
+     */
     public boolean hasCountryOfOrigin() {
       return fieldSetFlags()[32];
     }
 
 
     /**
-      * Clears the value of the 'country_of_origin' field.
-      * @return This builder.
-      */
+     * Clears the value of the 'country_of_origin' field.
+     * @return This builder.
+     */
     public OrderHeaderConsolidated.Builder clearCountryOfOrigin() {
       country_of_origin = null;
       fieldSetFlags()[32] = false;
@@ -3936,20 +3969,20 @@ static {
     }
 
     /**
-      * Gets the value of the 'currency_code' field.
-      * @return The value.
-      */
-    public String getCurrencyCode() {
+     * Gets the value of the 'currency_code' field.
+     * @return The value.
+     */
+    public java.lang.String getCurrencyCode() {
       return currency_code;
     }
 
 
     /**
-      * Sets the value of the 'currency_code' field.
-      * @param value The value of 'currency_code'.
-      * @return This builder.
-      */
-    public OrderHeaderConsolidated.Builder setCurrencyCode(String value) {
+     * Sets the value of the 'currency_code' field.
+     * @param value The value of 'currency_code'.
+     * @return This builder.
+     */
+    public OrderHeaderConsolidated.Builder setCurrencyCode(java.lang.String value) {
       validate(fields()[33], value);
       this.currency_code = value;
       fieldSetFlags()[33] = true;
@@ -3957,18 +3990,18 @@ static {
     }
 
     /**
-      * Checks whether the 'currency_code' field has been set.
-      * @return True if the 'currency_code' field has been set, false otherwise.
-      */
+     * Checks whether the 'currency_code' field has been set.
+     * @return True if the 'currency_code' field has been set, false otherwise.
+     */
     public boolean hasCurrencyCode() {
       return fieldSetFlags()[33];
     }
 
 
     /**
-      * Clears the value of the 'currency_code' field.
-      * @return This builder.
-      */
+     * Clears the value of the 'currency_code' field.
+     * @return This builder.
+     */
     public OrderHeaderConsolidated.Builder clearCurrencyCode() {
       currency_code = null;
       fieldSetFlags()[33] = false;
@@ -3976,20 +4009,20 @@ static {
     }
 
     /**
-      * Gets the value of the 'cancel_flag' field.
-      * @return The value.
-      */
-    public String getCancelFlag() {
+     * Gets the value of the 'cancel_flag' field.
+     * @return The value.
+     */
+    public java.lang.String getCancelFlag() {
       return cancel_flag;
     }
 
 
     /**
-      * Sets the value of the 'cancel_flag' field.
-      * @param value The value of 'cancel_flag'.
-      * @return This builder.
-      */
-    public OrderHeaderConsolidated.Builder setCancelFlag(String value) {
+     * Sets the value of the 'cancel_flag' field.
+     * @param value The value of 'cancel_flag'.
+     * @return This builder.
+     */
+    public OrderHeaderConsolidated.Builder setCancelFlag(java.lang.String value) {
       validate(fields()[34], value);
       this.cancel_flag = value;
       fieldSetFlags()[34] = true;
@@ -3997,18 +4030,18 @@ static {
     }
 
     /**
-      * Checks whether the 'cancel_flag' field has been set.
-      * @return True if the 'cancel_flag' field has been set, false otherwise.
-      */
+     * Checks whether the 'cancel_flag' field has been set.
+     * @return True if the 'cancel_flag' field has been set, false otherwise.
+     */
     public boolean hasCancelFlag() {
       return fieldSetFlags()[34];
     }
 
 
     /**
-      * Clears the value of the 'cancel_flag' field.
-      * @return This builder.
-      */
+     * Clears the value of the 'cancel_flag' field.
+     * @return This builder.
+     */
     public OrderHeaderConsolidated.Builder clearCancelFlag() {
       cancel_flag = null;
       fieldSetFlags()[34] = false;
@@ -4016,20 +4049,20 @@ static {
     }
 
     /**
-      * Gets the value of the 'dotcom_guest_flag' field.
-      * @return The value.
-      */
-    public String getDotcomGuestFlag() {
+     * Gets the value of the 'dotcom_guest_flag' field.
+     * @return The value.
+     */
+    public java.lang.String getDotcomGuestFlag() {
       return dotcom_guest_flag;
     }
 
 
     /**
-      * Sets the value of the 'dotcom_guest_flag' field.
-      * @param value The value of 'dotcom_guest_flag'.
-      * @return This builder.
-      */
-    public OrderHeaderConsolidated.Builder setDotcomGuestFlag(String value) {
+     * Sets the value of the 'dotcom_guest_flag' field.
+     * @param value The value of 'dotcom_guest_flag'.
+     * @return This builder.
+     */
+    public OrderHeaderConsolidated.Builder setDotcomGuestFlag(java.lang.String value) {
       validate(fields()[35], value);
       this.dotcom_guest_flag = value;
       fieldSetFlags()[35] = true;
@@ -4037,18 +4070,18 @@ static {
     }
 
     /**
-      * Checks whether the 'dotcom_guest_flag' field has been set.
-      * @return True if the 'dotcom_guest_flag' field has been set, false otherwise.
-      */
+     * Checks whether the 'dotcom_guest_flag' field has been set.
+     * @return True if the 'dotcom_guest_flag' field has been set, false otherwise.
+     */
     public boolean hasDotcomGuestFlag() {
       return fieldSetFlags()[35];
     }
 
 
     /**
-      * Clears the value of the 'dotcom_guest_flag' field.
-      * @return This builder.
-      */
+     * Clears the value of the 'dotcom_guest_flag' field.
+     * @return This builder.
+     */
     public OrderHeaderConsolidated.Builder clearDotcomGuestFlag() {
       dotcom_guest_flag = null;
       fieldSetFlags()[35] = false;
@@ -4056,20 +4089,20 @@ static {
     }
 
     /**
-      * Gets the value of the 'flash_order_type' field.
-      * @return The value.
-      */
-    public String getFlashOrderType() {
+     * Gets the value of the 'flash_order_type' field.
+     * @return The value.
+     */
+    public java.lang.String getFlashOrderType() {
       return flash_order_type;
     }
 
 
     /**
-      * Sets the value of the 'flash_order_type' field.
-      * @param value The value of 'flash_order_type'.
-      * @return This builder.
-      */
-    public OrderHeaderConsolidated.Builder setFlashOrderType(String value) {
+     * Sets the value of the 'flash_order_type' field.
+     * @param value The value of 'flash_order_type'.
+     * @return This builder.
+     */
+    public OrderHeaderConsolidated.Builder setFlashOrderType(java.lang.String value) {
       validate(fields()[36], value);
       this.flash_order_type = value;
       fieldSetFlags()[36] = true;
@@ -4077,18 +4110,18 @@ static {
     }
 
     /**
-      * Checks whether the 'flash_order_type' field has been set.
-      * @return True if the 'flash_order_type' field has been set, false otherwise.
-      */
+     * Checks whether the 'flash_order_type' field has been set.
+     * @return True if the 'flash_order_type' field has been set, false otherwise.
+     */
     public boolean hasFlashOrderType() {
       return fieldSetFlags()[36];
     }
 
 
     /**
-      * Clears the value of the 'flash_order_type' field.
-      * @return This builder.
-      */
+     * Clears the value of the 'flash_order_type' field.
+     * @return This builder.
+     */
     public OrderHeaderConsolidated.Builder clearFlashOrderType() {
       flash_order_type = null;
       fieldSetFlags()[36] = false;
@@ -4096,20 +4129,20 @@ static {
     }
 
     /**
-      * Gets the value of the 'csr_id' field.
-      * @return The value.
-      */
-    public String getCsrId() {
+     * Gets the value of the 'csr_id' field.
+     * @return The value.
+     */
+    public java.lang.String getCsrId() {
       return csr_id;
     }
 
 
     /**
-      * Sets the value of the 'csr_id' field.
-      * @param value The value of 'csr_id'.
-      * @return This builder.
-      */
-    public OrderHeaderConsolidated.Builder setCsrId(String value) {
+     * Sets the value of the 'csr_id' field.
+     * @param value The value of 'csr_id'.
+     * @return This builder.
+     */
+    public OrderHeaderConsolidated.Builder setCsrId(java.lang.String value) {
       validate(fields()[37], value);
       this.csr_id = value;
       fieldSetFlags()[37] = true;
@@ -4117,18 +4150,18 @@ static {
     }
 
     /**
-      * Checks whether the 'csr_id' field has been set.
-      * @return True if the 'csr_id' field has been set, false otherwise.
-      */
+     * Checks whether the 'csr_id' field has been set.
+     * @return True if the 'csr_id' field has been set, false otherwise.
+     */
     public boolean hasCsrId() {
       return fieldSetFlags()[37];
     }
 
 
     /**
-      * Clears the value of the 'csr_id' field.
-      * @return This builder.
-      */
+     * Clears the value of the 'csr_id' field.
+     * @return This builder.
+     */
     public OrderHeaderConsolidated.Builder clearCsrId() {
       csr_id = null;
       fieldSetFlags()[37] = false;
@@ -4136,20 +4169,20 @@ static {
     }
 
     /**
-      * Gets the value of the 'transaction_number' field.
-      * @return The value.
-      */
-    public String getTransactionNumber() {
+     * Gets the value of the 'transaction_number' field.
+     * @return The value.
+     */
+    public java.lang.String getTransactionNumber() {
       return transaction_number;
     }
 
 
     /**
-      * Sets the value of the 'transaction_number' field.
-      * @param value The value of 'transaction_number'.
-      * @return This builder.
-      */
-    public OrderHeaderConsolidated.Builder setTransactionNumber(String value) {
+     * Sets the value of the 'transaction_number' field.
+     * @param value The value of 'transaction_number'.
+     * @return This builder.
+     */
+    public OrderHeaderConsolidated.Builder setTransactionNumber(java.lang.String value) {
       validate(fields()[38], value);
       this.transaction_number = value;
       fieldSetFlags()[38] = true;
@@ -4157,18 +4190,18 @@ static {
     }
 
     /**
-      * Checks whether the 'transaction_number' field has been set.
-      * @return True if the 'transaction_number' field has been set, false otherwise.
-      */
+     * Checks whether the 'transaction_number' field has been set.
+     * @return True if the 'transaction_number' field has been set, false otherwise.
+     */
     public boolean hasTransactionNumber() {
       return fieldSetFlags()[38];
     }
 
 
     /**
-      * Clears the value of the 'transaction_number' field.
-      * @return This builder.
-      */
+     * Clears the value of the 'transaction_number' field.
+     * @return This builder.
+     */
     public OrderHeaderConsolidated.Builder clearTransactionNumber() {
       transaction_number = null;
       fieldSetFlags()[38] = false;
@@ -4176,20 +4209,20 @@ static {
     }
 
     /**
-      * Gets the value of the 'language' field.
-      * @return The value.
-      */
-    public String getLanguage() {
+     * Gets the value of the 'language' field.
+     * @return The value.
+     */
+    public java.lang.String getLanguage() {
       return language;
     }
 
 
     /**
-      * Sets the value of the 'language' field.
-      * @param value The value of 'language'.
-      * @return This builder.
-      */
-    public OrderHeaderConsolidated.Builder setLanguage(String value) {
+     * Sets the value of the 'language' field.
+     * @param value The value of 'language'.
+     * @return This builder.
+     */
+    public OrderHeaderConsolidated.Builder setLanguage(java.lang.String value) {
       validate(fields()[39], value);
       this.language = value;
       fieldSetFlags()[39] = true;
@@ -4197,18 +4230,18 @@ static {
     }
 
     /**
-      * Checks whether the 'language' field has been set.
-      * @return True if the 'language' field has been set, false otherwise.
-      */
+     * Checks whether the 'language' field has been set.
+     * @return True if the 'language' field has been set, false otherwise.
+     */
     public boolean hasLanguage() {
       return fieldSetFlags()[39];
     }
 
 
     /**
-      * Clears the value of the 'language' field.
-      * @return This builder.
-      */
+     * Clears the value of the 'language' field.
+     * @return This builder.
+     */
     public OrderHeaderConsolidated.Builder clearLanguage() {
       language = null;
       fieldSetFlags()[39] = false;
@@ -4216,20 +4249,20 @@ static {
     }
 
     /**
-      * Gets the value of the 'original_order_number' field.
-      * @return The value.
-      */
-    public String getOriginalOrderNumber() {
+     * Gets the value of the 'original_order_number' field.
+     * @return The value.
+     */
+    public java.lang.String getOriginalOrderNumber() {
       return original_order_number;
     }
 
 
     /**
-      * Sets the value of the 'original_order_number' field.
-      * @param value The value of 'original_order_number'.
-      * @return This builder.
-      */
-    public OrderHeaderConsolidated.Builder setOriginalOrderNumber(String value) {
+     * Sets the value of the 'original_order_number' field.
+     * @param value The value of 'original_order_number'.
+     * @return This builder.
+     */
+    public OrderHeaderConsolidated.Builder setOriginalOrderNumber(java.lang.String value) {
       validate(fields()[40], value);
       this.original_order_number = value;
       fieldSetFlags()[40] = true;
@@ -4237,18 +4270,18 @@ static {
     }
 
     /**
-      * Checks whether the 'original_order_number' field has been set.
-      * @return True if the 'original_order_number' field has been set, false otherwise.
-      */
+     * Checks whether the 'original_order_number' field has been set.
+     * @return True if the 'original_order_number' field has been set, false otherwise.
+     */
     public boolean hasOriginalOrderNumber() {
       return fieldSetFlags()[40];
     }
 
 
     /**
-      * Clears the value of the 'original_order_number' field.
-      * @return This builder.
-      */
+     * Clears the value of the 'original_order_number' field.
+     * @return This builder.
+     */
     public OrderHeaderConsolidated.Builder clearOriginalOrderNumber() {
       original_order_number = null;
       fieldSetFlags()[40] = false;
@@ -4256,20 +4289,20 @@ static {
     }
 
     /**
-      * Gets the value of the 'terminal_id' field.
-      * @return The value.
-      */
-    public String getTerminalId() {
+     * Gets the value of the 'terminal_id' field.
+     * @return The value.
+     */
+    public java.lang.String getTerminalId() {
       return terminal_id;
     }
 
 
     /**
-      * Sets the value of the 'terminal_id' field.
-      * @param value The value of 'terminal_id'.
-      * @return This builder.
-      */
-    public OrderHeaderConsolidated.Builder setTerminalId(String value) {
+     * Sets the value of the 'terminal_id' field.
+     * @param value The value of 'terminal_id'.
+     * @return This builder.
+     */
+    public OrderHeaderConsolidated.Builder setTerminalId(java.lang.String value) {
       validate(fields()[41], value);
       this.terminal_id = value;
       fieldSetFlags()[41] = true;
@@ -4277,18 +4310,18 @@ static {
     }
 
     /**
-      * Checks whether the 'terminal_id' field has been set.
-      * @return True if the 'terminal_id' field has been set, false otherwise.
-      */
+     * Checks whether the 'terminal_id' field has been set.
+     * @return True if the 'terminal_id' field has been set, false otherwise.
+     */
     public boolean hasTerminalId() {
       return fieldSetFlags()[41];
     }
 
 
     /**
-      * Clears the value of the 'terminal_id' field.
-      * @return This builder.
-      */
+     * Clears the value of the 'terminal_id' field.
+     * @return This builder.
+     */
     public OrderHeaderConsolidated.Builder clearTerminalId() {
       terminal_id = null;
       fieldSetFlags()[41] = false;
@@ -4296,20 +4329,20 @@ static {
     }
 
     /**
-      * Gets the value of the 'demand_gross_sales' field.
-      * @return The value.
-      */
-    public Double getDemandGrossSales() {
+     * Gets the value of the 'demand_gross_sales' field.
+     * @return The value.
+     */
+    public java.lang.Double getDemandGrossSales() {
       return demand_gross_sales;
     }
 
 
     /**
-      * Sets the value of the 'demand_gross_sales' field.
-      * @param value The value of 'demand_gross_sales'.
-      * @return This builder.
-      */
-    public OrderHeaderConsolidated.Builder setDemandGrossSales(Double value) {
+     * Sets the value of the 'demand_gross_sales' field.
+     * @param value The value of 'demand_gross_sales'.
+     * @return This builder.
+     */
+    public OrderHeaderConsolidated.Builder setDemandGrossSales(java.lang.Double value) {
       validate(fields()[42], value);
       this.demand_gross_sales = value;
       fieldSetFlags()[42] = true;
@@ -4317,18 +4350,18 @@ static {
     }
 
     /**
-      * Checks whether the 'demand_gross_sales' field has been set.
-      * @return True if the 'demand_gross_sales' field has been set, false otherwise.
-      */
+     * Checks whether the 'demand_gross_sales' field has been set.
+     * @return True if the 'demand_gross_sales' field has been set, false otherwise.
+     */
     public boolean hasDemandGrossSales() {
       return fieldSetFlags()[42];
     }
 
 
     /**
-      * Clears the value of the 'demand_gross_sales' field.
-      * @return This builder.
-      */
+     * Clears the value of the 'demand_gross_sales' field.
+     * @return This builder.
+     */
     public OrderHeaderConsolidated.Builder clearDemandGrossSales() {
       demand_gross_sales = null;
       fieldSetFlags()[42] = false;
@@ -4336,20 +4369,20 @@ static {
     }
 
     /**
-      * Gets the value of the 'demand_discounted_sales' field.
-      * @return The value.
-      */
-    public Double getDemandDiscountedSales() {
+     * Gets the value of the 'demand_discounted_sales' field.
+     * @return The value.
+     */
+    public java.lang.Double getDemandDiscountedSales() {
       return demand_discounted_sales;
     }
 
 
     /**
-      * Sets the value of the 'demand_discounted_sales' field.
-      * @param value The value of 'demand_discounted_sales'.
-      * @return This builder.
-      */
-    public OrderHeaderConsolidated.Builder setDemandDiscountedSales(Double value) {
+     * Sets the value of the 'demand_discounted_sales' field.
+     * @param value The value of 'demand_discounted_sales'.
+     * @return This builder.
+     */
+    public OrderHeaderConsolidated.Builder setDemandDiscountedSales(java.lang.Double value) {
       validate(fields()[43], value);
       this.demand_discounted_sales = value;
       fieldSetFlags()[43] = true;
@@ -4357,18 +4390,18 @@ static {
     }
 
     /**
-      * Checks whether the 'demand_discounted_sales' field has been set.
-      * @return True if the 'demand_discounted_sales' field has been set, false otherwise.
-      */
+     * Checks whether the 'demand_discounted_sales' field has been set.
+     * @return True if the 'demand_discounted_sales' field has been set, false otherwise.
+     */
     public boolean hasDemandDiscountedSales() {
       return fieldSetFlags()[43];
     }
 
 
     /**
-      * Clears the value of the 'demand_discounted_sales' field.
-      * @return This builder.
-      */
+     * Clears the value of the 'demand_discounted_sales' field.
+     * @return This builder.
+     */
     public OrderHeaderConsolidated.Builder clearDemandDiscountedSales() {
       demand_discounted_sales = null;
       fieldSetFlags()[43] = false;
@@ -4376,20 +4409,20 @@ static {
     }
 
     /**
-      * Gets the value of the 'ship_amount' field.
-      * @return The value.
-      */
-    public String getShipAmount() {
+     * Gets the value of the 'ship_amount' field.
+     * @return The value.
+     */
+    public java.lang.String getShipAmount() {
       return ship_amount;
     }
 
 
     /**
-      * Sets the value of the 'ship_amount' field.
-      * @param value The value of 'ship_amount'.
-      * @return This builder.
-      */
-    public OrderHeaderConsolidated.Builder setShipAmount(String value) {
+     * Sets the value of the 'ship_amount' field.
+     * @param value The value of 'ship_amount'.
+     * @return This builder.
+     */
+    public OrderHeaderConsolidated.Builder setShipAmount(java.lang.String value) {
       validate(fields()[44], value);
       this.ship_amount = value;
       fieldSetFlags()[44] = true;
@@ -4397,18 +4430,18 @@ static {
     }
 
     /**
-      * Checks whether the 'ship_amount' field has been set.
-      * @return True if the 'ship_amount' field has been set, false otherwise.
-      */
+     * Checks whether the 'ship_amount' field has been set.
+     * @return True if the 'ship_amount' field has been set, false otherwise.
+     */
     public boolean hasShipAmount() {
       return fieldSetFlags()[44];
     }
 
 
     /**
-      * Clears the value of the 'ship_amount' field.
-      * @return This builder.
-      */
+     * Clears the value of the 'ship_amount' field.
+     * @return This builder.
+     */
     public OrderHeaderConsolidated.Builder clearShipAmount() {
       ship_amount = null;
       fieldSetFlags()[44] = false;
@@ -4416,20 +4449,20 @@ static {
     }
 
     /**
-      * Gets the value of the 'gift_wrap_amount' field.
-      * @return The value.
-      */
-    public String getGiftWrapAmount() {
+     * Gets the value of the 'gift_wrap_amount' field.
+     * @return The value.
+     */
+    public java.lang.String getGiftWrapAmount() {
       return gift_wrap_amount;
     }
 
 
     /**
-      * Sets the value of the 'gift_wrap_amount' field.
-      * @param value The value of 'gift_wrap_amount'.
-      * @return This builder.
-      */
-    public OrderHeaderConsolidated.Builder setGiftWrapAmount(String value) {
+     * Sets the value of the 'gift_wrap_amount' field.
+     * @param value The value of 'gift_wrap_amount'.
+     * @return This builder.
+     */
+    public OrderHeaderConsolidated.Builder setGiftWrapAmount(java.lang.String value) {
       validate(fields()[45], value);
       this.gift_wrap_amount = value;
       fieldSetFlags()[45] = true;
@@ -4437,18 +4470,18 @@ static {
     }
 
     /**
-      * Checks whether the 'gift_wrap_amount' field has been set.
-      * @return True if the 'gift_wrap_amount' field has been set, false otherwise.
-      */
+     * Checks whether the 'gift_wrap_amount' field has been set.
+     * @return True if the 'gift_wrap_amount' field has been set, false otherwise.
+     */
     public boolean hasGiftWrapAmount() {
       return fieldSetFlags()[45];
     }
 
 
     /**
-      * Clears the value of the 'gift_wrap_amount' field.
-      * @return This builder.
-      */
+     * Clears the value of the 'gift_wrap_amount' field.
+     * @return This builder.
+     */
     public OrderHeaderConsolidated.Builder clearGiftWrapAmount() {
       gift_wrap_amount = null;
       fieldSetFlags()[45] = false;
@@ -4456,20 +4489,20 @@ static {
     }
 
     /**
-      * Gets the value of the 'gift_wrap_flag' field.
-      * @return The value.
-      */
-    public String getGiftWrapFlag() {
+     * Gets the value of the 'gift_wrap_flag' field.
+     * @return The value.
+     */
+    public java.lang.String getGiftWrapFlag() {
       return gift_wrap_flag;
     }
 
 
     /**
-      * Sets the value of the 'gift_wrap_flag' field.
-      * @param value The value of 'gift_wrap_flag'.
-      * @return This builder.
-      */
-    public OrderHeaderConsolidated.Builder setGiftWrapFlag(String value) {
+     * Sets the value of the 'gift_wrap_flag' field.
+     * @param value The value of 'gift_wrap_flag'.
+     * @return This builder.
+     */
+    public OrderHeaderConsolidated.Builder setGiftWrapFlag(java.lang.String value) {
       validate(fields()[46], value);
       this.gift_wrap_flag = value;
       fieldSetFlags()[46] = true;
@@ -4477,18 +4510,18 @@ static {
     }
 
     /**
-      * Checks whether the 'gift_wrap_flag' field has been set.
-      * @return True if the 'gift_wrap_flag' field has been set, false otherwise.
-      */
+     * Checks whether the 'gift_wrap_flag' field has been set.
+     * @return True if the 'gift_wrap_flag' field has been set, false otherwise.
+     */
     public boolean hasGiftWrapFlag() {
       return fieldSetFlags()[46];
     }
 
 
     /**
-      * Clears the value of the 'gift_wrap_flag' field.
-      * @return This builder.
-      */
+     * Clears the value of the 'gift_wrap_flag' field.
+     * @return This builder.
+     */
     public OrderHeaderConsolidated.Builder clearGiftWrapFlag() {
       gift_wrap_flag = null;
       fieldSetFlags()[46] = false;
@@ -4496,20 +4529,20 @@ static {
     }
 
     /**
-      * Gets the value of the 'gwp_flag' field.
-      * @return The value.
-      */
-    public String getGwpFlag() {
+     * Gets the value of the 'gwp_flag' field.
+     * @return The value.
+     */
+    public java.lang.String getGwpFlag() {
       return gwp_flag;
     }
 
 
     /**
-      * Sets the value of the 'gwp_flag' field.
-      * @param value The value of 'gwp_flag'.
-      * @return This builder.
-      */
-    public OrderHeaderConsolidated.Builder setGwpFlag(String value) {
+     * Sets the value of the 'gwp_flag' field.
+     * @param value The value of 'gwp_flag'.
+     * @return This builder.
+     */
+    public OrderHeaderConsolidated.Builder setGwpFlag(java.lang.String value) {
       validate(fields()[47], value);
       this.gwp_flag = value;
       fieldSetFlags()[47] = true;
@@ -4517,18 +4550,18 @@ static {
     }
 
     /**
-      * Checks whether the 'gwp_flag' field has been set.
-      * @return True if the 'gwp_flag' field has been set, false otherwise.
-      */
+     * Checks whether the 'gwp_flag' field has been set.
+     * @return True if the 'gwp_flag' field has been set, false otherwise.
+     */
     public boolean hasGwpFlag() {
       return fieldSetFlags()[47];
     }
 
 
     /**
-      * Clears the value of the 'gwp_flag' field.
-      * @return This builder.
-      */
+     * Clears the value of the 'gwp_flag' field.
+     * @return This builder.
+     */
     public OrderHeaderConsolidated.Builder clearGwpFlag() {
       gwp_flag = null;
       fieldSetFlags()[47] = false;
@@ -4536,20 +4569,20 @@ static {
     }
 
     /**
-      * Gets the value of the 'order_cancel_flag' field.
-      * @return The value.
-      */
-    public String getOrderCancelFlag() {
+     * Gets the value of the 'order_cancel_flag' field.
+     * @return The value.
+     */
+    public java.lang.String getOrderCancelFlag() {
       return order_cancel_flag;
     }
 
 
     /**
-      * Sets the value of the 'order_cancel_flag' field.
-      * @param value The value of 'order_cancel_flag'.
-      * @return This builder.
-      */
-    public OrderHeaderConsolidated.Builder setOrderCancelFlag(String value) {
+     * Sets the value of the 'order_cancel_flag' field.
+     * @param value The value of 'order_cancel_flag'.
+     * @return This builder.
+     */
+    public OrderHeaderConsolidated.Builder setOrderCancelFlag(java.lang.String value) {
       validate(fields()[48], value);
       this.order_cancel_flag = value;
       fieldSetFlags()[48] = true;
@@ -4557,18 +4590,18 @@ static {
     }
 
     /**
-      * Checks whether the 'order_cancel_flag' field has been set.
-      * @return True if the 'order_cancel_flag' field has been set, false otherwise.
-      */
+     * Checks whether the 'order_cancel_flag' field has been set.
+     * @return True if the 'order_cancel_flag' field has been set, false otherwise.
+     */
     public boolean hasOrderCancelFlag() {
       return fieldSetFlags()[48];
     }
 
 
     /**
-      * Clears the value of the 'order_cancel_flag' field.
-      * @return This builder.
-      */
+     * Clears the value of the 'order_cancel_flag' field.
+     * @return This builder.
+     */
     public OrderHeaderConsolidated.Builder clearOrderCancelFlag() {
       order_cancel_flag = null;
       fieldSetFlags()[48] = false;
@@ -4576,20 +4609,20 @@ static {
     }
 
     /**
-      * Gets the value of the 'order_cancel_datetime' field.
-      * @return The value.
-      */
-    public String getOrderCancelDatetime() {
+     * Gets the value of the 'order_cancel_datetime' field.
+     * @return The value.
+     */
+    public java.lang.String getOrderCancelDatetime() {
       return order_cancel_datetime;
     }
 
 
     /**
-      * Sets the value of the 'order_cancel_datetime' field.
-      * @param value The value of 'order_cancel_datetime'.
-      * @return This builder.
-      */
-    public OrderHeaderConsolidated.Builder setOrderCancelDatetime(String value) {
+     * Sets the value of the 'order_cancel_datetime' field.
+     * @param value The value of 'order_cancel_datetime'.
+     * @return This builder.
+     */
+    public OrderHeaderConsolidated.Builder setOrderCancelDatetime(java.lang.String value) {
       validate(fields()[49], value);
       this.order_cancel_datetime = value;
       fieldSetFlags()[49] = true;
@@ -4597,18 +4630,18 @@ static {
     }
 
     /**
-      * Checks whether the 'order_cancel_datetime' field has been set.
-      * @return True if the 'order_cancel_datetime' field has been set, false otherwise.
-      */
+     * Checks whether the 'order_cancel_datetime' field has been set.
+     * @return True if the 'order_cancel_datetime' field has been set, false otherwise.
+     */
     public boolean hasOrderCancelDatetime() {
       return fieldSetFlags()[49];
     }
 
 
     /**
-      * Clears the value of the 'order_cancel_datetime' field.
-      * @return This builder.
-      */
+     * Clears the value of the 'order_cancel_datetime' field.
+     * @return This builder.
+     */
     public OrderHeaderConsolidated.Builder clearOrderCancelDatetime() {
       order_cancel_datetime = null;
       fieldSetFlags()[49] = false;
@@ -4616,20 +4649,20 @@ static {
     }
 
     /**
-      * Gets the value of the 'sample_flag' field.
-      * @return The value.
-      */
-    public String getSampleFlag() {
+     * Gets the value of the 'sample_flag' field.
+     * @return The value.
+     */
+    public java.lang.String getSampleFlag() {
       return sample_flag;
     }
 
 
     /**
-      * Sets the value of the 'sample_flag' field.
-      * @param value The value of 'sample_flag'.
-      * @return This builder.
-      */
-    public OrderHeaderConsolidated.Builder setSampleFlag(String value) {
+     * Sets the value of the 'sample_flag' field.
+     * @param value The value of 'sample_flag'.
+     * @return This builder.
+     */
+    public OrderHeaderConsolidated.Builder setSampleFlag(java.lang.String value) {
       validate(fields()[50], value);
       this.sample_flag = value;
       fieldSetFlags()[50] = true;
@@ -4637,18 +4670,18 @@ static {
     }
 
     /**
-      * Checks whether the 'sample_flag' field has been set.
-      * @return True if the 'sample_flag' field has been set, false otherwise.
-      */
+     * Checks whether the 'sample_flag' field has been set.
+     * @return True if the 'sample_flag' field has been set, false otherwise.
+     */
     public boolean hasSampleFlag() {
       return fieldSetFlags()[50];
     }
 
 
     /**
-      * Clears the value of the 'sample_flag' field.
-      * @return This builder.
-      */
+     * Clears the value of the 'sample_flag' field.
+     * @return This builder.
+     */
     public OrderHeaderConsolidated.Builder clearSampleFlag() {
       sample_flag = null;
       fieldSetFlags()[50] = false;
@@ -4656,20 +4689,20 @@ static {
     }
 
     /**
-      * Gets the value of the 'order_submit_datetime' field.
-      * @return The value.
-      */
-    public String getOrderSubmitDatetime() {
+     * Gets the value of the 'order_submit_datetime' field.
+     * @return The value.
+     */
+    public java.lang.String getOrderSubmitDatetime() {
       return order_submit_datetime;
     }
 
 
     /**
-      * Sets the value of the 'order_submit_datetime' field.
-      * @param value The value of 'order_submit_datetime'.
-      * @return This builder.
-      */
-    public OrderHeaderConsolidated.Builder setOrderSubmitDatetime(String value) {
+     * Sets the value of the 'order_submit_datetime' field.
+     * @param value The value of 'order_submit_datetime'.
+     * @return This builder.
+     */
+    public OrderHeaderConsolidated.Builder setOrderSubmitDatetime(java.lang.String value) {
       validate(fields()[51], value);
       this.order_submit_datetime = value;
       fieldSetFlags()[51] = true;
@@ -4677,18 +4710,18 @@ static {
     }
 
     /**
-      * Checks whether the 'order_submit_datetime' field has been set.
-      * @return True if the 'order_submit_datetime' field has been set, false otherwise.
-      */
+     * Checks whether the 'order_submit_datetime' field has been set.
+     * @return True if the 'order_submit_datetime' field has been set, false otherwise.
+     */
     public boolean hasOrderSubmitDatetime() {
       return fieldSetFlags()[51];
     }
 
 
     /**
-      * Clears the value of the 'order_submit_datetime' field.
-      * @return This builder.
-      */
+     * Clears the value of the 'order_submit_datetime' field.
+     * @return This builder.
+     */
     public OrderHeaderConsolidated.Builder clearOrderSubmitDatetime() {
       order_submit_datetime = null;
       fieldSetFlags()[51] = false;
@@ -4696,20 +4729,20 @@ static {
     }
 
     /**
-      * Gets the value of the 'order_submit_datetime_utc' field.
-      * @return The value.
-      */
-    public String getOrderSubmitDatetimeUtc() {
+     * Gets the value of the 'order_submit_datetime_utc' field.
+     * @return The value.
+     */
+    public java.lang.String getOrderSubmitDatetimeUtc() {
       return order_submit_datetime_utc;
     }
 
 
     /**
-      * Sets the value of the 'order_submit_datetime_utc' field.
-      * @param value The value of 'order_submit_datetime_utc'.
-      * @return This builder.
-      */
-    public OrderHeaderConsolidated.Builder setOrderSubmitDatetimeUtc(String value) {
+     * Sets the value of the 'order_submit_datetime_utc' field.
+     * @param value The value of 'order_submit_datetime_utc'.
+     * @return This builder.
+     */
+    public OrderHeaderConsolidated.Builder setOrderSubmitDatetimeUtc(java.lang.String value) {
       validate(fields()[52], value);
       this.order_submit_datetime_utc = value;
       fieldSetFlags()[52] = true;
@@ -4717,18 +4750,18 @@ static {
     }
 
     /**
-      * Checks whether the 'order_submit_datetime_utc' field has been set.
-      * @return True if the 'order_submit_datetime_utc' field has been set, false otherwise.
-      */
+     * Checks whether the 'order_submit_datetime_utc' field has been set.
+     * @return True if the 'order_submit_datetime_utc' field has been set, false otherwise.
+     */
     public boolean hasOrderSubmitDatetimeUtc() {
       return fieldSetFlags()[52];
     }
 
 
     /**
-      * Clears the value of the 'order_submit_datetime_utc' field.
-      * @return This builder.
-      */
+     * Clears the value of the 'order_submit_datetime_utc' field.
+     * @return This builder.
+     */
     public OrderHeaderConsolidated.Builder clearOrderSubmitDatetimeUtc() {
       order_submit_datetime_utc = null;
       fieldSetFlags()[52] = false;
@@ -4736,20 +4769,20 @@ static {
     }
 
     /**
-      * Gets the value of the 'order_submit_datetime_local' field.
-      * @return The value.
-      */
-    public String getOrderSubmitDatetimeLocal() {
+     * Gets the value of the 'order_submit_datetime_local' field.
+     * @return The value.
+     */
+    public java.lang.String getOrderSubmitDatetimeLocal() {
       return order_submit_datetime_local;
     }
 
 
     /**
-      * Sets the value of the 'order_submit_datetime_local' field.
-      * @param value The value of 'order_submit_datetime_local'.
-      * @return This builder.
-      */
-    public OrderHeaderConsolidated.Builder setOrderSubmitDatetimeLocal(String value) {
+     * Sets the value of the 'order_submit_datetime_local' field.
+     * @param value The value of 'order_submit_datetime_local'.
+     * @return This builder.
+     */
+    public OrderHeaderConsolidated.Builder setOrderSubmitDatetimeLocal(java.lang.String value) {
       validate(fields()[53], value);
       this.order_submit_datetime_local = value;
       fieldSetFlags()[53] = true;
@@ -4757,18 +4790,18 @@ static {
     }
 
     /**
-      * Checks whether the 'order_submit_datetime_local' field has been set.
-      * @return True if the 'order_submit_datetime_local' field has been set, false otherwise.
-      */
+     * Checks whether the 'order_submit_datetime_local' field has been set.
+     * @return True if the 'order_submit_datetime_local' field has been set, false otherwise.
+     */
     public boolean hasOrderSubmitDatetimeLocal() {
       return fieldSetFlags()[53];
     }
 
 
     /**
-      * Clears the value of the 'order_submit_datetime_local' field.
-      * @return This builder.
-      */
+     * Clears the value of the 'order_submit_datetime_local' field.
+     * @return This builder.
+     */
     public OrderHeaderConsolidated.Builder clearOrderSubmitDatetimeLocal() {
       order_submit_datetime_local = null;
       fieldSetFlags()[53] = false;
@@ -4776,20 +4809,20 @@ static {
     }
 
     /**
-      * Gets the value of the 'order_submit_year_month' field.
-      * @return The value.
-      */
-    public Integer getOrderSubmitYearMonth() {
+     * Gets the value of the 'order_submit_year_month' field.
+     * @return The value.
+     */
+    public java.lang.Integer getOrderSubmitYearMonth() {
       return order_submit_year_month;
     }
 
 
     /**
-      * Sets the value of the 'order_submit_year_month' field.
-      * @param value The value of 'order_submit_year_month'.
-      * @return This builder.
-      */
-    public OrderHeaderConsolidated.Builder setOrderSubmitYearMonth(Integer value) {
+     * Sets the value of the 'order_submit_year_month' field.
+     * @param value The value of 'order_submit_year_month'.
+     * @return This builder.
+     */
+    public OrderHeaderConsolidated.Builder setOrderSubmitYearMonth(java.lang.Integer value) {
       validate(fields()[54], value);
       this.order_submit_year_month = value;
       fieldSetFlags()[54] = true;
@@ -4797,18 +4830,18 @@ static {
     }
 
     /**
-      * Checks whether the 'order_submit_year_month' field has been set.
-      * @return True if the 'order_submit_year_month' field has been set, false otherwise.
-      */
+     * Checks whether the 'order_submit_year_month' field has been set.
+     * @return True if the 'order_submit_year_month' field has been set, false otherwise.
+     */
     public boolean hasOrderSubmitYearMonth() {
       return fieldSetFlags()[54];
     }
 
 
     /**
-      * Clears the value of the 'order_submit_year_month' field.
-      * @return This builder.
-      */
+     * Clears the value of the 'order_submit_year_month' field.
+     * @return This builder.
+     */
     public OrderHeaderConsolidated.Builder clearOrderSubmitYearMonth() {
       order_submit_year_month = null;
       fieldSetFlags()[54] = false;
@@ -4816,20 +4849,20 @@ static {
     }
 
     /**
-      * Gets the value of the 'order_submit_date' field.
-      * @return The value.
-      */
-    public String getOrderSubmitDate() {
+     * Gets the value of the 'order_submit_date' field.
+     * @return The value.
+     */
+    public java.lang.String getOrderSubmitDate() {
       return order_submit_date;
     }
 
 
     /**
-      * Sets the value of the 'order_submit_date' field.
-      * @param value The value of 'order_submit_date'.
-      * @return This builder.
-      */
-    public OrderHeaderConsolidated.Builder setOrderSubmitDate(String value) {
+     * Sets the value of the 'order_submit_date' field.
+     * @param value The value of 'order_submit_date'.
+     * @return This builder.
+     */
+    public OrderHeaderConsolidated.Builder setOrderSubmitDate(java.lang.String value) {
       validate(fields()[55], value);
       this.order_submit_date = value;
       fieldSetFlags()[55] = true;
@@ -4837,18 +4870,18 @@ static {
     }
 
     /**
-      * Checks whether the 'order_submit_date' field has been set.
-      * @return True if the 'order_submit_date' field has been set, false otherwise.
-      */
+     * Checks whether the 'order_submit_date' field has been set.
+     * @return True if the 'order_submit_date' field has been set, false otherwise.
+     */
     public boolean hasOrderSubmitDate() {
       return fieldSetFlags()[55];
     }
 
 
     /**
-      * Clears the value of the 'order_submit_date' field.
-      * @return This builder.
-      */
+     * Clears the value of the 'order_submit_date' field.
+     * @return This builder.
+     */
     public OrderHeaderConsolidated.Builder clearOrderSubmitDate() {
       order_submit_date = null;
       fieldSetFlags()[55] = false;
@@ -4856,20 +4889,20 @@ static {
     }
 
     /**
-      * Gets the value of the 'order_submit_hour' field.
-      * @return The value.
-      */
-    public Integer getOrderSubmitHour() {
+     * Gets the value of the 'order_submit_hour' field.
+     * @return The value.
+     */
+    public java.lang.Integer getOrderSubmitHour() {
       return order_submit_hour;
     }
 
 
     /**
-      * Sets the value of the 'order_submit_hour' field.
-      * @param value The value of 'order_submit_hour'.
-      * @return This builder.
-      */
-    public OrderHeaderConsolidated.Builder setOrderSubmitHour(Integer value) {
+     * Sets the value of the 'order_submit_hour' field.
+     * @param value The value of 'order_submit_hour'.
+     * @return This builder.
+     */
+    public OrderHeaderConsolidated.Builder setOrderSubmitHour(java.lang.Integer value) {
       validate(fields()[56], value);
       this.order_submit_hour = value;
       fieldSetFlags()[56] = true;
@@ -4877,18 +4910,18 @@ static {
     }
 
     /**
-      * Checks whether the 'order_submit_hour' field has been set.
-      * @return True if the 'order_submit_hour' field has been set, false otherwise.
-      */
+     * Checks whether the 'order_submit_hour' field has been set.
+     * @return True if the 'order_submit_hour' field has been set, false otherwise.
+     */
     public boolean hasOrderSubmitHour() {
       return fieldSetFlags()[56];
     }
 
 
     /**
-      * Clears the value of the 'order_submit_hour' field.
-      * @return This builder.
-      */
+     * Clears the value of the 'order_submit_hour' field.
+     * @return This builder.
+     */
     public OrderHeaderConsolidated.Builder clearOrderSubmitHour() {
       order_submit_hour = null;
       fieldSetFlags()[56] = false;
@@ -4896,20 +4929,20 @@ static {
     }
 
     /**
-      * Gets the value of the 'dp_create_timestamp' field.
-      * @return The value.
-      */
-    public String getDpCreateTimestamp() {
+     * Gets the value of the 'dp_create_timestamp' field.
+     * @return The value.
+     */
+    public java.lang.String getDpCreateTimestamp() {
       return dp_create_timestamp;
     }
 
 
     /**
-      * Sets the value of the 'dp_create_timestamp' field.
-      * @param value The value of 'dp_create_timestamp'.
-      * @return This builder.
-      */
-    public OrderHeaderConsolidated.Builder setDpCreateTimestamp(String value) {
+     * Sets the value of the 'dp_create_timestamp' field.
+     * @param value The value of 'dp_create_timestamp'.
+     * @return This builder.
+     */
+    public OrderHeaderConsolidated.Builder setDpCreateTimestamp(java.lang.String value) {
       validate(fields()[57], value);
       this.dp_create_timestamp = value;
       fieldSetFlags()[57] = true;
@@ -4917,18 +4950,18 @@ static {
     }
 
     /**
-      * Checks whether the 'dp_create_timestamp' field has been set.
-      * @return True if the 'dp_create_timestamp' field has been set, false otherwise.
-      */
+     * Checks whether the 'dp_create_timestamp' field has been set.
+     * @return True if the 'dp_create_timestamp' field has been set, false otherwise.
+     */
     public boolean hasDpCreateTimestamp() {
       return fieldSetFlags()[57];
     }
 
 
     /**
-      * Clears the value of the 'dp_create_timestamp' field.
-      * @return This builder.
-      */
+     * Clears the value of the 'dp_create_timestamp' field.
+     * @return This builder.
+     */
     public OrderHeaderConsolidated.Builder clearDpCreateTimestamp() {
       dp_create_timestamp = null;
       fieldSetFlags()[57] = false;
@@ -4936,20 +4969,20 @@ static {
     }
 
     /**
-      * Gets the value of the 'dp_update_timestamp' field.
-      * @return The value.
-      */
-    public String getDpUpdateTimestamp() {
+     * Gets the value of the 'dp_update_timestamp' field.
+     * @return The value.
+     */
+    public java.lang.String getDpUpdateTimestamp() {
       return dp_update_timestamp;
     }
 
 
     /**
-      * Sets the value of the 'dp_update_timestamp' field.
-      * @param value The value of 'dp_update_timestamp'.
-      * @return This builder.
-      */
-    public OrderHeaderConsolidated.Builder setDpUpdateTimestamp(String value) {
+     * Sets the value of the 'dp_update_timestamp' field.
+     * @param value The value of 'dp_update_timestamp'.
+     * @return This builder.
+     */
+    public OrderHeaderConsolidated.Builder setDpUpdateTimestamp(java.lang.String value) {
       validate(fields()[58], value);
       this.dp_update_timestamp = value;
       fieldSetFlags()[58] = true;
@@ -4957,18 +4990,18 @@ static {
     }
 
     /**
-      * Checks whether the 'dp_update_timestamp' field has been set.
-      * @return True if the 'dp_update_timestamp' field has been set, false otherwise.
-      */
+     * Checks whether the 'dp_update_timestamp' field has been set.
+     * @return True if the 'dp_update_timestamp' field has been set, false otherwise.
+     */
     public boolean hasDpUpdateTimestamp() {
       return fieldSetFlags()[58];
     }
 
 
     /**
-      * Clears the value of the 'dp_update_timestamp' field.
-      * @return This builder.
-      */
+     * Clears the value of the 'dp_update_timestamp' field.
+     * @return This builder.
+     */
     public OrderHeaderConsolidated.Builder clearDpUpdateTimestamp() {
       dp_update_timestamp = null;
       fieldSetFlags()[58] = false;
@@ -4976,20 +5009,20 @@ static {
     }
 
     /**
-      * Gets the value of the 'sephora_id_update_timestamp' field.
-      * @return The value.
-      */
-    public String getSephoraIdUpdateTimestamp() {
+     * Gets the value of the 'sephora_id_update_timestamp' field.
+     * @return The value.
+     */
+    public java.lang.String getSephoraIdUpdateTimestamp() {
       return sephora_id_update_timestamp;
     }
 
 
     /**
-      * Sets the value of the 'sephora_id_update_timestamp' field.
-      * @param value The value of 'sephora_id_update_timestamp'.
-      * @return This builder.
-      */
-    public OrderHeaderConsolidated.Builder setSephoraIdUpdateTimestamp(String value) {
+     * Sets the value of the 'sephora_id_update_timestamp' field.
+     * @param value The value of 'sephora_id_update_timestamp'.
+     * @return This builder.
+     */
+    public OrderHeaderConsolidated.Builder setSephoraIdUpdateTimestamp(java.lang.String value) {
       validate(fields()[59], value);
       this.sephora_id_update_timestamp = value;
       fieldSetFlags()[59] = true;
@@ -4997,18 +5030,18 @@ static {
     }
 
     /**
-      * Checks whether the 'sephora_id_update_timestamp' field has been set.
-      * @return True if the 'sephora_id_update_timestamp' field has been set, false otherwise.
-      */
+     * Checks whether the 'sephora_id_update_timestamp' field has been set.
+     * @return True if the 'sephora_id_update_timestamp' field has been set, false otherwise.
+     */
     public boolean hasSephoraIdUpdateTimestamp() {
       return fieldSetFlags()[59];
     }
 
 
     /**
-      * Clears the value of the 'sephora_id_update_timestamp' field.
-      * @return This builder.
-      */
+     * Clears the value of the 'sephora_id_update_timestamp' field.
+     * @return This builder.
+     */
     public OrderHeaderConsolidated.Builder clearSephoraIdUpdateTimestamp() {
       sephora_id_update_timestamp = null;
       fieldSetFlags()[59] = false;
@@ -5016,20 +5049,20 @@ static {
     }
 
     /**
-      * Gets the value of the 'topic' field.
-      * @return The value.
-      */
-    public String getTopic() {
+     * Gets the value of the 'topic' field.
+     * @return The value.
+     */
+    public java.lang.String getTopic() {
       return topic;
     }
 
 
     /**
-      * Sets the value of the 'topic' field.
-      * @param value The value of 'topic'.
-      * @return This builder.
-      */
-    public OrderHeaderConsolidated.Builder setTopic(String value) {
+     * Sets the value of the 'topic' field.
+     * @param value The value of 'topic'.
+     * @return This builder.
+     */
+    public OrderHeaderConsolidated.Builder setTopic(java.lang.String value) {
       validate(fields()[60], value);
       this.topic = value;
       fieldSetFlags()[60] = true;
@@ -5037,18 +5070,18 @@ static {
     }
 
     /**
-      * Checks whether the 'topic' field has been set.
-      * @return True if the 'topic' field has been set, false otherwise.
-      */
+     * Checks whether the 'topic' field has been set.
+     * @return True if the 'topic' field has been set, false otherwise.
+     */
     public boolean hasTopic() {
       return fieldSetFlags()[60];
     }
 
 
     /**
-      * Clears the value of the 'topic' field.
-      * @return This builder.
-      */
+     * Clears the value of the 'topic' field.
+     * @return This builder.
+     */
     public OrderHeaderConsolidated.Builder clearTopic() {
       topic = null;
       fieldSetFlags()[60] = false;
@@ -5056,20 +5089,20 @@ static {
     }
 
     /**
-      * Gets the value of the 'partition' field.
-      * @return The value.
-      */
-    public Integer getPartition() {
+     * Gets the value of the 'partition' field.
+     * @return The value.
+     */
+    public java.lang.Integer getPartition() {
       return partition;
     }
 
 
     /**
-      * Sets the value of the 'partition' field.
-      * @param value The value of 'partition'.
-      * @return This builder.
-      */
-    public OrderHeaderConsolidated.Builder setPartition(Integer value) {
+     * Sets the value of the 'partition' field.
+     * @param value The value of 'partition'.
+     * @return This builder.
+     */
+    public OrderHeaderConsolidated.Builder setPartition(java.lang.Integer value) {
       validate(fields()[61], value);
       this.partition = value;
       fieldSetFlags()[61] = true;
@@ -5077,18 +5110,18 @@ static {
     }
 
     /**
-      * Checks whether the 'partition' field has been set.
-      * @return True if the 'partition' field has been set, false otherwise.
-      */
+     * Checks whether the 'partition' field has been set.
+     * @return True if the 'partition' field has been set, false otherwise.
+     */
     public boolean hasPartition() {
       return fieldSetFlags()[61];
     }
 
 
     /**
-      * Clears the value of the 'partition' field.
-      * @return This builder.
-      */
+     * Clears the value of the 'partition' field.
+     * @return This builder.
+     */
     public OrderHeaderConsolidated.Builder clearPartition() {
       partition = null;
       fieldSetFlags()[61] = false;
@@ -5096,20 +5129,20 @@ static {
     }
 
     /**
-      * Gets the value of the 'offset' field.
-      * @return The value.
-      */
-    public Long getOffset() {
+     * Gets the value of the 'offset' field.
+     * @return The value.
+     */
+    public java.lang.Long getOffset() {
       return offset;
     }
 
 
     /**
-      * Sets the value of the 'offset' field.
-      * @param value The value of 'offset'.
-      * @return This builder.
-      */
-    public OrderHeaderConsolidated.Builder setOffset(Long value) {
+     * Sets the value of the 'offset' field.
+     * @param value The value of 'offset'.
+     * @return This builder.
+     */
+    public OrderHeaderConsolidated.Builder setOffset(java.lang.Long value) {
       validate(fields()[62], value);
       this.offset = value;
       fieldSetFlags()[62] = true;
@@ -5117,18 +5150,18 @@ static {
     }
 
     /**
-      * Checks whether the 'offset' field has been set.
-      * @return True if the 'offset' field has been set, false otherwise.
-      */
+     * Checks whether the 'offset' field has been set.
+     * @return True if the 'offset' field has been set, false otherwise.
+     */
     public boolean hasOffset() {
       return fieldSetFlags()[62];
     }
 
 
     /**
-      * Clears the value of the 'offset' field.
-      * @return This builder.
-      */
+     * Clears the value of the 'offset' field.
+     * @return This builder.
+     */
     public OrderHeaderConsolidated.Builder clearOffset() {
       offset = null;
       fieldSetFlags()[62] = false;
@@ -5136,20 +5169,20 @@ static {
     }
 
     /**
-      * Gets the value of the 'timestamp' field.
-      * @return The value.
-      */
-    public Long getTimestamp() {
+     * Gets the value of the 'timestamp' field.
+     * @return The value.
+     */
+    public java.lang.Long getTimestamp() {
       return timestamp;
     }
 
 
     /**
-      * Sets the value of the 'timestamp' field.
-      * @param value The value of 'timestamp'.
-      * @return This builder.
-      */
-    public OrderHeaderConsolidated.Builder setTimestamp(Long value) {
+     * Sets the value of the 'timestamp' field.
+     * @param value The value of 'timestamp'.
+     * @return This builder.
+     */
+    public OrderHeaderConsolidated.Builder setTimestamp(java.lang.Long value) {
       validate(fields()[63], value);
       this.timestamp = value;
       fieldSetFlags()[63] = true;
@@ -5157,18 +5190,18 @@ static {
     }
 
     /**
-      * Checks whether the 'timestamp' field has been set.
-      * @return True if the 'timestamp' field has been set, false otherwise.
-      */
+     * Checks whether the 'timestamp' field has been set.
+     * @return True if the 'timestamp' field has been set, false otherwise.
+     */
     public boolean hasTimestamp() {
       return fieldSetFlags()[63];
     }
 
 
     /**
-      * Clears the value of the 'timestamp' field.
-      * @return This builder.
-      */
+     * Clears the value of the 'timestamp' field.
+     * @return This builder.
+     */
     public OrderHeaderConsolidated.Builder clearTimestamp() {
       timestamp = null;
       fieldSetFlags()[63] = false;
@@ -5176,20 +5209,20 @@ static {
     }
 
     /**
-      * Gets the value of the 'channel' field.
-      * @return The value.
-      */
-    public String getChannel() {
+     * Gets the value of the 'channel' field.
+     * @return The value.
+     */
+    public java.lang.String getChannel() {
       return channel;
     }
 
 
     /**
-      * Sets the value of the 'channel' field.
-      * @param value The value of 'channel'.
-      * @return This builder.
-      */
-    public OrderHeaderConsolidated.Builder setChannel(String value) {
+     * Sets the value of the 'channel' field.
+     * @param value The value of 'channel'.
+     * @return This builder.
+     */
+    public OrderHeaderConsolidated.Builder setChannel(java.lang.String value) {
       validate(fields()[64], value);
       this.channel = value;
       fieldSetFlags()[64] = true;
@@ -5197,18 +5230,18 @@ static {
     }
 
     /**
-      * Checks whether the 'channel' field has been set.
-      * @return True if the 'channel' field has been set, false otherwise.
-      */
+     * Checks whether the 'channel' field has been set.
+     * @return True if the 'channel' field has been set, false otherwise.
+     */
     public boolean hasChannel() {
       return fieldSetFlags()[64];
     }
 
 
     /**
-      * Clears the value of the 'channel' field.
-      * @return This builder.
-      */
+     * Clears the value of the 'channel' field.
+     * @return This builder.
+     */
     public OrderHeaderConsolidated.Builder clearChannel() {
       channel = null;
       fieldSetFlags()[64] = false;
@@ -5216,20 +5249,20 @@ static {
     }
 
     /**
-      * Gets the value of the 'transaction_datetime_local' field.
-      * @return The value.
-      */
-    public String getTransactionDatetimeLocal() {
+     * Gets the value of the 'transaction_datetime_local' field.
+     * @return The value.
+     */
+    public java.lang.String getTransactionDatetimeLocal() {
       return transaction_datetime_local;
     }
 
 
     /**
-      * Sets the value of the 'transaction_datetime_local' field.
-      * @param value The value of 'transaction_datetime_local'.
-      * @return This builder.
-      */
-    public OrderHeaderConsolidated.Builder setTransactionDatetimeLocal(String value) {
+     * Sets the value of the 'transaction_datetime_local' field.
+     * @param value The value of 'transaction_datetime_local'.
+     * @return This builder.
+     */
+    public OrderHeaderConsolidated.Builder setTransactionDatetimeLocal(java.lang.String value) {
       validate(fields()[65], value);
       this.transaction_datetime_local = value;
       fieldSetFlags()[65] = true;
@@ -5237,18 +5270,18 @@ static {
     }
 
     /**
-      * Checks whether the 'transaction_datetime_local' field has been set.
-      * @return True if the 'transaction_datetime_local' field has been set, false otherwise.
-      */
+     * Checks whether the 'transaction_datetime_local' field has been set.
+     * @return True if the 'transaction_datetime_local' field has been set, false otherwise.
+     */
     public boolean hasTransactionDatetimeLocal() {
       return fieldSetFlags()[65];
     }
 
 
     /**
-      * Clears the value of the 'transaction_datetime_local' field.
-      * @return This builder.
-      */
+     * Clears the value of the 'transaction_datetime_local' field.
+     * @return This builder.
+     */
     public OrderHeaderConsolidated.Builder clearTransactionDatetimeLocal() {
       transaction_datetime_local = null;
       fieldSetFlags()[65] = false;
@@ -5256,20 +5289,20 @@ static {
     }
 
     /**
-      * Gets the value of the 'hold_release_datetime' field.
-      * @return The value.
-      */
-    public String getHoldReleaseDatetime() {
+     * Gets the value of the 'hold_release_datetime' field.
+     * @return The value.
+     */
+    public java.lang.String getHoldReleaseDatetime() {
       return hold_release_datetime;
     }
 
 
     /**
-      * Sets the value of the 'hold_release_datetime' field.
-      * @param value The value of 'hold_release_datetime'.
-      * @return This builder.
-      */
-    public OrderHeaderConsolidated.Builder setHoldReleaseDatetime(String value) {
+     * Sets the value of the 'hold_release_datetime' field.
+     * @param value The value of 'hold_release_datetime'.
+     * @return This builder.
+     */
+    public OrderHeaderConsolidated.Builder setHoldReleaseDatetime(java.lang.String value) {
       validate(fields()[66], value);
       this.hold_release_datetime = value;
       fieldSetFlags()[66] = true;
@@ -5277,18 +5310,18 @@ static {
     }
 
     /**
-      * Checks whether the 'hold_release_datetime' field has been set.
-      * @return True if the 'hold_release_datetime' field has been set, false otherwise.
-      */
+     * Checks whether the 'hold_release_datetime' field has been set.
+     * @return True if the 'hold_release_datetime' field has been set, false otherwise.
+     */
     public boolean hasHoldReleaseDatetime() {
       return fieldSetFlags()[66];
     }
 
 
     /**
-      * Clears the value of the 'hold_release_datetime' field.
-      * @return This builder.
-      */
+     * Clears the value of the 'hold_release_datetime' field.
+     * @return This builder.
+     */
     public OrderHeaderConsolidated.Builder clearHoldReleaseDatetime() {
       hold_release_datetime = null;
       fieldSetFlags()[66] = false;
@@ -5296,20 +5329,20 @@ static {
     }
 
     /**
-      * Gets the value of the 'cancel_type' field.
-      * @return The value.
-      */
-    public String getCancelType() {
+     * Gets the value of the 'cancel_type' field.
+     * @return The value.
+     */
+    public java.lang.String getCancelType() {
       return cancel_type;
     }
 
 
     /**
-      * Sets the value of the 'cancel_type' field.
-      * @param value The value of 'cancel_type'.
-      * @return This builder.
-      */
-    public OrderHeaderConsolidated.Builder setCancelType(String value) {
+     * Sets the value of the 'cancel_type' field.
+     * @param value The value of 'cancel_type'.
+     * @return This builder.
+     */
+    public OrderHeaderConsolidated.Builder setCancelType(java.lang.String value) {
       validate(fields()[67], value);
       this.cancel_type = value;
       fieldSetFlags()[67] = true;
@@ -5317,18 +5350,18 @@ static {
     }
 
     /**
-      * Checks whether the 'cancel_type' field has been set.
-      * @return True if the 'cancel_type' field has been set, false otherwise.
-      */
+     * Checks whether the 'cancel_type' field has been set.
+     * @return True if the 'cancel_type' field has been set, false otherwise.
+     */
     public boolean hasCancelType() {
       return fieldSetFlags()[67];
     }
 
 
     /**
-      * Clears the value of the 'cancel_type' field.
-      * @return This builder.
-      */
+     * Clears the value of the 'cancel_type' field.
+     * @return This builder.
+     */
     public OrderHeaderConsolidated.Builder clearCancelType() {
       cancel_type = null;
       fieldSetFlags()[67] = false;
@@ -5336,20 +5369,20 @@ static {
     }
 
     /**
-      * Gets the value of the 'cancel_reason_text' field.
-      * @return The value.
-      */
-    public String getCancelReasonText() {
+     * Gets the value of the 'cancel_reason_text' field.
+     * @return The value.
+     */
+    public java.lang.String getCancelReasonText() {
       return cancel_reason_text;
     }
 
 
     /**
-      * Sets the value of the 'cancel_reason_text' field.
-      * @param value The value of 'cancel_reason_text'.
-      * @return This builder.
-      */
-    public OrderHeaderConsolidated.Builder setCancelReasonText(String value) {
+     * Sets the value of the 'cancel_reason_text' field.
+     * @param value The value of 'cancel_reason_text'.
+     * @return This builder.
+     */
+    public OrderHeaderConsolidated.Builder setCancelReasonText(java.lang.String value) {
       validate(fields()[68], value);
       this.cancel_reason_text = value;
       fieldSetFlags()[68] = true;
@@ -5357,18 +5390,18 @@ static {
     }
 
     /**
-      * Checks whether the 'cancel_reason_text' field has been set.
-      * @return True if the 'cancel_reason_text' field has been set, false otherwise.
-      */
+     * Checks whether the 'cancel_reason_text' field has been set.
+     * @return True if the 'cancel_reason_text' field has been set, false otherwise.
+     */
     public boolean hasCancelReasonText() {
       return fieldSetFlags()[68];
     }
 
 
     /**
-      * Clears the value of the 'cancel_reason_text' field.
-      * @return This builder.
-      */
+     * Clears the value of the 'cancel_reason_text' field.
+     * @return This builder.
+     */
     public OrderHeaderConsolidated.Builder clearCancelReasonText() {
       cancel_reason_text = null;
       fieldSetFlags()[68] = false;
@@ -5376,20 +5409,20 @@ static {
     }
 
     /**
-      * Gets the value of the 'cancel_reason_code' field.
-      * @return The value.
-      */
-    public String getCancelReasonCode() {
+     * Gets the value of the 'cancel_reason_code' field.
+     * @return The value.
+     */
+    public java.lang.String getCancelReasonCode() {
       return cancel_reason_code;
     }
 
 
     /**
-      * Sets the value of the 'cancel_reason_code' field.
-      * @param value The value of 'cancel_reason_code'.
-      * @return This builder.
-      */
-    public OrderHeaderConsolidated.Builder setCancelReasonCode(String value) {
+     * Sets the value of the 'cancel_reason_code' field.
+     * @param value The value of 'cancel_reason_code'.
+     * @return This builder.
+     */
+    public OrderHeaderConsolidated.Builder setCancelReasonCode(java.lang.String value) {
       validate(fields()[69], value);
       this.cancel_reason_code = value;
       fieldSetFlags()[69] = true;
@@ -5397,18 +5430,18 @@ static {
     }
 
     /**
-      * Checks whether the 'cancel_reason_code' field has been set.
-      * @return True if the 'cancel_reason_code' field has been set, false otherwise.
-      */
+     * Checks whether the 'cancel_reason_code' field has been set.
+     * @return True if the 'cancel_reason_code' field has been set, false otherwise.
+     */
     public boolean hasCancelReasonCode() {
       return fieldSetFlags()[69];
     }
 
 
     /**
-      * Clears the value of the 'cancel_reason_code' field.
-      * @return This builder.
-      */
+     * Clears the value of the 'cancel_reason_code' field.
+     * @return This builder.
+     */
     public OrderHeaderConsolidated.Builder clearCancelReasonCode() {
       cancel_reason_code = null;
       fieldSetFlags()[69] = false;
@@ -5416,20 +5449,20 @@ static {
     }
 
     /**
-      * Gets the value of the 'pickup_cancelled_datetime' field.
-      * @return The value.
-      */
-    public String getPickupCancelledDatetime() {
+     * Gets the value of the 'pickup_cancelled_datetime' field.
+     * @return The value.
+     */
+    public java.lang.String getPickupCancelledDatetime() {
       return pickup_cancelled_datetime;
     }
 
 
     /**
-      * Sets the value of the 'pickup_cancelled_datetime' field.
-      * @param value The value of 'pickup_cancelled_datetime'.
-      * @return This builder.
-      */
-    public OrderHeaderConsolidated.Builder setPickupCancelledDatetime(String value) {
+     * Sets the value of the 'pickup_cancelled_datetime' field.
+     * @param value The value of 'pickup_cancelled_datetime'.
+     * @return This builder.
+     */
+    public OrderHeaderConsolidated.Builder setPickupCancelledDatetime(java.lang.String value) {
       validate(fields()[70], value);
       this.pickup_cancelled_datetime = value;
       fieldSetFlags()[70] = true;
@@ -5437,18 +5470,18 @@ static {
     }
 
     /**
-      * Checks whether the 'pickup_cancelled_datetime' field has been set.
-      * @return True if the 'pickup_cancelled_datetime' field has been set, false otherwise.
-      */
+     * Checks whether the 'pickup_cancelled_datetime' field has been set.
+     * @return True if the 'pickup_cancelled_datetime' field has been set, false otherwise.
+     */
     public boolean hasPickupCancelledDatetime() {
       return fieldSetFlags()[70];
     }
 
 
     /**
-      * Clears the value of the 'pickup_cancelled_datetime' field.
-      * @return This builder.
-      */
+     * Clears the value of the 'pickup_cancelled_datetime' field.
+     * @return This builder.
+     */
     public OrderHeaderConsolidated.Builder clearPickupCancelledDatetime() {
       pickup_cancelled_datetime = null;
       fieldSetFlags()[70] = false;
@@ -5456,20 +5489,20 @@ static {
     }
 
     /**
-      * Gets the value of the 'seller_org_code' field.
-      * @return The value.
-      */
-    public String getSellerOrgCode() {
+     * Gets the value of the 'seller_org_code' field.
+     * @return The value.
+     */
+    public java.lang.String getSellerOrgCode() {
       return seller_org_code;
     }
 
 
     /**
-      * Sets the value of the 'seller_org_code' field.
-      * @param value The value of 'seller_org_code'.
-      * @return This builder.
-      */
-    public OrderHeaderConsolidated.Builder setSellerOrgCode(String value) {
+     * Sets the value of the 'seller_org_code' field.
+     * @param value The value of 'seller_org_code'.
+     * @return This builder.
+     */
+    public OrderHeaderConsolidated.Builder setSellerOrgCode(java.lang.String value) {
       validate(fields()[71], value);
       this.seller_org_code = value;
       fieldSetFlags()[71] = true;
@@ -5477,18 +5510,18 @@ static {
     }
 
     /**
-      * Checks whether the 'seller_org_code' field has been set.
-      * @return True if the 'seller_org_code' field has been set, false otherwise.
-      */
+     * Checks whether the 'seller_org_code' field has been set.
+     * @return True if the 'seller_org_code' field has been set, false otherwise.
+     */
     public boolean hasSellerOrgCode() {
       return fieldSetFlags()[71];
     }
 
 
     /**
-      * Clears the value of the 'seller_org_code' field.
-      * @return This builder.
-      */
+     * Clears the value of the 'seller_org_code' field.
+     * @return This builder.
+     */
     public OrderHeaderConsolidated.Builder clearSellerOrgCode() {
       seller_org_code = null;
       fieldSetFlags()[71] = false;
@@ -5496,20 +5529,20 @@ static {
     }
 
     /**
-      * Gets the value of the 'bi_pointsbalance_atorder' field.
-      * @return The value.
-      */
-    public Integer getBiPointsbalanceAtorder() {
+     * Gets the value of the 'bi_pointsbalance_atorder' field.
+     * @return The value.
+     */
+    public java.lang.Integer getBiPointsbalanceAtorder() {
       return bi_pointsbalance_atorder;
     }
 
 
     /**
-      * Sets the value of the 'bi_pointsbalance_atorder' field.
-      * @param value The value of 'bi_pointsbalance_atorder'.
-      * @return This builder.
-      */
-    public OrderHeaderConsolidated.Builder setBiPointsbalanceAtorder(Integer value) {
+     * Sets the value of the 'bi_pointsbalance_atorder' field.
+     * @param value The value of 'bi_pointsbalance_atorder'.
+     * @return This builder.
+     */
+    public OrderHeaderConsolidated.Builder setBiPointsbalanceAtorder(java.lang.Integer value) {
       validate(fields()[72], value);
       this.bi_pointsbalance_atorder = value;
       fieldSetFlags()[72] = true;
@@ -5517,18 +5550,18 @@ static {
     }
 
     /**
-      * Checks whether the 'bi_pointsbalance_atorder' field has been set.
-      * @return True if the 'bi_pointsbalance_atorder' field has been set, false otherwise.
-      */
+     * Checks whether the 'bi_pointsbalance_atorder' field has been set.
+     * @return True if the 'bi_pointsbalance_atorder' field has been set, false otherwise.
+     */
     public boolean hasBiPointsbalanceAtorder() {
       return fieldSetFlags()[72];
     }
 
 
     /**
-      * Clears the value of the 'bi_pointsbalance_atorder' field.
-      * @return This builder.
-      */
+     * Clears the value of the 'bi_pointsbalance_atorder' field.
+     * @return This builder.
+     */
     public OrderHeaderConsolidated.Builder clearBiPointsbalanceAtorder() {
       bi_pointsbalance_atorder = null;
       fieldSetFlags()[72] = false;
@@ -5536,20 +5569,20 @@ static {
     }
 
     /**
-      * Gets the value of the 'shipped_datetime' field.
-      * @return The value.
-      */
-    public String getShippedDatetime() {
+     * Gets the value of the 'shipped_datetime' field.
+     * @return The value.
+     */
+    public java.lang.String getShippedDatetime() {
       return shipped_datetime;
     }
 
 
     /**
-      * Sets the value of the 'shipped_datetime' field.
-      * @param value The value of 'shipped_datetime'.
-      * @return This builder.
-      */
-    public OrderHeaderConsolidated.Builder setShippedDatetime(String value) {
+     * Sets the value of the 'shipped_datetime' field.
+     * @param value The value of 'shipped_datetime'.
+     * @return This builder.
+     */
+    public OrderHeaderConsolidated.Builder setShippedDatetime(java.lang.String value) {
       validate(fields()[73], value);
       this.shipped_datetime = value;
       fieldSetFlags()[73] = true;
@@ -5557,18 +5590,18 @@ static {
     }
 
     /**
-      * Checks whether the 'shipped_datetime' field has been set.
-      * @return True if the 'shipped_datetime' field has been set, false otherwise.
-      */
+     * Checks whether the 'shipped_datetime' field has been set.
+     * @return True if the 'shipped_datetime' field has been set, false otherwise.
+     */
     public boolean hasShippedDatetime() {
       return fieldSetFlags()[73];
     }
 
 
     /**
-      * Clears the value of the 'shipped_datetime' field.
-      * @return This builder.
-      */
+     * Clears the value of the 'shipped_datetime' field.
+     * @return This builder.
+     */
     public OrderHeaderConsolidated.Builder clearShippedDatetime() {
       shipped_datetime = null;
       fieldSetFlags()[73] = false;
@@ -5576,20 +5609,20 @@ static {
     }
 
     /**
-      * Gets the value of the 'pickup_store_number' field.
-      * @return The value.
-      */
-    public String getPickupStoreNumber() {
+     * Gets the value of the 'pickup_store_number' field.
+     * @return The value.
+     */
+    public java.lang.String getPickupStoreNumber() {
       return pickup_store_number;
     }
 
 
     /**
-      * Sets the value of the 'pickup_store_number' field.
-      * @param value The value of 'pickup_store_number'.
-      * @return This builder.
-      */
-    public OrderHeaderConsolidated.Builder setPickupStoreNumber(String value) {
+     * Sets the value of the 'pickup_store_number' field.
+     * @param value The value of 'pickup_store_number'.
+     * @return This builder.
+     */
+    public OrderHeaderConsolidated.Builder setPickupStoreNumber(java.lang.String value) {
       validate(fields()[74], value);
       this.pickup_store_number = value;
       fieldSetFlags()[74] = true;
@@ -5597,18 +5630,18 @@ static {
     }
 
     /**
-      * Checks whether the 'pickup_store_number' field has been set.
-      * @return True if the 'pickup_store_number' field has been set, false otherwise.
-      */
+     * Checks whether the 'pickup_store_number' field has been set.
+     * @return True if the 'pickup_store_number' field has been set, false otherwise.
+     */
     public boolean hasPickupStoreNumber() {
       return fieldSetFlags()[74];
     }
 
 
     /**
-      * Clears the value of the 'pickup_store_number' field.
-      * @return This builder.
-      */
+     * Clears the value of the 'pickup_store_number' field.
+     * @return This builder.
+     */
     public OrderHeaderConsolidated.Builder clearPickupStoreNumber() {
       pickup_store_number = null;
       fieldSetFlags()[74] = false;
@@ -5616,20 +5649,20 @@ static {
     }
 
     /**
-      * Gets the value of the 'picked_up_datetime' field.
-      * @return The value.
-      */
-    public String getPickedUpDatetime() {
+     * Gets the value of the 'picked_up_datetime' field.
+     * @return The value.
+     */
+    public java.lang.String getPickedUpDatetime() {
       return picked_up_datetime;
     }
 
 
     /**
-      * Sets the value of the 'picked_up_datetime' field.
-      * @param value The value of 'picked_up_datetime'.
-      * @return This builder.
-      */
-    public OrderHeaderConsolidated.Builder setPickedUpDatetime(String value) {
+     * Sets the value of the 'picked_up_datetime' field.
+     * @param value The value of 'picked_up_datetime'.
+     * @return This builder.
+     */
+    public OrderHeaderConsolidated.Builder setPickedUpDatetime(java.lang.String value) {
       validate(fields()[75], value);
       this.picked_up_datetime = value;
       fieldSetFlags()[75] = true;
@@ -5637,18 +5670,18 @@ static {
     }
 
     /**
-      * Checks whether the 'picked_up_datetime' field has been set.
-      * @return True if the 'picked_up_datetime' field has been set, false otherwise.
-      */
+     * Checks whether the 'picked_up_datetime' field has been set.
+     * @return True if the 'picked_up_datetime' field has been set, false otherwise.
+     */
     public boolean hasPickedUpDatetime() {
       return fieldSetFlags()[75];
     }
 
 
     /**
-      * Clears the value of the 'picked_up_datetime' field.
-      * @return This builder.
-      */
+     * Clears the value of the 'picked_up_datetime' field.
+     * @return This builder.
+     */
     public OrderHeaderConsolidated.Builder clearPickedUpDatetime() {
       picked_up_datetime = null;
       fieldSetFlags()[75] = false;
@@ -5656,20 +5689,20 @@ static {
     }
 
     /**
-      * Gets the value of the 'external_order_type' field.
-      * @return The value.
-      */
-    public String getExternalOrderType() {
+     * Gets the value of the 'external_order_type' field.
+     * @return The value.
+     */
+    public java.lang.String getExternalOrderType() {
       return external_order_type;
     }
 
 
     /**
-      * Sets the value of the 'external_order_type' field.
-      * @param value The value of 'external_order_type'.
-      * @return This builder.
-      */
-    public OrderHeaderConsolidated.Builder setExternalOrderType(String value) {
+     * Sets the value of the 'external_order_type' field.
+     * @param value The value of 'external_order_type'.
+     * @return This builder.
+     */
+    public OrderHeaderConsolidated.Builder setExternalOrderType(java.lang.String value) {
       validate(fields()[76], value);
       this.external_order_type = value;
       fieldSetFlags()[76] = true;
@@ -5677,18 +5710,18 @@ static {
     }
 
     /**
-      * Checks whether the 'external_order_type' field has been set.
-      * @return True if the 'external_order_type' field has been set, false otherwise.
-      */
+     * Checks whether the 'external_order_type' field has been set.
+     * @return True if the 'external_order_type' field has been set, false otherwise.
+     */
     public boolean hasExternalOrderType() {
       return fieldSetFlags()[76];
     }
 
 
     /**
-      * Clears the value of the 'external_order_type' field.
-      * @return This builder.
-      */
+     * Clears the value of the 'external_order_type' field.
+     * @return This builder.
+     */
     public OrderHeaderConsolidated.Builder clearExternalOrderType() {
       external_order_type = null;
       fieldSetFlags()[76] = false;
@@ -5696,20 +5729,20 @@ static {
     }
 
     /**
-      * Gets the value of the 'external_order_number' field.
-      * @return The value.
-      */
-    public String getExternalOrderNumber() {
+     * Gets the value of the 'external_order_number' field.
+     * @return The value.
+     */
+    public java.lang.String getExternalOrderNumber() {
       return external_order_number;
     }
 
 
     /**
-      * Sets the value of the 'external_order_number' field.
-      * @param value The value of 'external_order_number'.
-      * @return This builder.
-      */
-    public OrderHeaderConsolidated.Builder setExternalOrderNumber(String value) {
+     * Sets the value of the 'external_order_number' field.
+     * @param value The value of 'external_order_number'.
+     * @return This builder.
+     */
+    public OrderHeaderConsolidated.Builder setExternalOrderNumber(java.lang.String value) {
       validate(fields()[77], value);
       this.external_order_number = value;
       fieldSetFlags()[77] = true;
@@ -5717,18 +5750,18 @@ static {
     }
 
     /**
-      * Checks whether the 'external_order_number' field has been set.
-      * @return True if the 'external_order_number' field has been set, false otherwise.
-      */
+     * Checks whether the 'external_order_number' field has been set.
+     * @return True if the 'external_order_number' field has been set, false otherwise.
+     */
     public boolean hasExternalOrderNumber() {
       return fieldSetFlags()[77];
     }
 
 
     /**
-      * Clears the value of the 'external_order_number' field.
-      * @return This builder.
-      */
+     * Clears the value of the 'external_order_number' field.
+     * @return This builder.
+     */
     public OrderHeaderConsolidated.Builder clearExternalOrderNumber() {
       external_order_number = null;
       fieldSetFlags()[77] = false;
@@ -5736,20 +5769,20 @@ static {
     }
 
     /**
-      * Gets the value of the 'hal_selected' field.
-      * @return The value.
-      */
-    public String getHalSelected() {
+     * Gets the value of the 'hal_selected' field.
+     * @return The value.
+     */
+    public java.lang.String getHalSelected() {
       return hal_selected;
     }
 
 
     /**
-      * Sets the value of the 'hal_selected' field.
-      * @param value The value of 'hal_selected'.
-      * @return This builder.
-      */
-    public OrderHeaderConsolidated.Builder setHalSelected(String value) {
+     * Sets the value of the 'hal_selected' field.
+     * @param value The value of 'hal_selected'.
+     * @return This builder.
+     */
+    public OrderHeaderConsolidated.Builder setHalSelected(java.lang.String value) {
       validate(fields()[78], value);
       this.hal_selected = value;
       fieldSetFlags()[78] = true;
@@ -5757,21 +5790,60 @@ static {
     }
 
     /**
-      * Checks whether the 'hal_selected' field has been set.
-      * @return True if the 'hal_selected' field has been set, false otherwise.
-      */
+     * Checks whether the 'hal_selected' field has been set.
+     * @return True if the 'hal_selected' field has been set, false otherwise.
+     */
     public boolean hasHalSelected() {
       return fieldSetFlags()[78];
     }
 
 
     /**
-      * Clears the value of the 'hal_selected' field.
-      * @return This builder.
-      */
+     * Clears the value of the 'hal_selected' field.
+     * @return This builder.
+     */
     public OrderHeaderConsolidated.Builder clearHalSelected() {
       hal_selected = null;
       fieldSetFlags()[78] = false;
+      return this;
+    }
+
+    /**
+     * Gets the value of the 'is_declined' field.
+     * @return The value.
+     */
+    public boolean getIsDeclined() {
+      return is_declined;
+    }
+
+
+    /**
+     * Sets the value of the 'is_declined' field.
+     * @param value The value of 'is_declined'.
+     * @return This builder.
+     */
+    public OrderHeaderConsolidated.Builder setIsDeclined(boolean value) {
+      validate(fields()[79], value);
+      this.is_declined = value;
+      fieldSetFlags()[79] = true;
+      return this;
+    }
+
+    /**
+     * Checks whether the 'is_declined' field has been set.
+     * @return True if the 'is_declined' field has been set, false otherwise.
+     */
+    public boolean hasIsDeclined() {
+      return fieldSetFlags()[79];
+    }
+
+
+    /**
+     * Clears the value of the 'is_declined' field.
+     * @return This builder.
+     */
+    public OrderHeaderConsolidated.Builder clearIsDeclined() {
+      fieldSetFlags()[79] = false;
       return this;
     }
 
@@ -5780,89 +5852,90 @@ static {
     public OrderHeaderConsolidated build() {
       try {
         OrderHeaderConsolidated record = new OrderHeaderConsolidated();
-        record.org_id = fieldSetFlags()[0] ? this.org_id : (String) defaultValue(fields()[0]);
-        record.atg_id = fieldSetFlags()[1] ? this.atg_id : (String) defaultValue(fields()[1]);
-        record.usa_id = fieldSetFlags()[2] ? this.usa_id : (Long) defaultValue(fields()[2]);
-        record.sephora_id = fieldSetFlags()[3] ? this.sephora_id : (Long) defaultValue(fields()[3]);
-        record.order_number = fieldSetFlags()[4] ? this.order_number : (String) defaultValue(fields()[4]);
-        record.atg_order_number = fieldSetFlags()[5] ? this.atg_order_number : (String) defaultValue(fields()[5]);
-        record.transaction_date = fieldSetFlags()[6] ? this.transaction_date : (String) defaultValue(fields()[6]);
-        record.transaction_datetime = fieldSetFlags()[7] ? this.transaction_datetime : (String) defaultValue(fields()[7]);
-        record.transaction_datetime_utc = fieldSetFlags()[8] ? this.transaction_datetime_utc : (String) defaultValue(fields()[8]);
-        record.fulfill_milestone_datetime = fieldSetFlags()[9] ? this.fulfill_milestone_datetime : (String) defaultValue(fields()[9]);
-        record.channel_type = fieldSetFlags()[10] ? this.channel_type : (String) defaultValue(fields()[10]);
-        record.transaction_type = fieldSetFlags()[11] ? this.transaction_type : (String) defaultValue(fields()[11]);
-        record.sub_transaction_type = fieldSetFlags()[12] ? this.sub_transaction_type : (String) defaultValue(fields()[12]);
-        record.store_number = fieldSetFlags()[13] ? this.store_number : (String) defaultValue(fields()[13]);
-        record.mplus_store_number = fieldSetFlags()[14] ? this.mplus_store_number : (String) defaultValue(fields()[14]);
-        record.bi_tier_atorder = fieldSetFlags()[15] ? this.bi_tier_atorder : (String) defaultValue(fields()[15]);
-        record.units = fieldSetFlags()[16] ? this.units : (Double) defaultValue(fields()[16]);
-        record.gross_sales_usd_amount = fieldSetFlags()[17] ? this.gross_sales_usd_amount : (Double) defaultValue(fields()[17]);
-        record.gross_sales_local_amount = fieldSetFlags()[18] ? this.gross_sales_local_amount : (Double) defaultValue(fields()[18]);
-        record.sales_afterdiscount_usd_amount = fieldSetFlags()[19] ? this.sales_afterdiscount_usd_amount : (Double) defaultValue(fields()[19]);
-        record.sales_afterdiscount_local_amount = fieldSetFlags()[20] ? this.sales_afterdiscount_local_amount : (Double) defaultValue(fields()[20]);
-        record.net_sales_usd_amount = fieldSetFlags()[21] ? this.net_sales_usd_amount : (Double) defaultValue(fields()[21]);
-        record.net_sales_local_amount = fieldSetFlags()[22] ? this.net_sales_local_amount : (String) defaultValue(fields()[22]);
-        record.discount_usd_amount = fieldSetFlags()[23] ? this.discount_usd_amount : (Double) defaultValue(fields()[23]);
-        record.discount_local_amount = fieldSetFlags()[24] ? this.discount_local_amount : (Double) defaultValue(fields()[24]);
+        record.org_id = fieldSetFlags()[0] ? this.org_id : (java.lang.String) defaultValue(fields()[0]);
+        record.atg_id = fieldSetFlags()[1] ? this.atg_id : (java.lang.String) defaultValue(fields()[1]);
+        record.usa_id = fieldSetFlags()[2] ? this.usa_id : (java.lang.Long) defaultValue(fields()[2]);
+        record.sephora_id = fieldSetFlags()[3] ? this.sephora_id : (java.lang.Long) defaultValue(fields()[3]);
+        record.order_number = fieldSetFlags()[4] ? this.order_number : (java.lang.String) defaultValue(fields()[4]);
+        record.atg_order_number = fieldSetFlags()[5] ? this.atg_order_number : (java.lang.String) defaultValue(fields()[5]);
+        record.transaction_date = fieldSetFlags()[6] ? this.transaction_date : (java.lang.String) defaultValue(fields()[6]);
+        record.transaction_datetime = fieldSetFlags()[7] ? this.transaction_datetime : (java.lang.String) defaultValue(fields()[7]);
+        record.transaction_datetime_utc = fieldSetFlags()[8] ? this.transaction_datetime_utc : (java.lang.String) defaultValue(fields()[8]);
+        record.fulfill_milestone_datetime = fieldSetFlags()[9] ? this.fulfill_milestone_datetime : (java.lang.String) defaultValue(fields()[9]);
+        record.channel_type = fieldSetFlags()[10] ? this.channel_type : (java.lang.String) defaultValue(fields()[10]);
+        record.transaction_type = fieldSetFlags()[11] ? this.transaction_type : (java.lang.String) defaultValue(fields()[11]);
+        record.sub_transaction_type = fieldSetFlags()[12] ? this.sub_transaction_type : (java.lang.String) defaultValue(fields()[12]);
+        record.store_number = fieldSetFlags()[13] ? this.store_number : (java.lang.String) defaultValue(fields()[13]);
+        record.mplus_store_number = fieldSetFlags()[14] ? this.mplus_store_number : (java.lang.String) defaultValue(fields()[14]);
+        record.bi_tier_atorder = fieldSetFlags()[15] ? this.bi_tier_atorder : (java.lang.String) defaultValue(fields()[15]);
+        record.units = fieldSetFlags()[16] ? this.units : (java.lang.Double) defaultValue(fields()[16]);
+        record.gross_sales_usd_amount = fieldSetFlags()[17] ? this.gross_sales_usd_amount : (java.lang.Double) defaultValue(fields()[17]);
+        record.gross_sales_local_amount = fieldSetFlags()[18] ? this.gross_sales_local_amount : (java.lang.Double) defaultValue(fields()[18]);
+        record.sales_afterdiscount_usd_amount = fieldSetFlags()[19] ? this.sales_afterdiscount_usd_amount : (java.lang.Double) defaultValue(fields()[19]);
+        record.sales_afterdiscount_local_amount = fieldSetFlags()[20] ? this.sales_afterdiscount_local_amount : (java.lang.Double) defaultValue(fields()[20]);
+        record.net_sales_usd_amount = fieldSetFlags()[21] ? this.net_sales_usd_amount : (java.lang.Double) defaultValue(fields()[21]);
+        record.net_sales_local_amount = fieldSetFlags()[22] ? this.net_sales_local_amount : (java.lang.String) defaultValue(fields()[22]);
+        record.discount_usd_amount = fieldSetFlags()[23] ? this.discount_usd_amount : (java.lang.Double) defaultValue(fields()[23]);
+        record.discount_local_amount = fieldSetFlags()[24] ? this.discount_local_amount : (java.lang.Double) defaultValue(fields()[24]);
         record.exchange_rate = fieldSetFlags()[25] ? this.exchange_rate : (java.math.BigDecimal) defaultValue(fields()[25]);
-        record.giftwrap_gross_amount = fieldSetFlags()[26] ? this.giftwrap_gross_amount : (Double) defaultValue(fields()[26]);
-        record.giftwrap_net_amount = fieldSetFlags()[27] ? this.giftwrap_net_amount : (Double) defaultValue(fields()[27]);
-        record.ship_gross_amount = fieldSetFlags()[28] ? this.ship_gross_amount : (Double) defaultValue(fields()[28]);
-        record.ship_net_amount = fieldSetFlags()[29] ? this.ship_net_amount : (Double) defaultValue(fields()[29]);
-        record.tax_amount = fieldSetFlags()[30] ? this.tax_amount : (String) defaultValue(fields()[30]);
-        record.origin_of_order = fieldSetFlags()[31] ? this.origin_of_order : (String) defaultValue(fields()[31]);
-        record.country_of_origin = fieldSetFlags()[32] ? this.country_of_origin : (String) defaultValue(fields()[32]);
-        record.currency_code = fieldSetFlags()[33] ? this.currency_code : (String) defaultValue(fields()[33]);
-        record.cancel_flag = fieldSetFlags()[34] ? this.cancel_flag : (String) defaultValue(fields()[34]);
-        record.dotcom_guest_flag = fieldSetFlags()[35] ? this.dotcom_guest_flag : (String) defaultValue(fields()[35]);
-        record.flash_order_type = fieldSetFlags()[36] ? this.flash_order_type : (String) defaultValue(fields()[36]);
-        record.csr_id = fieldSetFlags()[37] ? this.csr_id : (String) defaultValue(fields()[37]);
-        record.transaction_number = fieldSetFlags()[38] ? this.transaction_number : (String) defaultValue(fields()[38]);
-        record.language = fieldSetFlags()[39] ? this.language : (String) defaultValue(fields()[39]);
-        record.original_order_number = fieldSetFlags()[40] ? this.original_order_number : (String) defaultValue(fields()[40]);
-        record.terminal_id = fieldSetFlags()[41] ? this.terminal_id : (String) defaultValue(fields()[41]);
-        record.demand_gross_sales = fieldSetFlags()[42] ? this.demand_gross_sales : (Double) defaultValue(fields()[42]);
-        record.demand_discounted_sales = fieldSetFlags()[43] ? this.demand_discounted_sales : (Double) defaultValue(fields()[43]);
-        record.ship_amount = fieldSetFlags()[44] ? this.ship_amount : (String) defaultValue(fields()[44]);
-        record.gift_wrap_amount = fieldSetFlags()[45] ? this.gift_wrap_amount : (String) defaultValue(fields()[45]);
-        record.gift_wrap_flag = fieldSetFlags()[46] ? this.gift_wrap_flag : (String) defaultValue(fields()[46]);
-        record.gwp_flag = fieldSetFlags()[47] ? this.gwp_flag : (String) defaultValue(fields()[47]);
-        record.order_cancel_flag = fieldSetFlags()[48] ? this.order_cancel_flag : (String) defaultValue(fields()[48]);
-        record.order_cancel_datetime = fieldSetFlags()[49] ? this.order_cancel_datetime : (String) defaultValue(fields()[49]);
-        record.sample_flag = fieldSetFlags()[50] ? this.sample_flag : (String) defaultValue(fields()[50]);
-        record.order_submit_datetime = fieldSetFlags()[51] ? this.order_submit_datetime : (String) defaultValue(fields()[51]);
-        record.order_submit_datetime_utc = fieldSetFlags()[52] ? this.order_submit_datetime_utc : (String) defaultValue(fields()[52]);
-        record.order_submit_datetime_local = fieldSetFlags()[53] ? this.order_submit_datetime_local : (String) defaultValue(fields()[53]);
-        record.order_submit_year_month = fieldSetFlags()[54] ? this.order_submit_year_month : (Integer) defaultValue(fields()[54]);
-        record.order_submit_date = fieldSetFlags()[55] ? this.order_submit_date : (String) defaultValue(fields()[55]);
-        record.order_submit_hour = fieldSetFlags()[56] ? this.order_submit_hour : (Integer) defaultValue(fields()[56]);
-        record.dp_create_timestamp = fieldSetFlags()[57] ? this.dp_create_timestamp : (String) defaultValue(fields()[57]);
-        record.dp_update_timestamp = fieldSetFlags()[58] ? this.dp_update_timestamp : (String) defaultValue(fields()[58]);
-        record.sephora_id_update_timestamp = fieldSetFlags()[59] ? this.sephora_id_update_timestamp : (String) defaultValue(fields()[59]);
-        record.topic = fieldSetFlags()[60] ? this.topic : (String) defaultValue(fields()[60]);
-        record.partition = fieldSetFlags()[61] ? this.partition : (Integer) defaultValue(fields()[61]);
-        record.offset = fieldSetFlags()[62] ? this.offset : (Long) defaultValue(fields()[62]);
-        record.timestamp = fieldSetFlags()[63] ? this.timestamp : (Long) defaultValue(fields()[63]);
-        record.channel = fieldSetFlags()[64] ? this.channel : (String) defaultValue(fields()[64]);
-        record.transaction_datetime_local = fieldSetFlags()[65] ? this.transaction_datetime_local : (String) defaultValue(fields()[65]);
-        record.hold_release_datetime = fieldSetFlags()[66] ? this.hold_release_datetime : (String) defaultValue(fields()[66]);
-        record.cancel_type = fieldSetFlags()[67] ? this.cancel_type : (String) defaultValue(fields()[67]);
-        record.cancel_reason_text = fieldSetFlags()[68] ? this.cancel_reason_text : (String) defaultValue(fields()[68]);
-        record.cancel_reason_code = fieldSetFlags()[69] ? this.cancel_reason_code : (String) defaultValue(fields()[69]);
-        record.pickup_cancelled_datetime = fieldSetFlags()[70] ? this.pickup_cancelled_datetime : (String) defaultValue(fields()[70]);
-        record.seller_org_code = fieldSetFlags()[71] ? this.seller_org_code : (String) defaultValue(fields()[71]);
-        record.bi_pointsbalance_atorder = fieldSetFlags()[72] ? this.bi_pointsbalance_atorder : (Integer) defaultValue(fields()[72]);
-        record.shipped_datetime = fieldSetFlags()[73] ? this.shipped_datetime : (String) defaultValue(fields()[73]);
-        record.pickup_store_number = fieldSetFlags()[74] ? this.pickup_store_number : (String) defaultValue(fields()[74]);
-        record.picked_up_datetime = fieldSetFlags()[75] ? this.picked_up_datetime : (String) defaultValue(fields()[75]);
-        record.external_order_type = fieldSetFlags()[76] ? this.external_order_type : (String) defaultValue(fields()[76]);
-        record.external_order_number = fieldSetFlags()[77] ? this.external_order_number : (String) defaultValue(fields()[77]);
-        record.hal_selected = fieldSetFlags()[78] ? this.hal_selected : (String) defaultValue(fields()[78]);
+        record.giftwrap_gross_amount = fieldSetFlags()[26] ? this.giftwrap_gross_amount : (java.lang.Double) defaultValue(fields()[26]);
+        record.giftwrap_net_amount = fieldSetFlags()[27] ? this.giftwrap_net_amount : (java.lang.Double) defaultValue(fields()[27]);
+        record.ship_gross_amount = fieldSetFlags()[28] ? this.ship_gross_amount : (java.lang.Double) defaultValue(fields()[28]);
+        record.ship_net_amount = fieldSetFlags()[29] ? this.ship_net_amount : (java.lang.Double) defaultValue(fields()[29]);
+        record.tax_amount = fieldSetFlags()[30] ? this.tax_amount : (java.lang.String) defaultValue(fields()[30]);
+        record.origin_of_order = fieldSetFlags()[31] ? this.origin_of_order : (java.lang.String) defaultValue(fields()[31]);
+        record.country_of_origin = fieldSetFlags()[32] ? this.country_of_origin : (java.lang.String) defaultValue(fields()[32]);
+        record.currency_code = fieldSetFlags()[33] ? this.currency_code : (java.lang.String) defaultValue(fields()[33]);
+        record.cancel_flag = fieldSetFlags()[34] ? this.cancel_flag : (java.lang.String) defaultValue(fields()[34]);
+        record.dotcom_guest_flag = fieldSetFlags()[35] ? this.dotcom_guest_flag : (java.lang.String) defaultValue(fields()[35]);
+        record.flash_order_type = fieldSetFlags()[36] ? this.flash_order_type : (java.lang.String) defaultValue(fields()[36]);
+        record.csr_id = fieldSetFlags()[37] ? this.csr_id : (java.lang.String) defaultValue(fields()[37]);
+        record.transaction_number = fieldSetFlags()[38] ? this.transaction_number : (java.lang.String) defaultValue(fields()[38]);
+        record.language = fieldSetFlags()[39] ? this.language : (java.lang.String) defaultValue(fields()[39]);
+        record.original_order_number = fieldSetFlags()[40] ? this.original_order_number : (java.lang.String) defaultValue(fields()[40]);
+        record.terminal_id = fieldSetFlags()[41] ? this.terminal_id : (java.lang.String) defaultValue(fields()[41]);
+        record.demand_gross_sales = fieldSetFlags()[42] ? this.demand_gross_sales : (java.lang.Double) defaultValue(fields()[42]);
+        record.demand_discounted_sales = fieldSetFlags()[43] ? this.demand_discounted_sales : (java.lang.Double) defaultValue(fields()[43]);
+        record.ship_amount = fieldSetFlags()[44] ? this.ship_amount : (java.lang.String) defaultValue(fields()[44]);
+        record.gift_wrap_amount = fieldSetFlags()[45] ? this.gift_wrap_amount : (java.lang.String) defaultValue(fields()[45]);
+        record.gift_wrap_flag = fieldSetFlags()[46] ? this.gift_wrap_flag : (java.lang.String) defaultValue(fields()[46]);
+        record.gwp_flag = fieldSetFlags()[47] ? this.gwp_flag : (java.lang.String) defaultValue(fields()[47]);
+        record.order_cancel_flag = fieldSetFlags()[48] ? this.order_cancel_flag : (java.lang.String) defaultValue(fields()[48]);
+        record.order_cancel_datetime = fieldSetFlags()[49] ? this.order_cancel_datetime : (java.lang.String) defaultValue(fields()[49]);
+        record.sample_flag = fieldSetFlags()[50] ? this.sample_flag : (java.lang.String) defaultValue(fields()[50]);
+        record.order_submit_datetime = fieldSetFlags()[51] ? this.order_submit_datetime : (java.lang.String) defaultValue(fields()[51]);
+        record.order_submit_datetime_utc = fieldSetFlags()[52] ? this.order_submit_datetime_utc : (java.lang.String) defaultValue(fields()[52]);
+        record.order_submit_datetime_local = fieldSetFlags()[53] ? this.order_submit_datetime_local : (java.lang.String) defaultValue(fields()[53]);
+        record.order_submit_year_month = fieldSetFlags()[54] ? this.order_submit_year_month : (java.lang.Integer) defaultValue(fields()[54]);
+        record.order_submit_date = fieldSetFlags()[55] ? this.order_submit_date : (java.lang.String) defaultValue(fields()[55]);
+        record.order_submit_hour = fieldSetFlags()[56] ? this.order_submit_hour : (java.lang.Integer) defaultValue(fields()[56]);
+        record.dp_create_timestamp = fieldSetFlags()[57] ? this.dp_create_timestamp : (java.lang.String) defaultValue(fields()[57]);
+        record.dp_update_timestamp = fieldSetFlags()[58] ? this.dp_update_timestamp : (java.lang.String) defaultValue(fields()[58]);
+        record.sephora_id_update_timestamp = fieldSetFlags()[59] ? this.sephora_id_update_timestamp : (java.lang.String) defaultValue(fields()[59]);
+        record.topic = fieldSetFlags()[60] ? this.topic : (java.lang.String) defaultValue(fields()[60]);
+        record.partition = fieldSetFlags()[61] ? this.partition : (java.lang.Integer) defaultValue(fields()[61]);
+        record.offset = fieldSetFlags()[62] ? this.offset : (java.lang.Long) defaultValue(fields()[62]);
+        record.timestamp = fieldSetFlags()[63] ? this.timestamp : (java.lang.Long) defaultValue(fields()[63]);
+        record.channel = fieldSetFlags()[64] ? this.channel : (java.lang.String) defaultValue(fields()[64]);
+        record.transaction_datetime_local = fieldSetFlags()[65] ? this.transaction_datetime_local : (java.lang.String) defaultValue(fields()[65]);
+        record.hold_release_datetime = fieldSetFlags()[66] ? this.hold_release_datetime : (java.lang.String) defaultValue(fields()[66]);
+        record.cancel_type = fieldSetFlags()[67] ? this.cancel_type : (java.lang.String) defaultValue(fields()[67]);
+        record.cancel_reason_text = fieldSetFlags()[68] ? this.cancel_reason_text : (java.lang.String) defaultValue(fields()[68]);
+        record.cancel_reason_code = fieldSetFlags()[69] ? this.cancel_reason_code : (java.lang.String) defaultValue(fields()[69]);
+        record.pickup_cancelled_datetime = fieldSetFlags()[70] ? this.pickup_cancelled_datetime : (java.lang.String) defaultValue(fields()[70]);
+        record.seller_org_code = fieldSetFlags()[71] ? this.seller_org_code : (java.lang.String) defaultValue(fields()[71]);
+        record.bi_pointsbalance_atorder = fieldSetFlags()[72] ? this.bi_pointsbalance_atorder : (java.lang.Integer) defaultValue(fields()[72]);
+        record.shipped_datetime = fieldSetFlags()[73] ? this.shipped_datetime : (java.lang.String) defaultValue(fields()[73]);
+        record.pickup_store_number = fieldSetFlags()[74] ? this.pickup_store_number : (java.lang.String) defaultValue(fields()[74]);
+        record.picked_up_datetime = fieldSetFlags()[75] ? this.picked_up_datetime : (java.lang.String) defaultValue(fields()[75]);
+        record.external_order_type = fieldSetFlags()[76] ? this.external_order_type : (java.lang.String) defaultValue(fields()[76]);
+        record.external_order_number = fieldSetFlags()[77] ? this.external_order_number : (java.lang.String) defaultValue(fields()[77]);
+        record.hal_selected = fieldSetFlags()[78] ? this.hal_selected : (java.lang.String) defaultValue(fields()[78]);
+        record.is_declined = fieldSetFlags()[79] ? this.is_declined : (java.lang.Boolean) defaultValue(fields()[79]);
         return record;
       } catch (org.apache.avro.AvroMissingFieldException e) {
         throw e;
-      } catch (Exception e) {
+      } catch (java.lang.Exception e) {
         throw new org.apache.avro.AvroRuntimeException(e);
       }
     }
@@ -5870,19 +5943,19 @@ static {
 
   @SuppressWarnings("unchecked")
   private static final org.apache.avro.io.DatumWriter<OrderHeaderConsolidated>
-    WRITER$ = (org.apache.avro.io.DatumWriter<OrderHeaderConsolidated>)MODEL$.createDatumWriter(SCHEMA$);
+          WRITER$ = (org.apache.avro.io.DatumWriter<OrderHeaderConsolidated>)MODEL$.createDatumWriter(SCHEMA$);
 
   @Override public void writeExternal(java.io.ObjectOutput out)
-    throws java.io.IOException {
+          throws java.io.IOException {
     WRITER$.write(this, SpecificData.getEncoder(out));
   }
 
   @SuppressWarnings("unchecked")
   private static final org.apache.avro.io.DatumReader<OrderHeaderConsolidated>
-    READER$ = (org.apache.avro.io.DatumReader<OrderHeaderConsolidated>)MODEL$.createDatumReader(SCHEMA$);
+          READER$ = (org.apache.avro.io.DatumReader<OrderHeaderConsolidated>)MODEL$.createDatumReader(SCHEMA$);
 
   @Override public void readExternal(java.io.ObjectInput in)
-    throws java.io.IOException {
+          throws java.io.IOException {
     READER$.read(this, SpecificData.getDecoder(in));
   }
 

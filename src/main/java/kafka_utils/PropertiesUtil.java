@@ -73,7 +73,7 @@ public class PropertiesUtil {
         props.put(ProducerConfig.VALUE_SERIALIZER_CLASS_CONFIG, KafkaAvroSerializer.class);
         props.put(AbstractKafkaSchemaSerDeConfig.SCHEMA_REGISTRY_URL_CONFIG, propsFromFile.getProperty("schema-registry.server"));
         props.put(AbstractKafkaSchemaSerDeConfig.AUTO_REGISTER_SCHEMAS, false);
-        props.put(AbstractKafkaSchemaSerDeConfig.USE_SCHEMA_ID, "100264");
+       // props.put(AbstractKafkaSchemaSerDeConfig.USE_SCHEMA_ID, "100275");
         props.put(AbstractKafkaSchemaSerDeConfig.BASIC_AUTH_CREDENTIALS_SOURCE, "USER_INFO");
         props.put(AbstractKafkaSchemaSerDeConfig.USER_INFO_CONFIG, propsFromFile.getProperty("basic.auth.user.info"));
         return props;
