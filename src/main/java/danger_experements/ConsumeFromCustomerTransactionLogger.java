@@ -1,6 +1,5 @@
 package danger_experements;
 
-import avro_pojos.CustomerTransactions;
 import kafka_utils.PropertiesUtil;
 import org.apache.kafka.clients.consumer.ConsumerRecord;
 import org.apache.kafka.clients.consumer.ConsumerRecords;
@@ -21,7 +20,7 @@ public class ConsumeFromCustomerTransactionLogger {
 
         KafkaConsumer<String, org.apache.avro.generic.GenericData.Record> consumer =
                 new KafkaConsumer<>(PropertiesUtil.getPropertiesForDevConsumer
-                        ("Sephora.DataPlatform.ReturnAuth.CustomerTransactionsLogger.GRP.DEV","100264"));
+                        ("Sephora.DataPlatform.ReturnAuth.CustomerTransactionsLogger.GRP.DEV", null));
 
         consumer.subscribe(Collections.singleton("Sephora.DataPlatform.ReturnAuth.CustomerTransactionsLogger"));
 
@@ -29,9 +28,12 @@ public class ConsumeFromCustomerTransactionLogger {
         while (true) {
             ConsumerRecords<String, org.apache.avro.generic.GenericData.Record> consumerRecords = consumer.poll(Duration.ofMillis(1000));
             for (ConsumerRecord<String, org.apache.avro.generic.GenericData.Record> cr : consumerRecords) {
-                logger.info(() -> "key: " + cr.key() + "| \n \n \n value: " + cr.value());
+                int salesCounter = Integer.parseInt(cr.value().get("cust_sale_counter").toString());
+                int returnCounter = Integer.parseInt(cr.value().get("cust_return_counter").toString());
+                if (salesCounter + returnCounter > 20)
+                    logger.info(() -> "serialized value size: " + cr.serializedValueSize() + "; orders number: " + salesCounter + returnCounter);
             }
-          //  consumer.commitSync();
+            //  consumer.commitSync();
         }
     }
 }
