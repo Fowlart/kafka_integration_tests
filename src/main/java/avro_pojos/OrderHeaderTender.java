@@ -12,14 +12,11 @@ import org.apache.avro.specific.SpecificData;
 
 @org.apache.avro.specific.AvroGenerated
 public class OrderHeaderTender extends org.apache.avro.specific.SpecificRecordBase implements org.apache.avro.specific.SpecificRecord {
-  private static final long serialVersionUID = 984062064262623005L;
-  public static final org.apache.avro.Schema SCHEMA$ = new org.apache.avro.Schema.Parser().parse("{\"type\":\"record\",\"name\":\"OrderHeaderTender\",\"namespace\":\"com.sephora.dataplatform.avro\",\"fields\":[{\"name\":\"order_header\",\"type\":[{\"type\":\"record\",\"name\":\"OrderHeaderConsolidated\",\"fields\":[{\"name\":\"org_id\",\"type\":[\"null\",{\"type\":\"string\",\"avro.java.string\":\"String\"}],\"default\":null},{\"name\":\"atg_id\",\"type\":[\"null\",{\"type\":\"string\",\"avro.java.string\":\"String\"}],\"default\":null},{\"name\":\"usa_id\",\"type\":[\"null\",\"long\"]},{\"name\":\"sephora_id\",\"type\":[\"null\",\"long\"]},{\"name\":\"order_number\",\"type\":[\"null\",{\"type\":\"string\",\"avro.java.string\":\"String\"}]},{\"name\":\"atg_order_number\",\"type\":[\"null\",{\"type\":\"string\",\"avro.java.string\":\"String\"}],\"default\":null},{\"name\":\"transaction_date\",\"type\":[\"null\",{\"type\":\"string\",\"avro.java.string\":\"String\"}],\"default\":null},{\"name\":\"transaction_datetime\",\"type\":[\"null\",{\"type\":\"string\",\"avro.java.string\":\"String\"}],\"default\":null},{\"name\":\"transaction_datetime_utc\",\"type\":[\"null\",{\"type\":\"string\",\"avro.java.string\":\"String\"}],\"default\":null},{\"name\":\"fulfill_milestone_datetime\",\"type\":[\"null\",{\"type\":\"string\",\"avro.java.string\":\"String\"}],\"default\":null},{\"name\":\"channel_type\",\"type\":[\"null\",{\"type\":\"string\",\"avro.java.string\":\"String\"}],\"default\":null},{\"name\":\"transaction_type\",\"type\":[\"null\",{\"type\":\"string\",\"avro.java.string\":\"String\"}],\"default\":null},{\"name\":\"sub_transaction_type\",\"type\":[\"null\",{\"type\":\"string\",\"avro.java.string\":\"String\"}],\"default\":null},{\"name\":\"store_number\",\"type\":[\"null\",{\"type\":\"string\",\"avro.java.string\":\"String\"}],\"default\":null},{\"name\":\"mplus_store_number\",\"type\":[\"null\",{\"type\":\"string\",\"avro.java.string\":\"String\"}],\"default\":null},{\"name\":\"bi_tier_atorder\",\"type\":[\"null\",{\"type\":\"string\",\"avro.java.string\":\"String\"}],\"default\":null},{\"name\":\"units\",\"type\":[\"null\",\"double\"],\"default\":null},{\"name\":\"gross_sales_usd_amount\",\"type\":[\"null\",\"double\"],\"default\":null},{\"name\":\"gross_sales_local_amount\",\"type\":[\"null\",\"double\"],\"default\":null},{\"name\":\"sales_afterdiscount_usd_amount\",\"type\":[\"null\",\"double\"],\"default\":null},{\"name\":\"sales_afterdiscount_local_amount\",\"type\":[\"null\",\"double\"],\"default\":null},{\"name\":\"net_sales_usd_amount\",\"type\":[\"null\",\"double\"],\"default\":null},{\"name\":\"net_sales_local_amount\",\"type\":[\"null\",{\"type\":\"string\",\"avro.java.string\":\"String\"}],\"default\":null},{\"name\":\"discount_usd_amount\",\"type\":[\"null\",\"double\"],\"default\":null},{\"name\":\"discount_local_amount\",\"type\":[\"null\",\"double\"],\"default\":null},{\"name\":\"exchange_rate\",\"type\":[\"null\",{\"type\":\"fixed\",\"name\":\"fixed\",\"namespace\":\"exchange_rate\",\"size\":5,\"logicalType\":\"decimal\",\"precision\":10,\"scale\":6}],\"default\":null},{\"name\":\"giftwrap_gross_amount\",\"type\":[\"null\",\"double\"],\"default\":null},{\"name\":\"giftwrap_net_amount\",\"type\":[\"null\",\"double\"],\"default\":null},{\"name\":\"ship_gross_amount\",\"type\":[\"null\",\"double\"],\"default\":null},{\"name\":\"ship_net_amount\",\"type\":[\"null\",\"double\"],\"default\":null},{\"name\":\"tax_amount\",\"type\":[\"null\",{\"type\":\"string\",\"avro.java.string\":\"String\"}],\"default\":null},{\"name\":\"origin_of_order\",\"type\":[\"null\",{\"type\":\"string\",\"avro.java.string\":\"String\"}],\"default\":null},{\"name\":\"country_of_origin\",\"type\":[\"null\",{\"type\":\"string\",\"avro.java.string\":\"String\"}],\"default\":null},{\"name\":\"currency_code\",\"type\":[\"null\",{\"type\":\"string\",\"avro.java.string\":\"String\"}],\"default\":null},{\"name\":\"cancel_flag\",\"type\":[\"null\",{\"type\":\"string\",\"avro.java.string\":\"String\"}],\"default\":null},{\"name\":\"dotcom_guest_flag\",\"type\":[\"null\",{\"type\":\"string\",\"avro.java.string\":\"String\"}],\"default\":null},{\"name\":\"flash_order_type\",\"type\":[\"null\",{\"type\":\"string\",\"avro.java.string\":\"String\"}],\"default\":null},{\"name\":\"csr_id\",\"type\":[\"null\",{\"type\":\"string\",\"avro.java.string\":\"String\"}],\"default\":null},{\"name\":\"transaction_number\",\"type\":[\"null\",{\"type\":\"string\",\"avro.java.string\":\"String\"}],\"default\":null},{\"name\":\"language\",\"type\":[\"null\",{\"type\":\"string\",\"avro.java.string\":\"String\"}],\"default\":null},{\"name\":\"original_order_number\",\"type\":[\"null\",{\"type\":\"string\",\"avro.java.string\":\"String\"}],\"default\":null},{\"name\":\"terminal_id\",\"type\":[\"null\",{\"type\":\"string\",\"avro.java.string\":\"String\"}],\"default\":null},{\"name\":\"demand_gross_sales\",\"type\":[\"null\",\"double\"],\"default\":null},{\"name\":\"demand_discounted_sales\",\"type\":[\"null\",\"double\"],\"default\":null},{\"name\":\"ship_amount\",\"type\":[\"null\",{\"type\":\"string\",\"avro.java.string\":\"String\"}],\"default\":null},{\"name\":\"gift_wrap_amount\",\"type\":[\"null\",{\"type\":\"string\",\"avro.java.string\":\"String\"}],\"default\":null},{\"name\":\"gift_wrap_flag\",\"type\":[\"null\",{\"type\":\"string\",\"avro.java.string\":\"String\"}],\"default\":null},{\"name\":\"gwp_flag\",\"type\":[\"null\",{\"type\":\"string\",\"avro.java.string\":\"String\"}],\"default\":null},{\"name\":\"order_cancel_flag\",\"type\":[\"null\",{\"type\":\"string\",\"avro.java.string\":\"String\"}],\"default\":null},{\"name\":\"order_cancel_datetime\",\"type\":[\"null\",{\"type\":\"string\",\"avro.java.string\":\"String\"}],\"default\":null},{\"name\":\"sample_flag\",\"type\":[\"null\",{\"type\":\"string\",\"avro.java.string\":\"String\"}],\"default\":null},{\"name\":\"order_submit_datetime\",\"type\":[\"null\",{\"type\":\"string\",\"avro.java.string\":\"String\"}],\"default\":null},{\"name\":\"order_submit_datetime_utc\",\"type\":[\"null\",{\"type\":\"string\",\"avro.java.string\":\"String\"}],\"default\":null},{\"name\":\"order_submit_datetime_local\",\"type\":[\"null\",{\"type\":\"string\",\"avro.java.string\":\"String\"}],\"default\":null},{\"name\":\"order_submit_year_month\",\"type\":[\"null\",\"int\"],\"default\":null},{\"name\":\"order_submit_date\",\"type\":[\"null\",{\"type\":\"string\",\"avro.java.string\":\"String\"}]},{\"name\":\"order_submit_hour\",\"type\":[\"null\",\"int\"],\"default\":null},{\"name\":\"dp_create_timestamp\",\"type\":[\"null\",{\"type\":\"string\",\"avro.java.string\":\"String\"}],\"default\":null},{\"name\":\"dp_update_timestamp\",\"type\":[\"null\",{\"type\":\"string\",\"avro.java.string\":\"String\"}],\"default\":null},{\"name\":\"sephora_id_update_timestamp\",\"type\":[\"null\",{\"type\":\"string\",\"avro.java.string\":\"String\"}],\"default\":null},{\"name\":\"topic\",\"type\":[\"null\",{\"type\":\"string\",\"avro.java.string\":\"String\"}],\"default\":null},{\"name\":\"partition\",\"type\":[\"null\",\"int\"],\"default\":null},{\"name\":\"offset\",\"type\":[\"null\",\"long\"],\"default\":null},{\"name\":\"timestamp\",\"type\":[\"null\",\"long\"],\"default\":null},{\"name\":\"channel\",\"type\":[\"null\",{\"type\":\"string\",\"avro.java.string\":\"String\"}],\"default\":null},{\"name\":\"transaction_datetime_local\",\"type\":[\"null\",{\"type\":\"string\",\"avro.java.string\":\"String\"}],\"default\":null},{\"name\":\"hold_release_datetime\",\"type\":[\"null\",{\"type\":\"string\",\"avro.java.string\":\"String\"}],\"default\":null},{\"name\":\"cancel_type\",\"type\":[\"null\",{\"type\":\"string\",\"avro.java.string\":\"String\"}],\"default\":null},{\"name\":\"cancel_reason_text\",\"type\":[\"null\",{\"type\":\"string\",\"avro.java.string\":\"String\"}],\"default\":null},{\"name\":\"cancel_reason_code\",\"type\":[\"null\",{\"type\":\"string\",\"avro.java.string\":\"String\"}],\"default\":null},{\"name\":\"pickup_cancelled_datetime\",\"type\":[\"null\",{\"type\":\"string\",\"avro.java.string\":\"String\"}],\"default\":null},{\"name\":\"seller_org_code\",\"type\":[\"null\",{\"type\":\"string\",\"avro.java.string\":\"String\"}],\"default\":null},{\"name\":\"bi_pointsbalance_atorder\",\"type\":[\"null\",\"int\"],\"default\":null},{\"name\":\"shipped_datetime\",\"type\":[\"null\",{\"type\":\"string\",\"avro.java.string\":\"String\"}],\"default\":null},{\"name\":\"pickup_store_number\",\"type\":[\"null\",{\"type\":\"string\",\"avro.java.string\":\"String\"}],\"default\":null},{\"name\":\"picked_up_datetime\",\"type\":[\"null\",{\"type\":\"string\",\"avro.java.string\":\"String\"}],\"default\":null},{\"name\":\"external_order_type\",\"type\":[\"null\",{\"type\":\"string\",\"avro.java.string\":\"String\"}],\"default\":null},{\"name\":\"external_order_number\",\"type\":[\"null\",{\"type\":\"string\",\"avro.java.string\":\"String\"}],\"default\":null},{\"name\":\"hal_selected\",\"type\":[\"null\",{\"type\":\"string\",\"avro.java.string\":\"String\"}],\"default\":null}]},\"null\"]},{\"name\":\"order_tender\",\"type\":[{\"type\":\"record\",\"name\":\"OrderTenderDetailsEvents\",\"fields\":[{\"name\":\"order_number\",\"type\":[\"null\",{\"type\":\"string\",\"avro.java.string\":\"String\"}],\"default\":null},{\"name\":\"atg_order_number\",\"type\":[\"null\",{\"type\":\"string\",\"avro.java.string\":\"String\"}],\"default\":null},{\"name\":\"org_id\",\"type\":[\"null\",{\"type\":\"string\",\"avro.java.string\":\"String\"}],\"default\":null},{\"name\":\"store_number\",\"type\":[\"null\",{\"type\":\"st","ring\",\"avro.java.string\":\"String\"}],\"default\":null},{\"name\":\"transaction_number\",\"type\":[\"null\",{\"type\":\"string\",\"avro.java.string\":\"String\"}],\"default\":null},{\"name\":\"terminal_id\",\"type\":[\"null\",{\"type\":\"string\",\"avro.java.string\":\"String\"}],\"default\":null},{\"name\":\"transaction_datetime\",\"type\":[\"null\",{\"type\":\"string\",\"avro.java.string\":\"String\"}],\"default\":null},{\"name\":\"transaction_datetime_local\",\"type\":[\"null\",{\"type\":\"string\",\"avro.java.string\":\"String\"}],\"default\":null},{\"name\":\"transaction_datetime_utc\",\"type\":[\"null\",{\"type\":\"string\",\"avro.java.string\":\"String\"}],\"default\":null},{\"name\":\"order_submit_datetime\",\"type\":[\"null\",{\"type\":\"string\",\"avro.java.string\":\"String\"}],\"default\":null},{\"name\":\"order_submit_datetime_local\",\"type\":[\"null\",{\"type\":\"string\",\"avro.java.string\":\"String\"}],\"default\":null},{\"name\":\"order_submit_datetime_utc\",\"type\":[\"null\",{\"type\":\"string\",\"avro.java.string\":\"String\"}],\"default\":null},{\"name\":\"tender_id\",\"type\":[\"null\",{\"type\":\"string\",\"avro.java.string\":\"String\"}],\"default\":null},{\"name\":\"tender_type\",\"type\":[\"null\",{\"type\":\"string\",\"avro.java.string\":\"String\"}],\"default\":null},{\"name\":\"currency_code\",\"type\":[\"null\",{\"type\":\"string\",\"avro.java.string\":\"String\"}],\"default\":null},{\"name\":\"tender_local_amount\",\"type\":[\"null\",\"double\"],\"default\":null},{\"name\":\"tender_code\",\"type\":[\"null\",\"int\"],\"default\":null},{\"name\":\"card_number\",\"type\":[\"null\",{\"type\":\"string\",\"avro.java.string\":\"String\"}],\"default\":null},{\"name\":\"tender_void_flag\",\"type\":[\"null\",{\"type\":\"string\",\"avro.java.string\":\"String\"}],\"default\":null},{\"name\":\"transaction_tender_line_number\",\"type\":[\"null\",{\"type\":\"string\",\"avro.java.string\":\"String\"}],\"default\":null},{\"name\":\"tender_change_flag\",\"type\":[\"null\",{\"type\":\"string\",\"avro.java.string\":\"String\"}],\"default\":null},{\"name\":\"authorization_code\",\"type\":[\"null\",{\"type\":\"string\",\"avro.java.string\":\"String\"}],\"default\":null},{\"name\":\"credit_card_type\",\"type\":[\"null\",{\"type\":\"string\",\"avro.java.string\":\"String\"}],\"default\":null},{\"name\":\"third_party_tender_type\",\"type\":[\"null\",{\"type\":\"string\",\"avro.java.string\":\"String\"}],\"default\":null},{\"name\":\"gift_certification_number\",\"type\":[\"null\",{\"type\":\"string\",\"avro.java.string\":\"String\"}],\"default\":null},{\"name\":\"atg_requested_amount\",\"type\":[\"null\",\"double\"],\"default\":null},{\"name\":\"atg_processed_amount\",\"type\":[\"null\",\"double\"],\"default\":null},{\"name\":\"atg_authorization_type\",\"type\":[\"null\",{\"type\":\"string\",\"avro.java.string\":\"String\"}],\"default\":null},{\"name\":\"atg_credit_card_token\",\"type\":[\"null\",{\"type\":\"string\",\"avro.java.string\":\"String\"}],\"default\":null},{\"name\":\"source_payload_name\",\"type\":[\"null\",{\"type\":\"string\",\"avro.java.string\":\"String\"}],\"default\":null},{\"name\":\"payment_reference_1\",\"type\":[\"null\",{\"type\":\"string\",\"avro.java.string\":\"String\"}],\"default\":null},{\"name\":\"payment_reference_2\",\"type\":[\"null\",{\"type\":\"string\",\"avro.java.string\":\"String\"}],\"default\":null},{\"name\":\"payment_reference_3\",\"type\":[\"null\",{\"type\":\"string\",\"avro.java.string\":\"String\"}],\"default\":null},{\"name\":\"payment_reference_4\",\"type\":[\"null\",{\"type\":\"string\",\"avro.java.string\":\"String\"}],\"default\":null},{\"name\":\"payment_reference_5\",\"type\":[\"null\",{\"type\":\"string\",\"avro.java.string\":\"String\"}],\"default\":null},{\"name\":\"payment_reference_6\",\"type\":[\"null\",{\"type\":\"string\",\"avro.java.string\":\"String\"}],\"default\":null},{\"name\":\"payment_reference_7\",\"type\":[\"null\",{\"type\":\"string\",\"avro.java.string\":\"String\"}],\"default\":null},{\"name\":\"payment_reference_8\",\"type\":[\"null\",{\"type\":\"string\",\"avro.java.string\":\"String\"}],\"default\":null},{\"name\":\"payment_reference_9\",\"type\":[\"null\",{\"type\":\"string\",\"avro.java.string\":\"String\"}],\"default\":null},{\"name\":\"tender_type_code\",\"type\":[\"null\",{\"type\":\"string\",\"avro.java.string\":\"String\"}],\"default\":null},{\"name\":\"order_submit_date\",\"type\":[\"null\",{\"type\":\"string\",\"avro.java.string\":\"String\"}],\"default\":null},{\"name\":\"last_modified_timestamp\",\"type\":[\"null\",{\"type\":\"string\",\"avro.java.string\":\"String\"}],\"default\":null},{\"name\":\"topic\",\"type\":[\"null\",{\"type\":\"string\",\"avro.java.string\":\"String\"}],\"default\":null},{\"name\":\"partition\",\"type\":[\"null\",\"int\"],\"default\":null},{\"name\":\"offset\",\"type\":[\"null\",\"long\"],\"default\":null},{\"name\":\"timestamp\",\"type\":[\"null\",\"long\"],\"default\":null},{\"name\":\"dp_create_timestamp\",\"type\":[\"null\",{\"type\":\"string\",\"avro.java.string\":\"String\"}],\"default\":null},{\"name\":\"transaction_date\",\"type\":[\"null\",{\"type\":\"string\",\"avro.java.string\":\"String\"}],\"default\":null},{\"name\":\"channel_type\",\"type\":[\"null\",{\"type\":\"string\",\"avro.java.string\":\"String\"}],\"default\":null},{\"name\":\"tender_usd_amount\",\"type\":[\"null\",\"double\"],\"default\":null},{\"name\":\"exchange_rate\",\"type\":[\"null\",\"double\"],\"default\":null},{\"name\":\"origin_of_order\",\"type\":[\"null\",{\"type\":\"string\",\"avro.java.string\":\"String\"}],\"default\":null},{\"name\":\"sub_transaction_type\",\"type\":[\"null\",{\"type\":\"string\",\"avro.java.string\":\"String\"}],\"default\":null},{\"name\":\"transaction_type\",\"type\":[\"null\",{\"type\":\"string\",\"avro.java.string\":\"String\"}],\"default\":null},{\"name\":\"sephora_id\",\"type\":[\"null\",\"long\"],\"default\":null},{\"name\":\"order_cancel_flag\",\"type\":[\"null\",{\"type\":\"string\",\"avro.java.string\":\"String\"}],\"default\":null},{\"name\":\"order_cancel_datetime\",\"type\":[\"null\",{\"type\":\"string\",\"avro.java.string\":\"String\"}],\"default\":null},{\"name\":\"dp_update_timestamp\",\"type\":[\"null\",{\"type\":\"string\",\"avro.java.string\":\"String\"}],\"default\":null},{\"name\":\"tender_detail_key\",\"type\":[\"null\",{\"type\":\"string\",\"avro.java.string\":\"String\"}],\"default\":null}]},\"null\"]}]}");
+  private static final long serialVersionUID = -4378562460551021121L;
+  public static final org.apache.avro.Schema SCHEMA$ = new org.apache.avro.Schema.Parser().parse("{\"type\":\"record\",\"name\":\"OrderHeaderTender\",\"namespace\":\"com.sephora.dataplatform.avro\",\"fields\":[{\"name\":\"order_header\",\"type\":[{\"type\":\"record\",\"name\":\"OrderHeaderConsolidated\",\"fields\":[{\"name\":\"org_id\",\"type\":[\"null\",{\"type\":\"string\",\"avro.java.string\":\"String\"}],\"default\":null},{\"name\":\"atg_id\",\"type\":[\"null\",{\"type\":\"string\",\"avro.java.string\":\"String\"}],\"default\":null},{\"name\":\"usa_id\",\"type\":[\"null\",\"long\"]},{\"name\":\"sephora_id\",\"type\":[\"null\",\"long\"]},{\"name\":\"order_number\",\"type\":[\"null\",{\"type\":\"string\",\"avro.java.string\":\"String\"}]},{\"name\":\"original_order_number\",\"type\":[\"null\",{\"type\":\"string\",\"avro.java.string\":\"String\"}],\"default\":null},{\"name\":\"channel_type\",\"type\":[\"null\",{\"type\":\"string\",\"avro.java.string\":\"String\"}],\"default\":null},{\"name\":\"transaction_type\",\"type\":[\"null\",{\"type\":\"string\",\"avro.java.string\":\"String\"}],\"default\":null},{\"name\":\"store_number\",\"type\":[\"null\",{\"type\":\"string\",\"avro.java.string\":\"String\"}],\"default\":null},{\"name\":\"cancel_flag\",\"type\":[\"null\",{\"type\":\"string\",\"avro.java.string\":\"String\"}],\"default\":null},{\"name\":\"order_cancel_flag\",\"type\":[\"null\",{\"type\":\"string\",\"avro.java.string\":\"String\"}],\"default\":null},{\"name\":\"order_cancel_datetime\",\"type\":[\"null\",{\"type\":\"string\",\"avro.java.string\":\"String\"}],\"default\":null},{\"name\":\"order_submit_datetime\",\"type\":[\"null\",{\"type\":\"string\",\"avro.java.string\":\"String\"}],\"default\":null},{\"name\":\"order_submit_datetime_local\",\"type\":[\"null\",{\"type\":\"string\",\"avro.java.string\":\"String\"}],\"default\":null},{\"name\":\"order_submit_date\",\"type\":[\"null\",{\"type\":\"string\",\"avro.java.string\":\"String\"}],\"default\":null},{\"name\":\"is_declined\",\"type\":\"boolean\",\"default\":false},{\"name\":\"return_auth_flag\",\"type\":[\"null\",{\"type\":\"string\",\"avro.java.string\":\"String\"}],\"default\":null},{\"name\":\"return_reason_text\",\"type\":[\"null\",{\"type\":\"string\",\"avro.java.string\":\"String\"}],\"default\":null},{\"name\":\"return_reference_number\",\"type\":[\"null\",{\"type\":\"string\",\"avro.java.string\":\"String\"}],\"default\":null},{\"name\":\"return_group_id\",\"type\":[\"null\",{\"type\":\"string\",\"avro.java.string\":\"String\"}],\"default\":null},{\"name\":\"return_sale_counter\",\"type\":[\"null\",\"int\"],\"default\":null},{\"name\":\"return_return_counter\",\"type\":[\"null\",\"int\"],\"default\":null}]},\"null\"]},{\"name\":\"order_tender\",\"type\":[{\"type\":\"record\",\"name\":\"OrderTenderDetailsEvents\",\"fields\":[{\"name\":\"order_number\",\"type\":[\"null\",{\"type\":\"string\",\"avro.java.string\":\"String\"}],\"default\":null},{\"name\":\"card_number\",\"type\":[\"null\",{\"type\":\"string\",\"avro.java.string\":\"String\"}],\"default\":null},{\"name\":\"channel_type\",\"type\":[\"null\",{\"type\":\"string\",\"avro.java.string\":\"String\"}],\"default\":null},{\"name\":\"transaction_type\",\"type\":[\"null\",{\"type\":\"string\",\"avro.java.string\":\"String\"}],\"default\":null},{\"name\":\"order_submit_date\",\"type\":[\"null\",{\"type\":\"string\",\"avro.java.string\":\"String\"}],\"default\":null}]},\"null\"]},{\"name\":\"batch_id\",\"type\":[\"null\",{\"type\":\"string\",\"avro.java.string\":\"String\"}],\"default\":null},{\"name\":\"group_id\",\"type\":[\"null\",{\"type\":\"string\",\"avro.java.string\":\"String\"}],\"default\":null},{\"name\":\"number_of_accounts\",\"type\":\"int\",\"default\":1},{\"name\":\"is_primary\",\"type\":\"boolean\",\"doc\":\"means that transaction is directly related to the aggregation key\",\"default\":false},{\"name\":\"is_merge\",\"type\":\"boolean\",\"doc\":\"means that need to change key to usa_id from order_header (only if is_primary = true)\",\"default\":false}]}");
   public static org.apache.avro.Schema getClassSchema() { return SCHEMA$; }
 
   private static SpecificData MODEL$ = new SpecificData();
-static {
-    MODEL$.addLogicalTypeConversion(new org.apache.avro.Conversions.DecimalConversion());
-  }
 
   private static final BinaryMessageEncoder<OrderHeaderTender> ENCODER =
       new BinaryMessageEncoder<OrderHeaderTender>(MODEL$, SCHEMA$);
@@ -74,6 +71,13 @@ static {
 
   @Deprecated public OrderHeaderConsolidated order_header;
   @Deprecated public OrderTenderDetailsEvents order_tender;
+  @Deprecated public String batch_id;
+  @Deprecated public String group_id;
+  @Deprecated public int number_of_accounts;
+  /** means that transaction is directly related to the aggregation key */
+  @Deprecated public boolean is_primary;
+  /** means that need to change key to usa_id from order_header (only if is_primary = true) */
+  @Deprecated public boolean is_merge;
 
   /**
    * Default constructor.  Note that this does not initialize fields
@@ -86,10 +90,20 @@ static {
    * All-args constructor.
    * @param order_header The new value for order_header
    * @param order_tender The new value for order_tender
+   * @param batch_id The new value for batch_id
+   * @param group_id The new value for group_id
+   * @param number_of_accounts The new value for number_of_accounts
+   * @param is_primary means that transaction is directly related to the aggregation key
+   * @param is_merge means that need to change key to usa_id from order_header (only if is_primary = true)
    */
-  public OrderHeaderTender(OrderHeaderConsolidated order_header, OrderTenderDetailsEvents order_tender) {
+  public OrderHeaderTender(OrderHeaderConsolidated order_header, OrderTenderDetailsEvents order_tender, String batch_id, String group_id, Integer number_of_accounts, Boolean is_primary, Boolean is_merge) {
     this.order_header = order_header;
     this.order_tender = order_tender;
+    this.batch_id = batch_id;
+    this.group_id = group_id;
+    this.number_of_accounts = number_of_accounts;
+    this.is_primary = is_primary;
+    this.is_merge = is_merge;
   }
 
   public SpecificData getSpecificData() { return MODEL$; }
@@ -99,6 +113,11 @@ static {
     switch (field$) {
     case 0: return order_header;
     case 1: return order_tender;
+    case 2: return batch_id;
+    case 3: return group_id;
+    case 4: return number_of_accounts;
+    case 5: return is_primary;
+    case 6: return is_merge;
     default: throw new IndexOutOfBoundsException("Invalid index: " + field$);
     }
   }
@@ -109,6 +128,11 @@ static {
     switch (field$) {
     case 0: order_header = (OrderHeaderConsolidated)value$; break;
     case 1: order_tender = (OrderTenderDetailsEvents)value$; break;
+    case 2: batch_id = value$ != null ? value$.toString() : null; break;
+    case 3: group_id = value$ != null ? value$.toString() : null; break;
+    case 4: number_of_accounts = (Integer)value$; break;
+    case 5: is_primary = (Boolean)value$; break;
+    case 6: is_merge = (Boolean)value$; break;
     default: throw new IndexOutOfBoundsException("Invalid index: " + field$);
     }
   }
@@ -145,6 +169,93 @@ static {
    */
   public void setOrderTender(OrderTenderDetailsEvents value) {
     this.order_tender = value;
+  }
+
+  /**
+   * Gets the value of the 'batch_id' field.
+   * @return The value of the 'batch_id' field.
+   */
+  public String getBatchId() {
+    return batch_id;
+  }
+
+
+  /**
+   * Sets the value of the 'batch_id' field.
+   * @param value the value to set.
+   */
+  public void setBatchId(String value) {
+    this.batch_id = value;
+  }
+
+  /**
+   * Gets the value of the 'group_id' field.
+   * @return The value of the 'group_id' field.
+   */
+  public String getGroupId() {
+    return group_id;
+  }
+
+
+  /**
+   * Sets the value of the 'group_id' field.
+   * @param value the value to set.
+   */
+  public void setGroupId(String value) {
+    this.group_id = value;
+  }
+
+  /**
+   * Gets the value of the 'number_of_accounts' field.
+   * @return The value of the 'number_of_accounts' field.
+   */
+  public int getNumberOfAccounts() {
+    return number_of_accounts;
+  }
+
+
+  /**
+   * Sets the value of the 'number_of_accounts' field.
+   * @param value the value to set.
+   */
+  public void setNumberOfAccounts(int value) {
+    this.number_of_accounts = value;
+  }
+
+  /**
+   * Gets the value of the 'is_primary' field.
+   * @return means that transaction is directly related to the aggregation key
+   */
+  public boolean getIsPrimary() {
+    return is_primary;
+  }
+
+
+  /**
+   * Sets the value of the 'is_primary' field.
+   * means that transaction is directly related to the aggregation key
+   * @param value the value to set.
+   */
+  public void setIsPrimary(boolean value) {
+    this.is_primary = value;
+  }
+
+  /**
+   * Gets the value of the 'is_merge' field.
+   * @return means that need to change key to usa_id from order_header (only if is_primary = true)
+   */
+  public boolean getIsMerge() {
+    return is_merge;
+  }
+
+
+  /**
+   * Sets the value of the 'is_merge' field.
+   * means that need to change key to usa_id from order_header (only if is_primary = true)
+   * @param value the value to set.
+   */
+  public void setIsMerge(boolean value) {
+    this.is_merge = value;
   }
 
   /**
@@ -192,6 +303,13 @@ static {
     private OrderHeaderConsolidated.Builder order_headerBuilder;
     private OrderTenderDetailsEvents order_tender;
     private OrderTenderDetailsEvents.Builder order_tenderBuilder;
+    private String batch_id;
+    private String group_id;
+    private int number_of_accounts;
+    /** means that transaction is directly related to the aggregation key */
+    private boolean is_primary;
+    /** means that need to change key to usa_id from order_header (only if is_primary = true) */
+    private boolean is_merge;
 
     /** Creates a new Builder */
     private Builder() {
@@ -218,6 +336,26 @@ static {
       if (other.hasOrderTenderBuilder()) {
         this.order_tenderBuilder = OrderTenderDetailsEvents.newBuilder(other.getOrderTenderBuilder());
       }
+      if (isValidValue(fields()[2], other.batch_id)) {
+        this.batch_id = data().deepCopy(fields()[2].schema(), other.batch_id);
+        fieldSetFlags()[2] = other.fieldSetFlags()[2];
+      }
+      if (isValidValue(fields()[3], other.group_id)) {
+        this.group_id = data().deepCopy(fields()[3].schema(), other.group_id);
+        fieldSetFlags()[3] = other.fieldSetFlags()[3];
+      }
+      if (isValidValue(fields()[4], other.number_of_accounts)) {
+        this.number_of_accounts = data().deepCopy(fields()[4].schema(), other.number_of_accounts);
+        fieldSetFlags()[4] = other.fieldSetFlags()[4];
+      }
+      if (isValidValue(fields()[5], other.is_primary)) {
+        this.is_primary = data().deepCopy(fields()[5].schema(), other.is_primary);
+        fieldSetFlags()[5] = other.fieldSetFlags()[5];
+      }
+      if (isValidValue(fields()[6], other.is_merge)) {
+        this.is_merge = data().deepCopy(fields()[6].schema(), other.is_merge);
+        fieldSetFlags()[6] = other.fieldSetFlags()[6];
+      }
     }
 
     /**
@@ -236,6 +374,26 @@ static {
         fieldSetFlags()[1] = true;
       }
       this.order_tenderBuilder = null;
+      if (isValidValue(fields()[2], other.batch_id)) {
+        this.batch_id = data().deepCopy(fields()[2].schema(), other.batch_id);
+        fieldSetFlags()[2] = true;
+      }
+      if (isValidValue(fields()[3], other.group_id)) {
+        this.group_id = data().deepCopy(fields()[3].schema(), other.group_id);
+        fieldSetFlags()[3] = true;
+      }
+      if (isValidValue(fields()[4], other.number_of_accounts)) {
+        this.number_of_accounts = data().deepCopy(fields()[4].schema(), other.number_of_accounts);
+        fieldSetFlags()[4] = true;
+      }
+      if (isValidValue(fields()[5], other.is_primary)) {
+        this.is_primary = data().deepCopy(fields()[5].schema(), other.is_primary);
+        fieldSetFlags()[5] = true;
+      }
+      if (isValidValue(fields()[6], other.is_merge)) {
+        this.is_merge = data().deepCopy(fields()[6].schema(), other.is_merge);
+        fieldSetFlags()[6] = true;
+      }
     }
 
     /**
@@ -390,6 +548,211 @@ static {
       return this;
     }
 
+    /**
+      * Gets the value of the 'batch_id' field.
+      * @return The value.
+      */
+    public String getBatchId() {
+      return batch_id;
+    }
+
+
+    /**
+      * Sets the value of the 'batch_id' field.
+      * @param value The value of 'batch_id'.
+      * @return This builder.
+      */
+    public OrderHeaderTender.Builder setBatchId(String value) {
+      validate(fields()[2], value);
+      this.batch_id = value;
+      fieldSetFlags()[2] = true;
+      return this;
+    }
+
+    /**
+      * Checks whether the 'batch_id' field has been set.
+      * @return True if the 'batch_id' field has been set, false otherwise.
+      */
+    public boolean hasBatchId() {
+      return fieldSetFlags()[2];
+    }
+
+
+    /**
+      * Clears the value of the 'batch_id' field.
+      * @return This builder.
+      */
+    public OrderHeaderTender.Builder clearBatchId() {
+      batch_id = null;
+      fieldSetFlags()[2] = false;
+      return this;
+    }
+
+    /**
+      * Gets the value of the 'group_id' field.
+      * @return The value.
+      */
+    public String getGroupId() {
+      return group_id;
+    }
+
+
+    /**
+      * Sets the value of the 'group_id' field.
+      * @param value The value of 'group_id'.
+      * @return This builder.
+      */
+    public OrderHeaderTender.Builder setGroupId(String value) {
+      validate(fields()[3], value);
+      this.group_id = value;
+      fieldSetFlags()[3] = true;
+      return this;
+    }
+
+    /**
+      * Checks whether the 'group_id' field has been set.
+      * @return True if the 'group_id' field has been set, false otherwise.
+      */
+    public boolean hasGroupId() {
+      return fieldSetFlags()[3];
+    }
+
+
+    /**
+      * Clears the value of the 'group_id' field.
+      * @return This builder.
+      */
+    public OrderHeaderTender.Builder clearGroupId() {
+      group_id = null;
+      fieldSetFlags()[3] = false;
+      return this;
+    }
+
+    /**
+      * Gets the value of the 'number_of_accounts' field.
+      * @return The value.
+      */
+    public int getNumberOfAccounts() {
+      return number_of_accounts;
+    }
+
+
+    /**
+      * Sets the value of the 'number_of_accounts' field.
+      * @param value The value of 'number_of_accounts'.
+      * @return This builder.
+      */
+    public OrderHeaderTender.Builder setNumberOfAccounts(int value) {
+      validate(fields()[4], value);
+      this.number_of_accounts = value;
+      fieldSetFlags()[4] = true;
+      return this;
+    }
+
+    /**
+      * Checks whether the 'number_of_accounts' field has been set.
+      * @return True if the 'number_of_accounts' field has been set, false otherwise.
+      */
+    public boolean hasNumberOfAccounts() {
+      return fieldSetFlags()[4];
+    }
+
+
+    /**
+      * Clears the value of the 'number_of_accounts' field.
+      * @return This builder.
+      */
+    public OrderHeaderTender.Builder clearNumberOfAccounts() {
+      fieldSetFlags()[4] = false;
+      return this;
+    }
+
+    /**
+      * Gets the value of the 'is_primary' field.
+      * means that transaction is directly related to the aggregation key
+      * @return The value.
+      */
+    public boolean getIsPrimary() {
+      return is_primary;
+    }
+
+
+    /**
+      * Sets the value of the 'is_primary' field.
+      * means that transaction is directly related to the aggregation key
+      * @param value The value of 'is_primary'.
+      * @return This builder.
+      */
+    public OrderHeaderTender.Builder setIsPrimary(boolean value) {
+      validate(fields()[5], value);
+      this.is_primary = value;
+      fieldSetFlags()[5] = true;
+      return this;
+    }
+
+    /**
+      * Checks whether the 'is_primary' field has been set.
+      * means that transaction is directly related to the aggregation key
+      * @return True if the 'is_primary' field has been set, false otherwise.
+      */
+    public boolean hasIsPrimary() {
+      return fieldSetFlags()[5];
+    }
+
+
+    /**
+      * Clears the value of the 'is_primary' field.
+      * means that transaction is directly related to the aggregation key
+      * @return This builder.
+      */
+    public OrderHeaderTender.Builder clearIsPrimary() {
+      fieldSetFlags()[5] = false;
+      return this;
+    }
+
+    /**
+      * Gets the value of the 'is_merge' field.
+      * means that need to change key to usa_id from order_header (only if is_primary = true)
+      * @return The value.
+      */
+    public boolean getIsMerge() {
+      return is_merge;
+    }
+
+
+    /**
+      * Sets the value of the 'is_merge' field.
+      * means that need to change key to usa_id from order_header (only if is_primary = true)
+      * @param value The value of 'is_merge'.
+      * @return This builder.
+      */
+    public OrderHeaderTender.Builder setIsMerge(boolean value) {
+      validate(fields()[6], value);
+      this.is_merge = value;
+      fieldSetFlags()[6] = true;
+      return this;
+    }
+
+    /**
+      * Checks whether the 'is_merge' field has been set.
+      * means that need to change key to usa_id from order_header (only if is_primary = true)
+      * @return True if the 'is_merge' field has been set, false otherwise.
+      */
+    public boolean hasIsMerge() {
+      return fieldSetFlags()[6];
+    }
+
+
+    /**
+      * Clears the value of the 'is_merge' field.
+      * means that need to change key to usa_id from order_header (only if is_primary = true)
+      * @return This builder.
+      */
+    public OrderHeaderTender.Builder clearIsMerge() {
+      fieldSetFlags()[6] = false;
+      return this;
+    }
+
     @Override
     @SuppressWarnings("unchecked")
     public OrderHeaderTender build() {
@@ -415,6 +778,11 @@ static {
         } else {
           record.order_tender = fieldSetFlags()[1] ? this.order_tender : (OrderTenderDetailsEvents) defaultValue(fields()[1]);
         }
+        record.batch_id = fieldSetFlags()[2] ? this.batch_id : (String) defaultValue(fields()[2]);
+        record.group_id = fieldSetFlags()[3] ? this.group_id : (String) defaultValue(fields()[3]);
+        record.number_of_accounts = fieldSetFlags()[4] ? this.number_of_accounts : (Integer) defaultValue(fields()[4]);
+        record.is_primary = fieldSetFlags()[5] ? this.is_primary : (Boolean) defaultValue(fields()[5]);
+        record.is_merge = fieldSetFlags()[6] ? this.is_merge : (Boolean) defaultValue(fields()[6]);
         return record;
       } catch (org.apache.avro.AvroMissingFieldException e) {
         throw e;
@@ -442,6 +810,163 @@ static {
     READER$.read(this, SpecificData.getDecoder(in));
   }
 
+  @Override protected boolean hasCustomCoders() { return true; }
+
+  @Override public void customEncode(org.apache.avro.io.Encoder out)
+    throws java.io.IOException
+  {
+    if (this.order_header == null) {
+      out.writeIndex(1);
+      out.writeNull();
+    } else {
+      out.writeIndex(0);
+      this.order_header.customEncode(out);
+    }
+
+    if (this.order_tender == null) {
+      out.writeIndex(1);
+      out.writeNull();
+    } else {
+      out.writeIndex(0);
+      this.order_tender.customEncode(out);
+    }
+
+    if (this.batch_id == null) {
+      out.writeIndex(0);
+      out.writeNull();
+    } else {
+      out.writeIndex(1);
+      out.writeString(this.batch_id);
+    }
+
+    if (this.group_id == null) {
+      out.writeIndex(0);
+      out.writeNull();
+    } else {
+      out.writeIndex(1);
+      out.writeString(this.group_id);
+    }
+
+    out.writeInt(this.number_of_accounts);
+
+    out.writeBoolean(this.is_primary);
+
+    out.writeBoolean(this.is_merge);
+
+  }
+
+  @Override public void customDecode(org.apache.avro.io.ResolvingDecoder in)
+    throws java.io.IOException
+  {
+    org.apache.avro.Schema.Field[] fieldOrder = in.readFieldOrderIfDiff();
+    if (fieldOrder == null) {
+      if (in.readIndex() != 0) {
+        in.readNull();
+        this.order_header = null;
+      } else {
+        if (this.order_header == null) {
+          this.order_header = new OrderHeaderConsolidated();
+        }
+        this.order_header.customDecode(in);
+      }
+
+      if (in.readIndex() != 0) {
+        in.readNull();
+        this.order_tender = null;
+      } else {
+        if (this.order_tender == null) {
+          this.order_tender = new OrderTenderDetailsEvents();
+        }
+        this.order_tender.customDecode(in);
+      }
+
+      if (in.readIndex() != 1) {
+        in.readNull();
+        this.batch_id = null;
+      } else {
+        this.batch_id = in.readString();
+      }
+
+      if (in.readIndex() != 1) {
+        in.readNull();
+        this.group_id = null;
+      } else {
+        this.group_id = in.readString();
+      }
+
+      this.number_of_accounts = in.readInt();
+
+      this.is_primary = in.readBoolean();
+
+      this.is_merge = in.readBoolean();
+
+    } else {
+      for (int i = 0; i < 7; i++) {
+        switch (fieldOrder[i].pos()) {
+        case 0:
+          if (in.readIndex() != 0) {
+            in.readNull();
+            this.order_header = null;
+          } else {
+            if (this.order_header == null) {
+              this.order_header = new OrderHeaderConsolidated();
+            }
+            this.order_header.customDecode(in);
+          }
+          break;
+
+        case 1:
+          if (in.readIndex() != 0) {
+            in.readNull();
+            this.order_tender = null;
+          } else {
+            if (this.order_tender == null) {
+              this.order_tender = new OrderTenderDetailsEvents();
+            }
+            this.order_tender.customDecode(in);
+          }
+          break;
+
+        case 2:
+          if (in.readIndex() != 1) {
+            in.readNull();
+            this.batch_id = null;
+          } else {
+            this.batch_id = in.readString();
+          }
+          break;
+
+        case 3:
+          if (in.readIndex() != 1) {
+            in.readNull();
+            this.group_id = null;
+          } else {
+            this.group_id = in.readString();
+          }
+          break;
+
+        case 4:
+          this.number_of_accounts = in.readInt();
+          break;
+
+        case 5:
+          this.is_primary = in.readBoolean();
+          break;
+
+        case 6:
+          this.is_merge = in.readBoolean();
+          break;
+
+        default:
+          throw new java.io.IOException("Corrupt ResolvingDecoder.");
+        }
+      }
+    }
+  }
+
+  public static void main(String[] args) {
+    System.out.println(SCHEMA$);
+  }
 }
 
 

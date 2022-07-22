@@ -12,8 +12,8 @@ import org.apache.avro.specific.SpecificData;
 
 @org.apache.avro.specific.AvroGenerated
 public class DeleteSchedule extends org.apache.avro.specific.SpecificRecordBase implements org.apache.avro.specific.SpecificRecord {
-  private static final long serialVersionUID = -8526559199473065874L;
-  public static final org.apache.avro.Schema SCHEMA$ = new org.apache.avro.Schema.Parser().parse("{\"type\":\"record\",\"name\":\"DeleteSchedule\",\"namespace\":\"com.sephora.dataplatform.avro\",\"fields\":[{\"name\":\"return_reference_number\",\"type\":[\"null\",{\"type\":\"string\",\"avro.java.string\":\"String\"}],\"default\":null},{\"name\":\"start_date\",\"type\":\"long\",\"doc\":\"start_date field\"},{\"name\":\"transactions_summary\",\"type\":{\"type\":\"array\",\"items\":{\"type\":\"record\",\"name\":\"CustomerTransactionsSummary\",\"fields\":[{\"name\":\"return_surrogate_key\",\"type\":{\"type\":\"string\",\"avro.java.string\":\"String\"}},{\"name\":\"return_reference_number\",\"type\":[\"null\",{\"type\":\"string\",\"avro.java.string\":\"String\"}],\"default\":null},{\"name\":\"usa_id\",\"type\":[\"null\",\"long\"],\"doc\":\"bi_id\",\"default\":null},{\"name\":\"sephora_id\",\"type\":[\"null\",\"long\"],\"doc\":\"sephora_id field\",\"default\":null},{\"name\":\"online_atg_id\",\"type\":[\"null\",{\"type\":\"string\",\"avro.java.string\":\"String\"}],\"doc\":\"online_atg_id field\",\"default\":null},{\"name\":\"card_number\",\"type\":[\"null\",{\"type\":\"string\",\"avro.java.string\":\"String\"}],\"doc\":\"card_number token from order_tender_details_events table\",\"default\":null},{\"name\":\"return_auth_flag\",\"type\":[\"null\",{\"type\":\"string\",\"avro.java.string\":\"String\"}],\"doc\":\"return_auth_flag field\",\"default\":null},{\"name\":\"reason_text\",\"type\":[\"null\",{\"type\":\"string\",\"avro.java.string\":\"String\"}],\"doc\":\"the reason why the current return has such return_auth_flag\",\"default\":null},{\"name\":\"cust_sale_counter\",\"type\":\"int\",\"doc\":\"cust_sale_counter field\"},{\"name\":\"cust_return_counter\",\"type\":\"int\",\"doc\":\"cust_return_counter field\"},{\"name\":\"pct_sale_to_return\",\"type\":\"double\",\"doc\":\"pct_sale_to_return field\"},{\"name\":\"created_date\",\"type\":\"long\",\"doc\":\"created_date field\"},{\"name\":\"start_date\",\"type\":\"long\",\"doc\":\"start_date field\"},{\"name\":\"end_date\",\"type\":\"long\",\"doc\":\"end_date field\"},{\"name\":\"active_flag\",\"type\":{\"type\":\"string\",\"avro.java.string\":\"String\"},\"doc\":\"active_flag field A or I\",\"default\":\"A\"},{\"name\":\"record_update_flag\",\"type\":{\"type\":\"string\",\"avro.java.string\":\"String\"},\"doc\":\"record_update_flag field U or D\",\"default\":\"U\"}]},\"default\":[]},\"default\":[]}]}");
+  private static final long serialVersionUID = -6677972393574196758L;
+  public static final org.apache.avro.Schema SCHEMA$ = new org.apache.avro.Schema.Parser().parse("{\"type\":\"record\",\"name\":\"DeleteSchedule\",\"namespace\":\"com.sephora.dataplatform.avro\",\"fields\":[{\"name\":\"dp_reference_number\",\"type\":[\"null\",{\"type\":\"string\",\"avro.java.string\":\"String\"}],\"default\":null},{\"name\":\"expiration_date\",\"type\":[\"null\",\"long\"],\"doc\":\"keeps the date of the created_date, will be checked within transactionSummaryActualityPeriod\",\"default\":null},{\"name\":\"transactions_summary\",\"type\":{\"type\":\"array\",\"items\":{\"type\":\"record\",\"name\":\"CustomerTransactionsSummary\",\"fields\":[{\"name\":\"return_surrogate_key\",\"type\":{\"type\":\"string\",\"avro.java.string\":\"String\"}},{\"name\":\"return_reference_number\",\"type\":[\"null\",{\"type\":\"string\",\"avro.java.string\":\"String\"}],\"default\":null},{\"name\":\"dp_reference_number\",\"type\":[\"null\",{\"type\":\"string\",\"avro.java.string\":\"String\"}],\"doc\":\"reference number generated on DP side\",\"default\":null},{\"name\":\"group_id\",\"type\":[\"null\",{\"type\":\"string\",\"avro.java.string\":\"String\"}],\"default\":null},{\"name\":\"usa_id\",\"type\":[\"null\",\"long\"],\"doc\":\"bi_id\",\"default\":null},{\"name\":\"sephora_id\",\"type\":[\"null\",\"long\"],\"doc\":\"sephora_id field\",\"default\":null},{\"name\":\"online_atg_id\",\"type\":[\"null\",{\"type\":\"string\",\"avro.java.string\":\"String\"}],\"doc\":\"online_atg_id field\",\"default\":null},{\"name\":\"card_numbers\",\"type\":[\"null\",{\"type\":\"array\",\"items\":{\"type\":\"string\",\"avro.java.string\":\"String\"},\"default\":[]}],\"default\":null},{\"name\":\"return_auth_flag\",\"type\":[\"null\",{\"type\":\"string\",\"avro.java.string\":\"String\"}],\"doc\":\"return_auth_flag field\",\"default\":null},{\"name\":\"reason_text\",\"type\":[\"null\",{\"type\":\"string\",\"avro.java.string\":\"String\"}],\"doc\":\"the reason why the current return has such return_auth_flag\",\"default\":null},{\"name\":\"cust_sale_counter\",\"type\":\"int\",\"doc\":\"cust_sale_counter field\"},{\"name\":\"cust_return_counter\",\"type\":\"int\",\"doc\":\"cust_return_counter field\"},{\"name\":\"pct_sale_to_return\",\"type\":\"double\",\"doc\":\"pct_sale_to_return field\"},{\"name\":\"created_date\",\"type\":\"long\",\"doc\":\"created_date field\"},{\"name\":\"start_date\",\"type\":\"long\",\"doc\":\"start_date field\"},{\"name\":\"end_date\",\"type\":\"long\",\"doc\":\"end_date field\"},{\"name\":\"active_flag\",\"type\":{\"type\":\"string\",\"avro.java.string\":\"String\"},\"doc\":\"active_flag field A or I\",\"default\":\"A\"},{\"name\":\"record_update_flag\",\"type\":{\"type\":\"string\",\"avro.java.string\":\"String\"},\"doc\":\"record_update_flag field U or D\",\"default\":\"U\"}]},\"default\":[]},\"default\":[]}]}");
   public static org.apache.avro.Schema getClassSchema() { return SCHEMA$; }
 
   private static SpecificData MODEL$ = new SpecificData();
@@ -69,9 +69,9 @@ public class DeleteSchedule extends org.apache.avro.specific.SpecificRecordBase 
     return DECODER.decode(b);
   }
 
-  @Deprecated public String return_reference_number;
-  /** start_date field */
-  @Deprecated public long start_date;
+  @Deprecated public String dp_reference_number;
+  /** keeps the date of the created_date, will be checked within transactionSummaryActualityPeriod */
+  @Deprecated public Long expiration_date;
   @Deprecated public java.util.List<CustomerTransactionsSummary> transactions_summary;
 
   /**
@@ -83,13 +83,13 @@ public class DeleteSchedule extends org.apache.avro.specific.SpecificRecordBase 
 
   /**
    * All-args constructor.
-   * @param return_reference_number The new value for return_reference_number
-   * @param start_date start_date field
+   * @param dp_reference_number The new value for dp_reference_number
+   * @param expiration_date keeps the date of the created_date, will be checked within transactionSummaryActualityPeriod
    * @param transactions_summary The new value for transactions_summary
    */
-  public DeleteSchedule(String return_reference_number, Long start_date, java.util.List<CustomerTransactionsSummary> transactions_summary) {
-    this.return_reference_number = return_reference_number;
-    this.start_date = start_date;
+  public DeleteSchedule(String dp_reference_number, Long expiration_date, java.util.List<CustomerTransactionsSummary> transactions_summary) {
+    this.dp_reference_number = dp_reference_number;
+    this.expiration_date = expiration_date;
     this.transactions_summary = transactions_summary;
   }
 
@@ -98,8 +98,8 @@ public class DeleteSchedule extends org.apache.avro.specific.SpecificRecordBase 
   // Used by DatumWriter.  Applications should not call.
   public Object get(int field$) {
     switch (field$) {
-    case 0: return return_reference_number;
-    case 1: return start_date;
+    case 0: return dp_reference_number;
+    case 1: return expiration_date;
     case 2: return transactions_summary;
     default: throw new IndexOutOfBoundsException("Invalid index: " + field$);
     }
@@ -109,46 +109,46 @@ public class DeleteSchedule extends org.apache.avro.specific.SpecificRecordBase 
   @SuppressWarnings(value="unchecked")
   public void put(int field$, Object value$) {
     switch (field$) {
-    case 0: return_reference_number = value$ != null ? value$.toString() : null; break;
-    case 1: start_date = (Long)value$; break;
+    case 0: dp_reference_number = value$ != null ? value$.toString() : null; break;
+    case 1: expiration_date = (Long)value$; break;
     case 2: transactions_summary = (java.util.List<CustomerTransactionsSummary>)value$; break;
     default: throw new IndexOutOfBoundsException("Invalid index: " + field$);
     }
   }
 
   /**
-   * Gets the value of the 'return_reference_number' field.
-   * @return The value of the 'return_reference_number' field.
+   * Gets the value of the 'dp_reference_number' field.
+   * @return The value of the 'dp_reference_number' field.
    */
-  public String getReturnReferenceNumber() {
-    return return_reference_number;
+  public String getDpReferenceNumber() {
+    return dp_reference_number;
   }
 
 
   /**
-   * Sets the value of the 'return_reference_number' field.
+   * Sets the value of the 'dp_reference_number' field.
    * @param value the value to set.
    */
-  public void setReturnReferenceNumber(String value) {
-    this.return_reference_number = value;
+  public void setDpReferenceNumber(String value) {
+    this.dp_reference_number = value;
   }
 
   /**
-   * Gets the value of the 'start_date' field.
-   * @return start_date field
+   * Gets the value of the 'expiration_date' field.
+   * @return keeps the date of the created_date, will be checked within transactionSummaryActualityPeriod
    */
-  public long getStartDate() {
-    return start_date;
+  public Long getExpirationDate() {
+    return expiration_date;
   }
 
 
   /**
-   * Sets the value of the 'start_date' field.
-   * start_date field
+   * Sets the value of the 'expiration_date' field.
+   * keeps the date of the created_date, will be checked within transactionSummaryActualityPeriod
    * @param value the value to set.
    */
-  public void setStartDate(long value) {
-    this.start_date = value;
+  public void setExpirationDate(Long value) {
+    this.expiration_date = value;
   }
 
   /**
@@ -209,9 +209,9 @@ public class DeleteSchedule extends org.apache.avro.specific.SpecificRecordBase 
   public static class Builder extends org.apache.avro.specific.SpecificRecordBuilderBase<DeleteSchedule>
     implements org.apache.avro.data.RecordBuilder<DeleteSchedule> {
 
-    private String return_reference_number;
-    /** start_date field */
-    private long start_date;
+    private String dp_reference_number;
+    /** keeps the date of the created_date, will be checked within transactionSummaryActualityPeriod */
+    private Long expiration_date;
     private java.util.List<CustomerTransactionsSummary> transactions_summary;
 
     /** Creates a new Builder */
@@ -225,12 +225,12 @@ public class DeleteSchedule extends org.apache.avro.specific.SpecificRecordBase 
      */
     private Builder(DeleteSchedule.Builder other) {
       super(other);
-      if (isValidValue(fields()[0], other.return_reference_number)) {
-        this.return_reference_number = data().deepCopy(fields()[0].schema(), other.return_reference_number);
+      if (isValidValue(fields()[0], other.dp_reference_number)) {
+        this.dp_reference_number = data().deepCopy(fields()[0].schema(), other.dp_reference_number);
         fieldSetFlags()[0] = other.fieldSetFlags()[0];
       }
-      if (isValidValue(fields()[1], other.start_date)) {
-        this.start_date = data().deepCopy(fields()[1].schema(), other.start_date);
+      if (isValidValue(fields()[1], other.expiration_date)) {
+        this.expiration_date = data().deepCopy(fields()[1].schema(), other.expiration_date);
         fieldSetFlags()[1] = other.fieldSetFlags()[1];
       }
       if (isValidValue(fields()[2], other.transactions_summary)) {
@@ -245,12 +245,12 @@ public class DeleteSchedule extends org.apache.avro.specific.SpecificRecordBase 
      */
     private Builder(DeleteSchedule other) {
       super(SCHEMA$);
-      if (isValidValue(fields()[0], other.return_reference_number)) {
-        this.return_reference_number = data().deepCopy(fields()[0].schema(), other.return_reference_number);
+      if (isValidValue(fields()[0], other.dp_reference_number)) {
+        this.dp_reference_number = data().deepCopy(fields()[0].schema(), other.dp_reference_number);
         fieldSetFlags()[0] = true;
       }
-      if (isValidValue(fields()[1], other.start_date)) {
-        this.start_date = data().deepCopy(fields()[1].schema(), other.start_date);
+      if (isValidValue(fields()[1], other.expiration_date)) {
+        this.expiration_date = data().deepCopy(fields()[1].schema(), other.expiration_date);
         fieldSetFlags()[1] = true;
       }
       if (isValidValue(fields()[2], other.transactions_summary)) {
@@ -260,84 +260,85 @@ public class DeleteSchedule extends org.apache.avro.specific.SpecificRecordBase 
     }
 
     /**
-      * Gets the value of the 'return_reference_number' field.
+      * Gets the value of the 'dp_reference_number' field.
       * @return The value.
       */
-    public String getReturnReferenceNumber() {
-      return return_reference_number;
+    public String getDpReferenceNumber() {
+      return dp_reference_number;
     }
 
 
     /**
-      * Sets the value of the 'return_reference_number' field.
-      * @param value The value of 'return_reference_number'.
+      * Sets the value of the 'dp_reference_number' field.
+      * @param value The value of 'dp_reference_number'.
       * @return This builder.
       */
-    public DeleteSchedule.Builder setReturnReferenceNumber(String value) {
+    public DeleteSchedule.Builder setDpReferenceNumber(String value) {
       validate(fields()[0], value);
-      this.return_reference_number = value;
+      this.dp_reference_number = value;
       fieldSetFlags()[0] = true;
       return this;
     }
 
     /**
-      * Checks whether the 'return_reference_number' field has been set.
-      * @return True if the 'return_reference_number' field has been set, false otherwise.
+      * Checks whether the 'dp_reference_number' field has been set.
+      * @return True if the 'dp_reference_number' field has been set, false otherwise.
       */
-    public boolean hasReturnReferenceNumber() {
+    public boolean hasDpReferenceNumber() {
       return fieldSetFlags()[0];
     }
 
 
     /**
-      * Clears the value of the 'return_reference_number' field.
+      * Clears the value of the 'dp_reference_number' field.
       * @return This builder.
       */
-    public DeleteSchedule.Builder clearReturnReferenceNumber() {
-      return_reference_number = null;
+    public DeleteSchedule.Builder clearDpReferenceNumber() {
+      dp_reference_number = null;
       fieldSetFlags()[0] = false;
       return this;
     }
 
     /**
-      * Gets the value of the 'start_date' field.
-      * start_date field
+      * Gets the value of the 'expiration_date' field.
+      * keeps the date of the created_date, will be checked within transactionSummaryActualityPeriod
       * @return The value.
       */
-    public long getStartDate() {
-      return start_date;
+    public Long getExpirationDate() {
+      return expiration_date;
     }
 
 
     /**
-      * Sets the value of the 'start_date' field.
-      * start_date field
-      * @param value The value of 'start_date'.
+      * Sets the value of the 'expiration_date' field.
+      * keeps the date of the created_date, will be checked within transactionSummaryActualityPeriod
+      * @param value The value of 'expiration_date'.
       * @return This builder.
       */
-    public DeleteSchedule.Builder setStartDate(long value) {
+    public DeleteSchedule.Builder setExpirationDate(Long value) {
       validate(fields()[1], value);
-      this.start_date = value;
+      this.expiration_date = value;
       fieldSetFlags()[1] = true;
       return this;
     }
 
     /**
-      * Checks whether the 'start_date' field has been set.
-      * start_date field
-      * @return True if the 'start_date' field has been set, false otherwise.
+      * Checks whether the 'expiration_date' field has been set.
+      * keeps the date of the created_date, will be checked within transactionSummaryActualityPeriod
+      * @return True if the 'expiration_date' field has been set, false otherwise.
       */
-    public boolean hasStartDate() {
+    public boolean hasExpirationDate() {
       return fieldSetFlags()[1];
     }
 
 
     /**
-      * Clears the value of the 'start_date' field.
-      * start_date field
+      * Clears the value of the 'expiration_date' field.
+      * keeps the date of the created_date, will be checked within transactionSummaryActualityPeriod
       * @return This builder.
       */
-    public DeleteSchedule.Builder clearStartDate() {
+    public DeleteSchedule.Builder clearExpirationDate() {
+      expiration_date = null;
       fieldSetFlags()[1] = false;
       return this;
     }
@@ -387,8 +388,8 @@ public class DeleteSchedule extends org.apache.avro.specific.SpecificRecordBase 
     public DeleteSchedule build() {
       try {
         DeleteSchedule record = new DeleteSchedule();
-        record.return_reference_number = fieldSetFlags()[0] ? this.return_reference_number : (String) defaultValue(fields()[0]);
-        record.start_date = fieldSetFlags()[1] ? this.start_date : (Long) defaultValue(fields()[1]);
+        record.dp_reference_number = fieldSetFlags()[0] ? this.dp_reference_number : (String) defaultValue(fields()[0]);
+        record.expiration_date = fieldSetFlags()[1] ? this.expiration_date : (Long) defaultValue(fields()[1]);
         record.transactions_summary = fieldSetFlags()[2] ? this.transactions_summary : (java.util.List<CustomerTransactionsSummary>) defaultValue(fields()[2]);
         return record;
       } catch (org.apache.avro.AvroMissingFieldException e) {
@@ -422,15 +423,21 @@ public class DeleteSchedule extends org.apache.avro.specific.SpecificRecordBase 
   @Override public void customEncode(org.apache.avro.io.Encoder out)
     throws java.io.IOException
   {
-    if (this.return_reference_number == null) {
+    if (this.dp_reference_number == null) {
       out.writeIndex(0);
       out.writeNull();
     } else {
       out.writeIndex(1);
-      out.writeString(this.return_reference_number);
+      out.writeString(this.dp_reference_number);
     }
 
-    out.writeLong(this.start_date);
+    if (this.expiration_date == null) {
+      out.writeIndex(0);
+      out.writeNull();
+    } else {
+      out.writeIndex(1);
+      out.writeLong(this.expiration_date);
+    }
 
     long size0 = this.transactions_summary.size();
     out.writeArrayStart();
@@ -454,12 +461,17 @@ public class DeleteSchedule extends org.apache.avro.specific.SpecificRecordBase 
     if (fieldOrder == null) {
       if (in.readIndex() != 1) {
         in.readNull();
-        this.return_reference_number = null;
+        this.dp_reference_number = null;
       } else {
-        this.return_reference_number = in.readString();
+        this.dp_reference_number = in.readString();
       }
 
-      this.start_date = in.readLong();
+      if (in.readIndex() != 1) {
+        in.readNull();
+        this.expiration_date = null;
+      } else {
+        this.expiration_date = in.readLong();
+      }
 
       long size0 = in.readArrayStart();
       java.util.List<CustomerTransactionsSummary> a0 = this.transactions_summary;
@@ -485,14 +497,19 @@ public class DeleteSchedule extends org.apache.avro.specific.SpecificRecordBase 
         case 0:
           if (in.readIndex() != 1) {
             in.readNull();
-            this.return_reference_number = null;
+            this.dp_reference_number = null;
           } else {
-            this.return_reference_number = in.readString();
+            this.dp_reference_number = in.readString();
           }
           break;
 
         case 1:
-          this.start_date = in.readLong();
+          if (in.readIndex() != 1) {
+            in.readNull();
+            this.expiration_date = null;
+          } else {
+            this.expiration_date = in.readLong();
+          }
           break;
 
         case 2:

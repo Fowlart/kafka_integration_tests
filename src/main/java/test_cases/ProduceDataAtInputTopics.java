@@ -51,7 +51,6 @@ public class ProduceDataAtInputTopics {
                 .setCardNumber("333")
                 .setTransactionType(transType)
                 .setOrderSubmitDate(date)
-                .setOrderSubmitDatetimeLocal(date)
                 .build();
     }
 

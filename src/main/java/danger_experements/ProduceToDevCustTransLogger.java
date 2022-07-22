@@ -41,7 +41,6 @@ public class ProduceToDevCustTransLogger {
                 .setCardNumber("333")
                 .setTransactionType(transType)
                 .setOrderSubmitDate(date)
-                .setOrderSubmitDatetimeLocal(date)
                 .build();
     }
 
@@ -72,7 +71,6 @@ public class ProduceToDevCustTransLogger {
 
         CustomerTransactions customerTransactions = CustomerTransactions
                 .newBuilder()
-                .setCardNumber("2234")
                 .setActiveFlag("A")
                 .setCreatedDate(new Date().getTime())
                 .setStartDate(new Date().getTime())
@@ -88,7 +86,6 @@ public class ProduceToDevCustTransLogger {
                 .setReturnReferenceNumber("2323242424")
                 .setReturnSurrogateKey("2323242424")
                 .setOrders(orderHeaderTenderList)
-                .setRules(Lists.newArrayList())
                 .setUsaId(666L)
                 .build();
 
