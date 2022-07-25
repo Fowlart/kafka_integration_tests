@@ -26,7 +26,7 @@ public class TestStitcherConsumeMsg {
         while (true) {
             ConsumerRecords<String, GenericData.Record> consumerRecords = consumer.poll(Duration.ofMillis(1000));
             for (ConsumerRecord<String, GenericData.Record> cr : consumerRecords) {
-                logger.info(()->cr.value().toString());
+                logger.info(()->"KEY: "+cr.key() + " VALUE: " + cr.value().toString());
             }
             //  consumer.commitSync();
         }

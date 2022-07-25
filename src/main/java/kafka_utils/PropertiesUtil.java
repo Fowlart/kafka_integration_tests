@@ -54,16 +54,16 @@ public class PropertiesUtil {
         return props;
     }
 
-    public static Properties getPropertiesForProducerOnQaEnv() {
-        return getCommonPropertiesForProducers(QA_KAFKA_PROPS_PATH);
+    public static <T> Properties getPropertiesForProducerOnQaEnv(Class<T> tClass) {
+        return getCommonPropertiesForProducers(QA_KAFKA_PROPS_PATH,tClass);
     }
 
 
-    public static Properties getPropertiesForProducerOnDevEnv() {
-        return getCommonPropertiesForProducers(DEV_KAFKA_PROPS_PATH);
+    public static <T> Properties getPropertiesForProducerOnDevEnv(Class<T> tClass) {
+        return getCommonPropertiesForProducers(DEV_KAFKA_PROPS_PATH,tClass);
     }
 
-    private static Properties getCommonPropertiesForProducers(String devKafkaPropsPath) {
+    private static <T> Properties getCommonPropertiesForProducers(String devKafkaPropsPath, Class<T> tClass) {
         final Properties propsFromFile = getPropertiesFromFile(devKafkaPropsPath);
         final Properties props = new Properties();
         props.put(ProducerConfig.BOOTSTRAP_SERVERS_CONFIG, propsFromFile.getProperty("kafka.server"));
@@ -72,7 +72,7 @@ public class PropertiesUtil {
         props.put("sasl.mechanism", "PLAIN");
         props.put(ProducerConfig.ACKS_CONFIG, "all");
         props.put(ProducerConfig.RETRIES_CONFIG, 1);
-        props.put(ProducerConfig.KEY_SERIALIZER_CLASS_CONFIG, LongSerializer.class); // Todo
+        props.put(ProducerConfig.KEY_SERIALIZER_CLASS_CONFIG, tClass); // Todo
         props.put(ProducerConfig.VALUE_SERIALIZER_CLASS_CONFIG, KafkaAvroSerializer.class);
         props.put(AbstractKafkaSchemaSerDeConfig.SCHEMA_REGISTRY_URL_CONFIG, propsFromFile.getProperty("schema-registry.server"));
         props.put(AbstractKafkaSchemaSerDeConfig.AUTO_REGISTER_SCHEMAS, false);
