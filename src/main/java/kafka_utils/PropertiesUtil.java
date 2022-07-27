@@ -32,12 +32,12 @@ public class PropertiesUtil {
         return propsFromFile;
     }
 
-    public static Properties getPropertiesForLocalProducer() {
+    public static <T> Properties getPropertiesForLocalProducer(Class<T> keySerializer) {
         Properties propsFromFile = getPropertiesFromFile(LOCAL_KAFKA_PROPS_PATH);
         final Properties props = new Properties();
         props.put(ProducerConfig.BOOTSTRAP_SERVERS_CONFIG, propsFromFile.getProperty("kafka.server"));
         props.put(AbstractKafkaSchemaSerDeConfig.SCHEMA_REGISTRY_URL_CONFIG, propsFromFile.getProperty("schema-registry.server"));
-        props.put(ProducerConfig.KEY_SERIALIZER_CLASS_CONFIG, StringSerializer.class);
+        props.put(ProducerConfig.KEY_SERIALIZER_CLASS_CONFIG, keySerializer);
         props.put(ProducerConfig.VALUE_SERIALIZER_CLASS_CONFIG, KafkaAvroSerializer.class);
         return props;
     }

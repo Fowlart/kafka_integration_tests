@@ -9,6 +9,7 @@ import org.apache.commons.compress.utils.Lists;
 import org.apache.kafka.clients.consumer.ConsumerRecord;
 import org.apache.kafka.clients.consumer.ConsumerRecords;
 import org.apache.kafka.clients.consumer.KafkaConsumer;
+import org.apache.kafka.common.serialization.StringSerializer;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.Test;
@@ -31,15 +32,15 @@ public class ProduceDataAtInputTopics {
     private static final long usaId = new Date().getTime();
 
     private static final MyKafkaProducer<String, OrderHeaderConsolidated> orderHeaderConsolidatedMyKafkaProducer =
-            new MyKafkaProducer<>(PropertiesUtil.getPropertiesForLocalProducer());
+            new MyKafkaProducer<>(PropertiesUtil.getPropertiesForLocalProducer(StringSerializer.class));
 
     private static final MyKafkaProducer<String, OrderTenderDetailsEvents> orderTenderDetailsEventsMyKafkaProducer =
-            new MyKafkaProducer<>(PropertiesUtil.getPropertiesForLocalProducer());
+            new MyKafkaProducer<>(PropertiesUtil.getPropertiesForLocalProducer(StringSerializer.class));
     private static final Logger logger = LoggerFactory.getLogger(ProduceDataAtInputTopics.class);
     KafkaConsumer<String, org.apache.avro.generic.GenericData.Record> consumer =
             new KafkaConsumer<>(PropertiesUtil.getPropertiesForLocalConsumer("DataPlatformCreditCardDPPreScreen"));
     private final MyKafkaProducer<String, Rule> ruleProducer =
-            new MyKafkaProducer<>(PropertiesUtil.getPropertiesForLocalProducer());
+            new MyKafkaProducer<>(PropertiesUtil.getPropertiesForLocalProducer(StringSerializer.class));
 
     private OrderTenderDetailsEvents getTender(String orderNumber,
                                                String date,

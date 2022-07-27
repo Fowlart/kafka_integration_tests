@@ -14,7 +14,7 @@ import java.util.Date;
 public class TestStitcherSendMsg {
 
     private static final MyKafkaProducer<Long, OrderHeaderTender> producerA =
-            new MyKafkaProducer<>(PropertiesUtil.getPropertiesForProducerOnQaEnv(LongSerializer.class));
+            new MyKafkaProducer<>(PropertiesUtil.getPropertiesForLocalProducer(LongSerializer.class));
 
     private static final MyKafkaProducer<String, OrderHeaderTender> producerB =
             new MyKafkaProducer<>(PropertiesUtil.getPropertiesForProducerOnQaEnv(StringSerializer.class));
@@ -60,20 +60,33 @@ public class TestStitcherSendMsg {
         String date = getCurrentTimeStamp("yyyy-MM-dd");
         String dateTime = getCurrentTimeStamp("yyyy-MM-dd HH:mm:ss");
 
-        OrderHeaderConsolidated order = getOrder(   1L, "1234", date, dateTime, "S");
-        OrderTenderDetailsEvents tender = getTender("CC667", "1234", date, "S");
+        OrderHeaderConsolidated orderA = getOrder(   111L, "1234", date, dateTime, "S");
+        OrderTenderDetailsEvents tenderA = getTender("CC1", "1234", date, "S");
 
-        OrderHeaderTender orderHeaderTender = OrderHeaderTender
+        OrderHeaderConsolidated orderB = getOrder(   null, "1234", date, dateTime, "S");
+        OrderTenderDetailsEvents tenderB = getTender("CC30", "1234", date, "S");
+
+        OrderHeaderTender orderHeaderTenderA = OrderHeaderTender
                 .newBuilder()
-                .setOrderHeader(order)
-                .setOrderTender(tender)
+                .setOrderHeader(orderA)
+                .setOrderTender(tenderA)
                 .build();
 
-        System.out.println("to UsaIdOrderHeaderTender: "+orderHeaderTender);
-        producerA.produceRecord(1L, orderHeaderTender, "Sephora.DataPlatform.ReturnAuth.UsaIdOrderHeaderTender", 1);
+        OrderHeaderTender orderHeaderTenderB = OrderHeaderTender
+                .newBuilder()
+                .setOrderHeader(orderB)
+                .setOrderTender(tenderB)
+                .build();
 
-       // order.setUsaId(null);
-       // System.out.println("to CardNumberOrderHeaderTender: "+orderHeaderTender);
-       // producerB.produceRecord("CC667", orderHeaderTender, "Sephora.DataPlatform.ReturnAuth.CardNumberOrderHeaderTender", 1);
+
+        for (long i = 1; i<=100;i++) {
+            orderHeaderTenderA.getOrderHeader().setUsaId(i);
+            orderHeaderTenderA.getOrderTender().setCardNumber("CC"+i);
+            System.out.println("to UsaIdOrderHeaderTender: "+orderHeaderTenderA);
+            producerA.produceRecord(i, orderHeaderTenderA, "Sephora.DataPlatform.ReturnAuth.UsaIdOrderHeaderTender", 1);
+        }
+
+        // System.out.println("to UsaIdOrderHeaderTender: "+orderHeaderTenderB);
+        // producerB.produceRecord("CC30", orderHeaderTenderB, "Sephora.DataPlatform.ReturnAuth.CardNumberOrderHeaderTender", 1);
     }
 }
