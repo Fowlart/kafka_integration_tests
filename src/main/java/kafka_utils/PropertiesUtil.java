@@ -54,16 +54,28 @@ public class PropertiesUtil {
         return props;
     }
 
-    public static <T> Properties getPropertiesForProducerOnQaEnv(Class<T> tClass) {
-        return getCommonPropertiesForProducers(QA_KAFKA_PROPS_PATH,tClass);
+    public static <T> Properties getPropertiesForProducerOnQaEnv(Class<T> tClass, String schemaId) {
+        return getCommonPropertiesForProducers(QA_KAFKA_PROPS_PATH,tClass,schemaId);
+    }
+
+    public static Properties getPropertiesForProducerOnDevEnvForStringKeyAndValueWithoutSchema(){
+        Properties result = getCommonPropertiesForProducers(DEV_KAFKA_PROPS_PATH,String.class,"null");
+        result.put(ProducerConfig.VALUE_SERIALIZER_CLASS_CONFIG, StringSerializer.class);
+        result.put(ProducerConfig.KEY_SERIALIZER_CLASS_CONFIG, StringSerializer.class);
+        return result;
     }
 
 
-    public static <T> Properties getPropertiesForProducerOnDevEnv(Class<T> tClass) {
-        return getCommonPropertiesForProducers(DEV_KAFKA_PROPS_PATH,tClass);
+    public static <T> Properties getPropertiesForProducerOnDevEnv
+            (Class<T> tClass,
+             String schemaId) {
+        return getCommonPropertiesForProducers(DEV_KAFKA_PROPS_PATH,tClass,schemaId);
     }
 
-    private static <T> Properties getCommonPropertiesForProducers(String devKafkaPropsPath, Class<T> tClass) {
+    private static <T> Properties getCommonPropertiesForProducers(String devKafkaPropsPath,
+                                                                  Class<T> tClass,
+                                                                  String schemaId) {
+
         final Properties propsFromFile = getPropertiesFromFile(devKafkaPropsPath);
         final Properties props = new Properties();
         props.put(ProducerConfig.BOOTSTRAP_SERVERS_CONFIG, propsFromFile.getProperty("kafka.server"));
@@ -72,11 +84,11 @@ public class PropertiesUtil {
         props.put("sasl.mechanism", "PLAIN");
         props.put(ProducerConfig.ACKS_CONFIG, "all");
         props.put(ProducerConfig.RETRIES_CONFIG, 1);
-        props.put(ProducerConfig.KEY_SERIALIZER_CLASS_CONFIG, tClass); // Todo
+        props.put(ProducerConfig.KEY_SERIALIZER_CLASS_CONFIG, tClass);
         props.put(ProducerConfig.VALUE_SERIALIZER_CLASS_CONFIG, KafkaAvroSerializer.class);
         props.put(AbstractKafkaSchemaSerDeConfig.SCHEMA_REGISTRY_URL_CONFIG, propsFromFile.getProperty("schema-registry.server"));
         props.put(AbstractKafkaSchemaSerDeConfig.AUTO_REGISTER_SCHEMAS, false);
-        props.put(AbstractKafkaSchemaSerDeConfig.USE_SCHEMA_ID, "100336"); // Todo
+        props.put(AbstractKafkaSchemaSerDeConfig.USE_SCHEMA_ID, schemaId);
         props.put(AbstractKafkaSchemaSerDeConfig.BASIC_AUTH_CREDENTIALS_SOURCE, "USER_INFO");
         props.put(AbstractKafkaSchemaSerDeConfig.USER_INFO_CONFIG, propsFromFile.getProperty("basic.auth.user.info"));
         return props;
@@ -103,7 +115,7 @@ public class PropertiesUtil {
         props.put("sasl.mechanism", "PLAIN");
         props.put("group.id", groupId);
         props.put(ConsumerConfig.KEY_DESERIALIZER_CLASS_CONFIG, StringDeserializer.class);
-        props.put(ConsumerConfig.VALUE_DESERIALIZER_CLASS_CONFIG, KafkaAvroDeserializer.class);
+        props.put(ConsumerConfig.VALUE_DESERIALIZER_CLASS_CONFIG, StringDeserializer.class); //todo: refactor
         props.put(ConsumerConfig.AUTO_OFFSET_RESET_CONFIG, "earliest");
         props.put(AbstractKafkaSchemaSerDeConfig.SCHEMA_REGISTRY_URL_CONFIG, propsFromFile.getProperty("schema-registry.server"));
         props.put(AbstractKafkaSchemaSerDeConfig.BASIC_AUTH_CREDENTIALS_SOURCE, "USER_INFO");

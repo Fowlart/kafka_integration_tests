@@ -9,28 +9,28 @@ import org.apache.kafka.common.serialization.LongSerializer;
 public class ReservationSendMessage {
 
     private static final MyKafkaProducer<Long, ReservationAuditAvro> producer = new MyKafkaProducer<>(PropertiesUtil
-            .getPropertiesForProducerOnQaEnv(LongSerializer.class));
+            .getPropertiesForProducerOnQaEnv(LongSerializer.class,"100336"));
 
 
     public static void main(String[] args) {
 
         ReservationAvro reservationAvro = ReservationAvro.newBuilder()
-                .setReservationId("666")
+                .setReservationId("99999")
                 .setChannelId("web")
-                .setWorld("Makeup, Fragrance")
+                .setWorld("Makeup,Fragrance")
                 .build();
 
         ReservationAuditAvro reservationAuditAvro = ReservationAuditAvro
                 .newBuilder()
                 .setReservation(reservationAvro)
                 .setStatus("COMPLETED")
-                .setUpdateTimestamp("2022-09-27T18:01:43")
-                .setCreatedTimeStamp("2022-09-27T17:01:43")
+                .setUpdateTimestamp("2022-09-30T18:00:00")
+                .setCreatedTimeStamp("2022-09-30T18:00:00")
                 .build();
 
         System.out.println(reservationAuditAvro.toString());
 
-        for (long i = 1; i <= 1; i++) producer.produceRecord(i, reservationAuditAvro, "Stores.StoreDigital.Reservations.Auditing", 1);
+         for (long i = 1; i <= 1; i++) producer.produceRecord(i, reservationAuditAvro, "Stores.StoreDigital.Reservations.Auditing", 1);
 
     }
 }

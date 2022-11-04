@@ -11,21 +11,21 @@ import org.junit.platform.commons.logging.LoggerFactory;
 import java.time.Duration;
 import java.util.Collections;
 
-public class ReadReservationTopic {
+public class ReadAsnAudit {
 
-    private static final Logger logger = LoggerFactory.getLogger(ReadReservationTopic.class);
+    private static final Logger logger = LoggerFactory.getLogger(ReadAsnAudit.class);
 
     public static void main(String[] args) {
 
         KafkaConsumer<String, String> consumer =
                 new KafkaConsumer<>(
                         PropertiesUtil
-                        .getPropertiesForDevConsumer
-                                ("Stores.StoreDigital.Reservations.Detail.Auditing.DataPlatform.DEV",
-                                        "100241"));
+                                .getPropertiesForDevConsumer
+                                        ("SupplyChain.WMS.asnAuditBIFeed.GRP.DEV",
+                                                "100352"));
 
 
-        consumer.subscribe(Collections.singleton("Stores.StoreDigital.Reservations.Auditing"));
+        consumer.subscribe(Collections.singleton("SupplyChain.WMS.asnAuditBIFeed"));
 
         //poll for data
         while (true) {
@@ -35,4 +35,5 @@ public class ReadReservationTopic {
             }
         }
     }
+
 }

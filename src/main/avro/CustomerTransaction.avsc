@@ -1,0 +1,53 @@
+{
+  "type": "record",
+  "name": "CustomerTransactions",
+  "namespace": "com.sephora.dataplatform.avro",
+  "fields": [
+    {
+      "name": "usa_id",
+      "type": [
+        "null",
+        "long"
+      ],
+      "doc": "bi_id",
+      "default": null
+    },
+    {
+      "name": "card_numbers",
+      "type": [
+        "null",
+        {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "avro.java.string": "String"
+          },
+          "default": []
+        }
+      ],
+      "default": null
+    },
+    {
+      "name": "reason_text",
+      "type": [
+        "null",
+        {
+          "type": "string",
+          "avro.java.string": "String"
+        }
+      ],
+      "doc": "the reason why the current return has such return_auth_flag",
+      "default": null
+    },
+    {
+      "name": "cust_sale_counter",
+      "type": "int",
+      "doc": "cust_sale_counter field"
+    },
+    {
+      "name": "created_date",
+      "type": "long",
+      "doc": "created_date field"
+    }
+  ]
+}

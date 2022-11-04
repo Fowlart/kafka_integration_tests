@@ -16,9 +16,6 @@ public class TestStitcherSendMsg {
     private static final MyKafkaProducer<Long, OrderHeaderTender> producerA =
             new MyKafkaProducer<>(PropertiesUtil.getPropertiesForLocalProducer(LongSerializer.class));
 
-    private static final MyKafkaProducer<String, OrderHeaderTender> producerB =
-            new MyKafkaProducer<>(PropertiesUtil.getPropertiesForProducerOnQaEnv(StringSerializer.class));
-
     private static OrderHeaderConsolidated getOrder(Long usaId, String orderNumber, String date, String dateTime, String transType) {
         return OrderHeaderConsolidated
                 .newBuilder()

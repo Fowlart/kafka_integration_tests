@@ -10,10 +10,11 @@ import org.apache.avro.message.BinaryMessageEncoder;
 import org.apache.avro.message.SchemaStore;
 import org.apache.avro.specific.SpecificData;
 
+@SuppressWarnings("all")
 @org.apache.avro.specific.AvroGenerated
 public class CustomerTransactions extends org.apache.avro.specific.SpecificRecordBase implements org.apache.avro.specific.SpecificRecord {
-  private static final long serialVersionUID = 823710836673568622L;
-  public static final org.apache.avro.Schema SCHEMA$ = new org.apache.avro.Schema.Parser().parse("{\"type\":\"record\",\"name\":\"CustomerTransactions\",\"namespace\":\"com.sephora.dataplatform.avro\",\"fields\":[{\"name\":\"return_surrogate_key\",\"type\":{\"type\":\"string\",\"avro.java.string\":\"String\"}},{\"name\":\"dp_reference_number\",\"type\":[\"null\",{\"type\":\"string\",\"avro.java.string\":\"String\"}],\"default\":null},{\"name\":\"return_reference_number\",\"type\":[\"null\",{\"type\":\"string\",\"avro.java.string\":\"String\"}],\"default\":null},{\"name\":\"usa_id\",\"type\":[\"null\",\"long\"],\"doc\":\"bi_id\",\"default\":null},{\"name\":\"sephora_id\",\"type\":[\"null\",\"long\"],\"doc\":\"sephora_id field\",\"default\":null},{\"name\":\"online_atg_id\",\"type\":[\"null\",{\"type\":\"string\",\"avro.java.string\":\"String\"}],\"doc\":\"online_atg_id field\",\"default\":null},{\"name\":\"card_numbers\",\"type\":[\"null\",{\"type\":\"array\",\"items\":{\"type\":\"string\",\"avro.java.string\":\"String\"},\"default\":[]}],\"default\":null},{\"name\":\"return_auth_flag\",\"type\":[\"null\",{\"type\":\"string\",\"avro.java.string\":\"String\"}],\"doc\":\"return_auth_flag field\",\"default\":null},{\"name\":\"reason_text\",\"type\":[\"null\",{\"type\":\"string\",\"avro.java.string\":\"String\"}],\"doc\":\"the reason why the current return has such return_auth_flag\",\"default\":null},{\"name\":\"cust_sale_counter\",\"type\":\"int\",\"doc\":\"cust_sale_counter field\"},{\"name\":\"cust_return_counter\",\"type\":\"int\",\"doc\":\"cust_return_counter field\"},{\"name\":\"pct_sale_to_return\",\"type\":\"double\",\"doc\":\"pct_sale_to_return field\"},{\"name\":\"created_date\",\"type\":\"long\",\"doc\":\"created_date field\"},{\"name\":\"start_date\",\"type\":\"long\",\"doc\":\"start_date field\"},{\"name\":\"end_date\",\"type\":\"long\",\"doc\":\"end_date field\"},{\"name\":\"active_flag\",\"type\":{\"type\":\"string\",\"avro.java.string\":\"String\"},\"doc\":\"active_flag field A or I\",\"default\":\"A\"},{\"name\":\"orders\",\"type\":{\"type\":\"array\",\"items\":{\"type\":\"record\",\"name\":\"OrderHeaderTender\",\"fields\":[{\"name\":\"order_header\",\"type\":[{\"type\":\"record\",\"name\":\"OrderHeaderConsolidated\",\"fields\":[{\"name\":\"org_id\",\"type\":[\"null\",{\"type\":\"string\",\"avro.java.string\":\"String\"}],\"default\":null},{\"name\":\"atg_id\",\"type\":[\"null\",{\"type\":\"string\",\"avro.java.string\":\"String\"}],\"default\":null},{\"name\":\"usa_id\",\"type\":[\"null\",\"long\"]},{\"name\":\"sephora_id\",\"type\":[\"null\",\"long\"]},{\"name\":\"order_number\",\"type\":[\"null\",{\"type\":\"string\",\"avro.java.string\":\"String\"}]},{\"name\":\"original_order_number\",\"type\":[\"null\",{\"type\":\"string\",\"avro.java.string\":\"String\"}],\"default\":null},{\"name\":\"channel_type\",\"type\":[\"null\",{\"type\":\"string\",\"avro.java.string\":\"String\"}],\"default\":null},{\"name\":\"transaction_type\",\"type\":[\"null\",{\"type\":\"string\",\"avro.java.string\":\"String\"}],\"default\":null},{\"name\":\"store_number\",\"type\":[\"null\",{\"type\":\"string\",\"avro.java.string\":\"String\"}],\"default\":null},{\"name\":\"cancel_flag\",\"type\":[\"null\",{\"type\":\"string\",\"avro.java.string\":\"String\"}],\"default\":null},{\"name\":\"order_cancel_flag\",\"type\":[\"null\",{\"type\":\"string\",\"avro.java.string\":\"String\"}],\"default\":null},{\"name\":\"order_cancel_datetime\",\"type\":[\"null\",{\"type\":\"string\",\"avro.java.string\":\"String\"}],\"default\":null},{\"name\":\"order_submit_datetime\",\"type\":[\"null\",{\"type\":\"string\",\"avro.java.string\":\"String\"}],\"default\":null},{\"name\":\"order_submit_datetime_local\",\"type\":[\"null\",{\"type\":\"string\",\"avro.java.string\":\"String\"}],\"default\":null},{\"name\":\"order_submit_date\",\"type\":[\"null\",{\"type\":\"string\",\"avro.java.string\":\"String\"}],\"default\":null},{\"name\":\"is_declined\",\"type\":\"boolean\",\"default\":false},{\"name\":\"return_auth_flag\",\"type\":[\"null\",{\"type\":\"string\",\"avro.java.string\":\"String\"}],\"default\":null},{\"name\":\"return_reason_text\",\"type\":[\"null\",{\"type\":\"string\",\"avro.java.string\":\"String\"}],\"default\":null},{\"name\":\"return_reference_number\",\"type\":[\"null\",{\"type\":\"string\",\"avro.java.string\":\"String\"}],\"default\":null},{\"name\":\"return_group_id\",\"type\":[\"null\",{\"type\":\"string\",\"avro.java.string\":\"String\"}],\"default\":null},{\"name\":\"return_sale_counter\",\"type\":[\"null\",\"int\"],\"default\":null},{\"name\":\"return_return_counter\",\"type\":[\"null\",\"int\"],\"default\":null}]},\"null\"]},{\"name\":\"order_tender\",\"type\":[{\"type\":\"record\",\"name\":\"OrderTenderDetailsEvents\",\"fields\":[{\"name\":\"order_number\",\"type\":[\"null\",{\"type\":\"string\",\"avro.java.string\":\"String\"}],\"default\":null},{\"name\":\"card_number\",\"type\":[\"null\",{\"type\":\"string\",\"avro.java.string\":\"String\"}],\"default\":null},{\"name\":\"channel_type\",\"type\":[\"null\",{\"type\":\"string\",\"avro.java.string\":\"String\"}],\"default\":null},{\"name\":\"transaction_type\",\"type\":[\"null\",{\"type\":\"string\",\"avro.java.string\":\"String\"}],\"default\":null},{\"name\":\"order_submit_date\",\"type\":[\"null\",{\"type\":\"string\",\"avro.java.string\":\"String\"}],\"default\":null}]},\"null\"]},{\"name\":\"batch_id\",\"type\":[\"null\",{\"type\":\"string\",\"avro.java.string\":\"String\"}],\"default\":null},{\"name\":\"group_id\",\"type\":[\"null\",{\"type\":\"string\",\"avro.java.string\":\"String\"}],\"default\":null},{\"name\":\"number_of_accounts\",\"type\":\"int\",\"default\":1},{\"name\":\"is_primary\",\"type\":\"boolean\",\"doc\":\"means that transaction is directly related to the aggregation key\",\"default\":false},{\"name\":\"is_merge\",\"type\":\"boolean\",\"doc\":\"means that need to change key to usa_id from order_header (only if is_primary = true)\",\"default\":false}]},\"default\":[]},\"default\":[]},{\"name\":\"record_update_flag\",\"type\":{\"type\":\"string\",\"avro.java.string\":\"String\"},\"doc\":\"record_update_flag field U or D\",\"default\":\"U\"},{\"name\":\"number_of_accounts\",\"type\":\"int\",\"default\":1},{\"name\":\"group_id\",\"type\":[\"null\",{\"type\":\"string\",\"avro.java.string\":\"String\"}],\"default\":null},{\"name\":\"is_primary\",\"type\":\"boolean\",\"default\":false}]}");
+  private static final long serialVersionUID = 8803873402410211721L;
+  public static final org.apache.avro.Schema SCHEMA$ = new org.apache.avro.Schema.Parser().parse("{\"type\":\"record\",\"name\":\"CustomerTransactions\",\"namespace\":\"com.sephora.dataplatform.avro\",\"fields\":[{\"name\":\"usa_id\",\"type\":[\"null\",\"long\"],\"doc\":\"bi_id\",\"default\":null},{\"name\":\"card_numbers\",\"type\":[\"null\",{\"type\":\"array\",\"items\":{\"type\":\"string\",\"avro.java.string\":\"String\"},\"default\":[]}],\"default\":null},{\"name\":\"reason_text\",\"type\":[\"null\",{\"type\":\"string\",\"avro.java.string\":\"String\"}],\"doc\":\"the reason why the current return has such return_auth_flag\",\"default\":null},{\"name\":\"cust_sale_counter\",\"type\":\"int\",\"doc\":\"cust_sale_counter field\"},{\"name\":\"created_date\",\"type\":\"long\",\"doc\":\"created_date field\"}]}");
   public static org.apache.avro.Schema getClassSchema() { return SCHEMA$; }
 
   private static SpecificData MODEL$ = new SpecificData();
@@ -25,16 +26,7 @@ public class CustomerTransactions extends org.apache.avro.specific.SpecificRecor
       new BinaryMessageDecoder<CustomerTransactions>(MODEL$, SCHEMA$);
 
   /**
-   * Return the BinaryMessageEncoder instance used by this class.
-   * @return the message encoder used by this class
-   */
-  public static BinaryMessageEncoder<CustomerTransactions> getEncoder() {
-    return ENCODER;
-  }
-
-  /**
    * Return the BinaryMessageDecoder instance used by this class.
-   * @return the message decoder used by this class
    */
   public static BinaryMessageDecoder<CustomerTransactions> getDecoder() {
     return DECODER;
@@ -43,66 +35,31 @@ public class CustomerTransactions extends org.apache.avro.specific.SpecificRecor
   /**
    * Create a new BinaryMessageDecoder instance for this class that uses the specified {@link SchemaStore}.
    * @param resolver a {@link SchemaStore} used to find schemas by fingerprint
-   * @return a BinaryMessageDecoder instance for this class backed by the given SchemaStore
    */
   public static BinaryMessageDecoder<CustomerTransactions> createDecoder(SchemaStore resolver) {
     return new BinaryMessageDecoder<CustomerTransactions>(MODEL$, SCHEMA$, resolver);
   }
 
-  /**
-   * Serializes this CustomerTransactions to a ByteBuffer.
-   * @return a buffer holding the serialized data for this instance
-   * @throws java.io.IOException if this instance could not be serialized
-   */
+  /** Serializes this CustomerTransactions to a ByteBuffer. */
   public java.nio.ByteBuffer toByteBuffer() throws java.io.IOException {
     return ENCODER.encode(this);
   }
 
-  /**
-   * Deserializes a CustomerTransactions from a ByteBuffer.
-   * @param b a byte buffer holding serialized data for an instance of this class
-   * @return a CustomerTransactions instance decoded from the given buffer
-   * @throws java.io.IOException if the given bytes could not be deserialized into an instance of this class
-   */
+  /** Deserializes a CustomerTransactions from a ByteBuffer. */
   public static CustomerTransactions fromByteBuffer(
       java.nio.ByteBuffer b) throws java.io.IOException {
     return DECODER.decode(b);
   }
 
-  @Deprecated public String return_surrogate_key;
-  @Deprecated public String dp_reference_number;
-  @Deprecated public String return_reference_number;
   /** bi_id */
   @Deprecated public Long usa_id;
-  /** sephora_id field */
-  @Deprecated public Long sephora_id;
-  /** online_atg_id field */
-  @Deprecated public String online_atg_id;
-  @Deprecated public java.util.List<String> card_numbers;
-  /** return_auth_flag field */
-  @Deprecated public String return_auth_flag;
+  @Deprecated public java.util.List<CharSequence> card_numbers;
   /** the reason why the current return has such return_auth_flag */
-  @Deprecated public String reason_text;
+  @Deprecated public CharSequence reason_text;
   /** cust_sale_counter field */
   @Deprecated public int cust_sale_counter;
-  /** cust_return_counter field */
-  @Deprecated public int cust_return_counter;
-  /** pct_sale_to_return field */
-  @Deprecated public double pct_sale_to_return;
   /** created_date field */
   @Deprecated public long created_date;
-  /** start_date field */
-  @Deprecated public long start_date;
-  /** end_date field */
-  @Deprecated public long end_date;
-  /** active_flag field A or I */
-  @Deprecated public String active_flag;
-  @Deprecated public java.util.List<OrderHeaderTender> orders;
-  /** record_update_flag field U or D */
-  @Deprecated public String record_update_flag;
-  @Deprecated public int number_of_accounts;
-  @Deprecated public String group_id;
-  @Deprecated public boolean is_primary;
 
   /**
    * Default constructor.  Note that this does not initialize fields
@@ -113,79 +70,30 @@ public class CustomerTransactions extends org.apache.avro.specific.SpecificRecor
 
   /**
    * All-args constructor.
-   * @param return_surrogate_key The new value for return_surrogate_key
-   * @param dp_reference_number The new value for dp_reference_number
-   * @param return_reference_number The new value for return_reference_number
    * @param usa_id bi_id
-   * @param sephora_id sephora_id field
-   * @param online_atg_id online_atg_id field
    * @param card_numbers The new value for card_numbers
-   * @param return_auth_flag return_auth_flag field
    * @param reason_text the reason why the current return has such return_auth_flag
    * @param cust_sale_counter cust_sale_counter field
-   * @param cust_return_counter cust_return_counter field
-   * @param pct_sale_to_return pct_sale_to_return field
    * @param created_date created_date field
-   * @param start_date start_date field
-   * @param end_date end_date field
-   * @param active_flag active_flag field A or I
-   * @param orders The new value for orders
-   * @param record_update_flag record_update_flag field U or D
-   * @param number_of_accounts The new value for number_of_accounts
-   * @param group_id The new value for group_id
-   * @param is_primary The new value for is_primary
    */
-  public CustomerTransactions(String return_surrogate_key, String dp_reference_number, String return_reference_number, Long usa_id, Long sephora_id, String online_atg_id, java.util.List<String> card_numbers, String return_auth_flag, String reason_text, Integer cust_sale_counter, Integer cust_return_counter, Double pct_sale_to_return, Long created_date, Long start_date, Long end_date, String active_flag, java.util.List<OrderHeaderTender> orders, String record_update_flag, Integer number_of_accounts, String group_id, Boolean is_primary) {
-    this.return_surrogate_key = return_surrogate_key;
-    this.dp_reference_number = dp_reference_number;
-    this.return_reference_number = return_reference_number;
+  public CustomerTransactions(Long usa_id, java.util.List<CharSequence> card_numbers, CharSequence reason_text, Integer cust_sale_counter, Long created_date) {
     this.usa_id = usa_id;
-    this.sephora_id = sephora_id;
-    this.online_atg_id = online_atg_id;
     this.card_numbers = card_numbers;
-    this.return_auth_flag = return_auth_flag;
     this.reason_text = reason_text;
     this.cust_sale_counter = cust_sale_counter;
-    this.cust_return_counter = cust_return_counter;
-    this.pct_sale_to_return = pct_sale_to_return;
     this.created_date = created_date;
-    this.start_date = start_date;
-    this.end_date = end_date;
-    this.active_flag = active_flag;
-    this.orders = orders;
-    this.record_update_flag = record_update_flag;
-    this.number_of_accounts = number_of_accounts;
-    this.group_id = group_id;
-    this.is_primary = is_primary;
   }
 
-  public SpecificData getSpecificData() { return MODEL$; }
   public org.apache.avro.Schema getSchema() { return SCHEMA$; }
   // Used by DatumWriter.  Applications should not call.
   public Object get(int field$) {
     switch (field$) {
-    case 0: return return_surrogate_key;
-    case 1: return dp_reference_number;
-    case 2: return return_reference_number;
-    case 3: return usa_id;
-    case 4: return sephora_id;
-    case 5: return online_atg_id;
-    case 6: return card_numbers;
-    case 7: return return_auth_flag;
-    case 8: return reason_text;
-    case 9: return cust_sale_counter;
-    case 10: return cust_return_counter;
-    case 11: return pct_sale_to_return;
-    case 12: return created_date;
-    case 13: return start_date;
-    case 14: return end_date;
-    case 15: return active_flag;
-    case 16: return orders;
-    case 17: return record_update_flag;
-    case 18: return number_of_accounts;
-    case 19: return group_id;
-    case 20: return is_primary;
-    default: throw new IndexOutOfBoundsException("Invalid index: " + field$);
+    case 0: return usa_id;
+    case 1: return card_numbers;
+    case 2: return reason_text;
+    case 3: return cust_sale_counter;
+    case 4: return created_date;
+    default: throw new org.apache.avro.AvroRuntimeException("Bad index");
     }
   }
 
@@ -193,80 +101,13 @@ public class CustomerTransactions extends org.apache.avro.specific.SpecificRecor
   @SuppressWarnings(value="unchecked")
   public void put(int field$, Object value$) {
     switch (field$) {
-    case 0: return_surrogate_key = value$ != null ? value$.toString() : null; break;
-    case 1: dp_reference_number = value$ != null ? value$.toString() : null; break;
-    case 2: return_reference_number = value$ != null ? value$.toString() : null; break;
-    case 3: usa_id = (Long)value$; break;
-    case 4: sephora_id = (Long)value$; break;
-    case 5: online_atg_id = value$ != null ? value$.toString() : null; break;
-    case 6: card_numbers = (java.util.List<String>)value$; break;
-    case 7: return_auth_flag = value$ != null ? value$.toString() : null; break;
-    case 8: reason_text = value$ != null ? value$.toString() : null; break;
-    case 9: cust_sale_counter = (Integer)value$; break;
-    case 10: cust_return_counter = (Integer)value$; break;
-    case 11: pct_sale_to_return = (Double)value$; break;
-    case 12: created_date = (Long)value$; break;
-    case 13: start_date = (Long)value$; break;
-    case 14: end_date = (Long)value$; break;
-    case 15: active_flag = value$ != null ? value$.toString() : null; break;
-    case 16: orders = (java.util.List<OrderHeaderTender>)value$; break;
-    case 17: record_update_flag = value$ != null ? value$.toString() : null; break;
-    case 18: number_of_accounts = (Integer)value$; break;
-    case 19: group_id = value$ != null ? value$.toString() : null; break;
-    case 20: is_primary = (Boolean)value$; break;
-    default: throw new IndexOutOfBoundsException("Invalid index: " + field$);
+    case 0: usa_id = (Long)value$; break;
+    case 1: card_numbers = (java.util.List<CharSequence>)value$; break;
+    case 2: reason_text = (CharSequence)value$; break;
+    case 3: cust_sale_counter = (Integer)value$; break;
+    case 4: created_date = (Long)value$; break;
+    default: throw new org.apache.avro.AvroRuntimeException("Bad index");
     }
-  }
-
-  /**
-   * Gets the value of the 'return_surrogate_key' field.
-   * @return The value of the 'return_surrogate_key' field.
-   */
-  public String getReturnSurrogateKey() {
-    return return_surrogate_key;
-  }
-
-
-  /**
-   * Sets the value of the 'return_surrogate_key' field.
-   * @param value the value to set.
-   */
-  public void setReturnSurrogateKey(String value) {
-    this.return_surrogate_key = value;
-  }
-
-  /**
-   * Gets the value of the 'dp_reference_number' field.
-   * @return The value of the 'dp_reference_number' field.
-   */
-  public String getDpReferenceNumber() {
-    return dp_reference_number;
-  }
-
-
-  /**
-   * Sets the value of the 'dp_reference_number' field.
-   * @param value the value to set.
-   */
-  public void setDpReferenceNumber(String value) {
-    this.dp_reference_number = value;
-  }
-
-  /**
-   * Gets the value of the 'return_reference_number' field.
-   * @return The value of the 'return_reference_number' field.
-   */
-  public String getReturnReferenceNumber() {
-    return return_reference_number;
-  }
-
-
-  /**
-   * Sets the value of the 'return_reference_number' field.
-   * @param value the value to set.
-   */
-  public void setReturnReferenceNumber(String value) {
-    this.return_reference_number = value;
   }
 
   /**
@@ -276,7 +117,6 @@ public class CustomerTransactions extends org.apache.avro.specific.SpecificRecor
   public Long getUsaId() {
     return usa_id;
   }
-
 
   /**
    * Sets the value of the 'usa_id' field.
@@ -288,91 +128,35 @@ public class CustomerTransactions extends org.apache.avro.specific.SpecificRecor
   }
 
   /**
-   * Gets the value of the 'sephora_id' field.
-   * @return sephora_id field
-   */
-  public Long getSephoraId() {
-    return sephora_id;
-  }
-
-
-  /**
-   * Sets the value of the 'sephora_id' field.
-   * sephora_id field
-   * @param value the value to set.
-   */
-  public void setSephoraId(Long value) {
-    this.sephora_id = value;
-  }
-
-  /**
-   * Gets the value of the 'online_atg_id' field.
-   * @return online_atg_id field
-   */
-  public String getOnlineAtgId() {
-    return online_atg_id;
-  }
-
-
-  /**
-   * Sets the value of the 'online_atg_id' field.
-   * online_atg_id field
-   * @param value the value to set.
-   */
-  public void setOnlineAtgId(String value) {
-    this.online_atg_id = value;
-  }
-
-  /**
    * Gets the value of the 'card_numbers' field.
    * @return The value of the 'card_numbers' field.
    */
-  public java.util.List<String> getCardNumbers() {
+  public java.util.List<CharSequence> getCardNumbers() {
     return card_numbers;
   }
-
 
   /**
    * Sets the value of the 'card_numbers' field.
    * @param value the value to set.
    */
-  public void setCardNumbers(java.util.List<String> value) {
+  public void setCardNumbers(java.util.List<CharSequence> value) {
     this.card_numbers = value;
-  }
-
-  /**
-   * Gets the value of the 'return_auth_flag' field.
-   * @return return_auth_flag field
-   */
-  public String getReturnAuthFlag() {
-    return return_auth_flag;
-  }
-
-
-  /**
-   * Sets the value of the 'return_auth_flag' field.
-   * return_auth_flag field
-   * @param value the value to set.
-   */
-  public void setReturnAuthFlag(String value) {
-    this.return_auth_flag = value;
   }
 
   /**
    * Gets the value of the 'reason_text' field.
    * @return the reason why the current return has such return_auth_flag
    */
-  public String getReasonText() {
+  public CharSequence getReasonText() {
     return reason_text;
   }
-
 
   /**
    * Sets the value of the 'reason_text' field.
    * the reason why the current return has such return_auth_flag
    * @param value the value to set.
    */
-  public void setReasonText(String value) {
+  public void setReasonText(CharSequence value) {
     this.reason_text = value;
   }
 
@@ -380,212 +164,34 @@ public class CustomerTransactions extends org.apache.avro.specific.SpecificRecor
    * Gets the value of the 'cust_sale_counter' field.
    * @return cust_sale_counter field
    */
-  public int getCustSaleCounter() {
+  public Integer getCustSaleCounter() {
     return cust_sale_counter;
   }
-
 
   /**
    * Sets the value of the 'cust_sale_counter' field.
    * cust_sale_counter field
    * @param value the value to set.
    */
-  public void setCustSaleCounter(int value) {
+  public void setCustSaleCounter(Integer value) {
     this.cust_sale_counter = value;
-  }
-
-  /**
-   * Gets the value of the 'cust_return_counter' field.
-   * @return cust_return_counter field
-   */
-  public int getCustReturnCounter() {
-    return cust_return_counter;
-  }
-
-
-  /**
-   * Sets the value of the 'cust_return_counter' field.
-   * cust_return_counter field
-   * @param value the value to set.
-   */
-  public void setCustReturnCounter(int value) {
-    this.cust_return_counter = value;
-  }
-
-  /**
-   * Gets the value of the 'pct_sale_to_return' field.
-   * @return pct_sale_to_return field
-   */
-  public double getPctSaleToReturn() {
-    return pct_sale_to_return;
-  }
-
-
-  /**
-   * Sets the value of the 'pct_sale_to_return' field.
-   * pct_sale_to_return field
-   * @param value the value to set.
-   */
-  public void setPctSaleToReturn(double value) {
-    this.pct_sale_to_return = value;
   }
 
   /**
    * Gets the value of the 'created_date' field.
    * @return created_date field
    */
-  public long getCreatedDate() {
+  public Long getCreatedDate() {
     return created_date;
   }
-
 
   /**
    * Sets the value of the 'created_date' field.
    * created_date field
    * @param value the value to set.
    */
-  public void setCreatedDate(long value) {
+  public void setCreatedDate(Long value) {
     this.created_date = value;
-  }
-
-  /**
-   * Gets the value of the 'start_date' field.
-   * @return start_date field
-   */
-  public long getStartDate() {
-    return start_date;
-  }
-
-
-  /**
-   * Sets the value of the 'start_date' field.
-   * start_date field
-   * @param value the value to set.
-   */
-  public void setStartDate(long value) {
-    this.start_date = value;
-  }
-
-  /**
-   * Gets the value of the 'end_date' field.
-   * @return end_date field
-   */
-  public long getEndDate() {
-    return end_date;
-  }
-
-
-  /**
-   * Sets the value of the 'end_date' field.
-   * end_date field
-   * @param value the value to set.
-   */
-  public void setEndDate(long value) {
-    this.end_date = value;
-  }
-
-  /**
-   * Gets the value of the 'active_flag' field.
-   * @return active_flag field A or I
-   */
-  public String getActiveFlag() {
-    return active_flag;
-  }
-
-
-  /**
-   * Sets the value of the 'active_flag' field.
-   * active_flag field A or I
-   * @param value the value to set.
-   */
-  public void setActiveFlag(String value) {
-    this.active_flag = value;
-  }
-
-  /**
-   * Gets the value of the 'orders' field.
-   * @return The value of the 'orders' field.
-   */
-  public java.util.List<OrderHeaderTender> getOrders() {
-    return orders;
-  }
-
-
-  /**
-   * Sets the value of the 'orders' field.
-   * @param value the value to set.
-   */
-  public void setOrders(java.util.List<OrderHeaderTender> value) {
-    this.orders = value;
-  }
-
-  /**
-   * Gets the value of the 'record_update_flag' field.
-   * @return record_update_flag field U or D
-   */
-  public String getRecordUpdateFlag() {
-    return record_update_flag;
-  }
-
-
-  /**
-   * Sets the value of the 'record_update_flag' field.
-   * record_update_flag field U or D
-   * @param value the value to set.
-   */
-  public void setRecordUpdateFlag(String value) {
-    this.record_update_flag = value;
-  }
-
-  /**
-   * Gets the value of the 'number_of_accounts' field.
-   * @return The value of the 'number_of_accounts' field.
-   */
-  public int getNumberOfAccounts() {
-    return number_of_accounts;
-  }
-
-
-  /**
-   * Sets the value of the 'number_of_accounts' field.
-   * @param value the value to set.
-   */
-  public void setNumberOfAccounts(int value) {
-    this.number_of_accounts = value;
-  }
-
-  /**
-   * Gets the value of the 'group_id' field.
-   * @return The value of the 'group_id' field.
-   */
-  public String getGroupId() {
-    return group_id;
-  }
-
-
-  /**
-   * Sets the value of the 'group_id' field.
-   * @param value the value to set.
-   */
-  public void setGroupId(String value) {
-    this.group_id = value;
-  }
-
-  /**
-   * Gets the value of the 'is_primary' field.
-   * @return The value of the 'is_primary' field.
-   */
-  public boolean getIsPrimary() {
-    return is_primary;
-  }
-
-
-  /**
-   * Sets the value of the 'is_primary' field.
-   * @param value the value to set.
-   */
-  public void setIsPrimary(boolean value) {
-    this.is_primary = value;
   }
 
   /**
@@ -602,11 +208,7 @@ public class CustomerTransactions extends org.apache.avro.specific.SpecificRecor
    * @return A new CustomerTransactions RecordBuilder
    */
   public static CustomerTransactions.Builder newBuilder(CustomerTransactions.Builder other) {
-    if (other == null) {
-      return new CustomerTransactions.Builder();
-    } else {
-      return new CustomerTransactions.Builder(other);
-    }
+    return new CustomerTransactions.Builder(other);
   }
 
   /**
@@ -615,54 +217,24 @@ public class CustomerTransactions extends org.apache.avro.specific.SpecificRecor
    * @return A new CustomerTransactions RecordBuilder
    */
   public static CustomerTransactions.Builder newBuilder(CustomerTransactions other) {
-    if (other == null) {
-      return new CustomerTransactions.Builder();
-    } else {
-      return new CustomerTransactions.Builder(other);
-    }
+    return new CustomerTransactions.Builder(other);
   }
 
   /**
    * RecordBuilder for CustomerTransactions instances.
    */
-  @org.apache.avro.specific.AvroGenerated
   public static class Builder extends org.apache.avro.specific.SpecificRecordBuilderBase<CustomerTransactions>
     implements org.apache.avro.data.RecordBuilder<CustomerTransactions> {
 
-    private String return_surrogate_key;
-    private String dp_reference_number;
-    private String return_reference_number;
     /** bi_id */
     private Long usa_id;
-    /** sephora_id field */
-    private Long sephora_id;
-    /** online_atg_id field */
-    private String online_atg_id;
-    private java.util.List<String> card_numbers;
-    /** return_auth_flag field */
-    private String return_auth_flag;
+    private java.util.List<CharSequence> card_numbers;
     /** the reason why the current return has such return_auth_flag */
-    private String reason_text;
+    private CharSequence reason_text;
     /** cust_sale_counter field */
     private int cust_sale_counter;
-    /** cust_return_counter field */
-    private int cust_return_counter;
-    /** pct_sale_to_return field */
-    private double pct_sale_to_return;
     /** created_date field */
     private long created_date;
-    /** start_date field */
-    private long start_date;
-    /** end_date field */
-    private long end_date;
-    /** active_flag field A or I */
-    private String active_flag;
-    private java.util.List<OrderHeaderTender> orders;
-    /** record_update_flag field U or D */
-    private String record_update_flag;
-    private int number_of_accounts;
-    private String group_id;
-    private boolean is_primary;
 
     /** Creates a new Builder */
     private Builder() {
@@ -675,89 +247,25 @@ public class CustomerTransactions extends org.apache.avro.specific.SpecificRecor
      */
     private Builder(CustomerTransactions.Builder other) {
       super(other);
-      if (isValidValue(fields()[0], other.return_surrogate_key)) {
-        this.return_surrogate_key = data().deepCopy(fields()[0].schema(), other.return_surrogate_key);
-        fieldSetFlags()[0] = other.fieldSetFlags()[0];
+      if (isValidValue(fields()[0], other.usa_id)) {
+        this.usa_id = data().deepCopy(fields()[0].schema(), other.usa_id);
+        fieldSetFlags()[0] = true;
       }
-      if (isValidValue(fields()[1], other.dp_reference_number)) {
-        this.dp_reference_number = data().deepCopy(fields()[1].schema(), other.dp_reference_number);
-        fieldSetFlags()[1] = other.fieldSetFlags()[1];
+      if (isValidValue(fields()[1], other.card_numbers)) {
+        this.card_numbers = data().deepCopy(fields()[1].schema(), other.card_numbers);
+        fieldSetFlags()[1] = true;
       }
-      if (isValidValue(fields()[2], other.return_reference_number)) {
-        this.return_reference_number = data().deepCopy(fields()[2].schema(), other.return_reference_number);
-        fieldSetFlags()[2] = other.fieldSetFlags()[2];
+      if (isValidValue(fields()[2], other.reason_text)) {
+        this.reason_text = data().deepCopy(fields()[2].schema(), other.reason_text);
+        fieldSetFlags()[2] = true;
       }
-      if (isValidValue(fields()[3], other.usa_id)) {
-        this.usa_id = data().deepCopy(fields()[3].schema(), other.usa_id);
-        fieldSetFlags()[3] = other.fieldSetFlags()[3];
+      if (isValidValue(fields()[3], other.cust_sale_counter)) {
+        this.cust_sale_counter = data().deepCopy(fields()[3].schema(), other.cust_sale_counter);
+        fieldSetFlags()[3] = true;
       }
-      if (isValidValue(fields()[4], other.sephora_id)) {
-        this.sephora_id = data().deepCopy(fields()[4].schema(), other.sephora_id);
-        fieldSetFlags()[4] = other.fieldSetFlags()[4];
-      }
-      if (isValidValue(fields()[5], other.online_atg_id)) {
-        this.online_atg_id = data().deepCopy(fields()[5].schema(), other.online_atg_id);
-        fieldSetFlags()[5] = other.fieldSetFlags()[5];
-      }
-      if (isValidValue(fields()[6], other.card_numbers)) {
-        this.card_numbers = data().deepCopy(fields()[6].schema(), other.card_numbers);
-        fieldSetFlags()[6] = other.fieldSetFlags()[6];
-      }
-      if (isValidValue(fields()[7], other.return_auth_flag)) {
-        this.return_auth_flag = data().deepCopy(fields()[7].schema(), other.return_auth_flag);
-        fieldSetFlags()[7] = other.fieldSetFlags()[7];
-      }
-      if (isValidValue(fields()[8], other.reason_text)) {
-        this.reason_text = data().deepCopy(fields()[8].schema(), other.reason_text);
-        fieldSetFlags()[8] = other.fieldSetFlags()[8];
-      }
-      if (isValidValue(fields()[9], other.cust_sale_counter)) {
-        this.cust_sale_counter = data().deepCopy(fields()[9].schema(), other.cust_sale_counter);
-        fieldSetFlags()[9] = other.fieldSetFlags()[9];
-      }
-      if (isValidValue(fields()[10], other.cust_return_counter)) {
-        this.cust_return_counter = data().deepCopy(fields()[10].schema(), other.cust_return_counter);
-        fieldSetFlags()[10] = other.fieldSetFlags()[10];
-      }
-      if (isValidValue(fields()[11], other.pct_sale_to_return)) {
-        this.pct_sale_to_return = data().deepCopy(fields()[11].schema(), other.pct_sale_to_return);
-        fieldSetFlags()[11] = other.fieldSetFlags()[11];
-      }
-      if (isValidValue(fields()[12], other.created_date)) {
-        this.created_date = data().deepCopy(fields()[12].schema(), other.created_date);
-        fieldSetFlags()[12] = other.fieldSetFlags()[12];
-      }
-      if (isValidValue(fields()[13], other.start_date)) {
-        this.start_date = data().deepCopy(fields()[13].schema(), other.start_date);
-        fieldSetFlags()[13] = other.fieldSetFlags()[13];
-      }
-      if (isValidValue(fields()[14], other.end_date)) {
-        this.end_date = data().deepCopy(fields()[14].schema(), other.end_date);
-        fieldSetFlags()[14] = other.fieldSetFlags()[14];
-      }
-      if (isValidValue(fields()[15], other.active_flag)) {
-        this.active_flag = data().deepCopy(fields()[15].schema(), other.active_flag);
-        fieldSetFlags()[15] = other.fieldSetFlags()[15];
-      }
-      if (isValidValue(fields()[16], other.orders)) {
-        this.orders = data().deepCopy(fields()[16].schema(), other.orders);
-        fieldSetFlags()[16] = other.fieldSetFlags()[16];
-      }
-      if (isValidValue(fields()[17], other.record_update_flag)) {
-        this.record_update_flag = data().deepCopy(fields()[17].schema(), other.record_update_flag);
-        fieldSetFlags()[17] = other.fieldSetFlags()[17];
-      }
-      if (isValidValue(fields()[18], other.number_of_accounts)) {
-        this.number_of_accounts = data().deepCopy(fields()[18].schema(), other.number_of_accounts);
-        fieldSetFlags()[18] = other.fieldSetFlags()[18];
-      }
-      if (isValidValue(fields()[19], other.group_id)) {
-        this.group_id = data().deepCopy(fields()[19].schema(), other.group_id);
-        fieldSetFlags()[19] = other.fieldSetFlags()[19];
-      }
-      if (isValidValue(fields()[20], other.is_primary)) {
-        this.is_primary = data().deepCopy(fields()[20].schema(), other.is_primary);
-        fieldSetFlags()[20] = other.fieldSetFlags()[20];
+      if (isValidValue(fields()[4], other.created_date)) {
+        this.created_date = data().deepCopy(fields()[4].schema(), other.created_date);
+        fieldSetFlags()[4] = true;
       }
     }
 
@@ -766,211 +274,27 @@ public class CustomerTransactions extends org.apache.avro.specific.SpecificRecor
      * @param other The existing instance to copy.
      */
     private Builder(CustomerTransactions other) {
-      super(SCHEMA$);
-      if (isValidValue(fields()[0], other.return_surrogate_key)) {
-        this.return_surrogate_key = data().deepCopy(fields()[0].schema(), other.return_surrogate_key);
+            super(SCHEMA$);
+      if (isValidValue(fields()[0], other.usa_id)) {
+        this.usa_id = data().deepCopy(fields()[0].schema(), other.usa_id);
         fieldSetFlags()[0] = true;
       }
-      if (isValidValue(fields()[1], other.dp_reference_number)) {
-        this.dp_reference_number = data().deepCopy(fields()[1].schema(), other.dp_reference_number);
+      if (isValidValue(fields()[1], other.card_numbers)) {
+        this.card_numbers = data().deepCopy(fields()[1].schema(), other.card_numbers);
         fieldSetFlags()[1] = true;
       }
-      if (isValidValue(fields()[2], other.return_reference_number)) {
-        this.return_reference_number = data().deepCopy(fields()[2].schema(), other.return_reference_number);
+      if (isValidValue(fields()[2], other.reason_text)) {
+        this.reason_text = data().deepCopy(fields()[2].schema(), other.reason_text);
         fieldSetFlags()[2] = true;
       }
-      if (isValidValue(fields()[3], other.usa_id)) {
-        this.usa_id = data().deepCopy(fields()[3].schema(), other.usa_id);
+      if (isValidValue(fields()[3], other.cust_sale_counter)) {
+        this.cust_sale_counter = data().deepCopy(fields()[3].schema(), other.cust_sale_counter);
         fieldSetFlags()[3] = true;
       }
-      if (isValidValue(fields()[4], other.sephora_id)) {
-        this.sephora_id = data().deepCopy(fields()[4].schema(), other.sephora_id);
+      if (isValidValue(fields()[4], other.created_date)) {
+        this.created_date = data().deepCopy(fields()[4].schema(), other.created_date);
         fieldSetFlags()[4] = true;
       }
-      if (isValidValue(fields()[5], other.online_atg_id)) {
-        this.online_atg_id = data().deepCopy(fields()[5].schema(), other.online_atg_id);
-        fieldSetFlags()[5] = true;
-      }
-      if (isValidValue(fields()[6], other.card_numbers)) {
-        this.card_numbers = data().deepCopy(fields()[6].schema(), other.card_numbers);
-        fieldSetFlags()[6] = true;
-      }
-      if (isValidValue(fields()[7], other.return_auth_flag)) {
-        this.return_auth_flag = data().deepCopy(fields()[7].schema(), other.return_auth_flag);
-        fieldSetFlags()[7] = true;
-      }
-      if (isValidValue(fields()[8], other.reason_text)) {
-        this.reason_text = data().deepCopy(fields()[8].schema(), other.reason_text);
-        fieldSetFlags()[8] = true;
-      }
-      if (isValidValue(fields()[9], other.cust_sale_counter)) {
-        this.cust_sale_counter = data().deepCopy(fields()[9].schema(), other.cust_sale_counter);
-        fieldSetFlags()[9] = true;
-      }
-      if (isValidValue(fields()[10], other.cust_return_counter)) {
-        this.cust_return_counter = data().deepCopy(fields()[10].schema(), other.cust_return_counter);
-        fieldSetFlags()[10] = true;
-      }
-      if (isValidValue(fields()[11], other.pct_sale_to_return)) {
-        this.pct_sale_to_return = data().deepCopy(fields()[11].schema(), other.pct_sale_to_return);
-        fieldSetFlags()[11] = true;
-      }
-      if (isValidValue(fields()[12], other.created_date)) {
-        this.created_date = data().deepCopy(fields()[12].schema(), other.created_date);
-        fieldSetFlags()[12] = true;
-      }
-      if (isValidValue(fields()[13], other.start_date)) {
-        this.start_date = data().deepCopy(fields()[13].schema(), other.start_date);
-        fieldSetFlags()[13] = true;
-      }
-      if (isValidValue(fields()[14], other.end_date)) {
-        this.end_date = data().deepCopy(fields()[14].schema(), other.end_date);
-        fieldSetFlags()[14] = true;
-      }
-      if (isValidValue(fields()[15], other.active_flag)) {
-        this.active_flag = data().deepCopy(fields()[15].schema(), other.active_flag);
-        fieldSetFlags()[15] = true;
-      }
-      if (isValidValue(fields()[16], other.orders)) {
-        this.orders = data().deepCopy(fields()[16].schema(), other.orders);
-        fieldSetFlags()[16] = true;
-      }
-      if (isValidValue(fields()[17], other.record_update_flag)) {
-        this.record_update_flag = data().deepCopy(fields()[17].schema(), other.record_update_flag);
-        fieldSetFlags()[17] = true;
-      }
-      if (isValidValue(fields()[18], other.number_of_accounts)) {
-        this.number_of_accounts = data().deepCopy(fields()[18].schema(), other.number_of_accounts);
-        fieldSetFlags()[18] = true;
-      }
-      if (isValidValue(fields()[19], other.group_id)) {
-        this.group_id = data().deepCopy(fields()[19].schema(), other.group_id);
-        fieldSetFlags()[19] = true;
-      }
-      if (isValidValue(fields()[20], other.is_primary)) {
-        this.is_primary = data().deepCopy(fields()[20].schema(), other.is_primary);
-        fieldSetFlags()[20] = true;
-      }
-    }
-
-    /**
-      * Gets the value of the 'return_surrogate_key' field.
-      * @return The value.
-      */
-    public String getReturnSurrogateKey() {
-      return return_surrogate_key;
-    }
-
-
-    /**
-      * Sets the value of the 'return_surrogate_key' field.
-      * @param value The value of 'return_surrogate_key'.
-      * @return This builder.
-      */
-    public CustomerTransactions.Builder setReturnSurrogateKey(String value) {
-      validate(fields()[0], value);
-      this.return_surrogate_key = value;
-      fieldSetFlags()[0] = true;
-      return this;
-    }
-
-    /**
-      * Checks whether the 'return_surrogate_key' field has been set.
-      * @return True if the 'return_surrogate_key' field has been set, false otherwise.
-      */
-    public boolean hasReturnSurrogateKey() {
-      return fieldSetFlags()[0];
-    }
-
-
-    /**
-      * Clears the value of the 'return_surrogate_key' field.
-      * @return This builder.
-      */
-    public CustomerTransactions.Builder clearReturnSurrogateKey() {
-      return_surrogate_key = null;
-      fieldSetFlags()[0] = false;
-      return this;
-    }
-
-    /**
-      * Gets the value of the 'dp_reference_number' field.
-      * @return The value.
-      */
-    public String getDpReferenceNumber() {
-      return dp_reference_number;
-    }
-
-
-    /**
-      * Sets the value of the 'dp_reference_number' field.
-      * @param value The value of 'dp_reference_number'.
-      * @return This builder.
-      */
-    public CustomerTransactions.Builder setDpReferenceNumber(String value) {
-      validate(fields()[1], value);
-      this.dp_reference_number = value;
-      fieldSetFlags()[1] = true;
-      return this;
-    }
-
-    /**
-      * Checks whether the 'dp_reference_number' field has been set.
-      * @return True if the 'dp_reference_number' field has been set, false otherwise.
-      */
-    public boolean hasDpReferenceNumber() {
-      return fieldSetFlags()[1];
-    }
-
-
-    /**
-      * Clears the value of the 'dp_reference_number' field.
-      * @return This builder.
-      */
-    public CustomerTransactions.Builder clearDpReferenceNumber() {
-      dp_reference_number = null;
-      fieldSetFlags()[1] = false;
-      return this;
-    }
-
-    /**
-      * Gets the value of the 'return_reference_number' field.
-      * @return The value.
-      */
-    public String getReturnReferenceNumber() {
-      return return_reference_number;
-    }
-
-
-    /**
-      * Sets the value of the 'return_reference_number' field.
-      * @param value The value of 'return_reference_number'.
-      * @return This builder.
-      */
-    public CustomerTransactions.Builder setReturnReferenceNumber(String value) {
-      validate(fields()[2], value);
-      this.return_reference_number = value;
-      fieldSetFlags()[2] = true;
-      return this;
-    }
-
-    /**
-      * Checks whether the 'return_reference_number' field has been set.
-      * @return True if the 'return_reference_number' field has been set, false otherwise.
-      */
-    public boolean hasReturnReferenceNumber() {
-      return fieldSetFlags()[2];
-    }
-
-
-    /**
-      * Clears the value of the 'return_reference_number' field.
-      * @return This builder.
-      */
-    public CustomerTransactions.Builder clearReturnReferenceNumber() {
-      return_reference_number = null;
-      fieldSetFlags()[2] = false;
-      return this;
     }
 
     /**
@@ -982,7 +306,6 @@ public class CustomerTransactions extends org.apache.avro.specific.SpecificRecor
       return usa_id;
     }
 
-
     /**
       * Sets the value of the 'usa_id' field.
       * bi_id
@@ -990,9 +313,9 @@ public class CustomerTransactions extends org.apache.avro.specific.SpecificRecor
       * @return This builder.
       */
     public CustomerTransactions.Builder setUsaId(Long value) {
-      validate(fields()[3], value);
+      validate(fields()[0], value);
       this.usa_id = value;
-      fieldSetFlags()[3] = true;
+      fieldSetFlags()[0] = true;
       return this;
     }
 
@@ -1002,7 +325,7 @@ public class CustomerTransactions extends org.apache.avro.specific.SpecificRecor
       * @return True if the 'usa_id' field has been set, false otherwise.
       */
     public boolean hasUsaId() {
-      return fieldSetFlags()[3];
+      return fieldSetFlags()[0];
     }
 
 
@@ -1013,95 +336,7 @@ public class CustomerTransactions extends org.apache.avro.specific.SpecificRecor
       */
     public CustomerTransactions.Builder clearUsaId() {
       usa_id = null;
-      fieldSetFlags()[3] = false;
-      return this;
-    }
-
-    /**
-      * Gets the value of the 'sephora_id' field.
-      * sephora_id field
-      * @return The value.
-      */
-    public Long getSephoraId() {
-      return sephora_id;
-    }
-
-
-    /**
-      * Sets the value of the 'sephora_id' field.
-      * sephora_id field
-      * @param value The value of 'sephora_id'.
-      * @return This builder.
-      */
-    public CustomerTransactions.Builder setSephoraId(Long value) {
-      validate(fields()[4], value);
-      this.sephora_id = value;
-      fieldSetFlags()[4] = true;
-      return this;
-    }
-
-    /**
-      * Checks whether the 'sephora_id' field has been set.
-      * sephora_id field
-      * @return True if the 'sephora_id' field has been set, false otherwise.
-      */
-    public boolean hasSephoraId() {
-      return fieldSetFlags()[4];
-    }
-
-
-    /**
-      * Clears the value of the 'sephora_id' field.
-      * sephora_id field
-      * @return This builder.
-      */
-    public CustomerTransactions.Builder clearSephoraId() {
-      sephora_id = null;
-      fieldSetFlags()[4] = false;
-      return this;
-    }
-
-    /**
-      * Gets the value of the 'online_atg_id' field.
-      * online_atg_id field
-      * @return The value.
-      */
-    public String getOnlineAtgId() {
-      return online_atg_id;
-    }
-
-
-    /**
-      * Sets the value of the 'online_atg_id' field.
-      * online_atg_id field
-      * @param value The value of 'online_atg_id'.
-      * @return This builder.
-      */
-    public CustomerTransactions.Builder setOnlineAtgId(String value) {
-      validate(fields()[5], value);
-      this.online_atg_id = value;
-      fieldSetFlags()[5] = true;
-      return this;
-    }
-
-    /**
-      * Checks whether the 'online_atg_id' field has been set.
-      * online_atg_id field
-      * @return True if the 'online_atg_id' field has been set, false otherwise.
-      */
-    public boolean hasOnlineAtgId() {
-      return fieldSetFlags()[5];
-    }
-
-
-    /**
-      * Clears the value of the 'online_atg_id' field.
-      * online_atg_id field
-      * @return This builder.
-      */
-    public CustomerTransactions.Builder clearOnlineAtgId() {
-      online_atg_id = null;
-      fieldSetFlags()[5] = false;
+      fieldSetFlags()[0] = false;
       return this;
     }
 
@@ -1109,20 +344,19 @@ public class CustomerTransactions extends org.apache.avro.specific.SpecificRecor
       * Gets the value of the 'card_numbers' field.
       * @return The value.
       */
-    public java.util.List<String> getCardNumbers() {
+    public java.util.List<CharSequence> getCardNumbers() {
       return card_numbers;
     }
-
 
     /**
       * Sets the value of the 'card_numbers' field.
       * @param value The value of 'card_numbers'.
       * @return This builder.
       */
-    public CustomerTransactions.Builder setCardNumbers(java.util.List<String> value) {
-      validate(fields()[6], value);
+    public CustomerTransactions.Builder setCardNumbers(java.util.List<CharSequence> value) {
+      validate(fields()[1], value);
       this.card_numbers = value;
-      fieldSetFlags()[6] = true;
+      fieldSetFlags()[1] = true;
       return this;
     }
 
@@ -1131,7 +365,7 @@ public class CustomerTransactions extends org.apache.avro.specific.SpecificRecor
       * @return True if the 'card_numbers' field has been set, false otherwise.
       */
     public boolean hasCardNumbers() {
-      return fieldSetFlags()[6];
+      return fieldSetFlags()[1];
     }
 
 
@@ -1141,51 +375,7 @@ public class CustomerTransactions extends org.apache.avro.specific.SpecificRecor
       */
     public CustomerTransactions.Builder clearCardNumbers() {
       card_numbers = null;
-      fieldSetFlags()[6] = false;
-      return this;
-    }
-
-    /**
-      * Gets the value of the 'return_auth_flag' field.
-      * return_auth_flag field
-      * @return The value.
-      */
-    public String getReturnAuthFlag() {
-      return return_auth_flag;
-    }
-
-
-    /**
-      * Sets the value of the 'return_auth_flag' field.
-      * return_auth_flag field
-      * @param value The value of 'return_auth_flag'.
-      * @return This builder.
-      */
-    public CustomerTransactions.Builder setReturnAuthFlag(String value) {
-      validate(fields()[7], value);
-      this.return_auth_flag = value;
-      fieldSetFlags()[7] = true;
-      return this;
-    }
-
-    /**
-      * Checks whether the 'return_auth_flag' field has been set.
-      * return_auth_flag field
-      * @return True if the 'return_auth_flag' field has been set, false otherwise.
-      */
-    public boolean hasReturnAuthFlag() {
-      return fieldSetFlags()[7];
-    }
-
-
-    /**
-      * Clears the value of the 'return_auth_flag' field.
-      * return_auth_flag field
-      * @return This builder.
-      */
-    public CustomerTransactions.Builder clearReturnAuthFlag() {
-      return_auth_flag = null;
-      fieldSetFlags()[7] = false;
+      fieldSetFlags()[1] = false;
       return this;
     }
 
@@ -1194,10 +384,9 @@ public class CustomerTransactions extends org.apache.avro.specific.SpecificRecor
       * the reason why the current return has such return_auth_flag
       * @return The value.
       */
-    public String getReasonText() {
+    public CharSequence getReasonText() {
       return reason_text;
     }
-
 
     /**
       * Sets the value of the 'reason_text' field.
@@ -1205,10 +394,10 @@ public class CustomerTransactions extends org.apache.avro.specific.SpecificRecor
       * @param value The value of 'reason_text'.
       * @return This builder.
       */
-    public CustomerTransactions.Builder setReasonText(String value) {
-      validate(fields()[8], value);
+    public CustomerTransactions.Builder setReasonText(CharSequence value) {
+      validate(fields()[2], value);
       this.reason_text = value;
-      fieldSetFlags()[8] = true;
+      fieldSetFlags()[2] = true;
       return this;
     }
 
@@ -1218,7 +407,7 @@ public class CustomerTransactions extends org.apache.avro.specific.SpecificRecor
       * @return True if the 'reason_text' field has been set, false otherwise.
       */
     public boolean hasReasonText() {
-      return fieldSetFlags()[8];
+      return fieldSetFlags()[2];
     }
 
 
@@ -1229,7 +418,7 @@ public class CustomerTransactions extends org.apache.avro.specific.SpecificRecor
       */
     public CustomerTransactions.Builder clearReasonText() {
       reason_text = null;
-      fieldSetFlags()[8] = false;
+      fieldSetFlags()[2] = false;
       return this;
     }
 
@@ -1238,10 +427,9 @@ public class CustomerTransactions extends org.apache.avro.specific.SpecificRecor
       * cust_sale_counter field
       * @return The value.
       */
-    public int getCustSaleCounter() {
+    public Integer getCustSaleCounter() {
       return cust_sale_counter;
     }
-
 
     /**
       * Sets the value of the 'cust_sale_counter' field.
@@ -1250,9 +438,9 @@ public class CustomerTransactions extends org.apache.avro.specific.SpecificRecor
       * @return This builder.
       */
     public CustomerTransactions.Builder setCustSaleCounter(int value) {
-      validate(fields()[9], value);
+      validate(fields()[3], value);
       this.cust_sale_counter = value;
-      fieldSetFlags()[9] = true;
+      fieldSetFlags()[3] = true;
       return this;
     }
 
@@ -1262,7 +450,7 @@ public class CustomerTransactions extends org.apache.avro.specific.SpecificRecor
       * @return True if the 'cust_sale_counter' field has been set, false otherwise.
       */
     public boolean hasCustSaleCounter() {
-      return fieldSetFlags()[9];
+      return fieldSetFlags()[3];
     }
 
 
@@ -1272,93 +460,7 @@ public class CustomerTransactions extends org.apache.avro.specific.SpecificRecor
       * @return This builder.
       */
     public CustomerTransactions.Builder clearCustSaleCounter() {
-      fieldSetFlags()[9] = false;
-      return this;
-    }
-
-    /**
-      * Gets the value of the 'cust_return_counter' field.
-      * cust_return_counter field
-      * @return The value.
-      */
-    public int getCustReturnCounter() {
-      return cust_return_counter;
-    }
-
-
-    /**
-      * Sets the value of the 'cust_return_counter' field.
-      * cust_return_counter field
-      * @param value The value of 'cust_return_counter'.
-      * @return This builder.
-      */
-    public CustomerTransactions.Builder setCustReturnCounter(int value) {
-      validate(fields()[10], value);
-      this.cust_return_counter = value;
-      fieldSetFlags()[10] = true;
-      return this;
-    }
-
-    /**
-      * Checks whether the 'cust_return_counter' field has been set.
-      * cust_return_counter field
-      * @return True if the 'cust_return_counter' field has been set, false otherwise.
-      */
-    public boolean hasCustReturnCounter() {
-      return fieldSetFlags()[10];
-    }
-
-
-    /**
-      * Clears the value of the 'cust_return_counter' field.
-      * cust_return_counter field
-      * @return This builder.
-      */
-    public CustomerTransactions.Builder clearCustReturnCounter() {
-      fieldSetFlags()[10] = false;
-      return this;
-    }
-
-    /**
-      * Gets the value of the 'pct_sale_to_return' field.
-      * pct_sale_to_return field
-      * @return The value.
-      */
-    public double getPctSaleToReturn() {
-      return pct_sale_to_return;
-    }
-
-
-    /**
-      * Sets the value of the 'pct_sale_to_return' field.
-      * pct_sale_to_return field
-      * @param value The value of 'pct_sale_to_return'.
-      * @return This builder.
-      */
-    public CustomerTransactions.Builder setPctSaleToReturn(double value) {
-      validate(fields()[11], value);
-      this.pct_sale_to_return = value;
-      fieldSetFlags()[11] = true;
-      return this;
-    }
-
-    /**
-      * Checks whether the 'pct_sale_to_return' field has been set.
-      * pct_sale_to_return field
-      * @return True if the 'pct_sale_to_return' field has been set, false otherwise.
-      */
-    public boolean hasPctSaleToReturn() {
-      return fieldSetFlags()[11];
-    }
-
-
-    /**
-      * Clears the value of the 'pct_sale_to_return' field.
-      * pct_sale_to_return field
-      * @return This builder.
-      */
-    public CustomerTransactions.Builder clearPctSaleToReturn() {
-      fieldSetFlags()[11] = false;
+      fieldSetFlags()[3] = false;
       return this;
     }
 
@@ -1367,10 +469,9 @@ public class CustomerTransactions extends org.apache.avro.specific.SpecificRecor
       * created_date field
       * @return The value.
       */
-    public long getCreatedDate() {
+    public Long getCreatedDate() {
       return created_date;
     }
-
 
     /**
       * Sets the value of the 'created_date' field.
@@ -1379,9 +480,9 @@ public class CustomerTransactions extends org.apache.avro.specific.SpecificRecor
       * @return This builder.
       */
     public CustomerTransactions.Builder setCreatedDate(long value) {
-      validate(fields()[12], value);
+      validate(fields()[4], value);
       this.created_date = value;
-      fieldSetFlags()[12] = true;
+      fieldSetFlags()[4] = true;
       return this;
     }
 
@@ -1391,7 +492,7 @@ public class CustomerTransactions extends org.apache.avro.specific.SpecificRecor
       * @return True if the 'created_date' field has been set, false otherwise.
       */
     public boolean hasCreatedDate() {
-      return fieldSetFlags()[12];
+      return fieldSetFlags()[4];
     }
 
 
@@ -1401,339 +502,7 @@ public class CustomerTransactions extends org.apache.avro.specific.SpecificRecor
       * @return This builder.
       */
     public CustomerTransactions.Builder clearCreatedDate() {
-      fieldSetFlags()[12] = false;
-      return this;
-    }
-
-    /**
-      * Gets the value of the 'start_date' field.
-      * start_date field
-      * @return The value.
-      */
-    public long getStartDate() {
-      return start_date;
-    }
-
-
-    /**
-      * Sets the value of the 'start_date' field.
-      * start_date field
-      * @param value The value of 'start_date'.
-      * @return This builder.
-      */
-    public CustomerTransactions.Builder setStartDate(long value) {
-      validate(fields()[13], value);
-      this.start_date = value;
-      fieldSetFlags()[13] = true;
-      return this;
-    }
-
-    /**
-      * Checks whether the 'start_date' field has been set.
-      * start_date field
-      * @return True if the 'start_date' field has been set, false otherwise.
-      */
-    public boolean hasStartDate() {
-      return fieldSetFlags()[13];
-    }
-
-
-    /**
-      * Clears the value of the 'start_date' field.
-      * start_date field
-      * @return This builder.
-      */
-    public CustomerTransactions.Builder clearStartDate() {
-      fieldSetFlags()[13] = false;
-      return this;
-    }
-
-    /**
-      * Gets the value of the 'end_date' field.
-      * end_date field
-      * @return The value.
-      */
-    public long getEndDate() {
-      return end_date;
-    }
-
-
-    /**
-      * Sets the value of the 'end_date' field.
-      * end_date field
-      * @param value The value of 'end_date'.
-      * @return This builder.
-      */
-    public CustomerTransactions.Builder setEndDate(long value) {
-      validate(fields()[14], value);
-      this.end_date = value;
-      fieldSetFlags()[14] = true;
-      return this;
-    }
-
-    /**
-      * Checks whether the 'end_date' field has been set.
-      * end_date field
-      * @return True if the 'end_date' field has been set, false otherwise.
-      */
-    public boolean hasEndDate() {
-      return fieldSetFlags()[14];
-    }
-
-
-    /**
-      * Clears the value of the 'end_date' field.
-      * end_date field
-      * @return This builder.
-      */
-    public CustomerTransactions.Builder clearEndDate() {
-      fieldSetFlags()[14] = false;
-      return this;
-    }
-
-    /**
-      * Gets the value of the 'active_flag' field.
-      * active_flag field A or I
-      * @return The value.
-      */
-    public String getActiveFlag() {
-      return active_flag;
-    }
-
-
-    /**
-      * Sets the value of the 'active_flag' field.
-      * active_flag field A or I
-      * @param value The value of 'active_flag'.
-      * @return This builder.
-      */
-    public CustomerTransactions.Builder setActiveFlag(String value) {
-      validate(fields()[15], value);
-      this.active_flag = value;
-      fieldSetFlags()[15] = true;
-      return this;
-    }
-
-    /**
-      * Checks whether the 'active_flag' field has been set.
-      * active_flag field A or I
-      * @return True if the 'active_flag' field has been set, false otherwise.
-      */
-    public boolean hasActiveFlag() {
-      return fieldSetFlags()[15];
-    }
-
-
-    /**
-      * Clears the value of the 'active_flag' field.
-      * active_flag field A or I
-      * @return This builder.
-      */
-    public CustomerTransactions.Builder clearActiveFlag() {
-      active_flag = null;
-      fieldSetFlags()[15] = false;
-      return this;
-    }
-
-    /**
-      * Gets the value of the 'orders' field.
-      * @return The value.
-      */
-    public java.util.List<OrderHeaderTender> getOrders() {
-      return orders;
-    }
-
-
-    /**
-      * Sets the value of the 'orders' field.
-      * @param value The value of 'orders'.
-      * @return This builder.
-      */
-    public CustomerTransactions.Builder setOrders(java.util.List<OrderHeaderTender> value) {
-      validate(fields()[16], value);
-      this.orders = value;
-      fieldSetFlags()[16] = true;
-      return this;
-    }
-
-    /**
-      * Checks whether the 'orders' field has been set.
-      * @return True if the 'orders' field has been set, false otherwise.
-      */
-    public boolean hasOrders() {
-      return fieldSetFlags()[16];
-    }
-
-
-    /**
-      * Clears the value of the 'orders' field.
-      * @return This builder.
-      */
-    public CustomerTransactions.Builder clearOrders() {
-      orders = null;
-      fieldSetFlags()[16] = false;
-      return this;
-    }
-
-    /**
-      * Gets the value of the 'record_update_flag' field.
-      * record_update_flag field U or D
-      * @return The value.
-      */
-    public String getRecordUpdateFlag() {
-      return record_update_flag;
-    }
-
-
-    /**
-      * Sets the value of the 'record_update_flag' field.
-      * record_update_flag field U or D
-      * @param value The value of 'record_update_flag'.
-      * @return This builder.
-      */
-    public CustomerTransactions.Builder setRecordUpdateFlag(String value) {
-      validate(fields()[17], value);
-      this.record_update_flag = value;
-      fieldSetFlags()[17] = true;
-      return this;
-    }
-
-    /**
-      * Checks whether the 'record_update_flag' field has been set.
-      * record_update_flag field U or D
-      * @return True if the 'record_update_flag' field has been set, false otherwise.
-      */
-    public boolean hasRecordUpdateFlag() {
-      return fieldSetFlags()[17];
-    }
-
-
-    /**
-      * Clears the value of the 'record_update_flag' field.
-      * record_update_flag field U or D
-      * @return This builder.
-      */
-    public CustomerTransactions.Builder clearRecordUpdateFlag() {
-      record_update_flag = null;
-      fieldSetFlags()[17] = false;
-      return this;
-    }
-
-    /**
-      * Gets the value of the 'number_of_accounts' field.
-      * @return The value.
-      */
-    public int getNumberOfAccounts() {
-      return number_of_accounts;
-    }
-
-
-    /**
-      * Sets the value of the 'number_of_accounts' field.
-      * @param value The value of 'number_of_accounts'.
-      * @return This builder.
-      */
-    public CustomerTransactions.Builder setNumberOfAccounts(int value) {
-      validate(fields()[18], value);
-      this.number_of_accounts = value;
-      fieldSetFlags()[18] = true;
-      return this;
-    }
-
-    /**
-      * Checks whether the 'number_of_accounts' field has been set.
-      * @return True if the 'number_of_accounts' field has been set, false otherwise.
-      */
-    public boolean hasNumberOfAccounts() {
-      return fieldSetFlags()[18];
-    }
-
-
-    /**
-      * Clears the value of the 'number_of_accounts' field.
-      * @return This builder.
-      */
-    public CustomerTransactions.Builder clearNumberOfAccounts() {
-      fieldSetFlags()[18] = false;
-      return this;
-    }
-
-    /**
-      * Gets the value of the 'group_id' field.
-      * @return The value.
-      */
-    public String getGroupId() {
-      return group_id;
-    }
-
-
-    /**
-      * Sets the value of the 'group_id' field.
-      * @param value The value of 'group_id'.
-      * @return This builder.
-      */
-    public CustomerTransactions.Builder setGroupId(String value) {
-      validate(fields()[19], value);
-      this.group_id = value;
-      fieldSetFlags()[19] = true;
-      return this;
-    }
-
-    /**
-      * Checks whether the 'group_id' field has been set.
-      * @return True if the 'group_id' field has been set, false otherwise.
-      */
-    public boolean hasGroupId() {
-      return fieldSetFlags()[19];
-    }
-
-
-    /**
-      * Clears the value of the 'group_id' field.
-      * @return This builder.
-      */
-    public CustomerTransactions.Builder clearGroupId() {
-      group_id = null;
-      fieldSetFlags()[19] = false;
-      return this;
-    }
-
-    /**
-      * Gets the value of the 'is_primary' field.
-      * @return The value.
-      */
-    public boolean getIsPrimary() {
-      return is_primary;
-    }
-
-
-    /**
-      * Sets the value of the 'is_primary' field.
-      * @param value The value of 'is_primary'.
-      * @return This builder.
-      */
-    public CustomerTransactions.Builder setIsPrimary(boolean value) {
-      validate(fields()[20], value);
-      this.is_primary = value;
-      fieldSetFlags()[20] = true;
-      return this;
-    }
-
-    /**
-      * Checks whether the 'is_primary' field has been set.
-      * @return True if the 'is_primary' field has been set, false otherwise.
-      */
-    public boolean hasIsPrimary() {
-      return fieldSetFlags()[20];
-    }
-
-
-    /**
-      * Clears the value of the 'is_primary' field.
-      * @return This builder.
-      */
-    public CustomerTransactions.Builder clearIsPrimary() {
-      fieldSetFlags()[20] = false;
+      fieldSetFlags()[4] = false;
       return this;
     }
 
@@ -1742,30 +511,12 @@ public class CustomerTransactions extends org.apache.avro.specific.SpecificRecor
     public CustomerTransactions build() {
       try {
         CustomerTransactions record = new CustomerTransactions();
-        record.return_surrogate_key = fieldSetFlags()[0] ? this.return_surrogate_key : (String) defaultValue(fields()[0]);
-        record.dp_reference_number = fieldSetFlags()[1] ? this.dp_reference_number : (String) defaultValue(fields()[1]);
-        record.return_reference_number = fieldSetFlags()[2] ? this.return_reference_number : (String) defaultValue(fields()[2]);
-        record.usa_id = fieldSetFlags()[3] ? this.usa_id : (Long) defaultValue(fields()[3]);
-        record.sephora_id = fieldSetFlags()[4] ? this.sephora_id : (Long) defaultValue(fields()[4]);
-        record.online_atg_id = fieldSetFlags()[5] ? this.online_atg_id : (String) defaultValue(fields()[5]);
-        record.card_numbers = fieldSetFlags()[6] ? this.card_numbers : (java.util.List<String>) defaultValue(fields()[6]);
-        record.return_auth_flag = fieldSetFlags()[7] ? this.return_auth_flag : (String) defaultValue(fields()[7]);
-        record.reason_text = fieldSetFlags()[8] ? this.reason_text : (String) defaultValue(fields()[8]);
-        record.cust_sale_counter = fieldSetFlags()[9] ? this.cust_sale_counter : (Integer) defaultValue(fields()[9]);
-        record.cust_return_counter = fieldSetFlags()[10] ? this.cust_return_counter : (Integer) defaultValue(fields()[10]);
-        record.pct_sale_to_return = fieldSetFlags()[11] ? this.pct_sale_to_return : (Double) defaultValue(fields()[11]);
-        record.created_date = fieldSetFlags()[12] ? this.created_date : (Long) defaultValue(fields()[12]);
-        record.start_date = fieldSetFlags()[13] ? this.start_date : (Long) defaultValue(fields()[13]);
-        record.end_date = fieldSetFlags()[14] ? this.end_date : (Long) defaultValue(fields()[14]);
-        record.active_flag = fieldSetFlags()[15] ? this.active_flag : (String) defaultValue(fields()[15]);
-        record.orders = fieldSetFlags()[16] ? this.orders : (java.util.List<OrderHeaderTender>) defaultValue(fields()[16]);
-        record.record_update_flag = fieldSetFlags()[17] ? this.record_update_flag : (String) defaultValue(fields()[17]);
-        record.number_of_accounts = fieldSetFlags()[18] ? this.number_of_accounts : (Integer) defaultValue(fields()[18]);
-        record.group_id = fieldSetFlags()[19] ? this.group_id : (String) defaultValue(fields()[19]);
-        record.is_primary = fieldSetFlags()[20] ? this.is_primary : (Boolean) defaultValue(fields()[20]);
+        record.usa_id = fieldSetFlags()[0] ? this.usa_id : (Long) defaultValue(fields()[0]);
+        record.card_numbers = fieldSetFlags()[1] ? this.card_numbers : (java.util.List<CharSequence>) defaultValue(fields()[1]);
+        record.reason_text = fieldSetFlags()[2] ? this.reason_text : (CharSequence) defaultValue(fields()[2]);
+        record.cust_sale_counter = fieldSetFlags()[3] ? this.cust_sale_counter : (Integer) defaultValue(fields()[3]);
+        record.created_date = fieldSetFlags()[4] ? this.created_date : (Long) defaultValue(fields()[4]);
         return record;
-      } catch (org.apache.avro.AvroMissingFieldException e) {
-        throw e;
       } catch (Exception e) {
         throw new org.apache.avro.AvroRuntimeException(e);
       }
@@ -1790,427 +541,4 @@ public class CustomerTransactions extends org.apache.avro.specific.SpecificRecor
     READER$.read(this, SpecificData.getDecoder(in));
   }
 
-  @Override protected boolean hasCustomCoders() { return true; }
-
-  @Override public void customEncode(org.apache.avro.io.Encoder out)
-    throws java.io.IOException
-  {
-    out.writeString(this.return_surrogate_key);
-
-    if (this.dp_reference_number == null) {
-      out.writeIndex(0);
-      out.writeNull();
-    } else {
-      out.writeIndex(1);
-      out.writeString(this.dp_reference_number);
-    }
-
-    if (this.return_reference_number == null) {
-      out.writeIndex(0);
-      out.writeNull();
-    } else {
-      out.writeIndex(1);
-      out.writeString(this.return_reference_number);
-    }
-
-    if (this.usa_id == null) {
-      out.writeIndex(0);
-      out.writeNull();
-    } else {
-      out.writeIndex(1);
-      out.writeLong(this.usa_id);
-    }
-
-    if (this.sephora_id == null) {
-      out.writeIndex(0);
-      out.writeNull();
-    } else {
-      out.writeIndex(1);
-      out.writeLong(this.sephora_id);
-    }
-
-    if (this.online_atg_id == null) {
-      out.writeIndex(0);
-      out.writeNull();
-    } else {
-      out.writeIndex(1);
-      out.writeString(this.online_atg_id);
-    }
-
-    if (this.card_numbers == null) {
-      out.writeIndex(0);
-      out.writeNull();
-    } else {
-      out.writeIndex(1);
-      long size0 = this.card_numbers.size();
-      out.writeArrayStart();
-      out.setItemCount(size0);
-      long actualSize0 = 0;
-      for (String e0: this.card_numbers) {
-        actualSize0++;
-        out.startItem();
-        out.writeString(e0);
-      }
-      out.writeArrayEnd();
-      if (actualSize0 != size0)
-        throw new java.util.ConcurrentModificationException("Array-size written was " + size0 + ", but element count was " + actualSize0 + ".");
-    }
-
-    if (this.return_auth_flag == null) {
-      out.writeIndex(0);
-      out.writeNull();
-    } else {
-      out.writeIndex(1);
-      out.writeString(this.return_auth_flag);
-    }
-
-    if (this.reason_text == null) {
-      out.writeIndex(0);
-      out.writeNull();
-    } else {
-      out.writeIndex(1);
-      out.writeString(this.reason_text);
-    }
-
-    out.writeInt(this.cust_sale_counter);
-
-    out.writeInt(this.cust_return_counter);
-
-    out.writeDouble(this.pct_sale_to_return);
-
-    out.writeLong(this.created_date);
-
-    out.writeLong(this.start_date);
-
-    out.writeLong(this.end_date);
-
-    out.writeString(this.active_flag);
-
-    long size1 = this.orders.size();
-    out.writeArrayStart();
-    out.setItemCount(size1);
-    long actualSize1 = 0;
-    for (OrderHeaderTender e1: this.orders) {
-      actualSize1++;
-      out.startItem();
-      e1.customEncode(out);
-    }
-    out.writeArrayEnd();
-    if (actualSize1 != size1)
-      throw new java.util.ConcurrentModificationException("Array-size written was " + size1 + ", but element count was " + actualSize1 + ".");
-
-    out.writeString(this.record_update_flag);
-
-    out.writeInt(this.number_of_accounts);
-
-    if (this.group_id == null) {
-      out.writeIndex(0);
-      out.writeNull();
-    } else {
-      out.writeIndex(1);
-      out.writeString(this.group_id);
-    }
-
-    out.writeBoolean(this.is_primary);
-
-  }
-
-  @Override public void customDecode(org.apache.avro.io.ResolvingDecoder in)
-    throws java.io.IOException
-  {
-    org.apache.avro.Schema.Field[] fieldOrder = in.readFieldOrderIfDiff();
-    if (fieldOrder == null) {
-      this.return_surrogate_key = in.readString();
-
-      if (in.readIndex() != 1) {
-        in.readNull();
-        this.dp_reference_number = null;
-      } else {
-        this.dp_reference_number = in.readString();
-      }
-
-      if (in.readIndex() != 1) {
-        in.readNull();
-        this.return_reference_number = null;
-      } else {
-        this.return_reference_number = in.readString();
-      }
-
-      if (in.readIndex() != 1) {
-        in.readNull();
-        this.usa_id = null;
-      } else {
-        this.usa_id = in.readLong();
-      }
-
-      if (in.readIndex() != 1) {
-        in.readNull();
-        this.sephora_id = null;
-      } else {
-        this.sephora_id = in.readLong();
-      }
-
-      if (in.readIndex() != 1) {
-        in.readNull();
-        this.online_atg_id = null;
-      } else {
-        this.online_atg_id = in.readString();
-      }
-
-      if (in.readIndex() != 1) {
-        in.readNull();
-        this.card_numbers = null;
-      } else {
-        long size0 = in.readArrayStart();
-        java.util.List<String> a0 = this.card_numbers;
-        if (a0 == null) {
-          a0 = new SpecificData.Array<String>((int)size0, SCHEMA$.getField("card_numbers").schema().getTypes().get(1));
-          this.card_numbers = a0;
-        } else a0.clear();
-        SpecificData.Array<String> ga0 = (a0 instanceof SpecificData.Array ? (SpecificData.Array<String>)a0 : null);
-        for ( ; 0 < size0; size0 = in.arrayNext()) {
-          for ( ; size0 != 0; size0--) {
-            String e0 = (ga0 != null ? ga0.peek() : null);
-            e0 = in.readString();
-            a0.add(e0);
-          }
-        }
-      }
-
-      if (in.readIndex() != 1) {
-        in.readNull();
-        this.return_auth_flag = null;
-      } else {
-        this.return_auth_flag = in.readString();
-      }
-
-      if (in.readIndex() != 1) {
-        in.readNull();
-        this.reason_text = null;
-      } else {
-        this.reason_text = in.readString();
-      }
-
-      this.cust_sale_counter = in.readInt();
-
-      this.cust_return_counter = in.readInt();
-
-      this.pct_sale_to_return = in.readDouble();
-
-      this.created_date = in.readLong();
-
-      this.start_date = in.readLong();
-
-      this.end_date = in.readLong();
-
-      this.active_flag = in.readString();
-
-      long size1 = in.readArrayStart();
-      java.util.List<OrderHeaderTender> a1 = this.orders;
-      if (a1 == null) {
-        a1 = new SpecificData.Array<OrderHeaderTender>((int)size1, SCHEMA$.getField("orders").schema());
-        this.orders = a1;
-      } else a1.clear();
-      SpecificData.Array<OrderHeaderTender> ga1 = (a1 instanceof SpecificData.Array ? (SpecificData.Array<OrderHeaderTender>)a1 : null);
-      for ( ; 0 < size1; size1 = in.arrayNext()) {
-        for ( ; size1 != 0; size1--) {
-          OrderHeaderTender e1 = (ga1 != null ? ga1.peek() : null);
-          if (e1 == null) {
-            e1 = new OrderHeaderTender();
-          }
-          e1.customDecode(in);
-          a1.add(e1);
-        }
-      }
-
-      this.record_update_flag = in.readString();
-
-      this.number_of_accounts = in.readInt();
-
-      if (in.readIndex() != 1) {
-        in.readNull();
-        this.group_id = null;
-      } else {
-        this.group_id = in.readString();
-      }
-
-      this.is_primary = in.readBoolean();
-
-    } else {
-      for (int i = 0; i < 21; i++) {
-        switch (fieldOrder[i].pos()) {
-        case 0:
-          this.return_surrogate_key = in.readString();
-          break;
-
-        case 1:
-          if (in.readIndex() != 1) {
-            in.readNull();
-            this.dp_reference_number = null;
-          } else {
-            this.dp_reference_number = in.readString();
-          }
-          break;
-
-        case 2:
-          if (in.readIndex() != 1) {
-            in.readNull();
-            this.return_reference_number = null;
-          } else {
-            this.return_reference_number = in.readString();
-          }
-          break;
-
-        case 3:
-          if (in.readIndex() != 1) {
-            in.readNull();
-            this.usa_id = null;
-          } else {
-            this.usa_id = in.readLong();
-          }
-          break;
-
-        case 4:
-          if (in.readIndex() != 1) {
-            in.readNull();
-            this.sephora_id = null;
-          } else {
-            this.sephora_id = in.readLong();
-          }
-          break;
-
-        case 5:
-          if (in.readIndex() != 1) {
-            in.readNull();
-            this.online_atg_id = null;
-          } else {
-            this.online_atg_id = in.readString();
-          }
-          break;
-
-        case 6:
-          if (in.readIndex() != 1) {
-            in.readNull();
-            this.card_numbers = null;
-          } else {
-            long size0 = in.readArrayStart();
-            java.util.List<String> a0 = this.card_numbers;
-            if (a0 == null) {
-              a0 = new SpecificData.Array<String>((int)size0, SCHEMA$.getField("card_numbers").schema().getTypes().get(1));
-              this.card_numbers = a0;
-            } else a0.clear();
-            SpecificData.Array<String> ga0 = (a0 instanceof SpecificData.Array ? (SpecificData.Array<String>)a0 : null);
-            for ( ; 0 < size0; size0 = in.arrayNext()) {
-              for ( ; size0 != 0; size0--) {
-                String e0 = (ga0 != null ? ga0.peek() : null);
-                e0 = in.readString();
-                a0.add(e0);
-              }
-            }
-          }
-          break;
-
-        case 7:
-          if (in.readIndex() != 1) {
-            in.readNull();
-            this.return_auth_flag = null;
-          } else {
-            this.return_auth_flag = in.readString();
-          }
-          break;
-
-        case 8:
-          if (in.readIndex() != 1) {
-            in.readNull();
-            this.reason_text = null;
-          } else {
-            this.reason_text = in.readString();
-          }
-          break;
-
-        case 9:
-          this.cust_sale_counter = in.readInt();
-          break;
-
-        case 10:
-          this.cust_return_counter = in.readInt();
-          break;
-
-        case 11:
-          this.pct_sale_to_return = in.readDouble();
-          break;
-
-        case 12:
-          this.created_date = in.readLong();
-          break;
-
-        case 13:
-          this.start_date = in.readLong();
-          break;
-
-        case 14:
-          this.end_date = in.readLong();
-          break;
-
-        case 15:
-          this.active_flag = in.readString();
-          break;
-
-        case 16:
-          long size1 = in.readArrayStart();
-          java.util.List<OrderHeaderTender> a1 = this.orders;
-          if (a1 == null) {
-            a1 = new SpecificData.Array<OrderHeaderTender>((int)size1, SCHEMA$.getField("orders").schema());
-            this.orders = a1;
-          } else a1.clear();
-          SpecificData.Array<OrderHeaderTender> ga1 = (a1 instanceof SpecificData.Array ? (SpecificData.Array<OrderHeaderTender>)a1 : null);
-          for ( ; 0 < size1; size1 = in.arrayNext()) {
-            for ( ; size1 != 0; size1--) {
-              OrderHeaderTender e1 = (ga1 != null ? ga1.peek() : null);
-              if (e1 == null) {
-                e1 = new OrderHeaderTender();
-              }
-              e1.customDecode(in);
-              a1.add(e1);
-            }
-          }
-          break;
-
-        case 17:
-          this.record_update_flag = in.readString();
-          break;
-
-        case 18:
-          this.number_of_accounts = in.readInt();
-          break;
-
-        case 19:
-          if (in.readIndex() != 1) {
-            in.readNull();
-            this.group_id = null;
-          } else {
-            this.group_id = in.readString();
-          }
-          break;
-
-        case 20:
-          this.is_primary = in.readBoolean();
-          break;
-
-        default:
-          throw new java.io.IOException("Corrupt ResolvingDecoder.");
-        }
-      }
-    }
-  }
 }
-
-
-
-
-
-
-
-
-
-
