@@ -24,11 +24,11 @@ public class UsrAsnAuditSendMessage {
 
         UsrAsnAuditRecord record = readFile(csv).get(3);
 
-        record.asnflgcnt = "CHANGED";
+        record.audit_log_id = "special_id_347";
+
+        record.asnflgcnt = 654;
 
         record.wh_id = "CHANGED";
-
-        record.audit_log_id = "special_id_345";
 
         String json = objectMapper.writeValueAsString(record);
 

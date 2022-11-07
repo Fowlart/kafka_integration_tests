@@ -31,7 +31,7 @@ public class UsrAsnAuditRecord {
     public String asntotcnt;
     public String asnaudcnt;
     public String asnrvscnt;
-    public String asnflgcnt;
+    public Integer asnflgcnt;
     public String audthrhbrkflg;
     public String audremcnt;
     public String audit_usr_id;
