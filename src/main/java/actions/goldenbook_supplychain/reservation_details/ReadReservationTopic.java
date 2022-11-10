@@ -1,7 +1,6 @@
-package danger_experements.reservation_details;
+package actions.goldenbook_supplychain.reservation_details;
 
 import kafka_utils.PropertiesUtil;
-import org.apache.avro.generic.GenericData;
 import org.apache.kafka.clients.consumer.ConsumerRecord;
 import org.apache.kafka.clients.consumer.ConsumerRecords;
 import org.apache.kafka.clients.consumer.KafkaConsumer;
@@ -11,21 +10,21 @@ import org.junit.platform.commons.logging.LoggerFactory;
 import java.time.Duration;
 import java.util.Collections;
 
-public class ReadAsnAudit {
+public class ReadReservationTopic {
 
-    private static final Logger logger = LoggerFactory.getLogger(ReadAsnAudit.class);
+    private static final Logger logger = LoggerFactory.getLogger(ReadReservationTopic.class);
 
     public static void main(String[] args) {
 
         KafkaConsumer<String, String> consumer =
                 new KafkaConsumer<>(
                         PropertiesUtil
-                                .getPropertiesForDevConsumer
-                                        ("SupplyChain.WMS.asnAuditBIFeed.GRP.DEV",
-                                                "100352"));
+                        .getPropertiesForDevConsumer
+                                ("Stores.StoreDigital.Reservations.Detail.Auditing.DataPlatform.DEV",
+                                        "100241"));
 
 
-        consumer.subscribe(Collections.singleton("SupplyChain.WMS.asnAuditBIFeed"));
+        consumer.subscribe(Collections.singleton("Stores.StoreDigital.Reservations.Auditing"));
 
         //poll for data
         while (true) {
@@ -35,5 +34,4 @@ public class ReadAsnAudit {
             }
         }
     }
-
 }

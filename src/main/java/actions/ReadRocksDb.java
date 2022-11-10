@@ -1,8 +1,5 @@
-package danger_experements;
+package actions;
 
-import avro_pojos.AccountGroup;
-import org.apache.kafka.common.serialization.LongSerializer;
-import org.apache.kafka.common.serialization.Serdes;
 import org.apache.kafka.common.serialization.StringDeserializer;
 import org.apache.kafka.common.serialization.StringSerializer;
 import org.rocksdb.RocksDB;
@@ -10,7 +7,6 @@ import org.rocksdb.RocksDBException;
 import org.rocksdb.RocksIterator;
 
 import java.io.IOException;
-import java.util.Arrays;
 import java.util.Objects;
 
 public class ReadRocksDb {

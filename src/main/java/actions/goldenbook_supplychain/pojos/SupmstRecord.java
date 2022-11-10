@@ -1,4 +1,4 @@
-package danger_experements.goldenbook_supplychain.pojos;
+package actions.goldenbook_supplychain.pojos;
 
 import com.fasterxml.jackson.annotation.JsonPropertyOrder;
 

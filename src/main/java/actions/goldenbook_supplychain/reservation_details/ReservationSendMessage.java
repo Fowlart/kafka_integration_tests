@@ -1,4 +1,4 @@
-package danger_experements.reservation_details;
+package actions.goldenbook_supplychain.reservation_details;
 
 import com.sephora.services.reservation.avro.audit.ReservationAuditAvro;
 import com.sephora.services.reservation.avro.audit.ReservationAvro;

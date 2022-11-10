@@ -1,4 +1,4 @@
-package danger_experements;
+package actions;
 
 import kafka_utils.PropertiesUtil;
 import org.apache.avro.generic.GenericData;
