@@ -12,27 +12,19 @@ import java.util.List;
 
 public class SupMstSendMessage {
 
-    private static final MyKafkaProducer<String, String> producer = new MyKafkaProducer<>(PropertiesUtil.getPropertiesForProducerOnDevEnvForStringKeyAndValueWithoutSchema());
+    private static final MyKafkaProducer<String, String> producer = new MyKafkaProducer<>(PropertiesUtil.getPropertiesForProducerOn_DEV_EnvForStringKeyAndValueWithoutSchema());
     private static final String TOPIC_NAME = "SupplyChain.WMS.supmstBIFeed";
     public static List<SupmstRecord> readFile(File csvFile) throws Exception {
         MappingIterator<SupmstRecord> iterator = new CsvMapper().readerWithTypedSchemaFor(SupmstRecord.class).readValues(csvFile);
         return iterator.readAll();
     }
-
     public static void main(String[] args) throws Exception {
-
         File csv = new File("src/main/resources/supmst_bi_feed.csv");
-
         ObjectMapper objectMapper = new ObjectMapper();
-
         SupmstRecord record = readFile(csv).get(3);
-
         System.out.println("Changing record with supnum ="+record.supnum);
-
-        record.trust_flg = 999;
-
+        record.trust_flg = 6661;
         String json = objectMapper.writeValueAsString(record);
-
         producer.produceRecord(null, json, TOPIC_NAME, 1);
     }
 }

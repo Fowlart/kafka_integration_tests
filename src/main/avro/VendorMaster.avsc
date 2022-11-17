@@ -1,0 +1,94 @@
+{
+  "type": "record",
+  "name": "VendorRecord",
+  "fields": [
+    {
+      "name": "advPromoAllowancePercent",
+      "type": ["double", "null"]
+    },
+    {
+      "name": "brand",
+      "type": ["long", "null"]
+    },
+    {
+      "name": "brandDescription",
+      "type": ["string", "null"]
+    },
+    {
+      "name": "buyer",
+      "type": ["long", "null"]
+    },
+    {
+      "name": "cashDiscountDays",
+      "type": ["int", "null"]
+    },
+    {
+      "name": "cashDiscountNetDays",
+      "type": ["int", "null"]
+    },
+    {
+      "name": "cashDiscountPercent",
+      "type": ["double", "null"]
+    },
+    {
+      "name": "cashDiscountTerms",
+      "type": ["string", "null"]
+    },
+    {
+      "name": "department",
+      "type": ["long", "null"]
+    },
+    {
+      "name": "excAdvPromoDiscOnInvoice",
+      "type": ["string", "null"]
+    },
+    {
+      "name": "firstTradeDiscountPercent",
+      "type": ["double", "null"]
+    },
+    {
+      "name": "freightAllowancePercent",
+      "type": ["double", "null"]
+    },
+    {
+      "name": "ovrEdi852FromGrossToNetSales",
+      "type": ["string", "null"]
+    },
+    {
+      "name": "ovrEdiXmitFromRetailToCost",
+      "type": ["string", "null"]
+    },
+    {
+      "name": "poCostRetailFlag",
+      "type": ["string", "null"]
+    },
+    {
+      "name": "purchaseCurrency",
+      "type": ["string", "null"]
+    },
+    {
+      "name": "secondTradeDiscountPercent",
+      "type": ["double", "null"]
+    },
+    {
+      "name": "territory",
+      "type": ["string", "null"]
+    },
+    {
+      "name": "thirdTradeDiscountPercent",
+      "type": ["double", "null"]
+    },
+    {
+      "name": "vendor",
+      "type": ["long", "null"]
+    },
+    {
+      "name": "vendorName",
+      "type": ["string", "null"]
+    },
+    {
+      "name": "vndInvCostRetail",
+      "type": ["string", "null"]
+    }
+  ]
+}

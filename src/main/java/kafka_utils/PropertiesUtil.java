@@ -12,6 +12,8 @@ import org.apache.kafka.common.serialization.StringSerializer;
 import java.io.FileInputStream;
 import java.io.IOException;
 import java.io.InputStream;
+import java.nio.file.Files;
+import java.nio.file.Paths;
 import java.util.Objects;
 import java.util.Properties;
 
@@ -24,7 +26,7 @@ public class PropertiesUtil {
 
     private static Properties getPropertiesFromFile(String filePath) {
         final Properties propsFromFile = new Properties();
-        try (InputStream input = new FileInputStream(filePath)) {
+        try (InputStream input = Files.newInputStream(Paths.get(filePath))) {
             propsFromFile.load(input);
         } catch (IOException ex) {
             ex.printStackTrace();
@@ -58,8 +60,15 @@ public class PropertiesUtil {
         return getCommonPropertiesForProducers(QA_KAFKA_PROPS_PATH,tClass,schemaId);
     }
 
-    public static Properties getPropertiesForProducerOnDevEnvForStringKeyAndValueWithoutSchema(){
+    public static Properties getPropertiesForProducerOn_DEV_EnvForStringKeyAndValueWithoutSchema(){
         Properties result = getCommonPropertiesForProducers(DEV_KAFKA_PROPS_PATH,String.class,"null");
+        result.put(ProducerConfig.VALUE_SERIALIZER_CLASS_CONFIG, StringSerializer.class);
+        result.put(ProducerConfig.KEY_SERIALIZER_CLASS_CONFIG, StringSerializer.class);
+        return result;
+    }
+
+    public static Properties getPropertiesForProducerOn_STAGE_EnvForStringKeyAndValueWithoutSchema(){
+        Properties result = getCommonPropertiesForProducers(QA_KAFKA_PROPS_PATH,String.class,"null");
         result.put(ProducerConfig.VALUE_SERIALIZER_CLASS_CONFIG, StringSerializer.class);
         result.put(ProducerConfig.KEY_SERIALIZER_CLASS_CONFIG, StringSerializer.class);
         return result;

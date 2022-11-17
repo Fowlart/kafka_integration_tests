@@ -7,7 +7,7 @@ public class ReadReservationTopic {
     public static void main(String[] args) {
         JsonTopicReader jsonTopicReader = new JsonTopicReader();
         jsonTopicReader.readFromQaTopic(topic,
-                10,
-                "100241");
+                3,
+                "100336");
     }
 }
