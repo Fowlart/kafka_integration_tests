@@ -6,9 +6,7 @@ import kafka_utils.MyKafkaProducer;
 import kafka_utils.PropertiesUtil;
 
 public class SendReturnToVendorQA {
-    private static final MyKafkaProducer<String, String> producer =
-            new MyKafkaProducer<>
-                    (PropertiesUtil.getPropertiesForProducerOn_STAGE_EnvForStringKeyAndValueWithoutSchema());
+    private static final MyKafkaProducer<String, String> producer = new MyKafkaProducer<>(PropertiesUtil.getPropertiesForProducerOn_STAGE_EnvForStringKeyAndValueWithoutSchema());
     private static final String TOPIC_NAME = "Sephora.SupplyChain.RTV";
 
     public static void main(String[] args) throws Exception {
