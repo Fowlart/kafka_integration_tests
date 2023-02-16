@@ -1,12 +1,13 @@
-package actions.goldenbook_supplychain.reservation_details;
+package actions.reservation_details;
 
-import kafka_utils.JsonTopicReader;
+import kafka_utils.TopicReader;
 
 public class ReadReservationTopic {
     public static final String topic = "Stores.StoreDigital.Reservations.Auditing";
     public static void main(String[] args) {
-        JsonTopicReader jsonTopicReader = new JsonTopicReader();
-        jsonTopicReader.readFromQaTopic(topic,
+        TopicReader topicReader = new TopicReader();
+
+        topicReader.readFromDevTopic(topic,
                 3,
                 "100336");
     }

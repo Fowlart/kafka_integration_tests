@@ -9,11 +9,11 @@ import org.junit.platform.commons.logging.LoggerFactory;
 import java.time.Duration;
 import java.util.Collections;
 
-public class JsonTopicReader {
+public class TopicReader {
 
-    private static final Logger logger = LoggerFactory.getLogger(JsonTopicReader.class);
+    private static final Logger logger = LoggerFactory.getLogger(TopicReader.class);
 
-    private <K, V> void readTopic(KafkaConsumer<K, V> consumer, int msgNumber, String topicName) {
+    private   <K, V> void readTopic(KafkaConsumer<K, V> consumer, int msgNumber, String topicName) {
         int counter = 0;
         consumer.subscribe(Collections.singleton(topicName));
         while (counter <= msgNumber) {

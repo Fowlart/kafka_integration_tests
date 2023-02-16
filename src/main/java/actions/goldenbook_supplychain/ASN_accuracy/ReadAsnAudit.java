@@ -1,11 +1,11 @@
 package actions.goldenbook_supplychain.ASN_accuracy;
 
-import kafka_utils.JsonTopicReader;
+import kafka_utils.TopicReader;
 public class ReadAsnAudit {
     private static final String topic = "SupplyChain.WMS.asnAuditBIFeed";
     public static void main(String[] args) {
-        JsonTopicReader jsonTopicReader = new JsonTopicReader();
-        jsonTopicReader.readFromDevTopic(topic,
+        TopicReader topicReader = new TopicReader();
+        topicReader.readFromDevTopic(topic,
                 3,
                 null);
     }

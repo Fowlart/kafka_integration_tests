@@ -1,804 +1,826 @@
 {
+  "type": "record",
+  "name": "ReservationAuditAvro",
+  "namespace": "com.sephora.services.reservation.avro.audit",
   "fields": [
     {
-      "default": null,
       "name": "reservation",
       "type": [
         "null",
         {
+          "type": "record",
+          "name": "ReservationAvro",
           "fields": [
             {
-              "default": null,
               "name": "channelId",
               "type": [
                 "null",
                 {
-                  "avro.java.string": "String",
-                  "type": "string"
+                  "type": "string",
+                  "avro.java.string": "String"
                 }
-              ]
+              ],
+              "default": null
             },
             {
-              "default": null,
               "name": "reservationId",
               "type": [
                 "null",
                 {
-                  "avro.java.string": "String",
-                  "type": "string"
+                  "type": "string",
+                  "avro.java.string": "String"
                 }
-              ]
+              ],
+              "default": null
             },
             {
-              "default": [],
               "name": "tickets",
               "type": {
-                "default": [],
+                "type": "array",
                 "items": {
+                  "type": "record",
+                  "name": "TicketAvro",
                   "fields": [
                     {
-                      "default": null,
                       "name": "ticketId",
                       "type": [
                         "null",
                         {
-                          "avro.java.string": "String",
-                          "type": "string"
+                          "type": "string",
+                          "avro.java.string": "String"
                         }
-                      ]
+                      ],
+                      "default": null
                     },
                     {
-                      "default": null,
                       "name": "ticketStatus",
                       "type": [
                         "null",
                         {
-                          "avro.java.string": "String",
-                          "type": "string"
+                          "type": "string",
+                          "avro.java.string": "String"
                         }
-                      ]
+                      ],
+                      "default": null
                     },
                     {
-                      "default": null,
                       "name": "client",
                       "type": [
                         "null",
                         {
+                          "type": "record",
+                          "name": "ClientAvro",
                           "fields": [
                             {
-                              "default": null,
                               "name": "beautyInsiderId",
                               "type": [
                                 "null",
                                 {
-                                  "avro.java.string": "String",
-                                  "type": "string"
+                                  "type": "string",
+                                  "avro.java.string": "String"
                                 }
-                              ]
+                              ],
+                              "default": null
                             },
                             {
-                              "default": null,
                               "name": "customerProfileId",
                               "type": [
                                 "null",
                                 {
-                                  "avro.java.string": "String",
-                                  "type": "string"
+                                  "type": "string",
+                                  "avro.java.string": "String"
                                 }
-                              ]
+                              ],
+                              "default": null
                             },
                             {
-                              "default": null,
                               "name": "firstName",
                               "type": [
                                 "null",
                                 {
-                                  "avro.java.string": "String",
-                                  "type": "string"
+                                  "type": "string",
+                                  "avro.java.string": "String"
                                 }
-                              ]
+                              ],
+                              "default": null
                             },
                             {
-                              "default": null,
                               "name": "lastName",
                               "type": [
                                 "null",
                                 {
-                                  "avro.java.string": "String",
-                                  "type": "string"
+                                  "type": "string",
+                                  "avro.java.string": "String"
                                 }
-                              ]
+                              ],
+                              "default": null
                             },
                             {
-                              "default": null,
                               "name": "email",
                               "type": [
                                 "null",
                                 {
-                                  "avro.java.string": "String",
-                                  "type": "string"
+                                  "type": "string",
+                                  "avro.java.string": "String"
                                 }
-                              ]
+                              ],
+                              "default": null
                             },
                             {
-                              "default": null,
                               "name": "phone",
                               "type": [
                                 "null",
                                 {
-                                  "avro.java.string": "String",
-                                  "type": "string"
+                                  "type": "string",
+                                  "avro.java.string": "String"
                                 }
-                              ]
+                              ],
+                              "default": null
                             },
                             {
-                              "default": null,
                               "name": "timeZone",
                               "type": [
                                 "null",
                                 {
-                                  "avro.java.string": "String",
-                                  "type": "string"
+                                  "type": "string",
+                                  "avro.java.string": "String"
                                 }
-                              ]
+                              ],
+                              "default": null
                             }
-                          ],
-                          "name": "ClientAvro",
-                          "type": "record"
+                          ]
                         }
-                      ]
+                      ],
+                      "default": null
                     },
                     {
-                      "default": null,
                       "name": "serviceDetails",
                       "type": [
                         "null",
                         {
+                          "type": "record",
+                          "name": "ServiceDetailsAvro",
                           "fields": [
                             {
-                              "default": null,
                               "name": "activityType",
                               "type": [
                                 "null",
                                 {
-                                  "avro.java.string": "String",
-                                  "type": "string"
+                                  "type": "string",
+                                  "avro.java.string": "String"
                                 }
-                              ]
+                              ],
+                              "default": null
                             },
                             {
-                              "default": null,
                               "name": "storeBaId",
                               "type": [
                                 "null",
                                 {
-                                  "avro.java.string": "String",
-                                  "type": "string"
+                                  "type": "string",
+                                  "avro.java.string": "String"
                                 }
-                              ]
+                              ],
+                              "default": null
                             },
                             {
-                              "default": false,
                               "name": "isBaChosenByClient",
-                              "type": "boolean"
+                              "type": "boolean",
+                              "default": false
                             },
                             {
-                              "default": null,
                               "name": "activityId",
                               "type": [
                                 "null",
                                 {
-                                  "avro.java.string": "String",
-                                  "type": "string"
+                                  "type": "string",
+                                  "avro.java.string": "String"
                                 }
-                              ]
+                              ],
+                              "default": null
                             },
                             {
-                              "default": null,
                               "name": "storeId",
                               "type": [
                                 "null",
                                 {
-                                  "avro.java.string": "String",
-                                  "type": "string"
+                                  "type": "string",
+                                  "avro.java.string": "String"
                                 }
-                              ]
+                              ],
+                              "default": null
                             },
                             {
-                              "default": null,
                               "name": "skuId",
                               "type": [
                                 "null",
                                 {
-                                  "avro.java.string": "String",
-                                  "type": "string"
+                                  "type": "string",
+                                  "avro.java.string": "String"
                                 }
-                              ]
+                              ],
+                              "default": null
                             },
                             {
-                              "default": null,
                               "name": "startDateTime",
                               "type": [
                                 "null",
                                 {
-                                  "avro.java.string": "String",
-                                  "type": "string"
+                                  "type": "string",
+                                  "avro.java.string": "String"
                                 }
-                              ]
+                              ],
+                              "default": null
                             },
                             {
-                              "default": null,
                               "name": "cancelChargeHours",
                               "type": [
                                 "null",
                                 {
-                                  "avro.java.string": "String",
-                                  "type": "string"
+                                  "type": "string",
+                                  "avro.java.string": "String"
                                 }
-                              ]
+                              ],
+                              "default": null
                             },
                             {
-                              "default": null,
                               "name": "eventType",
                               "type": [
                                 "null",
                                 {
-                                  "avro.java.string": "String",
-                                  "type": "string"
+                                  "type": "string",
+                                  "avro.java.string": "String"
                                 }
-                              ]
+                              ],
+                              "default": null
                             },
                             {
-                              "default": false,
                               "name": "tipIncluded",
-                              "type": "boolean"
+                              "type": "boolean",
+                              "default": false
                             },
                             {
-                              "default": null,
                               "name": "tipAmount",
                               "type": [
                                 "null",
                                 {
-                                  "avro.java.string": "String",
-                                  "type": "string"
+                                  "type": "string",
+                                  "avro.java.string": "String"
                                 }
-                              ]
+                              ],
+                              "default": null
                             },
                             {
-                              "default": null,
                               "name": "orderXrefId",
                               "type": [
                                 "null",
                                 {
-                                  "avro.java.string": "String",
-                                  "type": "string"
+                                  "type": "string",
+                                  "avro.java.string": "String"
                                 }
-                              ]
+                              ],
+                              "default": null
                             }
-                          ],
-                          "name": "ServiceDetailsAvro",
-                          "type": "record"
+                          ]
                         }
-                      ]
+                      ],
+                      "default": null
                     },
                     {
-                      "default": null,
                       "name": "brandRequest",
                       "type": [
                         "null",
                         {
+                          "type": "record",
+                          "name": "BrandRequestAvro",
                           "fields": [
                             {
-                              "default": null,
                               "name": "brandId",
                               "type": [
                                 "null",
                                 {
-                                  "avro.java.string": "String",
-                                  "type": "string"
+                                  "type": "string",
+                                  "avro.java.string": "String"
                                 }
-                              ]
+                              ],
+                              "default": null
                             },
                             {
-                              "default": null,
                               "name": "brandName",
                               "type": [
                                 "null",
                                 {
-                                  "avro.java.string": "String",
-                                  "type": "string"
+                                  "type": "string",
+                                  "avro.java.string": "String"
                                 }
-                              ]
+                              ],
+                              "default": null
                             },
                             {
-                              "default": null,
                               "name": "requestHeadCount",
                               "type": [
                                 "null",
                                 {
-                                  "avro.java.string": "String",
-                                  "type": "string"
+                                  "type": "string",
+                                  "avro.java.string": "String"
                                 }
-                              ]
+                              ],
+                              "default": null
                             },
                             {
-                              "default": null,
                               "name": "brandRepFirstName",
                               "type": [
                                 "null",
                                 {
-                                  "avro.java.string": "String",
-                                  "type": "string"
+                                  "type": "string",
+                                  "avro.java.string": "String"
                                 }
-                              ]
+                              ],
+                              "default": null
                             },
                             {
-                              "default": null,
                               "name": "brandRepLastName",
                               "type": [
                                 "null",
                                 {
-                                  "avro.java.string": "String",
-                                  "type": "string"
+                                  "type": "string",
+                                  "avro.java.string": "String"
                                 }
-                              ]
+                              ],
+                              "default": null
                             },
                             {
-                              "default": null,
                               "name": "brandRepEmail",
                               "type": [
                                 "null",
                                 {
-                                  "avro.java.string": "String",
-                                  "type": "string"
+                                  "type": "string",
+                                  "avro.java.string": "String"
                                 }
-                              ]
+                              ],
+                              "default": null
                             },
                             {
-                              "default": null,
                               "name": "brandRepPhone",
                               "type": [
                                 "null",
                                 {
-                                  "avro.java.string": "String",
-                                  "type": "string"
+                                  "type": "string",
+                                  "avro.java.string": "String"
                                 }
-                              ]
+                              ],
+                              "default": null
                             }
-                          ],
-                          "name": "BrandRequestAvro",
-                          "type": "record"
+                          ]
                         }
-                      ]
+                      ],
+                      "default": null
                     },
                     {
-                      "default": null,
                       "name": "bookingXrefId",
                       "type": [
                         "null",
                         {
-                          "avro.java.string": "String",
-                          "type": "string"
+                          "type": "string",
+                          "avro.java.string": "String"
                         }
-                      ]
+                      ],
+                      "default": null
                     },
                     {
-                      "default": null,
                       "name": "bookingDateTime",
                       "type": [
                         "null",
                         {
-                          "avro.java.string": "String",
-                          "type": "string"
+                          "type": "string",
+                          "avro.java.string": "String"
                         }
-                      ]
+                      ],
+                      "default": null
                     },
                     {
-                      "default": null,
                       "name": "cancelDateTime",
                       "type": [
                         "null",
                         {
-                          "avro.java.string": "String",
-                          "type": "string"
+                          "type": "string",
+                          "avro.java.string": "String"
                         }
-                      ]
+                      ],
+                      "default": null
                     },
                     {
-                      "default": null,
                       "name": "confirmationId",
                       "type": [
                         "null",
                         {
-                          "avro.java.string": "String",
-                          "type": "string"
+                          "type": "string",
+                          "avro.java.string": "String"
                         }
-                      ]
+                      ],
+                      "default": null
                     },
                     {
-                      "default": null,
                       "name": "bookingType",
                       "type": [
                         "null",
                         {
-                          "avro.java.string": "String",
-                          "type": "string"
+                          "type": "string",
+                          "avro.java.string": "String"
                         }
-                      ]
+                      ],
+                      "default": null
                     },
                     {
-                      "default": null,
                       "name": "noShowTimestamp",
                       "type": [
                         "null",
                         {
-                          "avro.java.string": "String",
-                          "type": "string"
+                          "type": "string",
+                          "avro.java.string": "String"
                         }
-                      ]
+                      ],
+                      "default": null
                     }
-                  ],
-                  "name": "TicketAvro",
-                  "type": "record"
+                  ]
                 },
-                "type": "array"
-              }
+                "default": []
+              },
+              "default": []
             },
             {
-              "default": null,
               "name": "paymentDetails",
               "type": [
                 "null",
                 {
+                  "type": "record",
+                  "name": "ReservationPaymentAvro",
                   "fields": [
                     {
-                      "default": null,
                       "name": "paymentMethodId",
                       "type": [
                         "null",
                         {
-                          "avro.java.string": "String",
-                          "type": "string"
+                          "type": "string",
+                          "avro.java.string": "String"
                         }
-                      ]
+                      ],
+                      "default": null
                     },
                     {
-                      "default": null,
                       "name": "paymentMethod",
                       "type": [
                         "null",
                         {
-                          "avro.java.string": "String",
-                          "type": "string"
+                          "type": "string",
+                          "avro.java.string": "String"
                         }
-                      ]
+                      ],
+                      "default": null
                     },
                     {
-                      "default": null,
                       "name": "paymentReferenceNo",
                       "type": [
                         "null",
                         {
-                          "avro.java.string": "String",
-                          "type": "string"
+                          "type": "string",
+                          "avro.java.string": "String"
                         }
-                      ]
+                      ],
+                      "default": null
                     },
                     {
-                      "default": null,
                       "name": "paymentTransactionId",
                       "type": [
                         "null",
                         {
-                          "avro.java.string": "String",
-                          "type": "string"
+                          "type": "string",
+                          "avro.java.string": "String"
                         }
-                      ]
+                      ],
+                      "default": null
                     },
                     {
-                      "default": null,
                       "name": "paymentCaptureDateTime",
                       "type": [
                         "null",
                         {
-                          "avro.java.string": "String",
-                          "type": "string"
+                          "type": "string",
+                          "avro.java.string": "String"
                         }
-                      ]
+                      ],
+                      "default": null
                     },
                     {
-                      "default": null,
                       "name": "paymentAuthDateTime",
                       "type": [
                         "null",
                         {
-                          "avro.java.string": "String",
-                          "type": "string"
+                          "type": "string",
+                          "avro.java.string": "String"
                         }
-                      ]
+                      ],
+                      "default": null
                     },
                     {
-                      "default": null,
                       "name": "paymentAuthAmount",
                       "type": [
                         "null",
                         {
-                          "avro.java.string": "String",
-                          "type": "string"
+                          "type": "string",
+                          "avro.java.string": "String"
                         }
-                      ]
+                      ],
+                      "default": null
                     },
                     {
-                      "default": null,
                       "name": "paymentCaptureAmount",
                       "type": [
                         "null",
                         {
-                          "avro.java.string": "String",
-                          "type": "string"
+                          "type": "string",
+                          "avro.java.string": "String"
                         }
-                      ]
+                      ],
+                      "default": null
                     }
-                  ],
-                  "name": "ReservationPaymentAvro",
-                  "type": "record"
+                  ]
                 }
-              ]
+              ],
+              "default": null
             },
             {
-              "default": [],
               "name": "reservationPreferences",
               "type": {
-                "default": [],
+                "type": "array",
                 "items": {
+                  "type": "record",
+                  "name": "ReservationPreferenceAvro",
                   "fields": [
                     {
-                      "default": null,
                       "name": "reservationPrefId",
                       "type": [
                         "null",
                         {
-                          "avro.java.string": "String",
-                          "type": "string"
+                          "type": "string",
+                          "avro.java.string": "String"
                         }
-                      ]
+                      ],
+                      "default": null
                     },
                     {
-                      "default": null,
                       "name": "reservationPrefName",
                       "type": [
                         "null",
                         {
-                          "avro.java.string": "String",
-                          "type": "string"
+                          "type": "string",
+                          "avro.java.string": "String"
                         }
-                      ]
+                      ],
+                      "default": null
                     },
                     {
-                      "default": null,
                       "name": "reservationPrefValue",
                       "type": [
                         "null",
                         {
-                          "avro.java.string": "String",
-                          "type": "string"
+                          "type": "string",
+                          "avro.java.string": "String"
                         }
-                      ]
+                      ],
+                      "default": null
                     },
                     {
-                      "default": null,
                       "name": "reservationPrefType",
                       "type": [
                         "null",
                         {
-                          "avro.java.string": "String",
-                          "type": "string"
+                          "type": "string",
+                          "avro.java.string": "String"
                         }
-                      ]
+                      ],
+                      "default": null
                     }
-                  ],
-                  "name": "ReservationPreferenceAvro",
-                  "type": "record"
+                  ]
                 },
-                "type": "array"
-              }
+                "default": []
+              },
+              "default": []
             },
             {
-              "default": null,
               "name": "priceDetails",
               "type": [
                 "null",
                 {
+                  "type": "record",
+                  "name": "ReservationPricingAvro",
                   "fields": [
                     {
-                      "default": null,
                       "name": "listPrice",
                       "type": [
                         "null",
                         {
-                          "avro.java.string": "String",
-                          "type": "string"
+                          "type": "string",
+                          "avro.java.string": "String"
                         }
-                      ]
+                      ],
+                      "default": null
                     },
                     {
-                      "default": null,
                       "name": "taxes",
                       "type": [
                         "null",
                         {
+                          "type": "record",
+                          "name": "ReservationPricingTaxesAvro",
                           "fields": [
                             {
-                              "default": null,
                               "name": "goodsAndServicesTax",
                               "type": [
                                 "null",
                                 {
-                                  "avro.java.string": "String",
-                                  "type": "string"
+                                  "type": "string",
+                                  "avro.java.string": "String"
                                 }
-                              ]
+                              ],
+                              "default": null
                             },
                             {
-                              "default": null,
                               "name": "harmonizedSalesTax",
                               "type": [
                                 "null",
                                 {
-                                  "avro.java.string": "String",
-                                  "type": "string"
+                                  "type": "string",
+                                  "avro.java.string": "String"
                                 }
-                              ]
+                              ],
+                              "default": null
                             },
                             {
-                              "default": null,
                               "name": "provincialSalesTax",
                               "type": [
                                 "null",
                                 {
-                                  "avro.java.string": "String",
-                                  "type": "string"
+                                  "type": "string",
+                                  "avro.java.string": "String"
                                 }
-                              ]
+                              ],
+                              "default": null
                             },
                             {
-                              "default": null,
                               "name": "totalTax",
                               "type": [
                                 "null",
                                 {
-                                  "avro.java.string": "String",
-                                  "type": "string"
+                                  "type": "string",
+                                  "avro.java.string": "String"
                                 }
-                              ]
+                              ],
+                              "default": null
                             }
-                          ],
-                          "name": "ReservationPricingTaxesAvro",
-                          "type": "record"
+                          ]
                         }
-                      ]
+                      ],
+                      "default": null
                     },
                     {
-                      "default": null,
                       "name": "total",
                       "type": [
                         "null",
                         {
-                          "avro.java.string": "String",
-                          "type": "string"
+                          "type": "string",
+                          "avro.java.string": "String"
                         }
-                      ]
+                      ],
+                      "default": null
                     },
                     {
-                      "default": null,
                       "name": "noShowCharge",
                       "type": [
                         "null",
                         "double"
-                      ]
+                      ],
+                      "default": null
                     },
                     {
-                      "default": null,
                       "name": "currencyCode",
                       "type": [
                         "null",
                         {
-                          "avro.java.string": "String",
-                          "type": "string"
+                          "type": "string",
+                          "avro.java.string": "String"
                         }
-                      ]
+                      ],
+                      "default": null
                     }
-                  ],
-                  "name": "ReservationPricingAvro",
-                  "type": "record"
+                  ]
                 }
-              ]
+              ],
+              "default": null
             },
             {
-              "default": null,
               "name": "scheduleSource",
               "type": [
                 "null",
                 {
-                  "avro.java.string": "String",
-                  "type": "string"
+                  "type": "string",
+                  "avro.java.string": "String"
                 }
-              ]
+              ],
+              "default": null
             },
             {
-              "default": null,
               "name": "world",
               "type": [
                 "null",
                 {
-                  "avro.java.string": "String",
-                  "type": "string"
+                  "type": "string",
+                  "avro.java.string": "String"
                 }
-              ]
+              ],
+              "default": null
             }
-          ],
-          "name": "ReservationAvro",
-          "type": "record"
+          ]
         }
-      ]
+      ],
+      "default": null
     },
     {
-      "default": null,
       "name": "createdTimeStamp",
       "type": [
         "null",
         {
-          "avro.java.string": "String",
-          "type": "string"
+          "type": "string",
+          "avro.java.string": "String"
         }
-      ]
+      ],
+      "default": null
     },
     {
-      "default": null,
       "name": "updateTimestamp",
       "type": [
         "null",
         {
-          "avro.java.string": "String",
-          "type": "string"
+          "type": "string",
+          "avro.java.string": "String"
         }
-      ]
+      ],
+      "default": null
     },
     {
-      "default": null,
       "name": "updateChannel",
       "type": [
         "null",
         {
-          "avro.java.string": "String",
-          "type": "string"
+          "type": "string",
+          "avro.java.string": "String"
         }
-      ]
+      ],
+      "default": null
     },
     {
-      "default": null,
       "name": "status",
       "type": [
         "null",
         {
-          "avro.java.string": "String",
-          "type": "string"
+          "type": "string",
+          "avro.java.string": "String"
         }
-      ]
+      ],
+      "default": null
     },
     {
-      "default": null,
       "name": "noShowTimestamp",
       "type": [
         "null",
         {
-          "avro.java.string": "String",
-          "type": "string"
+          "type": "string",
+          "avro.java.string": "String"
         }
-      ]
+      ],
+      "default": null
+    },
+    {
+      "name": "net_sales_local_amount",
+      "type": [
+        "null",
+        {
+          "type": "string",
+          "avro.java.string": "String"
+        }
+      ],
+      "default": null
+    },
+    {
+      "name": "net_sales_usd_amount",
+      "type": [
+        "null",
+        {
+          "type": "string",
+          "avro.java.string": "String"
+        }
+      ],
+      "default": null
     }
-  ],
-  "name": "ReservationAuditAvro",
-  "namespace": "com.sephora.services.reservation.avro.audit",
-  "type": "record"
+  ]
 }
