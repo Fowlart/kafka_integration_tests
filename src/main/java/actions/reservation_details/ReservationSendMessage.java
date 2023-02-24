@@ -17,7 +17,7 @@ public class ReservationSendMessage {
 
         ReservationAvro reservationAvro = ReservationAvro
                 .newBuilder()
-                .setReservationId("99999")
+                .setReservationId("55535")
                 .setChannelId("web")
                 .setWorld("Makeup,Fragrance")
                 .build();
@@ -35,7 +35,7 @@ public class ReservationSendMessage {
         System.out.println(reservationAuditAvro.toString());
 
         for (long i = 1; i <= 1; i++)
-            producer.produceRecord(109992L, reservationAuditAvro, "Stores.StoreDigital.Reservations.Auditing", 1);
+            producer.produceRecord(102L, reservationAuditAvro, "Stores.StoreDigital.Reservations.Auditing", 1);
 
     }
 }
