@@ -32,7 +32,7 @@ public class ReadFromGamificationTopic {
 
             if (!game.get("task").equals(JSONObject.NULL)) {
                 JSONObject task = game.getJSONArray("task").getJSONObject(0);
-                task.put("appeasementNote", "test appeasementNote, please pay attention to this field!");
+                task.put("appeasementNote", "Hello, Raja!");
                 System.out.println(generalObject);
                 //todo: send this json to kafka
                 producer.produceRecord(String.valueOf(System.currentTimeMillis()), generalObject.toString(), topic, 1);
